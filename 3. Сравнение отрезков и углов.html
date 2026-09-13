@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сравнение отрезков и углов — Геометрия 7 класс</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f9f9fb; }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        h3 { color: #16a085; }
+        .card { background: #fff; border-radius: 12px; padding: 20px; margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .highlight { background-color: #e8f4f8; padding: 15px; border-left: 5px solid #3498db; border-radius: 5px; margin: 15px 0; }
+        .warning { background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; border-radius: 5px; margin: 15px 0; }
+        details { background: #f4f6f7; border-radius: 8px; padding: 10px 15px; margin: 10px 0; cursor: pointer; }
+        summary { font-weight: bold; color: #2980b9; outline: none; }
+        details[open] summary { margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 5px;}
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #3498db; color: white; }
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 0.8em; font-weight: bold; color: white; margin-right: 5px;}
+        .badge-must { background: #2ecc71; }
+        .badge-should { background: #f39c12; }
+        .badge-aspire { background: #9b59b6; }
+        .diagram { background: #fff; border: 2px solid #ecf0f1; border-radius: 8px; padding: 15px; margin: 15px 0; text-align: center; }
+        .diagram svg { max-width: 100%; height: auto; }
+        .step { background: #f8f9fa; padding: 10px; margin: 8px 0; border-radius: 5px; border-left: 3px solid #3498db; }
+    </style>
+</head>
+<body>
+
+    <h1>📐 Сравнение отрезков и углов</h1>
+    <p><strong>Геометрия 7 класс • Глава 1, §3 • Страницы 12-16</strong></p>
+
+    <div class="card">
+        <p>Привет! 👋 Продолжаем изучать геометрию. Сегодня научимся сравнивать отрезки и углы — определять, какие из них равны, а какие нет, и какой больше или меньше. Это как сравнивать предметы по размеру, только в геометрии мы используем специальные методы! 🔍</p>
+    </div>
+
+    <h2>🌾 Блок 1. Изучение (15-20 мин)</h2>
+
+    <div class="card">
+        <h3>🪝 Разминка: Как сравнить без линейки?</h3>
+        <p>Представь, что у тебя есть две палочки разной длины, но нет линейки. Как узнать, какая длиннее? Правильно — наложить их друг на друга! Если концы совпадают — палочки равны. Если один конец выступает — эта палочка длиннее.</p>
+        <p><strong>В геометрии</strong> мы используем тот же принцип — метод наложения! 📏</p>
+    </div>
+
+    <div class="card">
+        <h3>📖 Ключевые термины</h3>
+        <table>
+            <tr>
+                <th>Термин</th>
+                <th>Что это?</th>
+                <th>Как обозначаем</th>
+            </tr>
+            <tr>
+                <td><strong>Равные фигуры</strong></td>
+                <td>Фигуры, имеющие одинаковую форму и одинаковые размеры. Их можно совместить наложением.</td>
+                <td>AB = CD</td>
+            </tr>
+            <tr>
+                <td><strong>Середина отрезка</strong></td>
+                <td>Точка, делящая отрезок пополам, то есть на два равных отрезка.</td>
+                <td>AC = CB</td>
+            </tr>
+            <tr>
+                <td><strong>Биссектриса угла</strong></td>
+                <td>Луч, исходящий из вершины угла и делящий угол на два равных угла.</td>
+                <td>∠AOC = ∠COB</td>
+            </tr>
+            <tr>
+                <td><strong>Длина отрезка</strong></td>
+                <td>Расстояние между концами отрезка. Измеряется в единицах длины (см, м, км).</td>
+                <td>AB = 5 см</td>
+            </tr>
+            <tr>
+                <td><strong>Наложение фигур</strong></td>
+                <td>Способ сравнения фигур путём совмещения одной фигуры с другой.</td>
+                <td>—</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>📐 Графические иллюстрации</h3>
+        
+        <div class="diagram">
+            <h4>Сравнение отрезков наложением</h4>
+            <svg width="500" height="180" viewBox="0 0 500 180">
+                <!-- First segment -->
+                <line x1="50" y1="50" x2="250" y2="50" stroke="#e74c3c" stroke-width="4"/>
+                <circle cx="50" cy="50" r="5" fill="#c0392b"/>
+                <circle cx="250" cy="50" r="5" fill="#c0392b"/>
+                <text x="50" y="40" text-anchor="middle" font-size="14" font-weight="bold">A</text>
+                <text x="250" y="40" text-anchor="middle" font-size="14" font-weight="bold">B</text>
+                <text x="150" y="75" text-anchor="middle" font-size="12" fill="#e74c3c">Отрезок AB</text>
+                
+                <!-- Second segment (longer) -->
+                <line x1="50" y1="120" x2="300" y2="120" stroke="#3498db" stroke-width="4"/>
+                <circle cx="50" cy="120" r="5" fill="#2980b9"/>
+                <circle cx="300" cy="120" r="5" fill="#2980b9"/>
+                <text x="50" y="110" text-anchor="middle" font-size="14" font-weight="bold">C</text>
+                <text x="300" y="110" text-anchor="middle" font-size="14" font-weight="bold">D</text>
+                <text x="175" y="145" text-anchor="middle" font-size="12" fill="#3498db">Отрезок CD (длиннее)</text>
+                
+                <!-- Comparison arrow -->
+                <text x="350" y="100" font-size="14" font-weight="bold">AB < CD</text>
+            </svg>
+            <p><strong>Рис. 1:</strong> Отрезок AB короче отрезка CD (AB < CD), так как AB составляет часть CD</p>
+        </div>
+
+        <div class="diagram">
+            <h4>Середина отрезка</h4>
+            <svg width="400" height="120" viewBox="0 0 400 120">
+                <!-- Segment -->
+                <line x1="50" y1="60" x2="350" y2="60" stroke="#9b59b6" stroke-width="4"/>
+                <!-- Endpoints -->
+                <circle cx="50" cy="60" r="6" fill="#8e44ad"/>
+                <circle cx="350" cy="60" r="6" fill="#8e44ad"/>
+                <!-- Midpoint -->
+                <circle cx="200" cy="60" r="7" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+                <text x="50" y="80" text-anchor="middle" font-size="14" font-weight="bold">A</text>
+                <text x="350" y="80" text-anchor="middle" font-size="14" font-weight="bold">B</text>
+                <text x="200" y="45" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">C — середина</text>
+                <text x="125" y="100" text-anchor="middle" font-size="12">AC = CB</text>
+            </svg>
+            <p><strong>Рис. 2:</strong> Точка C — середина отрезка AB, делит его на два равных отрезка: AC = CB</p>
+        </div>
+
+        <div class="diagram">
+            <h4>Сравнение углов наложением (угол 1 меньше угла 2)</h4>
+            <svg width="600" height="250" viewBox="0 0 600 250">
+                <!-- Step 1: Two separate angles -->
+                <text x="100" y="20" text-anchor="middle" font-size="12" font-weight="bold">Шаг 1: Два угла</text>
+                
+                <!-- Angle 1 (smaller) -->
+                <line x1="50" y1="100" x2="50" y2="40" stroke="#e74c3c" stroke-width="3"/>
+                <line x1="50" y1="100" x2="100" y2="60" stroke="#e74c3c" stroke-width="3"/>
+                <circle cx="50" cy="100" r="4" fill="#c0392b"/>
+                <text x="50" y="115" text-anchor="middle" font-size="11">O₁</text>
+                <text x="45" y="35" font-size="11">A</text>
+                <text x="105" y="55" font-size="11">B</text>
+                <path d="M 50,100 L 50,80 A 20,20 0 0,1 66,72" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <text x="70" y="85" font-size="10" fill="#f39c12">∠1</text>
+                
+                <!-- Angle 2 (larger) -->
+                <line x1="150" y1="100" x2="150" y2="30" stroke="#3498db" stroke-width="3"/>
+                <line x1="150" y1="100" x2="220" y2="50" stroke="#3498db" stroke-width="3"/>
+                <circle cx="150" cy="100" r="4" fill="#2980b9"/>
+                <text x="150" y="115" text-anchor="middle" font-size="11">O₂</text>
+                <text x="145" y="25" font-size="11">C</text>
+                <text x="225" y="45" font-size="11">D</text>
+                <path d="M 150,100 L 150,70 A 30,30 0 0,1 174,58" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <text x="175" y="80" font-size="10" fill="#f39c12">∠2</text>
+                
+                <!-- Arrow showing overlay -->
+                <text x="300" y="80" font-size="20">→</text>
+                <text x="300" y="100" text-anchor="middle" font-size="11">Наложение</text>
+                
+                <!-- Step 2: Overlay result -->
+                <text x="450" y="20" text-anchor="middle" font-size="12" font-weight="bold">Шаг 2: Результат</text>
+                
+                <!-- Overlaid angles -->
+                <line x1="400" y1="150" x2="400" y2="60" stroke="#3498db" stroke-width="3"/>
+                <line x1="400" y1="150" x2="480" y2="80" stroke="#3498db" stroke-width="3"/>
+                <circle cx="400" cy="150" r="5" fill="#2980b9"/>
+                <text x="400" y="170" text-anchor="middle" font-size="12">O</text>
+                <text x="395" y="55" font-size="12">A=C</text>
+                <text x="485" y="75" font-size="12">D</text>
+                
+                <!-- Angle 1 side (shorter, inside angle 2) -->
+                <line x1="400" y1="150" x2="440" y2="100" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,3"/>
+                <text x="445" y="95" font-size="12">B</text>
+                
+                <!-- Angle arcs -->
+                <path d="M 400,150 L 400,110 A 40,40 0 0,1 424,98" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                <path d="M 400,150 L 400,100 A 50,50 0 0,1 440,88" fill="none" stroke="#3498db" stroke-width="2"/>
+                
+                <text x="430" y="120" font-size="10" fill="#e74c3c">∠1</text>
+                <text x="450" y="110" font-size="10" fill="#3498db">∠2</text>
+                
+                <!-- Conclusion -->
+                <text x="450" y="200" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50">∠1 < ∠2</text>
+                <text x="450" y="220" text-anchor="middle" font-size="11" fill="#7f8c8d">(∠1 составляет часть ∠2)</text>
+            </svg>
+            <p><strong>Рис. 3:</strong> Сравнение углов наложением: совмещаем вершины и одну сторону. Если вторая сторона угла 1 оказалась внутри угла 2, то ∠1 < ∠2</p>
+        </div>
+
+        <div class="diagram">
+            <h4>Сравнение равных углов наложением</h4>
+            <svg width="600" height="250" viewBox="0 0 600 250">
+                <!-- Step 1: Two angles -->
+                <text x="100" y="20" text-anchor="middle" font-size="12" font-weight="bold">Шаг 1: Два угла</text>
+                
+                <!-- Angle 1 -->
+                <line x1="50" y1="100" x2="50" y2="40" stroke="#e74c3c" stroke-width="3"/>
+                <line x1="50" y1="100" x2="110" y2="60" stroke="#e74c3c" stroke-width="3"/>
+                <circle cx="50" cy="100" r="4" fill="#c0392b"/>
+                <text x="50" y="115" text-anchor="middle" font-size="11">O₁</text>
+                <text x="45" y="35" font-size="11">A</text>
+                <text x="115" y="55" font-size="11">B</text>
+                <path d="M 50,100 L 50,80 A 20,20 0 0,1 66,72" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <text x="70" y="85" font-size="10" fill="#f39c12">∠1</text>
+                
+                <!-- Angle 2 (same size) -->
+                <line x1="150" y1="100" x2="150" y2="40" stroke="#3498db" stroke-width="3"/>
+                <line x1="150" y1="100" x2="210" y2="60" stroke="#3498db" stroke-width="3"/>
+                <circle cx="150" cy="100" r="4" fill="#2980b9"/>
+                <text x="150" y="115" text-anchor="middle" font-size="11">O₂</text>
+                <text x="145" y="35" font-size="11">C</text>
+                <text x="215" y="55" font-size="11">D</text>
+                <path d="M 150,100 L 150,80 A 20,20 0 0,1 166,72" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <text x="170" y="85" font-size="10" fill="#f39c12">∠2</text>
+                
+                <!-- Arrow -->
+                <text x="300" y="80" font-size="20">→</text>
+                <text x="300" y="100" text-anchor="middle" font-size="11">Наложение</text>
+                
+                <!-- Step 2: Perfect overlay -->
+                <text x="450" y="20" text-anchor="middle" font-size="12" font-weight="bold">Шаг 2: Результат</text>
+                
+                <!-- Perfectly overlaid angles -->
+                <line x1="400" y1="150" x2="400" y2="60" stroke="#9b59b6" stroke-width="4"/>
+                <line x1="400" y1="150" x2="470" y2="90" stroke="#9b59b6" stroke-width="4"/>
+                <circle cx="400" cy="150" r="5" fill="#8e44ad"/>
+                <text x="400" y="170" text-anchor="middle" font-size="12">O (A=C)</text>
+                <text x="395" y="55" font-size="12">B=D</text>
+                <text x="475" y="85" font-size="12"></text>
+                
+                <!-- Angle arc -->
+                <path d="M 400,150 L 400,110 A 40,40 0 0,1 432,98" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <text x="430" y="115" font-size="11" fill="#f39c12">∠1 = ∠2</text>
+                
+                <!-- Conclusion -->
+                <text x="450" y="200" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">✓ Углы полностью совпали</text>
+                <text x="450" y="220" text-anchor="middle" font-size="12" font-weight="bold">∠1 = ∠2</text>
+            </svg>
+            <p><strong>Рис. 4:</strong> Если при наложении углы полностью совпадают (все стороны совпадают), то углы равны</p>
+        </div>
+
+        <div class="diagram">
+            <h4>Биссектриса угла</h4>
+            <svg width="400" height="200" viewBox="0 0 400 200">
+                <!-- Angle sides -->
+                <line x1="200" y1="170" x2="100" y2="70" stroke="#9b59b6" stroke-width="3"/>
+                <line x1="200" y1="170" x2="300" y2="70" stroke="#3498db" stroke-width="3"/>
+                <!-- Bisector -->
+                <line x1="200" y1="170" x2="200" y2="60" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,3"/>
+                <!-- Vertex -->
+                <circle cx="200" cy="170" r="5" fill="#2c3e50"/>
+                <text x="200" y="190" text-anchor="middle" font-size="14" font-weight="bold">O</text>
+                <!-- Points -->
+                <text x="90" y="65" font-size="12">A</text>
+                <text x="310" y="65" font-size="12">B</text>
+                <text x="200" y="55" text-anchor="middle" font-size="12" fill="#e74c3c">C</text>
+                <!-- Angle arcs -->
+                <path d="M 200,170 L 200,130 A 40,40 0 0,0 172,102" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <path d="M 200,170 L 200,130 A 40,40 0 0,1 228,102" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <text x="175" y="125" font-size="10" fill="#f39c12">1</text>
+                <text x="215" y="125" font-size="10" fill="#f39c12">2</text>
+                <text x="200" y="30" text-anchor="middle" font-size="12" fill="#e74c3c">∠1 = ∠2</text>
+            </svg>
+            <p><strong>Рис. 5:</strong> Луч OC — биссектриса угла AOB, делит угол на два равных угла: ∠AOC = ∠COB</p>
+        </div>
+
+        <div class="diagram">
+            <h4>Развёрнутый угол больше неразвёрнутого</h4>
+            <svg width="500" height="150" viewBox="0 0 500 150">
+                <!-- Straight angle -->
+                <line x1="50" y1="75" x2="250" y2="75" stroke="#e74c3c" stroke-width="4"/>
+                <circle cx="150" cy="75" r="5" fill="#c0392b"/>
+                <text x="50" y="70" font-size="12">A</text>
+                <text x="150" y="95" text-anchor="middle" font-size="12" font-weight="bold">O</text>
+                <text x="250" y="70" font-size="12">B</text>
+                <path d="M 50,75 A 100,100 0 0,1 250,75" fill="none" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,3"/>
+                <text x="150" y="120" text-anchor="middle" font-size="12">Развёрнутый угол AOB = 180°</text>
+                
+                <!-- Non-straight angle -->
+                <line x1="300" y1="75" x2="400" y2="75" stroke="#3498db" stroke-width="3"/>
+                <line x1="300" y1="75" x2="370" y2="30" stroke="#3498db" stroke-width="3"/>
+                <circle cx="300" cy="75" r="5" fill="#2980b9"/>
+                <text x="300" y="95" text-anchor="middle" font-size="12" font-weight="bold">O</text>
+                <text x="380" y="25" font-size="12">C</text>
+                <path d="M 300,75 L 300,55 A 20,20 0 0,1 316,45" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <text x="380" y="120" text-anchor="middle" font-size="12">Неразвёрнутый угол</text>
+                
+                <text x="270" y="140" font-size="14" font-weight="bold">→</text>
+            </svg>
+            <p><strong>Рис. 6:</strong> Развёрнутый угол больше любого неразвёрнутого угла (неразвёрнутый угол составляет часть развёрнутого)</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📐 Главные правила</h3>
+        
+        <div class="highlight">
+            <strong>🌟 Правило 1: Равенство геометрических фигур</strong><br>
+            Две геометрические фигуры называются <strong>равными</strong>, если их можно совместить наложением.<br><br>
+            <em>Как проверить:</em> Представьте, что одну фигуру можно переместить и наложить на другую. Если они полностью совпадут — фигуры равны!
+        </div>
+
+        <div class="highlight">
+            <strong>🌟 Правило 2: Сравнение отрезков</strong><br>
+            Чтобы сравнить два отрезка, наложим один отрезок на другой так, чтобы конец одного отрезка совместился с концом другого.<br>
+            • Если другие концы тоже совпадут — <strong>отрезки равны</strong> (AB = CD)<br>
+            • Если не совпадут — <strong>меньшим считается тот отрезок, который составляет часть другого</strong> (AC < AB)
+        </div>
+
+        <div class="highlight">
+            <strong>🌟 Правило 3: Сравнение углов</strong><br>
+            Чтобы сравнить два угла, наложим один угол на другой так, чтобы:<br>
+            • Вершины совпали<br>
+            • Одна сторона первого угла совместилась с одной стороной второго<br>
+            • Две другие стороны оказались по одну сторону от совместившихся сторон<br><br>
+            • Если две другие стороны тоже совпадут — <strong>углы равны</strong> (∠1 = ∠2)<br>
+            • Если не совпадут — <strong>меньшим считается тот угол, который составляет часть другого</strong> (∠1 < ∠2)
+        </div>
+
+        <div class="highlight">
+            <strong>🌟 Правило 4: Биссектриса</strong><br>
+            <strong>Биссектриса угла</strong> — это луч, исходящий из вершины угла и делящий угол на два равных угла.<br>
+            Если луч OC делит угол AOB на два равных угла, то OC — биссектриса, и ∠AOC = ∠COB.
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Важно запомнить:</strong><br>
+            • Середина отрезка делит его на <strong>два равных отрезка</strong><br>
+            • Биссектриса делит угол на <strong>два равных угла</strong><br>
+            • Развёрнутый угол <strong>больше</strong> любого неразвёрнутого угла<br>
+            • Любые два развёрнутых угла <strong>равны</strong> (все они по 180°)
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>🛠 Блок 2. Закрепление (20-25 мин)</h2>
+    <p>Задания из учебника (стр. 15-16). Решай в тетради. После выполнения открой подсказку и проверь себя!</p>
+
+    <div class="card">
+        <h3><span class="badge badge-must">№21</span> Базовый уровень</h3>
+        <p><strong>Задание:</strong> На луче с началом O отмечены точки A, B и C так, что точка B лежит между точками O и A, а точка A — между точками O и C. Сравните отрезки OB и OA, OC и OA, OB и OC.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Нарисуй луч с началом в точке O.</div>
+            <div class="step"><strong>Шаг 2:</strong> Отметь точки в порядке: O → B → A → C (B между O и A, A между O и C).</div>
+            <div class="step"><strong>Шаг 3:</strong> Сравни OB и OA: точка B между O и A, значит OB — часть OA.</div>
+            <p><strong>Ответ:</strong> <strong>OB < OA</strong></p>
+            <div class="step"><strong>Шаг 4:</strong> Сравни OC и OA: точка A между O и C, значит OA — часть OC.</div>
+            <p><strong>Ответ:</strong> <strong>OA < OC</strong> (или OC > OA)</p>
+            <div class="step"><strong>Шаг 5:</strong> Сравни OB и OC: OB < OA и OA < OC, значит OB < OC.</div>
+            <p><strong>Ответ:</strong> <strong>OB < OC</strong></p>
+            <p><strong>Итог:</strong> OB < OA < OC (отрезки возрастают по длине)</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-must">№22</span> Базовый уровень</h3>
+        <p><strong>Задание:</strong> Точка O является серединой отрезка AB. Можно ли совместить наложением отрезки: а) OA и OB; б) OA и AB?</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Вспомни определение: середина отрезка делит его на два равных отрезка.</div>
+            <div class="step"><strong>Шаг 2:</strong> Точка O — середина AB, значит AO = OB.</div>
+            <p><strong>а) OA и OB:</strong></p>
+            <div class="step">Так как O — середина, OA = OB (равные отрезки).</div>
+            <p><strong>Ответ:</strong> <strong>ДА</strong>, можно совместить (они равны).</p>
+            <p><strong>б) OA и AB:</strong></p>
+            <div class="step">Отрезок AB состоит из двух отрезков: AO и OB.</div>
+            <div class="step">AB = AO + OB = 2·OA (AB в два раза длиннее OA).</div>
+            <p><strong>Ответ:</strong> <strong>НЕТ</strong>, нельзя совместить (AB больше OA).</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-should">№23</span> Средний уровень</h3>
+        <p><strong>Задание:</strong> На рисунке 30 отрезки AB, BC, CD и DE равны. Укажите:<br>
+        а) середины отрезков AC, AE и CE;<br>
+        б) отрезок, серединой которого является точка C;<br>
+        в) отрезки, серединой которых является точка C.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Дано:</strong> AB = BC = CD = DE (все отрезки равны).</div>
+            <div class="step"><strong>Рисунок:</strong> A — B — C — D — E (точки на одной прямой).</div>
+            <p><strong>а) Середины отрезков:</strong></p>
+            <div class="step"><strong>Отрезок AC:</strong> AC = AB + BC. Так как AB = BC, точка B делит AC пополам.</div>
+            <p><strong>Ответ:</strong> <strong>B</strong> — середина AC.</p>
+            <div class="step"><strong>Отрезок AE:</strong> AE = AB + BC + CD + DE = 4 равных отрезка. Точка C делит AE на AC (2 отрезка) и CE (2 отрезка).</div>
+            <p><strong>Ответ:</strong> <strong>C</strong> — середина AE.</p>
+            <div class="step"><strong>Отрезок CE:</strong> CE = CD + DE. Так как CD = DE, точка D делит CE пополам.</div>
+            <p><strong>Ответ:</strong> <strong>D</strong> — середина CE.</p>
+            <p><strong>б) Отрезок, серединой которого является точка C:</strong></p>
+            <div class="step">C делит пополам отрезок AE (AC = CE = 2 равных отрезка).</div>
+            <p><strong>Ответ:</strong> <strong>AE</strong>.</p>
+            <p><strong>в) Отрезки, серединой которых является точка C:</strong></p>
+            <div class="step">C — середина AE. Также C — середина BD (BC = CD).</div>
+            <p><strong>Ответ:</strong> <strong>AE и BD</strong>.</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-should">№24</span> Средний уровень</h3>
+        <p><strong>Задание:</strong> Луч OC делит угол AOB на два угла. Сравните углы AOB и AOC.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Нарисуй угол AOB.</div>
+            <div class="step"><strong>Шаг 2:</strong> Проведи луч OC внутри угла AOB (из вершины O).</div>
+            <div class="step"><strong>Шаг 3:</strong> Луч OC разделил угол AOB на два угла: AOC и COB.</div>
+            <div class="step"><strong>Шаг 4:</strong> Угол AOC — часть угла AOB.</div>
+            <p><strong>Ответ:</strong> <strong>∠AOC < ∠AOB</strong> (или ∠AOB > ∠AOC).</p>
+            <p><strong>Почему?</strong> Часть всегда меньше целого! Угол AOC составляет часть угла AOB.</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-aspire">№25</span> Продвинутый уровень</h3>
+        <p><strong>Задание:</strong> Луч l — биссектриса угла hk. Можно ли наложением совместить углы: а) hl и lh; б) hl и hk?</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Дано:</strong> Луч l — биссектриса угла hk.</div>
+            <div class="step"><strong>Значит:</strong> l делит угол hk на два равных угла.</div>
+            <p><strong>а) Углы hl и lh:</strong></p>
+            <div class="step">Так как l — биссектриса, углы hl и lh равны (∠hl = ∠lh).</div>
+            <div class="step">Равные углы можно совместить наложением.</div>
+            <p><strong>Ответ:</strong> <strong>ДА</strong>, можно совместить.</p>
+            <p><strong>б) Углы hl и hk:</strong></p>
+            <div class="step">Угол hl — это половина угла hk (так как l — биссектриса).</div>
+            <div class="step">∠hl составляет часть ∠hk.</div>
+            <div class="step">Часть меньше целого: ∠hl < ∠hk.</div>
+            <p><strong>Ответ:</strong> <strong>НЕТ</strong>, нельзя совместить (hl меньше hk).</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-aspire">№26</span> Продвинутый уровень</h3>
+        <p><strong>Задание:</strong> На рисунке 31 углы, обозначенные цифрами, равны. Укажите:<br>
+        а) биссектрису каждого из углов AOC, BOF, AOE;<br>
+        б) все углы, биссектрисой которых является луч OC. Сравните углы BOC и AOD.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Дано:</strong> На рисунке углы 1, 2, 3, 4, 5 равны между собой.</div>
+            <div class="step"><strong>Рисунок:</strong> Лучи OA, OB, OC, OD, OE, OF выходят из точки O.</div>
+            <p><strong>а) Биссектрисы углов:</strong></p>
+            <div class="step"><strong>Угол AOC:</strong> Состоит из углов 1 и 2. Они равны, значит OC делит AOC пополам.</div>
+            <p><strong>Ответ:</strong> <strong>OC</strong> — биссектриса ∠AOC.</p>
+            <div class="step"><strong>Угол BOF:</strong> Состоит из углов 2, 3, 4, 5. OD делит его на BOD (углы 2+3) и DOF (углы 4+5). Так как все углы равны, BOD = DOF.</div>
+            <p><strong>Ответ:</strong> <strong>OD</strong> — биссектриса ∠BOF.</p>
+            <div class="step"><strong>Угол AOE:</strong> Состоит из углов 1, 2, 3, 4. OC делит его на AOC (1+2) и COE (3+4). Они равны.</div>
+            <p><strong>Ответ:</strong> <strong>OC</strong> — биссектриса AOE.</p>
+            <p><strong>б) Углы, биссектрисой которых является OC:</strong></p>
+            <div class="step">OC делит пополам: ∠AOC, ∠AOE, ∠BOD (если рассматривать).</div>
+            <p><strong>Ответ:</strong> <strong>∠AOC, ∠AOE</strong> (и возможно другие, в зависимости от рисунка).</p>
+            <p><strong>Сравнение BOC и ∠AOD:</strong></p>
+            <div class="step">∠BOC = угол 2</div>
+            <div class="step">AOD = углы 1 + 2 + 3 = 3 угла</div>
+            <p><strong>Ответ:</strong> <strong>∠BOC < ∠AOD</strong> (один угол меньше трёх).</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3>💡 Методическая подсказка</h3>
+        <ul>
+            <li><strong>Если сложно представить наложение:</strong> Вырежи из бумаги два отрезка или угла и физически наложи их друг на друга. Это поможет понять принцип сравнения!</li>
+            <li><strong>Для запоминания:</strong> Середина = равно пополам. Биссектриса = угол пополам. Нарисуй ассоциации: ножницы (делят пополам).</li>
+            <li><strong>Проверка:</strong> После выполнения каждого задания сверь свой чертёж с рисунком в подсказке.</li>
+            <li><strong>Важно:</strong> Часть всегда меньше целого! Если одна фигура составляет часть другой, она точно меньше.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

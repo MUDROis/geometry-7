@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Измерение отрезков — Геометрия 7 класс</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f9f9fb; }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        h3 { color: #16a085; }
+        .card { background: #fff; border-radius: 12px; padding: 20px; margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .highlight { background-color: #e8f4f8; padding: 15px; border-left: 5px solid #3498db; border-radius: 5px; margin: 15px 0; }
+        .warning { background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; border-radius: 5px; margin: 15px 0; }
+        details { background: #f4f6f7; border-radius: 8px; padding: 10px 15px; margin: 10px 0; cursor: pointer; }
+        summary { font-weight: bold; color: #2980b9; outline: none; }
+        details[open] summary { margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 5px;}
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #3498db; color: white; }
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 0.8em; font-weight: bold; color: white; margin-right: 5px;}
+        .badge-must { background: #2ecc71; }
+        .badge-should { background: #f39c12; }
+        .badge-aspire { background: #9b59b6; }
+        .diagram { background: #fff; border: 2px solid #ecf0f1; border-radius: 8px; padding: 15px; margin: 15px 0; text-align: center; }
+        .diagram svg { max-width: 100%; height: auto; }
+        .step { background: #f8f9fa; padding: 10px; margin: 8px 0; border-radius: 5px; border-left: 3px solid #3498db; }
+    </style>
+</head>
+<body>
+
+    <h1>📏 Измерение отрезков</h1>
+    <p><strong>Геометрия 7 класс • Глава 1, §4 • Страницы 12-18</strong></p>
+
+    <div class="card">
+        <p>Привет! 👋 Сегодня научимся измерять отрезки — это один из самых важных навыков в геометрии! Ты узнаешь, что такое длина отрезка, какие бывают единицы измерения и как точно измерить расстояние между точками. Это пригодится в жизни: от измерения комнаты до расчёта пути на карте! 📐</p>
+    </div>
+
+    <h2>🌾 Блок 1. Изучение (15-20 мин)</h2>
+
+    <div class="card">
+        <h3>🪝 Разминка: Как измерить без линейки?</h3>
+        <p>Представь, что тебе нужно измерить длину стола, но под рукой нет линейки. Что будешь делать? Можно использовать:</p>
+        <ul>
+            <li>📱 Телефон (приблизительно)</li>
+            <li>✋ Свою ладонь</li>
+            <li>👣 Шаг</li>
+            <li>📏 Любой предмет известной длины (тетрадь, карандаш)</li>
+        </ul>
+        <p><strong>В геометрии</strong> мы используем стандартные единицы измерения и специальные инструменты для точности! 🎯</p>
+    </div>
+
+    <div class="card">
+        <h3>📖 Ключевые термины</h3>
+        <table>
+            <tr>
+                <th>Термин</th>
+                <th>Что это?</th>
+                <th>Как обозначаем</th>
+            </tr>
+            <tr>
+                <td><strong>Длина отрезка</strong></td>
+                <td>Расстояние между концами отрезка. Показывает, сколько раз единичный отрезок укладывается в данном.</td>
+                <td>AB = 5 см</td>
+            </tr>
+            <tr>
+                <td><strong>Единица измерения</strong></td>
+                <td>Отрезок, принятый за стандарт для измерения. Обычно это сантиметр, миллиметр, метр.</td>
+                <td>1 см, 1 мм, 1 м</td>
+            </tr>
+            <tr>
+                <td><strong>Масштабный отрезок</strong></td>
+                <td>Единичный отрезок, выбранный для измерения (масштабная линейка).</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td><strong>Расстояние между точками</strong></td>
+                <td>Длина отрезка, соединяющего эти точки.</td>
+                <td>Расстояние AB = длина отрезка AB</td>
+            </tr>
+            <tr>
+                <td><strong>Миллиметр</strong></td>
+                <td>Десятая часть сантиметра (0,1 см). Самая мелкая единица на школьной линейке.</td>
+                <td>1 см = 10 мм</td>
+            </tr>
+            <tr>
+                <td><strong>Метр</strong></td>
+                <td>Основная единица длины в системе СИ. 1 метр = 100 сантиметров.</td>
+                <td>1 м = 100 см</td>
+            </tr>
+            <tr>
+                <td><strong>Километр</strong></td>
+                <td>1000 метров. Используется для измерения больших расстояний.</td>
+                <td>1 км = 1000 м</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>📐 Графические иллюстрации</h3>
+        
+        <div class="diagram">
+            <h4>Измерение отрезка сантиметром</h4>
+            <svg width="500" height="150" viewBox="0 0 500 150">
+                <!-- Ruler -->
+                <rect x="50" y="80" width="400" height="40" fill="#ecf0f1" stroke="#34495e" stroke-width="2"/>
+                <!-- Main marks (1 cm = 50px) -->
+                <line x1="50" y1="80" x2="50" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="100" y1="80" x2="100" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="150" y1="80" x2="150" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="200" y1="80" x2="200" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="250" y1="80" x2="250" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="300" y1="80" x2="300" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="350" y1="80" x2="350" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="400" y1="80" x2="400" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="450" y1="80" x2="450" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                
+                <!-- Numbers -->
+                <text x="50" y="130" text-anchor="middle" font-size="12">0</text>
+                <text x="100" y="130" text-anchor="middle" font-size="12">1</text>
+                <text x="150" y="130" text-anchor="middle" font-size="12">2</text>
+                <text x="200" y="130" text-anchor="middle" font-size="12">3</text>
+                <text x="250" y="130" text-anchor="middle" font-size="12">4</text>
+                <text x="300" y="130" text-anchor="middle" font-size="12">5</text>
+                <text x="350" y="130" text-anchor="middle" font-size="12">6</text>
+                
+                <!-- Segment to measure: 5 cm = 250px, from x=50 to x=300 -->
+                <line x1="50" y1="50" x2="300" y2="50" stroke="#e74c3c" stroke-width="4"/>
+                <circle cx="50" cy="50" r="5" fill="#c0392b"/>
+                <circle cx="300" cy="50" r="5" fill="#c0392b"/>
+                <text x="50" y="40" text-anchor="middle" font-size="14" font-weight="bold">A</text>
+                <text x="300" y="40" text-anchor="middle" font-size="14" font-weight="bold">B</text>
+                
+                <!-- Measurement indication -->
+                <text x="175" y="25" text-anchor="middle" font-size="14" fill="#e74c3c" font-weight="bold">AB = 5 см</text>
+            </svg>
+            <p><strong>Рис. 1:</strong> Отрезок AB укладывается ровно 5 раз в сантиметре → AB = 5 см</p>
+        </div>
+
+        <div class="diagram">
+            <h4>Измерение с остатком (десятичные дроби)</h4>
+            <svg width="500" height="180" viewBox="0 0 500 180">
+                <!-- Ruler with mm -->
+                <rect x="50" y="110" width="400" height="40" fill="#ecf0f1" stroke="#34495e" stroke-width="2"/>
+                
+                <!-- Main cm marks (1 cm = 50px) -->
+                <line x1="50" y1="110" x2="50" y2="140" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="100" y1="110" x2="100" y2="140" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="150" y1="110" x2="150" y2="140" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="200" y1="110" x2="200" y2="140" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="250" y1="110" x2="250" y2="140" stroke="#2c3e50" stroke-width="2"/>
+                
+                <!-- mm marks between 0 and 1 (1 mm = 5px) -->
+                <line x1="55" y1="120" x2="55" y2="135" stroke="#7f8c8d" stroke-width="1"/>
+                <line x1="60" y1="120" x2="60" y2="135" stroke="#7f8c8d" stroke-width="1"/>
+                <line x1="65" y1="120" x2="65" y2="135" stroke="#7f8c8d" stroke-width="1"/>
+                <line x1="70" y1="115" x2="70" y2="135" stroke="#7f8c8d" stroke-width="1"/>
+                <line x1="75" y1="120" x2="75" y2="135" stroke="#7f8c8d" stroke-width="1"/>
+                <line x1="80" y1="120" x2="80" y2="135" stroke="#7f8c8d" stroke-width="1"/>
+                <line x1="85" y1="120" x2="85" y2="135" stroke="#7f8c8d" stroke-width="1"/>
+                <line x1="90" y1="115" x2="90" y2="135" stroke="#7f8c8d" stroke-width="1"/>
+                <line x1="95" y1="120" x2="95" y2="135" stroke="#7f8c8d" stroke-width="1"/>
+                
+                <!-- Numbers -->
+                <text x="50" y="160" text-anchor="middle" font-size="12">0</text>
+                <text x="100" y="160" text-anchor="middle" font-size="12">1</text>
+                <text x="150" y="160" text-anchor="middle" font-size="12">2</text>
+                <text x="200" y="160" text-anchor="middle" font-size="12">3</text>
+                <text x="250" y="160" text-anchor="middle" font-size="12">4</text>
+                
+                <!-- Segment to measure: 3.4 cm = 170px, from x=50 to x=220 -->
+                <line x1="50" y1="70" x2="220" y2="70" stroke="#e74c3c" stroke-width="4"/>
+                <circle cx="50" cy="70" r="5" fill="#c0392b"/>
+                <circle cx="220" cy="70" r="5" fill="#c0392b"/>
+                <text x="50" y="60" text-anchor="middle" font-size="14" font-weight="bold">A</text>
+                <text x="220" y="60" text-anchor="middle" font-size="14" font-weight="bold">C</text>
+                
+                <!-- Measurement indication -->
+                <text x="135" y="40" text-anchor="middle" font-size="14" fill="#e74c3c" font-weight="bold">AC = 3,4 см</text>
+                <text x="135" y="25" text-anchor="middle" font-size="11" fill="#7f8c8d">(3 см + 4 мм)</text>
+            </svg>
+            <p><strong>Рис. 2:</strong> Отрезок AC = 3 см + 4 мм = 3,4 см (сантиметр не укладывается целое число раз)</p>
+        </div>
+
+        <div class="diagram">
+            <h4>Точка делит отрезок на части</h4>
+            <svg width="500" height="150" viewBox="0 0 500 150">
+                <!-- Main segment: AB = 5.7 cm = 285px, from x=50 to x=335 -->
+                <line x1="50" y1="75" x2="335" y2="75" stroke="#9b59b6" stroke-width="4"/>
+                
+                <!-- Points -->
+                <circle cx="50" cy="75" r="6" fill="#8e44ad"/>
+                <circle cx="200" cy="75" r="6" fill="#e74c3c"/>
+                <circle cx="335" cy="75" r="6" fill="#8e44ad"/>
+                
+                <text x="50" y="95" text-anchor="middle" font-size="16" font-weight="bold">A</text>
+                <text x="200" y="65" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">C</text>
+                <text x="335" y="95" text-anchor="middle" font-size="16" font-weight="bold">B</text>
+                
+                <!-- Measurements: AC = 3 cm = 150px, CB = 2.7 cm = 135px -->
+                <text x="125" y="50" text-anchor="middle" font-size="13" fill="#3498db">AC = 3 см</text>
+                <text x="267" y="50" text-anchor="middle" font-size="13" fill="#3498db">CB = 2,7 см</text>
+                <text x="192" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#9b59b6">AB = AC + CB = 5,7 см</text>
+                
+                <!-- Brackets -->
+                <path d="M 50,85 L 50,100 L 200,100 L 200,85" fill="none" stroke="#3498db" stroke-width="1"/>
+                <path d="M 200,85 L 200,100 L 335,100 L 335,85" fill="none" stroke="#3498db" stroke-width="1"/>
+            </svg>
+            <p><strong>Рис. 3:</strong> Если точка C делит отрезок AB, то AB = AC + CB (длина всего отрезка равна сумме длин частей)</p>
+        </div>
+
+        <div class="diagram">
+            <h4>Единицы измерения: от миллиметра до километра</h4>
+            <svg width="500" height="200" viewBox="0 0 500 200">
+                <!-- Scale visualization -->
+                <text x="250" y="20" text-anchor="middle" font-size="14" font-weight="bold">Шкала единиц измерения</text>
+                
+                <!-- Millimeter -->
+                <line x1="50" y1="50" x2="60" y2="50" stroke="#e74c3c" stroke-width="3"/>
+                <text x="110" y="55" font-size="12">1 мм — маленькое деление</text>
+                
+                <!-- Centimeter -->
+                <line x1="50" y1="80" x2="100" y2="80" stroke="#3498db" stroke-width="3"/>
+                <text x="110" y="85" font-size="12">1 см = 10 мм</text>
+                
+                <!-- Decimeter -->
+                <line x1="50" y1="110" x2="200" y2="110" stroke="#9b59b6" stroke-width="3"/>
+                <text x="210" y="115" font-size="12">1 дм = 10 см = 100 мм</text>
+                
+                <!-- Meter -->
+                <line x1="50" y1="140" x2="350" y2="140" stroke="#2ecc71" stroke-width="3"/>
+                <text x="360" y="145" font-size="12">1 м = 100 см = 1000 мм</text>
+                
+                <!-- Kilometer -->
+                <line x1="50" y1="170" x2="490" y2="170" stroke="#f39c12" stroke-width="3"/>
+                <text x="250" y="190" text-anchor="middle" font-size="12">1 км = 1000 м</text>
+            </svg>
+            <p><strong>Рис. 4:</strong> Соотношение единиц измерения длины</p>
+        </div>
+
+        <div class="diagram">
+            <h4>Приближённое измерение</h4>
+            <svg width="500" height="150" viewBox="0 0 500 150">
+                <!-- Ruler -->
+                <rect x="50" y="80" width="400" height="40" fill="#ecf0f1" stroke="#34495e" stroke-width="2"/>
+                
+                <!-- Marks (1 cm = 50px) -->
+                <line x1="50" y1="80" x2="50" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="100" y1="80" x2="100" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="150" y1="80" x2="150" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="200" y1="80" x2="200" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="250" y1="80" x2="250" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                
+                <text x="50" y="130" text-anchor="middle" font-size="12">0</text>
+                <text x="100" y="130" text-anchor="middle" font-size="12">1</text>
+                <text x="150" y="130" text-anchor="middle" font-size="12">2</text>
+                <text x="200" y="130" text-anchor="middle" font-size="12">3</text>
+                <text x="250" y="130" text-anchor="middle" font-size="12">4</text>
+                
+                <!-- Segment: 3.8 cm = 190px, from x=50 to x=240 -->
+                <line x1="50" y1="50" x2="240" y2="50" stroke="#e74c3c" stroke-width="4"/>
+                <circle cx="50" cy="50" r="5" fill="#c0392b"/>
+                <circle cx="240" cy="50" r="5" fill="#c0392b"/>
+                <text x="50" y="40" text-anchor="middle" font-size="14" font-weight="bold">A</text>
+                <text x="240" y="40" text-anchor="middle" font-size="14" font-weight="bold">D</text>
+                
+                <!-- Approximate measurement -->
+                <text x="145" y="25" text-anchor="middle" font-size="13" fill="#e74c3c">AD ≈ 3,8 см</text>
+                <text x="350" y="100" font-size="11" fill="#7f8c8d">≈ означает «приблизительно»</text>
+            </svg>
+            <p><strong>Рис. 5:</strong> Если миллиметр не укладывается целое число раз, получаем приближённое значение: AD ≈ 3,8 см</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📐 Главные правила</h3>
+        
+        <div class="highlight">
+            <strong>🌟 Правило 1: Измерение отрезка</strong><br>
+            Измерить отрезок — значит найти, сколько раз в нём укладывается единичный отрезок (например, 1 см) и его части.<br><br>
+            <em>Пример:</em> Если в отрезке AB сантиметр укладывается ровно 5 раз, то AB = 5 см.
+        </div>
+
+        <div class="highlight">
+            <strong>🌟 Правило 2: Равные отрезки</strong><br>
+            Равные отрезки имеют <strong>равные длины</strong>.<br>
+            Если AB = CD, то их длины равны: длина AB = длина CD.
+        </div>
+
+        <div class="highlight">
+            <strong>🌟 Правило 3: Меньший отрезок</strong><br>
+            Если один отрезок меньше другого, то его длина <strong>меньше</strong> длины другого отрезка.<br>
+            Если AC < AB (AC составляет часть AB), то длина AC < длина AB.
+        </div>
+
+        <div class="highlight">
+            <strong>🌟 Правило 4: Свойство длин частей</strong><br>
+            Если точка делит отрезок на два отрезка, то <strong>длина всего отрезка равна сумме длин этих отрезков</strong>.<br>
+            Если точка C делит отрезок AB, то:<br>
+            <strong>AB = AC + CB</strong>
+        </div>
+
+        <div class="highlight">
+            <strong>🌟 Правило 5: Расстояние между точками</strong><br>
+            <strong>Длина отрезка AB называется также расстоянием между точками A и B</strong>.<br>
+            Расстояние всегда положительное число!
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Важно запомнить:</strong><br>
+            • 1 см = 10 мм<br>
+            • 1 м = 100 см = 1000 мм<br>
+            • 1 км = 1000 м<br>
+            • Знак ≈ означает «приблизительно равно»<br>
+            • На практике используют приближённые значения длин<br>
+            • Для более точного измерения делят единицу на более мелкие части
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>🛠 Блок 2. Закрепление (20-25 мин)</h2>
+    <p>Задания из учебника (стр. 15-18). Решай в тетради, используя линейку. После выполнения открой подсказку и проверь себя!</p>
+
+    <div class="card">
+        <h3><span class="badge badge-must">№27</span> Базовый уровень</h3>
+        <p><strong>Задание:</strong> Измерьте длину и ширину учебника геометрии и выразите их в сантиметрах и в миллиметрах.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Возьми линейку и измерь длину учебника (большую сторону).</div>
+            <div class="step"><strong>Шаг 2:</strong> Запиши результат в сантиметрах (например, 24 см).</div>
+            <div class="step"><strong>Шаг 3:</strong> Переведи в миллиметры: умножь на 10 (24 см = 240 мм).</div>
+            <div class="step"><strong>Шаг 4:</strong> Измерь ширину учебника (меньшую сторону).</div>
+            <div class="step"><strong>Шаг 5:</strong> Запиши в см и переведи в мм.</div>
+            <p><strong>Пример ответа:</strong><br>
+            Длина: 24 см = 240 мм<br>
+            Ширина: 17 см = 170 мм</p>
+            <p><em>(Твои результаты могут отличаться — это нормально!)</em></p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-must">№28</span> Базовый уровень</h3>
+        <p><strong>Задание:</strong> Измерьте толщину учебника геометрии и обложки. Найдите толщину одного листа.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Измерь толщину всего учебника (вместе с обложкой).</div>
+            <div class="step"><strong>Шаг 2:</strong> Измерь толщину обложки отдельно (если возможно).</div>
+            <div class="step"><strong>Шаг 3:</strong> Посчитай количество листов в учебнике.</div>
+            <div class="step"><strong>Шаг 4:</strong> Раздели толщину учебника (без обложки) на количество листов.</div>
+            <p><strong>Пример:</strong><br>
+            Толщина учебника: 1,5 см = 15 мм<br>
+            Количество листов: 100<br>
+            Толщина одного листа: 15 мм : 100 = 0,15 мм</p>
+            <p><strong>Важно:</strong> Один лист — это два страницы!</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-should">№29</span> Средний уровень</h3>
+        <p><strong>Задание:</strong> Найдите длины всех отрезков, изображённых на рисунке 36, если за единицу измерения принят отрезок: а) KL; б) AB.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Дано:</strong> На рисунке точки A, B, C, D, E, F, K, L на одной прямой.</div>
+            <p><strong>а) Если KL = 1 (единица):</strong></p>
+            <div class="step">Посмотри, сколько раз KL укладывается в каждом отрезке.</div>
+            <div class="step">Например: AB = 2·KL, значит AB = 2 единицы.</div>
+            <p><strong>б) Если AB = 1 (единица):</strong></p>
+            <div class="step">Теперь AB — это единица.</div>
+            <div class="step">Посчитай, сколько раз AB укладывается в других отрезках.</div>
+            <p><strong>Важно:</strong> При изменении единицы измерения числовые значения длин меняются, но отношения между отрезками остаются!</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-should">№30</span> Средний уровень</h3>
+        <p><strong>Задание:</strong> Начертите отрезок AB и луч h. Пользуясь масштабной линейкой, отложите на луче h от его начала отрезки, длины которых равны 2AB, ½AB и ¼AB.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Начерти отрезок AB любой длины (например, 4 см).</div>
+            <div class="step"><strong>Шаг 2:</strong> Начерти луч h с началом в точке O.</div>
+            <div class="step"><strong>Шаг 3:</strong> Измерь длину AB линейкой (допустим, AB = 4 см).</div>
+            <div class="step"><strong>Шаг 4:</strong> Вычисли: 2AB = 2·4 = 8 см.</div>
+            <div class="step"><strong>Шаг 5:</strong> Отложи на луче h от точки O отрезок длиной 8 см.</div>
+            <div class="step"><strong>Шаг 6:</strong> Вычисли: ½AB = 4 : 2 = 2 см. Отложи на луче.</div>
+            <div class="step"><strong>Шаг 7:</strong> Вычисли: ¼AB = 4 : 4 = 1 см. Отложи на луче.</div>
+            <p><strong>Проверка:</strong> Все три отрезка должны начинаться в точке O и идти в одну сторону по лучу.</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-aspire">№33</span> Продвинутый уровень</h3>
+        <p><strong>Задание:</strong> Точка B делит отрезок AC на два отрезка. Найдите длину отрезка AC, если AB = 7,8 см, BC = 25 мм.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Запиши данные: AB = 7,8 см, BC = 25 мм.</div>
+            <div class="step"><strong>Шаг 2:</strong> Переведи BC в сантиметры: 25 мм = 2,5 см.</div>
+            <div class="step"><strong>Шаг 3:</strong> Вспомни правило: AC = AB + BC.</div>
+            <div class="step"><strong>Шаг 4:</strong> Подставь значения: AC = 7,8 + 2,5.</div>
+            <div class="step"><strong>Шаг 5:</strong> Вычисли: AC = 10,3 см.</div>
+            <p><strong>Ответ:</strong> <strong>AC = 10,3 см</strong></p>
+            <p><strong>Важно:</strong> Всегда приводи все величины к одной единице измерения перед вычислениями!</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-aspire">№34</span> Продвинутый уровень</h3>
+        <p><strong>Задание:</strong> Точка B делит отрезок AC на два отрезка. Найдите длину отрезка BC, если:<br>
+        а) AB = 3,7 см, AC = 7,2 см;<br>
+        б) AB = 4 мм, AC = 4 см.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <p><strong>а) AB = 3,7 см, AC = 7,2 см:</strong></p>
+            <div class="step">AC = AB + BC, значит BC = AC - AB.</div>
+            <div class="step">BC = 7,2 - 3,7 = 3,5 см.</div>
+            <p><strong>Ответ:</strong> <strong>BC = 3,5 см</strong></p>
+            <p><strong>б) AB = 4 мм, AC = 4 см:</strong></p>
+            <div class="step">Переведём AC в миллиметры: AC = 4 см = 40 мм.</div>
+            <div class="step">BC = AC - AB = 40 - 4 = 36 мм.</div>
+            <div class="step">Или в сантиметрах: BC = 36 мм = 3,6 см.</div>
+            <p><strong>Ответ:</strong> <strong>BC = 36 мм (или 3,6 см)</strong></p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-aspire">№35</span> Продвинутый уровень</h3>
+        <p><strong>Задание:</strong> Точки A, B и C лежат на одной прямой. Известно, что AB = 12 см, BC = 13,5 см. Какой может быть длина отрезка AC?</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Рассмотрим возможные случаи расположения точек.</div>
+            <p><strong>Случай 1: Точка B между A и C</strong></p>
+            <div class="step">A — B — C</div>
+            <div class="step">AC = AB + BC = 12 + 13,5 = 25,5 см.</div>
+            <p><strong>Случай 2: Точка A между B и C</strong></p>
+            <div class="step">B — A — C</div>
+            <div class="step">BC = BA + AC, значит AC = BC - AB = 13,5 - 12 = 1,5 см.</div>
+            <p><strong>Случай 3: Точка C между A и B</strong></p>
+            <div class="step">A — C — B</div>
+            <div class="step">AB = AC + CB, но CB = BC = 13,5 см</div>
+            <div class="step">AC = AB - BC = 12 - 13,5 = -1,5 (невозможно!)</div>
+            <p><strong>Ответ:</strong> <strong>AC = 25,5 см или AC = 1,5 см</strong></p>
+            <p><em>Два возможных ответа в зависимости от порядка точек!</em></p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-aspire">№37</span> Продвинутый уровень</h3>
+        <p><strong>Задание:</strong> Точка C — середина отрезка AB, равного 64 см. На луче CA отмечена точка D так, что CD = 15 см. Найдите длины отрезков BD и DA.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> AB = 64 см, C — середина, значит AC = CB = 64 : 2 = 32 см.</div>
+            <div class="step"><strong>Шаг 2:</strong> Точка D на луче CA (то есть на продолжении за точку A).</div>
+            <div class="step"><strong>Шаг 3:</strong> CD = 15 см.</div>
+            <p><strong>Найдём DA:</strong></p>
+            <div class="step">DA = AC - CD = 32 - 15 = 17 см.</div>
+            <p><strong>Найдём BD:</strong></p>
+            <div class="step">BD = BC + CD = 32 + 15 = 47 см.</div>
+            <p><strong>Ответ:</strong> <strong>DA = 17 см, BD = 47 см</strong></p>
+            <p><em>Сделай чертёж для наглядности!</em></p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-aspire">№42</span> Продвинутый уровень</h3>
+        <p><strong>Задание:</strong> Отрезок, длина которого равна a, разделён произвольной точкой на два отрезка. Найдите расстояние между серединами этих отрезков.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Пусть отрезок AB = a.</div>
+            <div class="step"><strong>Шаг 2:</strong> Точка C делит AB на AC и CB.</div>
+            <div class="step"><strong>Шаг 3:</strong> M — середина AC, значит AM = MC = AC/2.</div>
+            <div class="step"><strong>Шаг 4:</strong> N — середина CB, значит CN = NB = CB/2.</div>
+            <div class="step"><strong>Шаг 5:</strong> Найдём MN:</div>
+            <div class="step">MN = MC + CN = AC/2 + CB/2 = (AC + CB)/2</div>
+            <div class="step">Но AC + CB = AB = a</div>
+            <div class="step">Значит MN = a/2</div>
+            <p><strong>Ответ:</strong> <strong>MN = a/2</strong> (половина длины всего отрезка)</p>
+            <p><strong>Вывод:</strong> Расстояние между серединами всегда равно половине длины отрезка, независимо от того, где находится точка деления!</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3>💡 Методическая подсказка</h3>
+        <ul>
+            <li><strong>Если сложно с единицами:</strong> Запомни «лесенку»: мм → см (×10), см → м (×100), м → км (×1000). При переводе в меньшие единицы — умножай, в большие — дели.</li>
+            <li><strong>Для точности:</strong> Всегда переводи все величины к одной единице перед вычислениями!</li>
+            <li><strong>Проверка:</strong> После решения задачи о расположении точек на прямой сделай чертёж — это поможет увидеть ошибку.</li>
+            <li><strong>Важно:</strong> Расстояние между серединами двух частей отрезка всегда равно половине длины всего отрезка — это полезное свойство!</li>
+        </ul>
+    </div>
+
+</body>
+</html>
