@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Луч и угол — Геометрия 7 класс</title>
+    <!-- Урок 2 курса. Все координаты SVG вычислены по формулам: x = cx + r·cos α, y = cy − r·sin α. Расчёты — в комментариях. -->
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f9f9fb; }
         h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
@@ -29,18 +30,19 @@
 </head>
 <body>
 
-    <h1> Луч и угол</h1>
-    <p><strong>Геометрия 7 класс • Глава 1, §2 • Страницы 9-11</strong></p>
+    <h1>🔦 Луч и угол</h1>
+    <p><strong>Геометрия 7 класс • Глава 1, §2 • Страницы 9–11</strong></p>
 
     <div class="card">
-        <p>Привет! 👋 Продолжаем изучать геометрические фигуры. Сегодня познакомимся с лучом и углом — это следующие важные фигуры после точки, прямой и отрезка. Ты узнаешь, как лучи «разрезают» прямую и как углы делят плоскость! 🌟</p>
+        <p>Привет! 👋 Продолжаем изучать геометрические фигуры. Сегодня познакомимся с лучом и углом — следующими важными фигурами после точки, прямой и отрезка. Ты узнаешь, как точка «разрезает» прямую на два луча и как углы делят плоскость! 🌟</p>
     </div>
 
-    <h2> Блок 1. Изучение (15-20 мин)</h2>
+    <h2>🌾 Блок 1. Изучение (15–20 мин)</h2>
 
     <div class="card">
-        <h3> Разминка: Луч фонарика</h3>
-        <p>Представь, что в тёмной комнате ты включаешь фонарик. Свет от фонарика идёт от одной точки (лампочки) и распространяется в одном направлении. В геометрии такая фигура называется <strong>лучом</strong>! У луча есть начало, но нет конца — он продолжается бесконечно в одном направлении. 🔦</p>
+        <h3>🪝 Разминка: Луч фонарика</h3>
+        <p>Представь, что в тёмной комнате ты включаешь фонарик. Свет выходит из одной точки (лампочки) и бежит в одном направлении — без конца! В геометрии такая фигура называется <strong>лучом</strong>: у него есть начало, но нет конца. 🔦</p>
+        <p>А если направить два луча из одной точки — получится <strong>угол</strong>, как раскрытая книга или ножницы. Сегодня разберём обе фигуры по полочкам!</p>
     </div>
 
     <div class="card">
@@ -53,37 +55,42 @@
             </tr>
             <tr>
                 <td><strong>Луч</strong></td>
-                <td>Часть прямой, которая имеет начало, но не имеет конца. Продолжается бесконечно в одном направлении.</td>
-                <td>Малая буква: <em>h, k</em> <br>Или две большие: <em>OA</em> (O — начало, A — точка на луче)</td>
+                <td>Часть прямой, имеющая начало, но не имеющая конца: продолжается бесконечно в одну сторону.</td>
+                <td>Малая буква: <em>h, k</em>; или две большие: <em>OA</em> (первая — начало)</td>
+            </tr>
+            <tr>
+                <td><strong>Начало луча</strong></td>
+                <td>Точка, от которой начинается луч (точка O делит прямую на два луча с началом O).</td>
+                <td>Точка <em>O</em></td>
             </tr>
             <tr>
                 <td><strong>Угол</strong></td>
-                <td>Фигура из точки и двух лучей, выходящих из этой точки.</td>
+                <td>Фигура, состоящая из точки и двух лучей, исходящих из этой точки.</td>
                 <td>∠hk, ∠AOB, ∠O</td>
             </tr>
             <tr>
                 <td><strong>Стороны угла</strong></td>
                 <td>Лучи, из которых состоит угол.</td>
-                <td>Лучи h и k, или OA и OB</td>
+                <td>Лучи <em>h</em> и <em>k</em>; или <em>OA</em> и <em>OB</em></td>
             </tr>
             <tr>
                 <td><strong>Вершина угла</strong></td>
-                <td>Общее начало сторон угла (точка, из которой выходят лучи).</td>
-                <td>Точка O</td>
+                <td>Общее начало сторон угла.</td>
+                <td>Точка <em>O</em></td>
             </tr>
             <tr>
                 <td><strong>Развёрнутый угол</strong></td>
-                <td>Угол, у которого обе стороны лежат на одной прямой. Одна сторона — продолжение другой.</td>
-                <td>Угол в 180° (прямая линия)</td>
+                <td>Угол, у которого обе стороны лежат на одной прямой: каждая сторона — продолжение другой.</td>
+                <td>∠AOB, если A, O, B на одной прямой</td>
             </tr>
             <tr>
                 <td><strong>Внутренняя область угла</strong></td>
-                <td>Часть плоскости внутри угла (между сторонами).</td>
+                <td>Одна из двух частей плоскости, на которые неразвёрнутый угол её разделяет («внутри угла»).</td>
                 <td>—</td>
             </tr>
             <tr>
                 <td><strong>Внешняя область угла</strong></td>
-                <td>Часть плоскости вне угла.</td>
+                <td>Другая часть плоскости («вне угла»).</td>
                 <td>—</td>
             </tr>
         </table>
@@ -91,180 +98,198 @@
 
     <div class="card">
         <h3>📐 Графические иллюстрации</h3>
-        
+
         <div class="diagram">
             <h4>Луч</h4>
-            <svg width="400" height="120" viewBox="0 0 400 120">
-                <!-- Ray -->
-                <line x1="80" y1="60" x2="380" y2="60" stroke="#e74c3c" stroke-width="4"/>
-                <!-- Start point -->
-                <circle cx="80" cy="60" r="6" fill="#c0392b"/>
-                <text x="80" y="80" text-anchor="middle" font-size="16" font-weight="bold">O</text>
-                <!-- Point on ray -->
+            <svg width="420" height="110" viewBox="0 0 420 110">
+                <!-- Луч: начало O(60,60), направление 0° (вправо), длина 320 px до (380,60); точка A на луче (200,60). -->
+                <line x1="60" y1="60" x2="372" y2="60" stroke="#e74c3c" stroke-width="4"/>
+                <polygon points="372,54 388,60 372,66" fill="#e74c3c"/>
+                <circle cx="60" cy="60" r="6" fill="#c0392b"/>
                 <circle cx="200" cy="60" r="4" fill="#e74c3c"/>
-                <text x="200" y="50" text-anchor="middle" font-size="14" font-weight="bold">A</text>
-                <!-- Arrow showing infinity -->
-                <polygon points="370,55 390,60 370,65" fill="#e74c3c"/>
-                <text x="230" y="95" text-anchor="middle" font-size="14" fill="#e74c3c">Луч OA (начало в точке O)</text>
+                <text x="60" y="85" text-anchor="middle" font-size="15" font-weight="bold">O</text>
+                <text x="200" y="45" text-anchor="middle" font-size="14" font-weight="bold">A</text>
+                <text x="220" y="100" text-anchor="middle" font-size="13" fill="#e74c3c">Луч OA: начало в точке O, продолжается бесконечно</text>
             </svg>
-            <p><strong>Рис. 1:</strong> Луч OA имеет начало в точке O и продолжается бесконечно через точку A</p>
+            <p><strong>Рис. 1:</strong> Луч OA имеет начало в точке O и продолжается бесконечно в сторону точки A (стрелка показывает бесконечность)</p>
         </div>
 
         <div class="diagram">
             <h4>Точка делит прямую на два луча</h4>
-            <svg width="500" height="150" viewBox="0 0 500 150">
-                <!-- Line -->
-                <line x1="20" y1="75" x2="480" y2="75" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5"/>
-                <!-- Two rays from point O -->
-                <line x1="250" y1="75" x2="480" y2="75" stroke="#3498db" stroke-width="4"/>
-                <line x1="250" y1="75" x2="20" y2="75" stroke="#e74c3c" stroke-width="4"/>
-                <!-- Point O -->
-                <circle cx="250" cy="75" r="6" fill="#2c3e50"/>
-                <text x="250" y="95" text-anchor="middle" font-size="16" font-weight="bold">O</text>
-                <!-- Points on rays -->
-                <circle cx="100" cy="75" r="4" fill="#e74c3c"/>
-                <text x="100" y="70" text-anchor="middle" font-size="12">A</text>
-                <circle cx="400" cy="75" r="4" fill="#3498db"/>
-                <text x="400" y="70" text-anchor="middle" font-size="12">B</text>
-                <text x="250" y="130" text-anchor="middle" font-size="13">Точка O делит прямую на два луча: OA и OB</text>
+            <svg width="500" height="120" viewBox="0 0 500 120">
+                <!-- Прямая y=70, x от 20 до 480. Точка O(250,70). Луч OA: направление 180°, A(100,70). Луч OB: направление 0°, B(400,70). -->
+                <line x1="250" y1="70" x2="20" y2="70" stroke="#e74c3c" stroke-width="4"/>
+                <line x1="250" y1="70" x2="480" y2="70" stroke="#3498db" stroke-width="4"/>
+                <circle cx="250" cy="70" r="6" fill="#2c3e50"/>
+                <circle cx="100" cy="70" r="4" fill="#c0392b"/>
+                <circle cx="400" cy="70" r="4" fill="#2980b9"/>
+                <text x="250" y="95" text-anchor="middle" font-size="15" font-weight="bold">O</text>
+                <text x="100" y="60" text-anchor="middle" font-size="14" font-weight="bold">A</text>
+                <text x="400" y="60" text-anchor="middle" font-size="14" font-weight="bold">B</text>
+                <text x="250" y="115" text-anchor="middle" font-size="12">Точка O делит прямую на два луча: OA (красный) и OB (синий)</text>
             </svg>
-            <p><strong>Рис. 2:</strong> Точка O на прямой делит её на два луча с общим началом O</p>
+            <p><strong>Рис. 2:</strong> Точка O на прямой — начало двух лучей OA и OB; такие лучи называются дополнительными друг к другу</p>
         </div>
 
         <div class="diagram">
             <h4>Угол и его элементы</h4>
-            <svg width="400" height="200" viewBox="0 0 400 200">
-                <!-- Angle sides -->
-                <line x1="200" y1="150" x2="80" y2="50" stroke="#9b59b6" stroke-width="4"/>
-                <line x1="200" y1="150" x2="320" y2="60" stroke="#3498db" stroke-width="4"/>
-                <!-- Vertex -->
-                <circle cx="200" cy="150" r="6" fill="#2c3e50"/>
-                <text x="200" y="175" text-anchor="middle" font-size="16" font-weight="bold">O</text>
-                <!-- Points on sides -->
-                <circle cx="80" cy="50" r="4" fill="#9b59b6"/>
-                <text x="70" y="45" font-size="14" font-weight="bold">A</text>
-                <circle cx="320" cy="60" r="4" fill="#3498db"/>
-                <text x="330" y="55" font-size="14" font-weight="bold">B</text>
-                <!-- Angle arc -->
-                <path d="M 200,150 L 200,100 A 50,50 0 0,1 240,120" fill="none" stroke="#f39c12" stroke-width="2"/>
-                <text x="220" y="110" font-size="12" fill="#f39c12" font-weight="bold">AOB</text>
-                <text x="200" y="195" text-anchor="middle" font-size="13">Угол AOB: вершина O, стороны OA и OB</text>
+            <svg width="420" height="200" viewBox="0 0 420 200">
+                <!-- Вершина O(200,170). Сторона OB: направление 0°, B(340,170). Сторона OA: направление 120° (cos=−0,5; sin=0,866), r=140: A(130.0,48.8).
+                     Дуга r=35: начало на 0° (235,170), конец на 120° (182.5,139.7), sweep=0. Подпись на биссектрисе 60°, r=52: (226.0,125.0). -->
+                <line x1="200" y1="170" x2="340" y2="170" stroke="#3498db" stroke-width="3"/>
+                <line x1="200" y1="170" x2="130" y2="48.8" stroke="#9b59b6" stroke-width="3"/>
+                <circle cx="200" cy="170" r="6" fill="#2c3e50"/>
+                <circle cx="340" cy="170" r="4" fill="#2980b9"/>
+                <circle cx="130" cy="48.8" r="4" fill="#8e44ad"/>
+                <path d="M 235,170 A 35,35 0 0 0 182.5,139.7" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <text x="200" y="192" text-anchor="middle" font-size="15" font-weight="bold">O</text>
+                <text x="350" y="175" font-size="14" font-weight="bold">B</text>
+                <text x="120" y="42" font-size="14" font-weight="bold">A</text>
+                <text x="226" y="125" font-size="13" fill="#f39c12" font-weight="bold">∠AOB</text>
             </svg>
-            <p><strong>Рис. 3:</strong> Угол состоит из вершины (точка O) и двух сторон (лучи OA и OB)</p>
+            <p><strong>Рис. 3:</strong> Угол AOB: вершина O, стороны — лучи OA и OB. Дуга между сторонами показывает сам угол</p>
         </div>
 
         <div class="diagram">
             <h4>Развёрнутый угол</h4>
-            <svg width="400" height="120" viewBox="0 0 400 120">
-                <!-- Straight line (straight angle) -->
-                <line x1="50" y1="60" x2="350" y2="60" stroke="#e74c3c" stroke-width="4"/>
-                <!-- Points -->
-                <circle cx="50" cy="60" r="4" fill="#c0392b"/>
-                <text x="50" y="80" text-anchor="middle" font-size="14" font-weight="bold">A</text>
-                <circle cx="200" cy="60" r="6" fill="#2c3e50"/>
-                <text x="200" y="80" text-anchor="middle" font-size="14" font-weight="bold">O</text>
-                <circle cx="350" cy="60" r="4" fill="#3498db"/>
-                <text x="350" y="80" text-anchor="middle" font-size="14" font-weight="bold">B</text>
-                <!-- Angle arc (semicircle) -->
-                <path d="M 50,60 A 150,150 0 0,1 350,60" fill="none" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,3"/>
-                <text x="200" y="40" text-anchor="middle" font-size="12" fill="#f39c12">Развёрнутый угол AOB = 180°</text>
+            <svg width="420" height="140" viewBox="0 0 420 140">
+                <!-- Прямая y=80, x от 60 до 360. Вершина O(210,80). A(60,80), B(360,80).
+                     Дуга-полуокружность r=40: M 250,80 A 40,40 0 0 0 170,80 (проходит сверху). Подпись на 90°, r=58: (210,22). -->
+                <line x1="60" y1="80" x2="360" y2="80" stroke="#e74c3c" stroke-width="4"/>
+                <circle cx="210" cy="80" r="6" fill="#2c3e50"/>
+                <circle cx="60" cy="80" r="4" fill="#c0392b"/>
+                <circle cx="360" cy="80" r="4" fill="#c0392b"/>
+                <path d="M 250,80 A 40,40 0 0 0 170,80" fill="none" stroke="#f39c12" stroke-width="2" stroke-dasharray="4,3"/>
+                <text x="60" y="102" text-anchor="middle" font-size="14" font-weight="bold">A</text>
+                <text x="210" y="102" text-anchor="middle" font-size="14" font-weight="bold">O</text>
+                <text x="360" y="102" text-anchor="middle" font-size="14" font-weight="bold">B</text>
+                <text x="210" y="20" text-anchor="middle" font-size="12" fill="#f39c12" font-weight="bold">развёрнутый угол AOB</text>
+                <text x="210" y="130" text-anchor="middle" font-size="12">Стороны OA и OB лежат на одной прямой</text>
             </svg>
-            <p><strong>Рис. 4:</strong> Развёрнутый угол — его стороны лежат на одной прямой (луч OA — продолжение луча OB)</p>
+            <p><strong>Рис. 4:</strong> Развёрнутый угол AOB: его стороны — дополнительные лучи OA и OB, то есть одна прямая</p>
         </div>
 
         <div class="diagram">
             <h4>Внутренняя и внешняя области угла</h4>
-            <svg width="400" height="220" viewBox="0 0 400 220">
-                <!-- Angle sides -->
-                <line x1="200" y1="180" x2="100" y2="80" stroke="#2c3e50" stroke-width="3"/>
-                <line x1="200" y1="180" x2="300" y2="90" stroke="#2c3e50" stroke-width="3"/>
-                <!-- Vertex -->
-                <circle cx="200" cy="180" r="5" fill="#2c3e50"/>
-                <text x="200" y="200" text-anchor="middle" font-size="12">O</text>
-                <!-- Points inside -->
-                <circle cx="180" cy="130" r="4" fill="#27ae60"/>
-                <text x="170" y="125" font-size="11">A</text>
-                <circle cx="220" cy="140" r="4" fill="#27ae60"/>
-                <text x="230" y="135" font-size="11">B</text>
-                <circle cx="200" cy="110" r="4" fill="#27ae60"/>
-                <text x="210" y="105" font-size="11">C</text>
-                <!-- Points on sides -->
-                <circle cx="150" cy="130" r="4" fill="#f39c12"/>
-                <text x="140" y="125" font-size="11">D</text>
-                <circle cx="250" cy="135" r="4" fill="#f39c12"/>
-                <text x="260" y="130" font-size="11">E</text>
-                <!-- Points outside -->
-                <circle cx="80" cy="180" r="4" fill="#e74c3c"/>
-                <text x="70" y="175" font-size="11">P</text>
-                <circle cx="320" cy="170" r="4" fill="#e74c3c"/>
-                <text x="330" y="165" font-size="11">Q</text>
-                <!-- Labels -->
-                <text x="200" y="215" text-anchor="middle" font-size="11" fill="#27ae60">Внутренняя область: A, B, C</text>
-                <text x="200" y="30" text-anchor="middle" font-size="11" fill="#e74c3c">Внешняя область: P, Q</text>
+            <svg width="420" height="220" viewBox="0 0 420 220">
+                <!-- Вершина O(200,190). Сторона 1: 130° (cos=−0,643; sin=0,766), r=150 → (103.6,75.1). Сторона 2: 30° (cos=0,866; sin=0,5), r=150 → (329.9,115.0).
+                     Дуга r=30: от 30° (226.0,175.0) до 130° (180.7,167.0), sweep=0.
+                     Внутри: A(212.2,121.1) [80°, r=70], B(250.0,103.4) [60°, r=100], C(180.9,81.7) [100°, r=110].
+                     На сторонах: D(269.3,150.0) [30°, r=80], E(142.1,121.1) [130°, r=90].
+                     Вне: P(87.2,149.0) [160°, r=120], Q(328.0,167.4) [10°, r=130]. -->
+                <line x1="200" y1="190" x2="103.6" y2="75.1" stroke="#2c3e50" stroke-width="3"/>
+                <line x1="200" y1="190" x2="329.9" y2="115" stroke="#2c3e50" stroke-width="3"/>
+                <path d="M 226,175 A 30,30 0 0 0 180.7,167" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <circle cx="200" cy="190" r="5" fill="#2c3e50"/>
+                <circle cx="212.2" cy="121.1" r="4" fill="#27ae60"/>
+                <circle cx="250" cy="103.4" r="4" fill="#27ae60"/>
+                <circle cx="180.9" cy="81.7" r="4" fill="#27ae60"/>
+                <circle cx="269.3" cy="150" r="4" fill="#f39c12"/>
+                <circle cx="142.1" cy="121.1" r="4" fill="#f39c12"/>
+                <circle cx="87.2" cy="149" r="4" fill="#e74c3c"/>
+                <circle cx="328" cy="167.4" r="4" fill="#e74c3c"/>
+                <text x="200" y="210" text-anchor="middle" font-size="13" font-weight="bold">O</text>
+                <text x="222" y="118" font-size="12" fill="#27ae60" font-weight="bold">A</text>
+                <text x="260" y="100" font-size="12" fill="#27ae60" font-weight="bold">B</text>
+                <text x="170" y="76" font-size="12" fill="#27ae60" font-weight="bold">C</text>
+                <text x="279" y="147" font-size="12" fill="#f39c12" font-weight="bold">D</text>
+                <text x="130" y="116" font-size="12" fill="#f39c12" font-weight="bold">E</text>
+                <text x="76" y="144" font-size="12" fill="#e74c3c" font-weight="bold">P</text>
+                <text x="338" y="164" font-size="12" fill="#e74c3c" font-weight="bold">Q</text>
             </svg>
-            <p><strong>Рис. 5:</strong> Точки A, B, C — внутри угла; точки D, E — на сторонах; точки P, Q — вне угла</p>
+            <p><strong>Рис. 5:</strong> Точки A, B, C лежат внутри угла (во внутренней области); D, E — на сторонах; P, Q — вне угла (во внешней области)</p>
+        </div>
+
+        <div class="diagram">
+            <h4>Луч из вершины внутри угла делит угол на два угла</h4>
+            <svg width="420" height="210" viewBox="0 0 420 210">
+                <!-- Вершина O(200,180). Сторона OB: 0° → B(340,180). Сторона OA: 110° (cos=−0,342; sin=0,940), r=140 → A(152.1,48.4).
+                     Луч OC: 55° (cos=0,574; sin=0,819), r=140 → C(280.3,65.3).
+                     Дуга ∠AOC r=32: от 55° (218.4,153.8) до 110° (189.1,149.9), sweep=0.
+                     Дуга ∠COB r=40: от 0° (240,180) до 55° (222.9,147.2), sweep=0.
+                     Подписи: ∠AOC на 82,5°, r=50 → (206.5,130.4); ∠COB на 27,5°, r=58 → (251.4,153.2). -->
+                <line x1="200" y1="180" x2="340" y2="180" stroke="#3498db" stroke-width="3"/>
+                <line x1="200" y1="180" x2="152.1" y2="48.4" stroke="#9b59b6" stroke-width="3"/>
+                <line x1="200" y1="180" x2="280.3" y2="65.3" stroke="#e74c3c" stroke-width="3" stroke-dasharray="6,4"/>
+                <circle cx="200" cy="180" r="6" fill="#2c3e50"/>
+                <path d="M 218.4,153.8 A 32,32 0 0 0 189.1,149.9" fill="none" stroke="#27ae60" stroke-width="2"/>
+                <path d="M 240,180 A 40,40 0 0 0 222.9,147.2" fill="none" stroke="#27ae60" stroke-width="2"/>
+                <text x="200" y="200" text-anchor="middle" font-size="14" font-weight="bold">O</text>
+                <text x="350" y="185" font-size="13" font-weight="bold">B</text>
+                <text x="142" y="42" font-size="13" font-weight="bold">A</text>
+                <text x="288" y="60" font-size="13" font-weight="bold" fill="#e74c3c">C</text>
+                <text x="206.5" y="126" font-size="12" fill="#27ae60" font-weight="bold">∠AOC</text>
+                <text x="251.4" y="149" font-size="12" fill="#27ae60" font-weight="bold">∠COB</text>
+            </svg>
+            <p><strong>Рис. 6:</strong> Луч OC исходит из вершины и проходит внутри угла AOB, поэтому делит его на два угла: ∠AOC и ∠COB</p>
         </div>
     </div>
 
     <div class="card">
         <h3>📐 Главные правила</h3>
-        
+
         <div class="highlight">
-            <strong>🌟 Правило 1: Луч</strong><br>
-            Точка на прямой делит эту прямую на <strong>два луча</strong> с общим началом в этой точке. Луч имеет начало, но не имеет конца!
+            <strong>🌟 Правило 1: Луч получается из прямой</strong><br>
+            Точка O на прямой делит её на <strong>два луча</strong> с общим началом O. У луча есть начало, но нет конца!<br>
+            <em>Что это значит?</em> Луч «смотрит» только в одну сторону от точки O — как свет фонарика от лампочки.
         </div>
 
         <div class="highlight">
-            <strong> Правило 2: Обозначение луча</strong><br>
-            Луч обозначают <strong>двумя буквами</strong>: первая буква — начало луча, вторая — любая точка на луче.<br>
-            Пример: луч OA (O — начало, A — точка на луче).
+            <strong>🌟 Правило 2: Обозначение луча</strong><br>
+            Луч обозначают двумя буквами: <strong>первая — начало луча</strong>, вторая — любая точка на луче.<br>
+            Пример: луч OA — начало в точке O. Порядок букв важен: запись «луч AO» означала бы другой луч (с началом A)!
         </div>
 
         <div class="highlight">
-            <strong>🌟 Правило 3: Угол</strong><br>
-            Угол обозначают <strong>тремя способами</strong>:<br>
-            • ∠hk (по сторонам — малыми буквами)<br>
-            • ∠AOB (по трём точкам: A на одной стороне, O — вершина, B на другой стороне)<br>
-            • ∠O (только вершина, если это не вызывает путаницы)
+            <strong>🌟 Правило 3: Угол и три способа его обозначить</strong><br>
+            Угол — это точка (вершина) и два луча (стороны) из неё. Обозначения:<br>
+            • <strong>∠hk</strong> — по сторонам (малыми буквами);<br>
+            • <strong>∠AOB</strong> — по трём точкам: вершина O в середине, A и B — на сторонах;<br>
+            • <strong>∠O</strong> — только по вершине, если других углов с той же вершиной нет и путаницы не возникнет.
         </div>
 
         <div class="highlight">
             <strong>🌟 Правило 4: Развёрнутый угол</strong><br>
-            Развёрнутый угол — это угол, у которого <strong>обе стороны лежат на одной прямой</strong>. Можно сказать, что одна сторона является продолжением другой.
+            Угол развёрнутый, если <strong>обе его стороны лежат на одной прямой</strong> (каждая сторона — продолжение другой).<br>
+            Для развёрнутого угла любую из двух частей плоскости можно считать внутренней областью.
+        </div>
+
+        <div class="highlight">
+            <strong>🌟 Правило 5: Луч внутри угла делит его</strong><br>
+            Если луч исходит из вершины <strong>неразвёрнутого</strong> угла и проходит внутри него, то он делит угол на <strong>два угла</strong> (рис. 6).<br>
+            Фигуру, состоящую из угла и его внутренней области, тоже называют углом.
         </div>
 
         <div class="warning">
             <strong>⚠️ Важно запомнить:</strong><br>
-            • Любой угол (кроме развёрнутого) делит плоскость на <strong>две области</strong>: внутреннюю и внешнюю<br>
-            • Точки могут лежать <strong>внутри угла</strong>, <strong>вне угла</strong> или <strong>на сторонах угла</strong><br>
-            • Луч, исходящий из вершины неразвёрнутого угла и проходящий внутри него, делит угол на <strong>два угла</strong>
+            • У луча есть начало, но нет конца; у отрезка есть оба конца; у прямой нет ни одного<br>
+            • Неразвёрнутый угол делит плоскость ровно на <strong>две области</strong>: внутреннюю и внешнюю<br>
+            • Точка может лежать <strong>внутри угла</strong>, <strong>на сторонах</strong> или <strong>вне угла</strong><br>
+            • Луч делит угол на два угла <strong>только</strong> если проходит внутри него
         </div>
     </div>
 
     <hr>
 
-    <h2>🛠 Блок 2. Закрепление (20-25 мин)</h2>
+    <h2>🛠 Блок 2. Закрепление (20–25 мин)</h2>
     <p>Задания из учебника (стр. 11). Решай в тетради, используя линейку. После выполнения открой подсказку и проверь себя!</p>
 
     <div class="card">
         <h3><span class="badge badge-must">№11</span> Базовый уровень</h3>
-        <p><strong>Задание:</strong> Проведите прямую, отметьте на ней точки A и B и на отрезке AB отметьте точку C.<br>
-        а) Среди лучей AB, BC, CA, AC и BA назовите совпадающие лучи;<br>
-        б) Назовите луч, который является продолжением луча CA.</p>
+        <p><strong>Задание:</strong> Проведите прямую, отметьте на ней точки <em>A</em> и <em>B</em> и на отрезке <em>AB</em> отметьте точку <em>C</em>.<br>
+        а) Среди лучей <em>AB</em>, <em>BC</em>, <em>CA</em>, <em>AC</em> и <em>BA</em> назовите совпадающие лучи;<br>
+        б) Назовите луч, который является продолжением луча <em>CA</em>.</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <div class="step"><strong>Шаг 1:</strong> Нарисуй прямую и отметь на ней точки A, C, B (точка C между A и B).</div>
+            <div class="step"><strong>Шаг 1:</strong> Нарисуй прямую и отметь точки в порядке A — C — B (точка C между A и B, значит C на отрезке AB).</div>
             <p><strong>а) Совпадающие лучи:</strong></p>
-            <div class="step">Луч AB начинается в A и идёт через B вправо.</div>
-            <div class="step">Луч AC начинается в A и идёт через C вправо (в ту же сторону, что AB).</div>
-            <p><strong>Ответ:</strong> <strong>AB и AC</strong> — совпадают (одно начало A, одно направление).</p>
-            <div class="step">Луч BC начинается в B и идёт через C влево.</div>
-            <div class="step">Луч BA начинается в B и идёт через A влево (в ту же сторону, что BC).</div>
-            <p><strong>Ответ:</strong> <strong>BC и BA</strong> — совпадают.</p>
+            <div class="step">Луч AB: начало A, направление в сторону B (вправо). Луч AC: начало A, направление в сторону C — тоже вправо. Начало одно, направление одно → совпадают.</div>
+            <div class="step">Луч BC: начало B, направление в сторону C (влево). Луч BA: начало B, направление в сторону A — тоже влево. Совпадают.</div>
+            <div class="step">Луч CA (начало C, влево) ни с кем из списка не совпадает: у остальных либо другое начало, либо другое направление.</div>
+            <p><strong>Ответ:</strong> <strong>AB и AC; BC и BA</strong>.</p>
             <p><strong>б) Продолжение луча CA:</strong></p>
-            <div class="step">Луч CA начинается в C и идёт через A влево.</div>
-            <div class="step">Его продолжение — луч, который начинается в C и идёт в противоположную сторону (вправо).</div>
-            <p><strong>Ответ:</strong> <strong>Луч CB</strong> (или луч CD, если есть точка D справа от C).</p>
+            <div class="step">Луч CA начинается в C и идёт влево. Продолжение — луч с тем же началом C, направленный в противоположную сторону (вправо): это луч CB.</div>
+            <p><strong>Ответ:</strong> <strong>луч CB</strong> (лучи CA и CB — дополнительные).</p>
         </details>
     </div>
 
@@ -272,11 +297,11 @@
         <h3><span class="badge badge-must">№12</span> Базовый уровень</h3>
         <p><strong>Задание:</strong> Начертите три неразвёрнутых угла и обозначьте их так: ∠AOB, ∠hk, ∠M.</p>
         <details>
-            <summary> Проверить решение</summary>
-            <div class="step"><strong>Угол 1 (AOB):</strong> Нарисуй точку O. Проведи из неё два луча в разные стороны. Отметь на одном луче точку A, на другом — точку B. Подпиши AOB.</div>
-            <div class="step"><strong>Угол 2 (∠hk):</strong> Нарисуй ещё один угол. Обозначь стороны малыми буквами h и k. Подпиши ∠hk.</div>
-            <div class="step"><strong>Угол 3 (∠M):</strong> Нарисуй третий угол. Обозначь вершину буквой M. Подпиши ∠M.</div>
-            <p><strong>Проверка:</strong> Все углы должны быть неразвёрнутыми (не прямыми линиями)!</p>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Угол 1:</strong> поставь точку O, проведи из неё два луча (не на одной прямой!). Отметь на лучах точки A и B. Подпиши: ∠AOB.</div>
+            <div class="step"><strong>Угол 2:</strong> нарисуй ещё один угол и подпиши его стороны малыми буквами h и k. Запиши: ∠hk.</div>
+            <div class="step"><strong>Угол 3:</strong> нарисуй третий угол и подпиши вершину буквой M. Запиши: ∠M (здесь одна вершина — путаницы нет).</div>
+            <p><strong>Проверка:</strong> все три угла неразвёрнутые — их стороны не лежат на одной прямой.</p>
         </details>
     </div>
 
@@ -285,73 +310,63 @@
         <p><strong>Задание:</strong> Начертите два развёрнутых угла и обозначьте их буквами.</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <div class="step"><strong>Шаг 1:</strong> Проведи прямую линию.</div>
-            <div class="step"><strong>Шаг 2:</strong> Отметь на ней точку O (вершина).</div>
-            <div class="step"><strong>Шаг 3:</strong> Отметь точки A и B на разных сторонах от O.</div>
-            <div class="step"><strong>Шаг 4:</strong> Подпиши угол: ∠AOB (или ∠hk, если обозначить лучи h и k).</div>
-            <p><strong>Повтори</strong> для второго развёрнутого угла с другими буквами.</p>
-            <p><strong>Пример:</strong> ∠COD, где точки C, O, D лежат на одной прямой.</p>
+            <div class="step"><strong>Шаг 1:</strong> Проведи прямую и отметь на ней точку O — это вершина.</div>
+            <div class="step"><strong>Шаг 2:</strong> Отметь точки A и B по разные стороны от O. Угол AOB — развёрнутый: стороны OA и OB на одной прямой.</div>
+            <div class="step"><strong>Шаг 3:</strong> Повтори с другой прямой: вершина P, точки C и D по разные стороны. Получился развёрнутый угол CPD (или ∠hk, если назвать лучи h и k).</div>
+            <p><strong>Проверка:</strong> в каждом угле стороны — дополнительные лучи (одна прямая через вершину).</p>
         </details>
     </div>
 
     <div class="card">
         <h3><span class="badge badge-should">№14</span> Средний уровень</h3>
-        <p><strong>Задание:</strong> Начертите три луча h, k и l с общим началом. Назовите все углы, образованные данными лучами.</p>
+        <p><strong>Задание:</strong> Начертите три луча <em>h</em>, <em>k</em> и <em>l</em> с общим началом. Назовите все углы, образованные данными лучами.</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <div class="step"><strong>Шаг 1:</strong> Нарисуй точку O (общее начало).</div>
-            <div class="step"><strong>Шаг 2:</strong> Проведи из точки O три луча под разными углами (как веер). Обозначь их h, k, l.</div>
-            <div class="step"><strong>Шаг 3:</strong> Найди все углы между парами лучей:</div>
-            <p>• Угол между h и k: <strong>∠hk</strong></p>
-            <p>• Угол между k и l: <strong>∠kl</strong></p>
-            <p>• Угол между h и l: <strong>∠hl</strong></p>
-            <p><strong>Ответ:</strong> <strong>3 угла</strong>: ∠hk, ∠kl, ∠hl.</p>
-            <p><strong>Почему?</strong> Из трёх лучей можно составить три пары: (h,k), (k,l), (h,l). Каждая пара образует угол.</p>
+            <div class="step"><strong>Шаг 1:</strong> Поставь точку O и проведи из неё три луча «веером» (никие два не на одной прямой). Подпиши их h, k, l.</div>
+            <div class="step"><strong>Шаг 2:</strong> Угол образует каждая <strong>пара</strong> лучей. Перечисли пары: (h, k), (k, l), (h, l).</div>
+            <p><strong>Ответ:</strong> <strong>3 угла: ∠hk, ∠kl, ∠hl</strong>.</p>
+            <p><strong>Почему?</strong> Пар из трёх лучей ровно три — как три рукопожатия у троих друзей.</p>
         </details>
     </div>
 
     <div class="card">
         <h3><span class="badge badge-aspire">№15</span> Продвинутый уровень</h3>
-        <p><strong>Задание:</strong> Начертите неразвёрнутый угол hk. Отметьте две точки внутри этого угла, две точки вне этого угла и две точки на сторонах угла.</p>
+        <p><strong>Задание:</strong> Начертите неразвёрнутый угол <em>hk</em>. Отметьте две точки внутри этого угла, две точки вне этого угла и две точки на сторонах угла.</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <div class="step"><strong>Шаг 1:</strong> Нарисуй угол (не развёрнутый!). Обозначь стороны h и k, вершину O.</div>
-            <div class="step"><strong>Шаг 2:</strong> Поставь <strong>две точки внутри угла</strong> (между сторонами). Подпиши их, например, A и B.</div>
-            <div class="step"><strong>Шаг 3:</strong> Поставь <strong>две точки вне угла</strong> (снаружи, за сторонами). Подпиши их, например, P и Q.</div>
-            <div class="step"><strong>Шаг 4:</strong> Поставь <strong>две точки на сторонах угла</strong> (на самих лучах h и k). Подпиши их, например, C и D.</div>
-            <p><strong>Проверка:</strong> A и B должны быть между лучами, P и Q — за пределами угла, C и D — на лучах.</p>
+            <div class="step"><strong>Шаг 1:</strong> Нарисуй угол с вершиной O и сторонами h и k.</div>
+            <div class="step"><strong>Шаг 2:</strong> Внутри (между сторонами) поставь точки A и B.</div>
+            <div class="step"><strong>Шаг 3:</strong> Вне угла (за сторонами, «сзади» или «сбоку») поставь точки P и Q.</div>
+            <div class="step"><strong>Шаг 4:</strong> На самих лучах h и k поставь точки C и D.</div>
+            <p><strong>Проверка:</strong> соедини O с точкой A воображаемым лучом — он проходит внутри угла; луч OP вышел бы за стороны.</p>
         </details>
     </div>
 
     <div class="card">
         <h3><span class="badge badge-aspire">№16</span> Продвинутый уровень</h3>
-        <p><strong>Задание:</strong> Начертите неразвёрнутый угол. Отметьте точки A, B, M и N так, чтобы все точки отрезка AB лежали внутри угла, а все точки отрезка MN лежали вне угла.</p>
+        <p><strong>Задание:</strong> Начертите неразвёрнутый угол. Отметьте точки <em>A</em>, <em>B</em>, <em>M</em> и <em>N</em> так, чтобы все точки отрезка <em>AB</em> лежали внутри угла, а все точки отрезка <em>MN</em> лежали вне угла.</p>
         <details>
             <summary>💡 Проверить решение</summary>
             <div class="step"><strong>Шаг 1:</strong> Нарисуй неразвёрнутый угол с вершиной O.</div>
-            <div class="step"><strong>Шаг 2:</strong> Внутри угла (достаточно далеко от сторон) поставь точки A и B. Соедини их отрезком.</div>
-            <div class="step"><strong>Шаг 3:</strong> Проверь: весь отрезок AB должен быть внутри угла (не касаться сторон).</div>
-            <div class="step"><strong>Шаг 4:</strong> Вне угла (снаружи) поставь точки M и N. Соедини их отрезком.</div>
-            <div class="step"><strong>Шаг 5:</strong> Проверь: весь отрезок MN должен быть вне угла.</div>
-            <p><strong>Подсказка:</strong> Точки M и N можно поставить по разные стороны от угла, тогда отрезок MN точно будет вне угла.</p>
+            <div class="step"><strong>Шаг 2:</strong> Поставь A и B внутри угла подальше от сторон и соедини отрезком AB — тогда весь отрезок окажется внутри.</div>
+            <div class="step"><strong>Шаг 3:</strong> Поставь M и N вне угла (удобно — по разные стороны от угла) и соедини отрезком MN.</div>
+            <div class="step"><strong>Шаг 4:</strong> Проверь: отрезок MN не должен пересекать стороны угла и не должен заходить внутрь.</div>
+            <p><strong>Подсказка:</strong> если M и N стоят по разные стороны угла, отрезок MN пройдёт «за вершиной» — целиком вне угла.</p>
         </details>
     </div>
 
     <div class="card">
         <h3><span class="badge badge-aspire">№17</span> Продвинутый уровень</h3>
-        <p><strong>Задание:</strong> Начертите неразвёрнутый угол AOB и проведите:<br>
-        а) луч OC, который делит угол AOB на два угла;<br>
-        б) луч OD, который не делит угол AOC на два угла.</p>
+        <p><strong>Задание:</strong> Начертите неразвёрнутый угол <em>AOB</em> и проведите:<br>
+        а) луч <em>OC</em>, который делит угол <em>AOB</em> на два угла;<br>
+        б) луч <em>OD</em>, который не делит угол <em>AOC</em> на два угла.</p>
         <details>
-            <summary> Проверить решение</summary>
-            <p><strong>а) Луч OC, который делит угол AOB:</strong></p>
-            <div class="step">Нарисуй угол AOB.</div>
-            <div class="step">Проведи луч OC <strong>внутри угла AOB</strong> (из вершины O между сторонами OA и OB).</div>
-            <p><strong>Результат:</strong> Получилось два угла: ∠AOC и ∠COB.</p>
-            <p><strong>б) Луч OD, который НЕ делит угол AOC:</strong></p>
-            <div class="step">Проведи луч OD <strong>вне угла AOC</strong> (например, за стороной OA или за стороной OC).</div>
-            <p><strong>Результат:</strong> Луч OD не проходит внутри угла AOC, поэтому не делит его.</p>
-            <p><strong>Важно:</strong> Луч делит угол на два угла только если он проходит <strong>внутри</strong> этого угла!</p>
+            <summary>💡 Проверить решение</summary>
+            <p><strong>а)</strong></p>
+            <div class="step">Проведи луч OC из вершины O <strong>внутри</strong> угла AOB (между сторонами OA и OB). Тогда ∠AOB = ∠AOC + ∠COB: луч поделил угол на два.</div>
+            <p><strong>б)</strong></p>
+            <div class="step">Проведи луч OD из вершины O <strong>вне</strong> угла AOC — например, за стороной OA. Луч не проходит внутри угла AOC, значит, не делит его.</div>
+            <p><strong>Важно:</strong> луч делит угол на два угла только тогда, когда исходит из вершины и проходит внутри угла!</p>
         </details>
     </div>
 
@@ -359,36 +374,34 @@
         <h3><span class="badge badge-aspire">№18</span> Продвинутый уровень</h3>
         <p><strong>Задание:</strong> Сколько неразвёрнутых углов образуется при пересечении двух прямых?</p>
         <details>
-            <summary> Проверить решение</summary>
-            <div class="step"><strong>Шаг 1:</strong> Нарисуй две пересекающиеся прямые.</div>
-            <div class="step"><strong>Шаг 2:</strong> Обозначь точку пересечения O.</div>
-            <div class="step"><strong>Шаг 3:</strong> Прямые делят плоскость на 4 части (как крест).</div>
-            <div class="step"><strong>Шаг 4:</strong> В каждой части — один угол.</div>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Нарисуй две пересекающиеся прямые, точку пересечения O.</div>
+            <div class="step"><strong>Шаг 2:</strong> Прямые дают 4 луча с началом O («крест» из четырёх лучей).</div>
+            <div class="step"><strong>Шаг 3:</strong> Соседние лучи образуют углы: их 4, и каждый неразвёрнутый (стороны не на одной прямой).</div>
             <p><strong>Ответ:</strong> <strong>4 неразвёрнутых угла</strong>.</p>
-            <p><strong>Почему?</strong> Две прямые образуют 4 луча с общим началом. Эти лучи образуют 4 угла вокруг точки пересечения.</p>
-            <p><strong>Дополнительно:</strong> Если прямые перпендикулярны, все 4 угла равны (по 90°). Если нет — есть два острых и два тупых угла.</p>
+            <p><strong>Дополнение:</strong> если прямые перпендикулярны — все 4 угла прямые; иначе два острых и два тупых (попарно равных — об этом в §6).</p>
         </details>
     </div>
 
     <div class="card">
         <h3><span class="badge badge-aspire">№20</span> Продвинутый уровень</h3>
-        <p><strong>Задание:</strong> Какие из лучей, изображённых на рисунке 23, делят угол AOB на два угла? (См. учебник, стр. 11)</p>
+        <p><strong>Задание:</strong> Какие из лучей, изображённых на рисунке 23, делят угол <em>AOB</em> на два угла?</p>
         <details>
-            <summary> Проверить решение</summary>
-            <p><em>Примечание: Для этого задания нужен рисунок 23 из учебника. Обычно на нём изображён угол AOB и несколько лучей, выходящих из вершины O.</em></p>
-            <div class="step"><strong>Правило:</strong> Луч делит угол на два угла, если он проходит <strong>внутри</strong> этого угла (между его сторонами).</div>
-            <div class="step"><strong>Как проверить:</strong> Посмотри на каждый луч. Если он находится между сторонами OA и OB — он делит угол. Если он вне угла или совпадает со стороной — не делит.</div>
-            <p><strong>Ответ:</strong> Те лучи, которые лежат внутри угла AOB (между OA и OB).</p>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Правило:</strong> луч делит угол AOB на два угла, если он исходит из вершины O и проходит <strong>внутри</strong> угла (между сторонами OA и OB).</div>
+            <div class="step"><strong>Как рассуждать:</strong> рассмотри каждый луч рисунка 23. Луч внутри угла — делит; луч, совпадающий со стороной, или луч вне угла — не делит.</div>
+            <p><strong>Ответ:</strong> те лучи рисунка 23, которые проходят внутри угла AOB (сравни со своим чертежом: внутренний луч даёт два угла, как луч OC на рис. 6).</p>
+            <p><em>Примечание: сверься с рисунком 23 в учебнике — рассуждение одинаково для любого набора лучей.</em></p>
         </details>
     </div>
 
     <div class="card">
         <h3>💡 Методическая подсказка</h3>
         <ul>
-            <li><strong>Если сложно представить:</strong> Возьми два карандаша, сложи их вместе одним концом — это модель угла. Разводи карандаши — угол «открывается».</li>
-            <li><strong>Для запоминания:</strong> Луч — как луч фонарика (есть начало, нет конца). Угол — как открытая книга (две стороны и вершина в корешке).</li>
-            <li><strong>Проверка:</strong> После выполнения каждого задания сверь свой чертёж с рисунком в подсказке.</li>
-            <li><strong>Важно:</strong> Развёрнутый угол — это прямая линия, но мы всё равно называем её углом (180°).</li>
+            <li><strong>Если сложно представить:</strong> сложи два карандаша концами в одной точке — это модель угла; разводи их и смотри, как угол «раскрывается».</li>
+            <li><strong>Для запоминания:</strong> луч — фонарик (начало есть, конца нет); угол — раскрытая книга (вершина в корешке, стороны — обложки).</li>
+            <li><strong>Проверка:</strong> после чертежа спроси себя: у луча первая буква — начало? у угла в записи ∠AOB вершина O стоит посередине?</li>
+            <li><strong>Важно:</strong> развёрнутый угол выглядит как прямая линия, но это всё равно угол: его стороны — дополнительные лучи.</li>
         </ul>
     </div>
 

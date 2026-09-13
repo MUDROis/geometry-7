@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Перпендикулярные прямые — Геометрия 7 класс</title>
+    <!-- Урок 6 курса. Все направления сторон и концы дуг вычислены по формулам x = cx + r·cos α, y = cy − r·sin α. Прямые углы — квадратиками. Расчёты — в комментариях внутри SVG. -->
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f9f9fb; }
         h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
         h2 { color: #2980b9; margin-top: 30px; }
         h3 { color: #16a085; }
-        .card { background: #fff; border-radius: 12px; padding: 20px; margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card { background: #fff; border-radius: 12px; padding: 20px; margin: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .highlight { background-color: #e8f4f8; padding: 15px; border-left: 5px solid #3498db; border-radius: 5px; margin: 15px 0; }
         .warning { background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; border-radius: 5px; margin: 15px 0; }
         details { background: #f4f6f7; border-radius: 8px; padding: 10px 15px; margin: 10px 0; cursor: pointer; }
@@ -30,28 +31,22 @@
 <body>
 
     <h1>⊥ Перпендикулярные прямые</h1>
-    <p><strong>Геометрия 7 класс • Глава 1, §6 • Страницы 20-26</strong></p>
+    <p><strong>Геометрия 7 класс • Глава 1, §6 • Страницы 20–26</strong></p>
 
     <div class="card">
-        <p>Привет! 👋 Сегодня изучаем перпендикулярные прямые — это прямые, которые пересекаются под прямым углом (90°). Ты узнаешь о смежных и вертикальных углах, научишься строить перпендикулярные линии и поймёшь, почему две прямые, перпендикулярные третьей, не пересекаются! Это основа черчения, строительства и даже навигации! ️📐</p>
+        <p>Привет! 👋 Сегодня изучаем пары углов, которые возникают при пересечении прямых: смежные и вертикальные, — и особый случай пересечения под прямым углом: перпендикулярные прямые. Ты узнаешь, почему вертикальные углы всегда равны, почему смежные в сумме дают 180° и как строят прямые углы на местности. Это завершает главу 1! 🎉</p>
     </div>
 
-    <h2>🌾 Блок 1. Изучение (15-20 мин)</h2>
+    <h2>🌾 Блок 1. Изучение (15–20 мин)</h2>
 
     <div class="card">
-        <h3>🪝 Разминка: Где встречаются перпендикуляры?</h3>
-        <p>Оглянись вокруг! Перпендикулярные прямые везде:</p>
-        <ul>
-            <li>📐 Углы стола и пола</li>
-            <li>🏢 Стены комнаты пересекаются под прямым углом</li>
-            <li>🚦 Перекрёсток дорог</li>
-            <li> Экран телефона (прямоугольник)</li>
-        </ul>
-        <p><strong>В геометрии</strong> мы изучаем свойства таких прямых и углов! </p>
+        <h3>🪝 Разминка: Перекрёсток и рамка</h3>
+        <p>Посмотри на перекрёсток двух дорог сверху: четыре угла между дорогами. Если один из них прямой — перекрёсток «квадратный», все четыре угла по 90°. А углы напротив друг друга (через центр перекрёстка) всегда равны — даже если перекрёсток косой! 🚦</p>
+        <p>То же самое видно в углах картинной рамки: соседние углы рамки дополняют друг друга до развёрнутого угла, а противоположные — равны. Разберём, почему так выходит!</p>
     </div>
 
     <div class="card">
-        <h3> Ключевые термины</h3>
+        <h3>📖 Ключевые термины</h3>
         <table>
             <tr>
                 <th>Термин</th>
@@ -60,32 +55,32 @@
             </tr>
             <tr>
                 <td><strong>Смежные углы</strong></td>
-                <td>Два угла, у которых одна сторона общая, а две другие являются продолжениями одна другой.</td>
+                <td>Два угла с общей стороной, а две другие стороны — дополнительные лучи (продолжения одна другой).</td>
                 <td>∠AOB и ∠BOC</td>
             </tr>
             <tr>
                 <td><strong>Вертикальные углы</strong></td>
-                <td>Два угла, стороны одного из которых являются продолжениями сторон другого.</td>
-                <td>1 и ∠3, ∠2 и 4</td>
+                <td>Два угла, стороны одного — продолжения сторон другого. Получаются «напротив» при пересечении прямых.</td>
+                <td>∠1 и 3, ∠2 и 4</td>
             </tr>
             <tr>
                 <td><strong>Перпендикулярные прямые</strong></td>
-                <td>Две пересекающиеся прямые, образующие четыре прямых угла (по 90°).</td>
-                <td>AC  BD</td>
+                <td>Прямые, которые пересекаются под прямым углом (образуют четыре прямых угла).</td>
+                <td>a ⊥ b</td>
             </tr>
             <tr>
                 <td><strong>Прямой угол</strong></td>
-                <td>Угол, равный 90°.</td>
+                <td>Угол в 90°; на чертеже отмечается квадратиком.</td>
                 <td>90°</td>
             </tr>
             <tr>
-                <td><strong>Сумма смежных углов</strong></td>
-                <td>Всегда равна 180° (развёрнутому углу).</td>
-                <td>∠1 + ∠2 = 180°</td>
+                <td><strong>Перпендикуляр</strong></td>
+                <td>Отрезок (или луч), проведённый из точки перпендикулярно данной прямой.</td>
+                <td>AH ⊥ a</td>
             </tr>
             <tr>
                 <td><strong>Эккер</strong></td>
-                <td>Прибор для построения прямых углов на местности. Два бруска под прямым углом на треножнике.</td>
+                <td>Прибор для построения прямых углов на местности: два бруска под прямым углом на треножнике с отвесом.</td>
                 <td>—</td>
             </tr>
         </table>
@@ -93,218 +88,175 @@
 
     <div class="card">
         <h3>📐 Графические иллюстрации</h3>
-        
+
         <div class="diagram">
-            <h4>Смежные углы</h4>
-            <svg width="400" height="200" viewBox="0 0 400 200">
-                <!-- Line AOC (straight line) -->
-                <line x1="50" y1="100" x2="350" y2="100" stroke="#34495e" stroke-width="2"/>
-                
-                <!-- Ray OB -->
-                <line x1="200" y1="100" x2="200" y2="40" stroke="#e74c3c" stroke-width="3"/>
-                
-                <!-- Points -->
-                <circle cx="50" cy="100" r="4" fill="#2c3e50"/>
-                <circle cx="200" cy="100" r="5" fill="#c0392b"/>
-                <circle cx="350" cy="100" r="4" fill="#2c3e50"/>
-                <circle cx="200" cy="40" r="4" fill="#e74c3c"/>
-                
-                <text x="40" y="115" font-size="12">A</text>
-                <text x="200" y="120" text-anchor="middle" font-size="12" font-weight="bold">O</text>
-                <text x="360" y="115" font-size="12">C</text>
-                <text x="200" y="35" text-anchor="middle" font-size="12">B</text>
-                
-                <!-- Angle arcs -->
-                <path d="M 200,100 L 200,80 A 20,20 0 0,0 180,95" fill="none" stroke="#f39c12" stroke-width="2"/>
-                <path d="M 200,100 L 200,80 A 20,20 0 0,1 220,95" fill="none" stroke="#3498db" stroke-width="2"/>
-                
-                <text x="165" y="90" font-size="11" fill="#f39c12">∠1</text>
-                <text x="225" y="90" font-size="11" fill="#3498db">∠2</text>
-                
-                <text x="200" y="180" text-anchor="middle" font-size="13">∠AOB и ∠BOC — смежные</text>
-                <text x="200" y="195" text-anchor="middle" font-size="12" fill="#27ae60" font-weight="bold">∠1 + ∠2 = 180°</text>
+            <h4>Смежные углы: сумма 180°</h4>
+            <svg width="440" height="170" viewBox="0 0 440 170">
+                <!-- Прямая AOC: y=120, A(60,120), O(230,120), C(400,120). Луч OB: направление 60°, длина 100: B(280,33.4).
+                     Дуга ∠AOB (60°→180°) r=28: начало (244,95.8), конец (202,120), sweep=0.
+                     Дуга ∠BOC (0°→60°) r=28: начало (258,120), конец (244,95.8), sweep=0.
+                     Подписи: ∠1 на биссектрисе 120°, r=42 → (209,83.6); ∠2 на биссектрисе 30°, r=42 → (266.4,99). -->
+                <line x1="60" y1="120" x2="400" y2="120" stroke="#34495e" stroke-width="3"/>
+                <line x1="230" y1="120" x2="280" y2="33.4" stroke="#e74c3c" stroke-width="3"/>
+                <path d="M 244,95.8 A 28,28 0 0 0 202,120" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <path d="M 258,120 A 28,28 0 0 0 244,95.8" fill="none" stroke="#27ae60" stroke-width="2"/>
+                <circle cx="230" cy="120" r="5" fill="#2c3e50"/>
+                <text x="60" y="140" text-anchor="middle" font-size="14" font-weight="bold">A</text>
+                <text x="230" y="140" text-anchor="middle" font-size="14" font-weight="bold">O</text>
+                <text x="400" y="140" text-anchor="middle" font-size="14" font-weight="bold">C</text>
+                <text x="286" y="28" font-size="14" font-weight="bold">B</text>
+                <text x="209" y="83.6" font-size="12" fill="#f39c12" font-weight="bold">∠1</text>
+                <text x="266.4" y="99" font-size="12" fill="#27ae60" font-weight="bold">∠2</text>
+                <text x="230" y="162" text-anchor="middle" font-size="13" font-weight="bold">∠1 + ∠2 = 180°</text>
             </svg>
-            <p><strong>Рис. 1:</strong> Смежные углы имеют общую сторону OB, а две другие (OA и OC) образуют прямую линию</p>
+            <p><strong>Рис. 1:</strong> Углы AOB и BOC смежные: сторона OB общая, а OA и OC — дополнительные лучи; вместе они дают развёрнутый угол</p>
         </div>
 
         <div class="diagram">
-            <h4>Вертикальные углы</h4>
-            <svg width="400" height="250" viewBox="0 0 400 250">
-                <!-- Two intersecting lines -->
-                <line x1="50" y1="50" x2="350" y2="200" stroke="#9b59b6" stroke-width="3"/>
-                <line x1="350" y1="50" x2="50" y2="200" stroke="#3498db" stroke-width="3"/>
-                
-                <!-- Intersection point -->
-                <circle cx="200" cy="125" r="5" fill="#2c3e50"/>
-                <text x="210" y="120" font-size="12" font-weight="bold">O</text>
-                
-                <!-- Angle arcs -->
-                <path d="M 200,125 L 220,105 A 25,25 0 0,0 200,125 L 180,145" fill="none" stroke="#f39c12" stroke-width="2"/>
-                <path d="M 200,125 L 220,145 A 25,25 0 0,0 200,125 L 180,105" fill="none" stroke="#27ae60" stroke-width="2"/>
-                
-                <text x="230" y="90" font-size="12" fill="#f39c12" font-weight="bold">∠1</text>
-                <text x="150" y="90" font-size="12" fill="#27ae60" font-weight="bold">∠3</text>
-                <text x="230" y="170" font-size="12" fill="#e74c3c" font-weight="bold">∠2</text>
-                <text x="150" y="170" font-size="12" fill="#3498db" font-weight="bold">∠4</text>
-                
-                <text x="200" y="230" text-anchor="middle" font-size="13">Вертикальные углы: ∠1 и ∠3, ∠2 и ∠4</text>
-                <text x="200" y="245" text-anchor="middle" font-size="12" fill="#27ae60" font-weight="bold">∠1 = ∠3, ∠2 = ∠4</text>
+            <h4>Вертикальные углы равны</h4>
+            <svg width="420" height="230" viewBox="0 0 420 230">
+                <!-- Две прямые через O(210,110): прямая 1 направления 20° и 200°; прямая 2 направления 120° и 300°. Длина половин 110.
+                     Концы: 20° → (313.4,72.4); 200° → (106.6,147.6); 120° → (155,14.7); 300° → (265,205.3).
+                     Дуга ∠1 (20°→120°) r=26: (234.4,101.1)→(197,87.5). Дуга ∠3 (200°→300°) r=26: (185.6,118.9)→(223,132.5).
+                     Дуга ∠2 (120°→200°) r=34: (193,80.6)→(178.1,121.6). Дуга ∠4 (300°→380°) r=34: (227,139.4)→(241.9,98.4).
+                     Подписи: ∠1 на 70°, r=44 → (225.0,68.7); ∠3 на 250°, r=44 → (195.0,151.3); ∠2 на 160°, r=48 → (164.9,93.6); ∠4 на 340°, r=48 → (255.1,126.4). -->
+                <line x1="106.6" y1="147.6" x2="313.4" y2="72.4" stroke="#9b59b6" stroke-width="3"/>
+                <line x1="155" y1="14.7" x2="265" y2="205.3" stroke="#3498db" stroke-width="3"/>
+                <path d="M 234.4,101.1 A 26,26 0 0 0 197,87.5" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <path d="M 185.6,118.9 A 26,26 0 0 0 223,132.5" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <path d="M 193,80.6 A 34,34 0 0 0 178.1,121.6" fill="none" stroke="#27ae60" stroke-width="2"/>
+                <path d="M 227,139.4 A 34,34 0 0 0 241.9,98.4" fill="none" stroke="#27ae60" stroke-width="2"/>
+                <circle cx="210" cy="110" r="5" fill="#2c3e50"/>
+                <text x="225" y="64" font-size="12" fill="#f39c12" font-weight="bold">∠1</text>
+                <text x="195" y="163" font-size="12" fill="#f39c12" font-weight="bold">∠3</text>
+                <text x="158" y="90" font-size="12" fill="#27ae60" font-weight="bold">∠2</text>
+                <text x="258" y="132" font-size="12" fill="#27ae60" font-weight="bold">∠4</text>
+                <text x="210" y="225" text-anchor="middle" font-size="13" font-weight="bold">∠1 = ∠3, ∠2 = ∠4</text>
             </svg>
-            <p><strong>Рис. 2:</strong> Вертикальные углы равны! Это важное свойство: ∠1 = ∠3 и ∠2 = ∠4</p>
+            <p><strong>Рис. 2:</strong> При пересечении двух прямых вертикальные углы лежат «напротив» друг друга и равны; смежные пары (∠1 и ∠2, ∠2 и ∠3…) дают 180°</p>
         </div>
 
         <div class="diagram">
-            <h4>Перпендикулярные прямые</h4>
-            <svg width="400" height="250" viewBox="0 0 400 250">
-                <!-- Vertical line -->
-                <line x1="200" y1="30" x2="200" y2="220" stroke="#e74c3c" stroke-width="4"/>
-                <!-- Horizontal line -->
-                <line x1="80" y1="125" x2="320" y2="125" stroke="#3498db" stroke-width="4"/>
-                
-                <!-- Intersection -->
-                <circle cx="200" cy="125" r="6" fill="#2c3e50"/>
-                <text x="210" y="120" font-size="12" font-weight="bold">O</text>
-                
-                <!-- Right angle marks (all 4 corners) -->
-                <path d="M 200,125 L 200,140 L 215,140" fill="none" stroke="#f39c12" stroke-width="2"/>
-                <path d="M 200,125 L 200,140 L 185,140" fill="none" stroke="#f39c12" stroke-width="2"/>
-                <path d="M 200,125 L 200,110 L 215,110" fill="none" stroke="#f39c12" stroke-width="2"/>
-                <path d="M 200,125 L 200,110 L 185,110" fill="none" stroke="#f39c12" stroke-width="2"/>
-                
-                <text x="200" y="25" text-anchor="middle" font-size="12">a</text>
-                <text x="200" y="240" text-anchor="middle" font-size="12">b</text>
-                <text x="70" y="130" font-size="12">c</text>
-                <text x="330" y="130" font-size="12">d</text>
-                
-                <text x="200" y="210" text-anchor="middle" font-size="13">Прямые a и b перпендикулярны</text>
-                <text x="200" y="225" text-anchor="middle" font-size="12" fill="#e74c3c" font-weight="bold">a ⊥ b</text>
-                <text x="200" y="240" text-anchor="middle" font-size="11">Все 4 угла = 90°</text>
+            <h4>Перпендикулярные прямые: четыре прямых угла</h4>
+            <svg width="420" height="230" viewBox="0 0 420 230">
+                <!-- Горизонталь y=110: (90,110)-(330,110); вертикаль x=210: (210,20)-(210,200). O(210,110).
+                     Квадратики s=14 в четырёх четвертях:
+                     I: M 224,110 L 224,96 L 210,96; II: M 196,110 L 196,96 L 210,96; III: M 196,110 L 196,124 L 210,124; IV: M 224,110 L 224,124 L 210,124. -->
+                <line x1="90" y1="110" x2="330" y2="110" stroke="#3498db" stroke-width="4"/>
+                <line x1="210" y1="20" x2="210" y2="200" stroke="#e74c3c" stroke-width="4"/>
+                <path d="M 224,110 L 224,96 L 210,96" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <path d="M 196,110 L 196,96 L 210,96" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <path d="M 196,110 L 196,124 L 210,124" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <path d="M 224,110 L 224,124 L 210,124" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <circle cx="210" cy="110" r="5" fill="#2c3e50"/>
+                <text x="340" y="115" font-size="14" font-weight="bold">a</text>
+                <text x="210" y="15" text-anchor="middle" font-size="14" font-weight="bold">b</text>
+                <text x="210" y="222" text-anchor="middle" font-size="13" font-weight="bold">a ⊥ b: все четыре угла по 90°</text>
             </svg>
-            <p><strong>Рис. 3:</strong> Перпендикулярные прямые образуют 4 прямых угла (по 90° каждый)</p>
+            <p><strong>Рис. 3:</strong> Перпендикулярные прямые образуют четыре прямых угла; достаточно одного квадратика — остальные углы прямые автоматически</p>
         </div>
 
         <div class="diagram">
             <h4>Две прямые, перпендикулярные третьей, не пересекаются</h4>
             <svg width="500" height="200" viewBox="0 0 500 200">
-                <!-- Horizontal line PQ -->
-                <line x1="50" y1="150" x2="450" y2="150" stroke="#34495e" stroke-width="3"/>
-                <text x="40" y="165" font-size="12">P</text>
-                <text x="460" y="165" font-size="12">Q</text>
-                
-                <!-- Perpendicular line AA1 -->
-                <line x1="150" y1="30" x2="150" y2="150" stroke="#e74c3c" stroke-width="3"/>
-                <circle cx="150" cy="150" r="4" fill="#c0392b"/>
-                <text x="140" y="25" font-size="12">A</text>
-                <text x="140" y="170" font-size="12">A₁</text>
-                
-                <!-- Perpendicular line BB1 -->
-                <line x1="350" y1="30" x2="350" y2="150" stroke="#3498db" stroke-width="3"/>
-                <circle cx="350" cy="150" r="4" fill="#2980b9"/>
-                <text x="340" y="25" font-size="12">B</text>
-                <text x="340" y="170" font-size="12">B₁</text>
-                
-                <!-- Right angle marks -->
-                <path d="M 150,150 L 150,140 L 160,140" fill="none" stroke="#f39c12" stroke-width="2"/>
-                <path d="M 350,150 L 350,140 L 340,140" fill="none" stroke="#f39c12" stroke-width="2"/>
-                
-                <text x="250" y="190" text-anchor="middle" font-size="13">AA₁ ⊥ PQ и BB₁ ⊥ PQ</text>
-                <text x="250" y="205" text-anchor="middle" font-size="12" fill="#27ae60" font-weight="bold">AA₁  BB₁ (не пересекаются!)</text>
+                <!-- Прямая PQ: y=150, (60,150)-(460,150). Перпендикуляры: x=160 и x=340, от y=40 до y=150.
+                     Квадратики: у первой M 160,136 L 174,136 L 174,150; у второй M 340,136 L 326,136 L 326,150. -->
+                <line x1="60" y1="150" x2="460" y2="150" stroke="#34495e" stroke-width="3"/>
+                <line x1="160" y1="40" x2="160" y2="150" stroke="#e74c3c" stroke-width="3"/>
+                <line x1="340" y1="40" x2="340" y2="150" stroke="#3498db" stroke-width="3"/>
+                <path d="M 160,136 L 174,136 L 174,150" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <path d="M 340,136 L 326,136 L 326,150" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <text x="52" y="168" font-size="13" font-weight="bold">P</text>
+                <text x="462" y="168" font-size="13" font-weight="bold">Q</text>
+                <text x="152" y="34" font-size="13" font-weight="bold">A</text>
+                <text x="152" y="168" font-size="13" font-weight="bold">A₁</text>
+                <text x="348" y="34" font-size="13" font-weight="bold">B</text>
+                <text x="348" y="168" font-size="13" font-weight="bold">B₁</text>
+                <text x="250" y="190" text-anchor="middle" font-size="13" font-weight="bold">AA₁ ⊥ PQ и BB₁ ⊥ PQ → AA₁ и BB₁ не пересекаются</text>
             </svg>
-            <p><strong>Рис. 4:</strong> Если две прямые перпендикулярны третьей, то они параллельны друг другу (не пересекаются)</p>
+            <p><strong>Рис. 4:</strong> Если бы прямые AA₁ и BB₁ пересеклись, из одной точки выходили бы два перпендикуляра к PQ — этого быть не может</p>
         </div>
 
         <div class="diagram">
-            <h4>Эккер — прибор для построения прямых углов на местности</h4>
-            <svg width="400" height="250" viewBox="0 0 400 250">
-                <!-- Tripod legs -->
-                <line x1="200" y1="180" x2="160" y2="230" stroke="#7f8c8d" stroke-width="3"/>
-                <line x1="200" y1="180" x2="200" y2="230" stroke="#7f8c8d" stroke-width="3"/>
-                <line x1="200" y1="180" x2="240" y2="230" stroke="#7f8c8d" stroke-width="3"/>
-                
-                <!-- Vertical pole -->
-                <line x1="200" y1="80" x2="200" y2="180" stroke="#34495e" stroke-width="4"/>
-                
-                <!-- Two perpendicular bars -->
-                <line x1="140" y1="100" x2="260" y2="100" stroke="#e74c3c" stroke-width="4"/>
-                <line x1="200" y1="60" x2="200" y2="140" stroke="#3498db" stroke-width="4"/>
-                
-                <!-- Center point -->
-                <circle cx="200" cy="100" r="5" fill="#2c3e50"/>
-                
-                <!-- Plumb line -->
-                <line x1="200" y1="100" x2="200" y2="200" stroke="#f39c12" stroke-width="2" stroke-dasharray="3,2"/>
-                <circle cx="200" cy="200" r="3" fill="#f39c12"/>
-                
-                <!-- Points on ground -->
-                <circle cx="120" cy="230" r="4" fill="#27ae60"/>
-                <circle cx="280" cy="230" r="4" fill="#27ae60"/>
-                <text x="110" y="245" font-size="11">A</text>
-                <text x="270" y="245" font-size="11">B</text>
-                <text x="190" y="245" font-size="11">O</text>
-                
-                <text x="200" y="40" text-anchor="middle" font-size="13" font-weight="bold">ЭККЕР</text>
-                <text x="200" y="220" text-anchor="middle" font-size="11">Построение ∠AOB = 90°</text>
+            <h4>Построение прямого угла на местности: эккер</h4>
+            <svg width="420" height="200" viewBox="0 0 420 200">
+                <!-- СХЕМА: треножник, стойка, два бруска под 90°, отвес, вехи A и B на местности. -->
+                <line x1="210" y1="140" x2="170" y2="185" stroke="#7f8c8d" stroke-width="3"/>
+                <line x1="210" y1="140" x2="210" y2="185" stroke="#7f8c8d" stroke-width="3"/>
+                <line x1="210" y1="140" x2="250" y2="185" stroke="#7f8c8d" stroke-width="3"/>
+                <line x1="210" y1="60" x2="210" y2="140" stroke="#34495e" stroke-width="4"/>
+                <line x1="150" y1="80" x2="270" y2="80" stroke="#e74c3c" stroke-width="4"/>
+                <line x1="210" y1="40" x2="210" y2="120" stroke="#3498db" stroke-width="4"/>
+                <path d="M 224,80 L 224,66 L 210,66" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <line x1="210" y1="80" x2="210" y2="150" stroke="#f39c12" stroke-width="2" stroke-dasharray="3,2"/>
+                <circle cx="210" cy="150" r="3" fill="#f39c12"/>
+                <circle cx="110" cy="185" r="4" fill="#27ae60"/>
+                <circle cx="310" cy="185" r="4" fill="#27ae60"/>
+                <text x="100" y="199" font-size="12">A</text>
+                <text x="316" y="199" font-size="12">B</text>
+                <text x="204" y="199" font-size="12">O</text>
+                <text x="210" y="25" text-anchor="middle" font-size="12" font-weight="bold">ЭККЕР (схема): ∠AOB = 90°</text>
             </svg>
-            <p><strong>Рис. 5:</strong> Эккер — простейший прибор для построения прямых углов на местности. Состоит из двух брусков под прямым углом на треножнике</p>
+            <p><strong>Рис. 5:</strong> Эккер: два бруска под прямым углом на треножнике; наводим один брусок на веху A — второй укажет направление OB под 90°</p>
         </div>
     </div>
 
     <div class="card">
         <h3>📐 Главные правила</h3>
-        
+
         <div class="highlight">
             <strong>🌟 Правило 1: Сумма смежных углов</strong><br>
-            Сумма смежных углов всегда равна <strong>180°</strong> (развёрнутому углу).<br>
-            Если ∠AOB и ∠BOC — смежные, то:<br>
-            <strong>∠AOB + ∠BOC = 180°</strong>
+            Смежные углы в сумме дают <strong>180°</strong>: их несоприкасающиеся стороны образуют развёрнутый угол.<br>
+            <strong>∠1 + ∠2 = 180°</strong> (рис. 1). Отсюда: смежный с острым — тупой, смежный с прямым — прямой.
         </div>
 
         <div class="highlight">
             <strong>🌟 Правило 2: Вертикальные углы равны</strong><br>
-            Вертикальные углы всегда равны между собой.<br>
-            Если ∠1 и ∠3 — вертикальные, то:<br>
-            <strong>∠1 = ∠3</strong><br>
-            Если ∠2 и ∠4 — вертикальные, то:<br>
-            <strong>∠2 = ∠4</strong>
+            <strong>∠1 = 3 и ∠2 = ∠4</strong> (рис. 2).<br>
+            <em>Почему?</em> ∠1 и ∠2 смежные: ∠1 = 180° − ∠2. ∠3 и ∠2 тоже смежные: ∠3 = 180° − ∠2. Значит, ∠1 = ∠3!
         </div>
 
         <div class="highlight">
             <strong>🌟 Правило 3: Перпендикулярные прямые</strong><br>
-            Две пересекающиеся прямые называются перпендикулярными, если они образуют <strong>четыре прямых угла</strong> (по 90° каждый).<br>
-            Обозначение: <strong>AC ⊥ BD</strong> (читается: «прямая AC перпендикулярна к прямой BD»)
+            Прямые перпендикулярны, если при пересечении образуют четыре прямых угла: <strong>a ⊥ b</strong>.<br>
+            Достаточно одного прямого угла: остальные три получаются сами (смежные и вертикальные).
         </div>
 
         <div class="highlight">
-            <strong>🌟 Правило 4: Свойство перпендикулярных прямых</strong><br>
-            Две прямые, перпендикулярные третьей, <strong>не пересекаются</strong> (они параллельны друг другу).<br>
-            Если AA₁ ⊥ PQ и BB₁ ⊥ PQ, то <strong>AA₁ ∥ BB₁</strong>
+            <strong>🌟 Правило 4: Два перпендикуляра к третьей прямой</strong><br>
+            Две прямые, перпендикулярные третьей, <strong>не пересекаются</strong> между собой (рис. 4).<br>
+            <em>Почему?</em> Иначе из точки их пересечения к третьей прямой шли бы два разных перпендикуляра — а такой угол «раздвоиться» не может.
+        </div>
+
+        <div class="highlight">
+            <strong>🌟 Правило 5: Как строят перпендикуляр</strong><br>
+            На чертеже — чертёжным треугольником: один катет вдоль прямой, второй даёт направление перпендикуляра через нужную точку.<br>
+            На местности — эккером или теодолитом (рис. 5).
         </div>
 
         <div class="warning">
             <strong>⚠️ Важно запомнить:</strong><br>
-            • Смежные углы имеют одну общую сторону<br>
-            • Вертикальные углы образуются при пересечении двух прямых<br>
-            • Если один из четырёх углов при пересечении прямых прямой (90°), то и все остальные тоже прямые<br>
-            • Для построения перпендикуляров используют чертёжный треугольник и линейку<br>
-            • На местности используют эккер или теодолит
+            • Смежные: одна сторона общая, другие — продолжения; сумма 180°<br>
+            • Вертикальные: стороны одного — продолжения сторон другого; равны<br>
+            • Если один из четырёх углов пересечения прямой — остальные три тоже прямые<br>
+            • Знак ⊥ читается «перпендикулярна»
         </div>
     </div>
 
     <hr>
 
-    <h2> Блок 2. Закрепление (20-25 мин)</h2>
-    <p>Задания из учебника (стр. 22-26). Решай в тетради, используя чертёжные инструменты. После выполнения открой подсказку и проверь себя!</p>
+    <h2>🛠 Блок 2. Закрепление (20–25 мин)</h2>
+    <p>Задания из учебника (стр. 22–26). Решай в тетради с чертёжными инструментами. После выполнения открой подсказку и проверь себя!</p>
 
     <div class="card">
         <h3><span class="badge badge-must">№58</span> Базовый уровень</h3>
-        <p><strong>Задание:</strong> Начертите острый угол AOB и на продолжении луча OB отметьте точку D. Сравните углы AOB и AOD.</p>
+        <p><strong>Задание:</strong> Начертите острый угол <em>AOB</em> и на продолжении луча <em>OB</em> отметьте точку <em>D</em>. Сравните углы <em>AOB</em> и <em>AOD</em>.</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <div class="step"><strong>Шаг 1:</strong> Начерти острый угол AOB (меньше 90°).</div>
-            <div class="step"><strong>Шаг 2:</strong> Продолжи луч OB за точку O и отметь точку D.</div>
-            <div class="step"><strong>Шаг 3:</strong> Углы AOB и AOD — смежные (имеют общую сторону OA).</div>
-            <div class="step"><strong>Шаг 4:</strong> Так как AOB острый (&lt; 90°), а сумма смежных углов = 180°, то ∠AOD = 180° - ∠AOB &gt; 90°.</div>
-            <p><strong>Ответ:</strong> <strong>∠AOB &lt; ∠AOD</strong> (острый угол меньше тупого)</p>
+            <div class="step"><strong>Шаг 1:</strong> Лучи OB и OD — дополнительные, значит углы AOB и AOD смежные.</div>
+            <div class="step"><strong>Шаг 2:</strong> ∠AOB + ∠AOD = 180°. Угол AOB острый (&lt; 90°), значит ∠AOD = 180° − ∠AOB &gt; 90° — тупой.</div>
+            <p><strong>Ответ:</strong> <strong>∠AOB &lt; ∠AOD</strong> (острый меньше тупого).</p>
+            <p><strong>Проверка:</strong> пример: ∠AOB = 50° → ∠AOD = 130°; 50° &lt; 130° ✓</p>
         </details>
     </div>
 
@@ -313,63 +265,49 @@
         <p><strong>Задание:</strong> Начертите три угла: острый, прямой и тупой. Для каждого из них начертите смежный угол.</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <div class="step"><strong>Острый угол (например, 60°):</strong></div>
-            <div class="step">Начерти угол 60°. Смежный с ним: 180° - 60° = 120° (тупой).</div>
-            <div class="step"><strong>Прямой угол (90°):</strong></div>
-            <div class="step">Начерти угол 90°. Смежный с ним: 180° - 90° = 90° (тоже прямой).</div>
-            <div class="step"><strong>Тупой угол (например, 120°):</strong></div>
-            <div class="step">Начерти угол 120°. Смежный с ним: 180° - 120° = 60° (острый).</div>
-            <p><strong>Вывод:</strong> Смежный с острым — тупой, смежный с прямым — прямой, смежный с тупым — острый.</p>
+            <div class="step"><strong>Шаг 1:</strong> Начерти острый угол (например, 50°). Продли одну сторону за вершину — получишь смежный угол: 180° − 50° = 130° (тупой).</div>
+            <div class="step"><strong>Шаг 2:</strong> Начерти прямой угол (90°, с квадратиком). Смежный с ним: 180° − 90° = 90° — тоже прямой.</div>
+            <div class="step"><strong>Шаг 3:</strong> Начерти тупой угол (например, 120°). Смежный: 180° − 120° = 60° — острый.</div>
+            <p><strong>Вывод:</strong> смежный с острым — тупой; смежный с прямым — прямой; смежный с тупым — острый.</p>
         </details>
     </div>
 
     <div class="card">
         <h3><span class="badge badge-should">№60</span> Средний уровень</h3>
-        <p><strong>Задание:</strong> Начертите неразвёрнутый угол hk. Постройте угол h₁k₁ так, чтобы углы h₁k и h₁k₁ были вертикальными.</p>
+        <p><strong>Задание:</strong> Начертите неразвёрнутый угол <em>hk</em>. Постройте угол <em>h₁k₁</em>, вертикальный углу <em>hk</em>.</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <div class="step"><strong>Шаг 1:</strong> Начерти угол hk (лучи h и k с общим началом).</div>
-            <div class="step"><strong>Шаг 2:</strong> Продолжи луч h за вершину — это луч h₁.</div>
-            <div class="step"><strong>Шаг 3:</strong> Продолжи луч k за вершину — это луч k₁.</div>
-            <div class="step"><strong>Шаг 4:</strong> Угол h₁k₁ образован продолжениями сторон угла hk.</div>
-            <p><strong>Проверка:</strong> ∠hk и ∠h₁k₁ — вертикальные углы, значит они равны!</p>
+            <div class="step"><strong>Шаг 1:</strong> Начерти угол hk с вершиной O.</div>
+            <div class="step"><strong>Шаг 2:</strong> Продли луч h за вершину — получишь луч h₁; продли луч k за вершину — получишь луч k₁.</div>
+            <div class="step"><strong>Шаг 3:</strong> Угол h₁k₁ образован продолжениями сторон угла hk — значит, он вертикальный углу hk.</div>
+            <p><strong>Проверка:</strong> измерь оба угла транспортиром: ∠hk = ∠h₁k₁ (вертикальные равны). Заодно углы h₁k и hk₁ тоже вертикальны между собой.</p>
         </details>
     </div>
 
     <div class="card">
         <h3><span class="badge badge-should">№61</span> Средний уровень</h3>
-        <p><strong>Задание:</strong> Начертите неразвёрнутый угол MON и отметьте точку P внутри угла и точку Q вне его. С помощью чертёжного угольника и линейки через точки P и Q проведите прямые, перпендикулярные прямым OM и ON.</p>
+        <p><strong>Задание:</strong> Начертите неразвёрнутый угол <em>MON</em> и отметьте точку <em>P</em> внутри угла и точку <em>Q</em> вне его. С помощью чертёжного угольника и линейки через точки <em>P</em> и <em>Q</em> проведите прямые, перпендикулярные прямым <em>OM</em> и <em>ON</em>.</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <div class="step"><strong>Шаг 1:</strong> Начерти угол MON.</div>
-            <div class="step"><strong>Шаг 2:</strong> Отметь точку P внутри угла и точку Q вне угла.</div>
-            <div class="step"><strong>Шаг 3:</strong> Для точки P:</div>
-            <div class="step">— Приложи угольник к прямой OM так, чтобы один катет лежал на OM.</div>
-            <div class="step">— Проведи через P прямую вдоль другого катета — это перпендикуляр к OM.</div>
-            <div class="step">— Повтори для прямой ON.</div>
-            <div class="step"><strong>Шаг 4:</strong> Для точки Q сделай то же самое.</div>
-            <p><strong>Итого:</strong> Через каждую точку проведено 2 перпендикуляра (к OM и к ON).</p>
+            <div class="step"><strong>Шаг 1:</strong> Начерти угол MON, отметь P внутри и Q снаружи.</div>
+            <div class="step"><strong>Шаг 2:</strong> Перпендикуляр из P к OM: приложи катет угольника к прямой OM, придвинь линейку ко второму катету, сдвинь угольник вдоль линейки до точки P и проведи прямую.</div>
+            <div class="step"><strong>Шаг 3:</strong> Тем же приёмом проведи перпендикуляр из P к ON.</div>
+            <div class="step"><strong>Шаг 4:</strong> Повтори оба построения для точки Q.</div>
+            <p><strong>Итог:</strong> четыре прямые: через P и через Q, каждая перпендикулярна OM или ON. Отметь прямые углы квадратиками.</p>
         </details>
     </div>
 
     <div class="card">
         <h3><span class="badge badge-aspire">№62</span> Продвинутый уровень</h3>
-        <p><strong>Задание:</strong> Найдите угол, смежный с углом ABC, если:<br>
-        а) ∠ABC = 111°;<br>
-        б) ∠ABC = 90°;<br>
-        в) ∠ABC = 15°.</p>
+        <p><strong>Задание:</strong> Найдите угол, смежный с углом <em>ABC</em>, если:<br>
+        а) ∠ABC = 111°; б) ∠ABC = 90°; в) ∠ABC = 15°.</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <p><strong>Правило:</strong> Смежный угол = 180° - данный угол</p>
-            <p><strong>а) ∠ABC = 111°:</strong></p>
-            <div class="step">Смежный угол = 180° - 111° = 69°</div>
-            <p><strong>Ответ:</strong> <strong>69°</strong></p>
-            <p><strong>б) ABC = 90°:</strong></p>
-            <div class="step">Смежный угол = 180° - 90° = 90°</div>
-            <p><strong>Ответ:</strong> <strong>90°</strong> (прямой угол)</p>
-            <p><strong>в) ∠ABC = 15°:</strong></p>
-            <div class="step">Смежный угол = 180° - 15° = 165°</div>
-            <p><strong>Ответ:</strong> <strong>165°</strong></p>
+            <div class="step"><strong>Правило:</strong> смежный угол = 180° − данный.</div>
+            <p><strong>а)</strong> 180° − 111° = <strong>69°</strong>.</p>
+            <p><strong>б)</strong> 180° − 90° = <strong>90°</strong> (прямой).</p>
+            <p><strong>в)</strong> 180° − 15° = <strong>165°</strong>.</p>
+            <p><strong>Проверка:</strong> в каждом пункте сумма двух углов равна 180° ✓</p>
         </details>
     </div>
 
@@ -377,12 +315,10 @@
         <h3><span class="badge badge-aspire">№63</span> Продвинутый уровень</h3>
         <p><strong>Задание:</strong> Один из смежных углов прямой. Каким (острым, прямым, тупым) является другой угол?</p>
         <details>
-            <summary> Проверить решение</summary>
-            <div class="step"><strong>Дано:</strong> Один угол = 90° (прямой).</div>
-            <div class="step"><strong>Свойство:</strong> Сумма смежных углов = 180°.</div>
-            <div class="step"><strong>Найти:</strong> Второй угол = 180° - 90° = 90°.</div>
-            <p><strong>Ответ:</strong> <strong>Прямой угол</strong> (тоже 90°)</p>
-            <p><strong>Вывод:</strong> Если один из смежных углов прямой, то и другой тоже прямой!</p>
+            <summary>💡 Проверить решение</summary>
+            <div class="step">Другой угол = 180° − 90° = 90°.</div>
+            <p><strong>Ответ:</strong> <strong>прямой</strong>.</p>
+            <p><strong>Вывод:</strong> если один из смежных углов прямой, то и второй прямой — стороны углов перпендикулярны!</p>
         </details>
     </div>
 
@@ -390,61 +326,25 @@
         <h3><span class="badge badge-aspire">№64</span> Продвинутый уровень</h3>
         <p><strong>Задание:</strong> Верно ли утверждение: если смежные углы равны, то они прямые?</p>
         <details>
-            <summary> Проверить решение</summary>
-            <div class="step"><strong>Дано:</strong> Смежные углы равны: ∠1 = ∠2.</div>
-            <div class="step"><strong>Свойство:</strong> ∠1 + ∠2 = 180°.</div>
-            <div class="step"><strong>Подставим:</strong> ∠1 + ∠1 = 180° (так как ∠1 = ∠2).</div>
-            <div class="step">2∠1 = 180°</div>
-            <div class="step">∠1 = 90°</div>
-            <div class="step">∠2 = 90°</div>
-            <p><strong>Ответ:</strong> <strong>ДА, верно!</strong> Если смежные углы равны, то каждый из них равен 90° (прямой угол).</p>
+            <summary>💡 Проверить решение</summary>
+            <div class="step">Пусть каждый смежный угол равен x. Тогда x + x = 180° → 2x = 180° → x = 90°.</div>
+            <p><strong>Ответ:</strong> <strong>да, верно</strong>: равные смежные углы — прямые.</p>
         </details>
     </div>
 
     <div class="card">
         <h3><span class="badge badge-aspire">№65</span> Продвинутый уровень</h3>
-        <p><strong>Задание:</strong> Найдите смежные углы hk и kl, если:<br>
-        а) ∠hk меньше ∠kl на 40°;<br>
-        б) ∠hk больше kl на 120°;<br>
-        в) ∠hk больше ∠kl на 47°18′;<br>
-        г) ∠hk = 3∠kl;<br>
-        д) ∠hk : kl = 5 : 4.</p>
+        <p><strong>Задание:</strong> Найдите смежные углы <em>hk</em> и <em>kl</em>, если:<br>
+        а) ∠hk меньше ∠kl на 40°; б) ∠hk больше ∠kl на 120°; в) ∠hk больше ∠kl на 47°18′; г) ∠hk = 3∠kl; д) ∠hk : ∠kl = 5 : 4.</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <p><strong>а) ∠hk меньше ∠kl на 40°:</strong></p>
-            <div class="step">Пусть ∠hk = x, тогда ∠kl = x + 40°.</div>
-            <div class="step">x + (x + 40°) = 180°</div>
-            <div class="step">2x = 140°</div>
-            <div class="step">x = 70°</div>
-            <p><strong>Ответ:</strong> <strong>∠hk = 70°, kl = 110°</strong></p>
-            
-            <p><strong>б) ∠hk больше ∠kl на 120°:</strong></p>
-            <div class="step">Пусть ∠kl = x, тогда ∠hk = x + 120°.</div>
-            <div class="step">x + (x + 120°) = 180°</div>
-            <div class="step">2x = 60°</div>
-            <div class="step">x = 30°</div>
-            <p><strong>Ответ:</strong> <strong>∠kl = 30°, ∠hk = 150°</strong></p>
-            
-            <p><strong>в) ∠hk больше ∠kl на 47°18′:</strong></p>
-            <div class="step">Пусть ∠kl = x, тогда ∠hk = x + 47°18′.</div>
-            <div class="step">x + (x + 47°18′) = 180°</div>
-            <div class="step">2x = 180° - 47°18′ = 132°42′</div>
-            <div class="step">x = 66°21′</div>
-            <p><strong>Ответ:</strong> <strong>∠kl = 66°21′, ∠hk = 113°39′</strong></p>
-            
-            <p><strong>г) ∠hk = 3∠kl:</strong></p>
-            <div class="step">Пусть ∠kl = x, тогда ∠hk = 3x.</div>
-            <div class="step">x + 3x = 180°</div>
-            <div class="step">4x = 180°</div>
-            <div class="step">x = 45°</div>
-            <p><strong>Ответ:</strong> <strong>∠kl = 45°, ∠hk = 135°</strong></p>
-            
-            <p><strong>д) ∠hk : kl = 5 : 4:</strong></p>
-            <div class="step">Пусть ∠hk = 5x, ∠kl = 4x.</div>
-            <div class="step">5x + 4x = 180°</div>
-            <div class="step">9x = 180°</div>
-            <div class="step">x = 20°</div>
-            <p><strong>Ответ:</strong> <strong>∠hk = 100°, ∠kl = 80°</strong></p>
+            <div class="step"><strong>Основа:</strong> ∠hk + ∠kl = 180°.</div>
+            <p><strong>а)</strong> x + (x + 40°) = 180° → 2x = 140° → x = 70°. <strong>Ответ: 70° и 110°.</strong></p>
+            <p><strong>б)</strong> (x + 120°) + x = 180° → 2x = 60° → x = 30°. <strong>Ответ: 150° и 30°.</strong></p>
+            <p><strong>в)</strong> (x + 47°18′) + x = 180° → 2x = 179°60′ − 47°18′ = 132°42′ → x = 66°21°. <strong>Ответ: 113°39′ и 66°21′.</strong></p>
+            <p><strong>г)</strong> 3x + x = 180° → 4x = 180° → x = 45°. <strong>Ответ: 135° и 45°.</strong></p>
+            <p><strong>д)</strong> 5x + 4x = 180° → 9x = 180° → x = 20°. <strong>Ответ: 100° и 80°.</strong></p>
+            <p><strong>Проверка:</strong> во всех пунктах сумма двух ответов равна 180° ✓</p>
         </details>
     </div>
 
@@ -452,16 +352,14 @@
 
     <div class="card">
         <h3><span class="badge badge-aspire">№66</span> Дополнительная практика</h3>
-        <p><strong>Задание:</strong> На рисунке 52 углы BOD и COD равны. Найдите угол AOD, если COB = 148°.</p>
+        <p><strong>Задание:</strong> На рисунке 52 углы <em>BOD</em> и <em>COD</em> равны. Найдите угол <em>AOD</em>, если ∠COB = 148°.</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <div class="step"><strong>Дано:</strong> ∠BOD = ∠COD, ∠COB = 148°.</div>
-            <div class="step"><strong>Шаг 1:</strong> ∠COB = ∠COD + ∠BOD = 2∠COD (так как они равны).</div>
-            <div class="step">2∠COD = 148°</div>
-            <div class="step">∠COD = 74°</div>
-            <div class="step"><strong>Шаг 2:</strong> ∠AOD и ∠COD — смежные (образуют прямую AOC).</div>
-            <div class="step">∠AOD = 180° - ∠COD = 180° - 74° = 106°</div>
-            <p><strong>Ответ:</strong> <strong>∠AOD = 106°</strong></p>
+            <div class="step"><strong>Шаг 1:</strong> Луч OD проходит внутри угла COB, значит ∠COB = ∠COD + ∠DOB = 2∠DOB (углы равны).</div>
+            <div class="step"><strong>Шаг 2:</strong> ∠DOB = 148° : 2 = 74°.</div>
+            <div class="step"><strong>Шаг 3:</strong> Точки A, O, B на одной прямой, значит ∠AOD и ∠DOB смежные: ∠AOD = 180° − 74° = 106°.</div>
+            <p><strong>Ответ:</strong> <strong>∠AOD = 106°</strong>.</p>
+            <p><strong>Проверка:</strong> ∠AOC = 180° − 148° = 32°; ∠AOD = ∠AOC + ∠COD = 32° + 74° = 106° ✓</p>
         </details>
     </div>
 
@@ -470,77 +368,52 @@
         <p><strong>Задание:</strong> Даны два равных угла. Равны ли смежные с ними углы?</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <div class="step"><strong>Дано:</strong> ∠1 = ∠2.</div>
-            <div class="step"><strong>Найти:</strong> Равны ли смежные с ними углы 3 и ∠4?</div>
-            <div class="step"><strong>Решение:</strong></div>
-            <div class="step">∠1 + ∠3 = 180° (смежные)</div>
-            <div class="step">∠2 + ∠4 = 180° (смежные)</div>
-            <div class="step">Так как ∠1 = ∠2, то:</div>
-            <div class="step">3 = 180° - 1</div>
-            <div class="step">∠4 = 180° - ∠2 = 180° - ∠1</div>
-            <div class="step">Значит, ∠3 = ∠4</div>
-            <p><strong>Ответ:</strong> <strong>ДА, равны!</strong> Смежные углы с равными углами тоже равны.</p>
+            <div class="step">Пусть ∠1 = ∠2 = x. Смежный с ∠1 равен 180° − x; смежный с ∠2 тоже 180° − x.</div>
+            <p><strong>Ответ:</strong> <strong>да, равны</strong>: оба смежных угла равны 180° − x.</p>
         </details>
     </div>
 
     <div class="card">
         <h3><span class="badge badge-aspire">№68</span> Дополнительная практика</h3>
         <p><strong>Задание:</strong> Найдите изображённые на рисунке 47 углы:<br>
-        а) ∠1, 3, ∠4, если ∠2 = 117°;<br>
-        б) ∠1, ∠2, ∠4, если ∠3 = 43°27′.</p>
+        а) ∠1, ∠3, ∠4, если ∠2 = 117°; б) ∠1, ∠2, ∠4, если ∠3 = 43°27′.</p>
         <details>
             <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Схема рисунка:</strong> углы 1, 2, 3, 4 идут по кругу вокруг точки пересечения: вертикальные пары (1, 3) и (2, 4); соседние — смежные.</div>
             <p><strong>а) ∠2 = 117°:</strong></p>
-            <div class="step">∠1 и ∠2 — смежные: ∠1 = 180° - 117° = 63°</div>
-            <div class="step">∠3 и ∠2 — смежные: ∠3 = 180° - 117° = 63°</div>
-            <div class="step">∠4 и ∠2 — вертикальные: ∠4 = ∠2 = 117°</div>
-            <p><strong>Ответ:</strong> <strong>∠1 = 63°, ∠3 = 63°, ∠4 = 117°</strong></p>
-            
+            <div class="step">∠1 = 180° − 117° = 63° (смежный с ∠2); ∠3 = 180° − 117° = 63° (смежный с ∠2); 4 = ∠2 = 117° (вертикальный).</div>
+            <p><strong>Ответ:</strong> <strong>∠1 = 63°, ∠3 = 63°, ∠4 = 117°</strong>.</p>
             <p><strong>б) ∠3 = 43°27′:</strong></p>
-            <div class="step">∠1 и ∠3 — вертикальные: ∠1 = ∠3 = 43°27′</div>
-            <div class="step">∠2 и ∠3 — смежные: ∠2 = 180° - 43°27′ = 136°33′</div>
-            <div class="step">∠4 и ∠2 — вертикальные: ∠4 = ∠2 = 136°33′</div>
-            <p><strong>Ответ:</strong> <strong>∠1 = 43°27′, ∠2 = 136°33′, ∠4 = 136°33′</strong></p>
+            <div class="step">∠1 = 3 = 43°27′ (вертикальный); ∠2 = 180° − 43°27′ = 179°60′ − 43°27′ = 136°33′; ∠4 = ∠2 = 136°33′.</div>
+            <p><strong>Ответ:</strong> <strong>∠1 = 43°27′, ∠2 = 136°33′, ∠4 = 136°33′</strong>.</p>
         </details>
     </div>
 
     <div class="card">
         <h3><span class="badge badge-aspire">№69</span> Дополнительная практика</h3>
         <p><strong>Задание:</strong> Найдите неразвёрнутые углы, образованные при пересечении двух прямых, если:<br>
-        а) сумма двух из них равна 114°;<br>
-        б) сумма трёх углов равна 220°.</p>
+        а) сумма двух из них равна 114°; б) сумма трёх углов равна 220°.</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <p><strong>а) Сумма двух углов = 114°:</strong></p>
-            <div class="step">При пересечении двух прямых образуются 4 угла: 2 пары вертикальных.</div>
-            <div class="step">Если сумма двух углов = 114°, это могут быть:</div>
-            <div class="step">— либо два смежных (но тогда 114° ≠ 180°, невозможно!)</div>
-            <div class="step">— либо два вертикальных (они равны).</div>
-            <div class="step">Значит, это два равных вертикальных угла: 2∠1 = 114°</div>
-            <div class="step">∠1 = 57°</div>
-            <div class="step">Смежный с ним: ∠2 = 180° - 57° = 123°</div>
-            <p><strong>Ответ:</strong> <strong>57°, 123°, 57°, 123°</strong></p>
-            
-            <p><strong>б) Сумма трёх углов = 220°:</strong></p>
-            <div class="step">Пусть углы: ∠1, ∠2, ∠3, ∠4 (∠1 = ∠3, ∠2 = ∠4).</div>
-            <div class="step">∠1 + ∠2 + 3 = 220°</div>
-            <div class="step">Так как ∠1 = ∠3, то: 2∠1 + ∠2 = 220°</div>
-            <div class="step">Но ∠1 + ∠2 = 180° (смежные), значит ∠2 = 180° - ∠1</div>
-            <div class="step">2∠1 + (180° - ∠1) = 220°</div>
-            <div class="step">∠1 = 40°</div>
-            <div class="step">∠2 = 180° - 40° = 140°</div>
-            <p><strong>Ответ:</strong> <strong>40°, 140°, 40°, 140°</strong></p>
+            <p><strong>а)</strong></p>
+            <div class="step">Два смежных угла в сумме дают 180° ≠ 114°, значит взяты два вертикальных (равных) угла: 2x = 114° → x = 57°.</div>
+            <div class="step">Смежные с ними: 180° − 57° = 123°.</div>
+            <p><strong>Ответ:</strong> <strong>57°, 123°, 57°, 123°</strong>.</p>
+            <p><strong>б)</strong></p>
+            <div class="step">Пусть углы по кругу: ∠1, ∠2, 3, ∠4, где ∠1 = ∠3 и ∠2 = ∠4. Сумма трёх: ∠1 + ∠2 + ∠3 = 220°.</div>
+            <div class="step">Так как ∠1 + ∠2 = 180° (смежные), то 180° + ∠3 = 220° → ∠3 = 40°; тогда ∠1 = 40°, ∠2 = ∠4 = 140°.</div>
+            <p><strong>Ответ:</strong> <strong>40°, 140°, 40°, 140°</strong>.</p>
+            <p><strong>Проверка:</strong> 40 + 140 + 40 = 220 ✓; 57 + 57 = 114 ✓</p>
         </details>
     </div>
 
     <div class="card">
         <h3>💡 Методическая подсказка</h3>
         <ul>
-            <li><strong>Если сложно с вертикальными углами:</strong> Нарисуй букву X — это две пересекающиеся прямые. Противоположные углы (накрест) — вертикальные и равны!</li>
-            <li><strong>Для запоминания:</strong> Смежные = рядом (имеют общую сторону), Вертикальные = напротив (равны).</li>
-            <li><strong>Проверка:</strong> После решения задачи о смежных углах проверь: их сумма должна быть 180°!</li>
-            <li><strong>Важно:</strong> Если один угол при пересечении прямых равен 90°, то все четыре угла прямые — это перпендикулярные прямые!</li>
-            <li><strong>Лайфхак:</strong> При решении задач с пропорциями (как №65д) используй коэффициент x: если отношение 5:4, то углы 5x и 4x.</li>
+            <li><strong>Если путаешь смежные и вертикальные:</strong> смежные — «соседи» (общая сторона), вертикальные — «напротив» (через вершину). Нарисуй букву X: напротив — вертикальные, рядом — смежные.</li>
+            <li><strong>Для запоминания:</strong> смежные → сумма 180°; вертикальные → равенство.</li>
+            <li><strong>Проверка задач:</strong> сумма четырёх углов пересечения всегда 360°; сумма смежной пары — 180°.</li>
+            <li><strong>Важно:</strong> один прямой угол при пересечении автоматически делает прямые перпендикулярными — все четыре угла прямые!</li>
         </ul>
     </div>
 
