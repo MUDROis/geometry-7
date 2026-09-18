@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Повторение главы I — Начальные геометрические сведения | 7 класс</title>
+    <!-- Урок-повторение главы I. Схема случаев построена в масштабе 1 см = 10 px; расчёты — в комментариях внутри SVG. -->
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f9f9fb; }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        h3 { color: #16a085; }
+        .card { background: #fff; border-radius: 12px; padding: 20px; margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .highlight { background-color: #e8f4f8; padding: 15px; border-left: 5px solid #3498db; border-radius: 5px; margin: 15px 0; }
+        .warning { background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; border-radius: 5px; margin: 15px 0; }
+        details { background: #f4f6f7; border-radius: 8px; padding: 10px 15px; margin: 10px 0; cursor: pointer; }
+        summary { font-weight: bold; color: #2980b9; outline: none; }
+        details[open] summary { margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 5px;}
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 0.8em; font-weight: bold; color: white; margin-right: 5px;}
+        .badge-must { background: #2ecc71; }
+        .badge-should { background: #f39c12; }
+        .badge-aspire { background: #9b59b6; }
+        .diagram { background: #fff; border: 2px solid #ecf0f1; border-radius: 8px; padding: 15px; margin: 15px 0; text-align: center; }
+        .diagram svg { max-width: 100%; height: auto; }
+        .step { background: #f8f9fa; padding: 10px; margin: 8px 0; border-radius: 5px; border-left: 3px solid #3498db; }
+        .qnum { display: inline-block; min-width: 26px; padding: 1px 7px; border-radius: 8px; background: #3498db; color: #fff; font-size: .8em; font-weight: 700; margin-right: 6px; }
+    </style>
+</head>
+<body>
+
+    <h1>🎓 Повторение главы I: начальные геометрические сведения</h1>
+    <p><strong>Геометрия 7 класс • Глава I • Вопросы для повторения 1–26 (стр. 26) • Дополнительные задачи 75–91 (стр. 27)</strong></p>
+
+    <div class="card">
+        <p>Привет! 👋 Сегодня урок-повторение: собираем всю главу I в одну копилку. Сначала пробежимся по 26 устным вопросам (нажимай на вопрос — откроется ответ), потом решим дополнительные задачи со звёздочкой сложности. Главное правило геометрии: <strong>сначала чертёж, потом вычисления!</strong> 📐</p>
+    </div>
+
+    <h2>🌾 Блок 1. Устное повторение (15–20 мин)</h2>
+
+    <div class="card">
+        <h3>📏 Прямые, отрезки, лучи</h3>
+        <details><summary><span class="qnum">1</span>Сколько прямых можно провести через две точки?</summary><p><strong>Ответ:</strong> ровно <strong>одну</strong> (аксиома).</p></details>
+        <details><summary><span class="qnum">2</span>Сколько общих точек могут иметь две прямые?</summary><p><strong>Ответ:</strong> не больше одной: либо <strong>одна</strong> (пересекаются), либо <strong>ни одной</strong> (не пересекаются).</p></details>
+        <details><summary><span class="qnum">3</span>Объясните, что такое отрезок.</summary><p><strong>Ответ:</strong> часть прямой, ограниченная <strong>двумя точками</strong> — концами; содержит концы и все точки между ними.</p></details>
+        <details><summary><span class="qnum">4</span>Какая фигура называется ломаной? Что такое вершины и звенья?</summary><p><strong>Ответ:</strong> ломаная — несколько отрезков, соединённых концами последовательно (соседние не на одной прямой). Отрезки — <strong>звенья</strong>, точки их соединения — <strong>вершины</strong>.</p></details>
+        <details><summary><span class="qnum">5</span>Какая ломаная называется многоугольником?</summary><p><strong>Ответ:</strong> <strong>замкнутая</strong> ломаная без самопересечений (концы совпадают); её звенья — стороны многоугольника.</p></details>
+        <details><summary><span class="qnum">6</span>Объясните, что такое луч. Как обозначаются лучи?</summary><p><strong>Ответ:</strong> часть прямой с <strong>началом</strong>, но без конца. Обозначение: двумя буквами (первая — начало, например OA) или одной строчной буквой (h, k).</p></details>
+        <details><summary><span class="qnum">10</span>Объясните, как сравнить два отрезка.</summary><p><strong>Ответ:</strong> <strong>наложением</strong> (совместить концы) или сравнением длин: длиннее тот, у кого длина больше.</p></details>
+        <details><summary><span class="qnum">11</span>Какая точка называется серединой отрезка?</summary><p><strong>Ответ:</strong> точка C, делящая отрезок AB на два равных: <strong>AC = CB</strong>.</p></details>
+        <details><summary><span class="qnum">14</span>Точка C делит отрезок AB на два отрезка. Как найти AB, зная AC и CB?</summary><p><strong>Ответ:</strong> <strong>AB = AC + CB</strong> (целое равно сумме частей).</p></details>
+        <details><summary><span class="qnum">15</span>Что такое длина ломаной?</summary><p><strong>Ответ:</strong> <strong>сумма длин всех звеньев</strong>; длина замкнутой ломаной ( многоугольника) — его периметр.</p></details>
+        <details><summary><span class="qnum">16</span>Какое наименьшее число сторон может иметь многоугольник?</summary><p><strong>Ответ:</strong> <strong>три</strong> (треугольник).</p></details>
+        <details><summary><span class="qnum">17</span>Объясните, как найти периметр многоугольника.</summary><p><strong>Ответ:</strong> <strong>сложить длины всех сторон</strong>.</p></details>
+        <details><summary><span class="qnum">18</span>Какими инструментами пользуются для измерения расстояний?</summary><p><strong>Ответ:</strong> линейка, рулетка, измерительная лента; на местности — <strong>рулетка и дальномер</strong>.</p></details>
+    </div>
+
+    <div class="card">
+        <h3>📐 Углы и их меры</h3>
+        <details><summary><span class="qnum">7</span>Какая фигура называется углом? Что такое вершина и стороны?</summary><p><strong>Ответ:</strong> фигура из <strong>точки (вершины)</strong> и двух <strong>лучей (сторон)</strong>, из неё выходящих. Запись: ∠AOB, ∠hk, ∠O.</p></details>
+        <details><summary><span class="qnum">8</span>Какой угол называется развёрнутым?</summary><p><strong>Ответ:</strong> угол в <strong>180°</strong>: его стороны лежат на одной прямой (дополнительные лучи).</p></details>
+        <details><summary><span class="qnum">9</span>Какие фигуры называются равными?</summary><p><strong>Ответ:</strong> те, что <strong>совпадают при наложении</strong>.</p></details>
+        <details><summary><span class="qnum">12</span>Объясните, как сравнить два угла.</summary><p><strong>Ответ:</strong> <strong>наложением</strong> (совместить вершину и одну сторону) или транспортиром: больше тот, у кого градусная мера больше.</p></details>
+        <details><summary><span class="qnum">13</span>Какой луч называется биссектрисой угла?</summary><p><strong>Ответ:</strong> луч из вершины, делящий угол на <strong>два равных</strong>.</p></details>
+        <details><summary><span class="qnum">19</span>Что такое градусная мера угла?</summary><p><strong>Ответ:</strong> число <strong>градусов</strong> (1° = 1/180 развёрнутого угла), содержащихся в угле; измеряется транспортиром.</p></details>
+        <details><summary><span class="qnum">20</span>Луч OC делит угол AOB на два угла. Как найти ∠AOB, зная ∠AOC и ∠COB?</summary><p><strong>Ответ:</strong> <strong>∠AOB = ∠AOC + ∠COB</strong>.</p></details>
+        <details><summary><span class="qnum">21</span>Какой угол называется острым; прямым; тупым?</summary><p><strong>Ответ:</strong> острый — <strong>меньше 90°</strong>; прямой — <strong>ровно 90°</strong>; тупой — <strong>больше 90°, но меньше 180°</strong>.</p></details>
+        <details><summary><span class="qnum">22</span>Какие углы называются смежными? Чему равна сумма смежных углов?</summary><p><strong>Ответ:</strong> углы с <strong>одной общей стороной</strong>, а две другие — дополнительные лучи. Сумма = <strong>180°</strong>.</p></details>
+        <details><summary><span class="qnum">23</span>Какие углы называются вертикальными? Каким свойством они обладают?</summary><p><strong>Ответ:</strong> углы, стороны одного — продолжения сторон другого. Вертикальные углы <strong>равны</strong>.</p></details>
+    </div>
+
+    <div class="card">
+        <h3>⊥ Перпендикулярность</h3>
+        <details><summary><span class="qnum">24</span>Какие прямые называются перпендикулярными?</summary><p><strong>Ответ:</strong> прямые, пересекающиеся под <strong>прямым углом</strong> (образуют четыре прямых угла). Запись: a ⊥ b.</p></details>
+        <details><summary><span class="qnum">25</span>Объясните, почему две прямые, перпендикулярные к третьей, не пересекаются.</summary><p><strong>Ответ:</strong> если бы они пересеклись в точке M, то из M к третьей прямой шли бы <strong>два перпендикуляра</strong>; при наложении рисунка лучи совпали бы — противоречие. Значит, не пересекаются.</p></details>
+        <details><summary><span class="qnum">26</span>Какие приборы применяют для построения прямых углов на местности?</summary><p><strong>Ответ:</strong> на чертеже — чертёжный треугольник (угольник); на местности — <strong>эккер</strong>, а также более точный <strong>теодолит</strong>.</p></details>
+    </div>
+
+    <div class="card">
+        <div class="highlight">
+            <strong>🔑 Три ключа главы:</strong><br>
+            1) Смежные углы: сумма <strong>180°</strong>. 2) Вертикальные углы: <strong>равны</strong>. 3) Отрезок: целое = <strong>сумма частей</strong> (и то же для градусных мер углов).
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>🛠 Блок 2. Дополнительные задачи (20–25 мин)</h2>
+
+    <div class="card">
+        <h3>🔥 Разминка: посчитай без ошибки</h3>
+        <details><summary><span class="qnum">75</span>Четыре точки, никакие три не на одной прямой. Через каждую пару — прямая. Сколько прямых?</summary>
+            <div class="step">Прямую задаёт пара точек: пар из четырёх точек шесть: (1,2), (1,3), (1,4), (2,3), (2,4), (3,4).</div>
+            <p><strong>Ответ:</strong> <strong>6 прямых</strong>.</p>
+        </details>
+        <details><summary><span class="qnum">76</span>Четыре прямые, каждые две пересекаются, через каждую точку пересечения — только две прямые. Сколько точек?</summary>
+            <div class="step">Точку пересечения задаёт пара прямых: пар из четырёх прямых шесть.</div>
+            <p><strong>Ответ:</strong> <strong>6 точек</strong>.</p>
+        </details>
+        <details><summary><span class="qnum">77</span>Сколько неразвёрнутых углов образуют три прямые, проходящие через одну точку?</summary>
+            <div class="step">Три прямые дают 6 лучей из точки O. Пар лучей: 15; из них 3 пары — дополнительные лучи (развёрнутые углы).</div>
+            <div class="step">Остальные пары дают неразвёрнутые углы: 15 − 3 = 12.</div>
+            <p><strong>Ответ:</strong> <strong>12 неразвёрнутых углов</strong>.</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-must">Уровень 1</span> Задача 78</h3>
+        <p><strong>Задание:</strong> Точка N лежит на отрезке MP. Расстояние между M и P равно 24 см, а расстояние между N и M в 2 раза больше расстояния между N и P. Найдите расстояния: а) между N и P; б) между N и M.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> N на отрезке MP, значит NP + NM = MP = 24 см.</div>
+            <div class="step"><strong>Шаг 2:</strong> Пусть NP = x, тогда NM = 2x. Уравнение: x + 2x = 24 → 3x = 24 → x = 8.</div>
+            <p><strong>Ответ:</strong> <strong>а) NP = 8 см; б) NM = 16 см</strong>.</p>
+            <p><strong>Проверка:</strong> 8 + 16 = 24 ✓ и 16 = 2·8 ✓</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-must">Уровень 1</span> Задача 79</h3>
+        <p><strong>Задание:</strong> Точки K, L, M лежат на одной прямой, KL = 6 см, LM = 10 см. Каким может быть расстояние KM? Для каждого случая сделай чертёж.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Случай 1: L между K и M.</strong> KM = KL + LM = 6 + 10 = 16 см.</div>
+            <div class="step"><strong>Случай 2: K между L и M.</strong> LM = LK + KM → KM = 10 − 6 = 4 см.</div>
+            <div class="step"><strong>Случай 3: M между K и L?</strong> Тогда KL = KM + ML → 6 = KM + 10 — невозможно (часть больше целого).</div>
+            <p><strong>Ответ:</strong> <strong>KM = 16 см или KM = 4 см</strong> (смотри схему ниже).</p>
+        </details>
+    </div>
+
+    <div class="diagram">
+        <h4>Два случая задачи 79 (масштаб: 1 см = 10 px)</h4>
+        <svg width="420" height="150" viewBox="0 0 420 150">
+            <!-- Масштаб 10 px/см. Случай 1: K(60,50), L(120,50), M(220,50): KL=60px=6см, LM=100px=10см, KM=160px=16см.
+                 Случай 2: L(60,110), K(120,110), M(160,110): LK=60px=6см, KM=40px=4см, LM=100px=10см. -->
+            <line x1="60" y1="50" x2="220" y2="50" stroke="#3498db" stroke-width="3"/>
+            <circle cx="60" cy="50" r="5" fill="#2980b9"/><circle cx="120" cy="50" r="5" fill="#2980b9"/><circle cx="220" cy="50" r="5" fill="#2980b9"/>
+            <text x="60" y="70" text-anchor="middle" font-size="13" font-weight="bold">K</text>
+            <text x="120" y="70" text-anchor="middle" font-size="13" font-weight="bold">L</text>
+            <text x="220" y="70" text-anchor="middle" font-size="13" font-weight="bold">M</text>
+            <text x="90" y="40" text-anchor="middle" font-size="11" fill="#7f8c8d">6</text>
+            <text x="170" y="40" text-anchor="middle" font-size="11" fill="#7f8c8d">10</text>
+            <text x="140" y="88" text-anchor="middle" font-size="12" fill="#27ae60" font-weight="bold">KM = 16 см</text>
+            <line x1="60" y1="110" x2="160" y2="110" stroke="#9b59b6" stroke-width="3"/>
+            <circle cx="60" cy="110" r="5" fill="#8e44ad"/><circle cx="120" cy="110" r="5" fill="#8e44ad"/><circle cx="160" cy="110" r="5" fill="#8e44ad"/>
+            <text x="60" y="130" text-anchor="middle" font-size="13" font-weight="bold">L</text>
+            <text x="120" y="130" text-anchor="middle" font-size="13" font-weight="bold">K</text>
+            <text x="160" y="130" text-anchor="middle" font-size="13" font-weight="bold">M</text>
+            <text x="90" y="100" text-anchor="middle" font-size="11" fill="#7f8c8d">6</text>
+            <text x="140" y="100" text-anchor="middle" font-size="11" fill="#7f8c8d">4</text>
+            <text x="110" y="146" text-anchor="middle" font-size="12" fill="#27ae60" font-weight="bold">KM = 4 см</text>
+            <text x="330" y="55" font-size="12" font-weight="bold">Случай 1:</text>
+            <text x="330" y="72" font-size="12">L между K и M</text>
+            <text x="330" y="115" font-size="12" font-weight="bold">Случай 2:</text>
+            <text x="330" y="132" font-size="12">K между L и M</text>
+        </svg>
+        <p><strong>Схема к задаче 79:</strong> порядок точек решает всё — сначала чертёж, потом вычисления</p>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-should">Уровень 2</span> Задача 80</h3>
+        <p><strong>Задание:</strong> Отрезок AB длины a разделён точками P и Q на три отрезка так, что AP = 2PQ = 2QB. Найдите расстояние между: а) точкой A и серединой отрезка QB; б) серединами отрезков AP и QB.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Пусть QB = x; тогда PQ = x (ведь 2PQ = 2QB) и AP = 2x. Всего: 2x + x + x = a → 4x = a → x = a/4.</div>
+            <div class="step"><strong>Шаг 2:</strong> Координаты на прямой: A = 0; P = AP = a/2; Q = a/2 + a/4 = 3a/4; B = a.</div>
+            <p><strong>а)</strong></p>
+            <div class="step">Середина QB: (3a/4 + a) : 2 = 7a/8. Расстояние от A: 7a/8 − 0 = 7a/8.</div>
+            <p><strong>Ответ:</strong> <strong>7a/8</strong>.</p>
+            <p><strong>б)</strong></p>
+            <div class="step">Середина AP: a/4; середина QB: 7a/8. Расстояние: 7a/8 − a/4 = 5a/8.</div>
+            <p><strong>Ответ:</strong> <strong>5a/8</strong>.</p>
+            <p><strong>Проверка:</strong> AP = a/2 = 2·(a/4) = 2PQ ✓; суммы частей: a/2 + a/4 + a/4 = a ✓</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-should">Уровень 2</span> Задача 82</h3>
+        <p><strong>Задание:</strong> Отрезок в 36 см разделён на четыре не равные друг другу части. Расстояние между серединами крайних частей равно 30 см. Найдите расстояние между серединами средних частей.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Части по порядку: x₁, x₂, x₃, x₄. Крайние: T = x₁ + x₄; средние: S = x₂ + x₃; T + S = 36.</div>
+            <div class="step"><strong>Шаг 2:</strong> Между серединами крайних частей умещаются: половина x₁, целиком x₂ и x₃, половина x₄: S + T/2 = 30.</div>
+            <div class="step"><strong>Шаг 3:</strong> Вычтем из T + S = 36: (T + S) − (S + T/2) = 36 − 30 → T/2 = 6 → T = 12, тогда S = 24.</div>
+            <div class="step"><strong>Шаг 4:</strong> Между серединами средних частей: половина x₂ + половина x₃ = S/2 = 12 см.</div>
+            <p><strong>Ответ:</strong> <strong>12 см</strong>.</p>
+            <p><strong>Проверка на примере:</strong> x₁=2, x₂=4, x₃=20, x₄=10 (T=12, S=24): середины крайних: 1 и 36−5=31 → 30 ✓; середины средних: 2+2=4 и 2+4+10=16 → 12 ✓</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-aspire">Уровень 3</span> Задача 84</h3>
+        <p><strong>Задание:</strong> Известно, что ∠AOB = 35°, ∠BOC = 50°. Найдите угол AOC. Для каждого случая сделай чертёж линейкой и транспортиром.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Случай 1: луч OB внутри угла AOC.</strong> ∠AOC = ∠AOB + ∠BOC = 35° + 50° = 85°.</div>
+            <div class="step"><strong>Случай 2: луч OA внутри угла BOC.</strong> ∠AOC = ∠BOC − ∠AOB = 50° − 35° = 15°.</div>
+            <div class="step"><strong>Случай 3: луч OC внутри угла AOB?</strong> Тогда ∠AOB = ∠AOC + ∠COB → 35° = ∠AOC + 50° — невозможно.</div>
+            <p><strong>Ответ:</strong> <strong>∠AOC = 85° или 15°</strong>.</p>
+            <p><strong>Проверка:</strong> в случае 1: 35° + 50° = 85° ✓; в случае 2: 15° + 35° = 50° ✓</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3><span class="badge badge-aspire">Уровень 3</span> Задача 86</h3>
+        <p><strong>Задание:</strong> Найдите смежные углы, если: а) один из них на 45° больше другого; б) их разность равна 35°.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Основа:</strong> сумма смежных углов = 180°.</div>
+            <p><strong>а)</strong></p>
+            <div class="step">x + (x + 45°) = 180° → 2x = 135° → x = 67,5°. Углы: 67,5° и 112,5°.</div>
+            <p><strong>б)</strong></p>
+            <div class="step">x + y = 180° и x − y = 35°. Сложим: 2x = 215° → x = 107,5°; y = 180° − 107,5° = 72,5°.</div>
+            <p><strong>Ответ:</strong> <strong>а) 67,5° и 112,5°; б) 107,5° и 72,5°</strong>.</p>
+            <p><strong>Проверка:</strong> 67,5 + 112,5 = 180 ✓, 112,5 − 67,5 = 45 ✓; 107,5 + 72,5 = 180 ✓, 107,5 − 72,5 = 35 ✓</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h3>💡 Методическая подсказка</h3>
+        <div class="warning">
+            <strong>🔥 Лайфхак главы: чертёж и случаи — не потеряй второй ответ!</strong><br>
+            В задачах «точки на прямой» и «луч внутри угла» ответ часто не один. Алгоритм:<br>
+            1) Сделай чертёж по условию и отметь известные величины.<br>
+            2) Спроси: «Может ли точка (луч) стоять ИНАЧЕ?» — с другой стороны, между другими точками.<br>
+            3) Реши КАЖДЫЙ случай отдельно и запиши все ответы; невозможный случай объясни («часть не больше целого»).
+        </div>
+        <ul>
+            <li><strong>Главное запомнить:</strong> через две точки — одна прямая; целое = сумма частей; смежные → 180°; вертикальные → равны; перпендикулярные → 90°.</li>
+            <li><strong>Проверка:</strong> после решения подставь ответы обратно в условие (суммы, разности, отношения) — как в блоках «Проверка» выше.</li>
+            <li><strong>Если задача со звёздочкой не идёт:</strong> начни с координатной прямой (как в №80) — точки становятся числами, и всё видно глазами.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
