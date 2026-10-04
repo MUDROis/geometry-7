@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Первый признак равенства треугольников — Геометрия 7 класс</title>
+<!-- Урок 8 курса. Глава II «Треугольники», §1. Все координаты SVG вычислены по формулам x = cx + r·cos α, y = cy − r·sin α. Расчёты — в комментариях внутри SVG. -->
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f9f9fb; }
+h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+h2 { color: #2980b9; margin-top: 30px; }
+h3 { color: #16a085; }
+.card { background: #fff; border-radius: 12px; padding: 20px; margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.highlight { background-color: #e8f4f8; padding: 15px; border-left: 5px solid #3498db; border-radius: 5px; margin: 15px 0; }
+.warning { background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; border-radius: 5px; margin: 15px 0; }
+details { background: #f4f6f7; border-radius: 8px; padding: 10px 15px; margin: 10px 0; cursor: pointer; }
+summary { font-weight: bold; color: #2980b9; outline: none; }
+details[open] summary { margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 5px;}
+table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background-color: #3498db; color: white; }
+.badge { display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 0.8em; font-weight: bold; color: white; margin-right: 5px;}
+.badge-must { background: #2ecc71; }
+.badge-should { background: #f39c12; }
+.badge-aspire { background: #9b59b6; }
+.diagram { background: #fff; border: 2px solid #ecf0f1; border-radius: 8px; padding: 15px; margin: 15px 0; text-align: center; }
+.diagram svg { max-width: 100%; height: auto; }
+.step { background: #f8f9fa; padding: 10px; margin: 8px 0; border-radius: 5px; border-left: 3px solid #3498db; }
+</style>
+</head>
+<body>
+<h1>🔺 Первый признак равенства треугольников</h1>
+<p><strong>Геометрия 7 класс • Глава II, §1 • Страницы 30–33</strong></p>
+<div class="card">
+<p>Привет! 👋 Сегодня начинается новая глава — «Треугольники». Треугольник — самая простая и самая важная фигура в геометрии: из него «собраны» все остальные многоугольники, крыши домов и мосты. Ты познакомишься с элементами треугольника, узнаешь, что такое теорема и доказательство, и выучишь <strong>первый признак равенства треугольников</strong> — главный инструмент геометрии! 🔍</p>
+</div>
+
+<h2>🌾 Блок 1. Изучение (15–20 мин)</h2>
+<div class="card">
+<h3>🪝 Разминка: Зачем строителям треугольники?</h3>
+<p>Представь: двум геодезистам нужно проверить, одинаковы ли два земельных участка треугольной формы. Они не могут наложить один участок на другой — это земля! Но они могут <strong>измерить</strong> несколько элементов (стороны и углы) и по совпадению этих элементов <strong>сделать вывод</strong>: участки равны. Именно это и делает первый признак равенства треугольников — он говорит, <em>каких именно</em> трёх элементов достаточно для вывода! 📐</p>
+</div>
+
+<div class="card">
+<h3>📖 Ключевые термины</h3>
+<table>
+<tr>
+<th>Термин</th>
+<th>Что это?</th>
+<th>Как обозначаем</th>
+</tr>
+<tr>
+<td><strong>Треугольник</strong></td>
+<td>Многоугольник с тремя вершинами, тремя сторонами и тремя углами. Простейший многоугольник.</td>
+<td>△ABC</td>
+</tr>
+<tr>
+<td><strong>Вершины треугольника</strong></td>
+<td>Точки, в которых сходятся стороны.</td>
+<td>A, B, C</td>
+</tr>
+<tr>
+<td><strong>Стороны треугольника</strong></td>
+<td>Отрезки, соединяющие вершины.</td>
+<td>AB, BC, CA</td>
+</tr>
+<tr>
+<td><strong>Углы треугольника</strong></td>
+<td>Углы при вершинах; часто обозначают одной буквой.</td>
+<td>∠A, ∠B, ∠C (или ∠BAC, ∠ABC, ∠BCA)</td>
+</tr>
+<tr>
+<td><strong>Периметр</strong></td>
+<td>Сумма длин всех сторон треугольника.</td>
+<td>P = AB + BC + CA</td>
+</tr>
+<tr>
+<td><strong>Равные треугольники</strong></td>
+<td>Треугольники, которые совмещаются наложением: их соответственные стороны и углы равны.</td>
+<td>△ABC = △A₁B₁C₁</td>
+</tr>
+<tr>
+<td><strong>Теорема</strong></td>
+<td>Утверждение, справедливость которого устанавливается путём рассуждений (доказательства).</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Первый признак</strong></td>
+<td>Если две стороны и угол между ними одного треугольника равны двум сторонам и углу между ними другого — треугольники равны.</td>
+<td>по двум сторонам и углу между ними</td>
+</tr>
+</table>
+</div>
+
+<div class="card">
+<h3>📐 Графические иллюстрации</h3>
+
+<div class="diagram">
+<h4>Треугольник ABC: вершины, стороны, углы</h4>
+<svg width="440" height="220" viewBox="0 0 440 220">
+<!-- Вершины: A(100,180), B(340,180), C(220,50).
+Стороны: AB горизонтальна (длина 240 px), AC и BC — наклонные.
+Углы: ∠A — между AB (напр. 0°) и AC (напр. от A к C: вектор (120,-130), α = atan2(130,120) ≈ 47,3°).
+∠B — между BA (напр. 180°) и BC (вектор от B к C: (-120,-130), α ≈ 180°-47,3°=132,7°).
+∠C — между CA и CB.
+Дуга ∠A: r=26, от 0° до 47,3°. Начало (126,180); конец (100+26·cos47,3°, 180-26·sin47,3°) = (117,6; 160,8).
+Дуга ∠B: r=26, от 132,7° до 180°. Начало (340+26·cos132,7°, 180-26·sin132,7°) = (322,3; 160,8); конец (314,180).
+Дуга ∠C: r=22. Напр. CA: от C к A — вектор (-120,130), α = atan2(-130,-120) ≈ 180°+47,3°=227,3° (но в математике это -132,7°). Напр. CB: (120,130), α ≈ 47,3°.
+Угол при C между CA и CB: разность 180°. Хм, пересчитаю: CA направление от C: (A-C)=(-120,130), α_CA = atan2(-130,-120) в SVG-координатах (y вниз): atan2(130,-120) = 180°-47,3°=132,7° (матем.); в SVG это направление «вниз-влево». CB: (B-C)=(120,130), α_CB = atan2(130,120) = 47,3°.
+Разность направлений: 132,7° - 47,3° = 85,4°. Это ∠C.
+Дуга ∠C: r=22, от 47,3° до 132,7°. Начало (220+22·cos47,3°, 50+22·sin47,3°) = (234,9; 66,2). Конец (220+22·cos132,7°, 50+22·sin132,7°) = (205,1; 66,2). -->
+<line x1="100" y1="180" x2="340" y2="180" stroke="#2c3e50" stroke-width="3"/>
+<line x1="100" y1="180" x2="220" y2="50" stroke="#2c3e50" stroke-width="3"/>
+<line x1="340" y1="180" x2="220" y2="50" stroke="#2c3e50" stroke-width="3"/>
+<path d="M 126,180 A 26,26 0 0 0 117.6,160.8" fill="none" stroke="#e74c3c" stroke-width="2"/>
+<path d="M 322.3,160.8 A 26,26 0 0 0 314,180" fill="none" stroke="#27ae60" stroke-width="2"/>
+<path d="M 234.9,66.2 A 22,22 0 0 0 205.1,66.2" fill="none" stroke="#9b59b6" stroke-width="2"/>
+<circle cx="100" cy="180" r="5" fill="#c0392b"/>
+<circle cx="340" cy="180" r="5" fill="#c0392b"/>
+<circle cx="220" cy="50" r="5" fill="#c0392b"/>
+<text x="80" y="198" font-size="14" font-weight="bold">A</text>
+<text x="348" y="198" font-size="14" font-weight="bold">B</text>
+<text x="220" y="40" text-anchor="middle" font-size="14" font-weight="bold">C</text>
+<text x="140" y="175" font-size="11" fill="#e74c3c" font-weight="bold">∠A</text>
+<text x="305" y="175" font-size="11" fill="#27ae60" font-weight="bold">∠B</text>
+<text x="220" y="85" text-anchor="middle" font-size="11" fill="#9b59b6" font-weight="bold">∠C</text>
+<text x="220" y="205" text-anchor="middle" font-size="12" fill="#7f8c8d">сторона AB (нижняя)</text>
+<text x="140" y="110" font-size="12" fill="#7f8c8d" transform="rotate(-47 140 110)">сторона AC</text>
+<text x="300" y="110" font-size="12" fill="#7f8c8d" transform="rotate(47 300 110)">сторона BC</text>
+</svg>
+<p><strong>Рис. 1:</strong> Треугольник ABC: 3 вершины (A, B, C), 3 стороны (AB, BC, CA), 3 угла (∠A, ∠B, ∠C). Периметр P = AB + BC + CA</p>
+</div>
+
+<div class="diagram">
+<h4>Равные треугольники: совмещение при наложении</h4>
+<svg width="560" height="220" viewBox="0 0 560 220">
+<!-- Два равных треугольника. △ABC: A(60,180), B(200,180), C(130,60). △A₁B₁C₁: A₁(320,180), B₁(460,180), C₁(390,60).
+Стороны равны: AB=A₁B₁=140, AC=A₁C₁, BC=B₁C₁. Углы при вершинах равны.
+Стрелка наложения от одного к другому. -->
+<line x1="60" y1="180" x2="200" y2="180" stroke="#3498db" stroke-width="3"/>
+<line x1="60" y1="180" x2="130" y2="60" stroke="#3498db" stroke-width="3"/>
+<line x1="200" y1="180" x2="130" y2="60" stroke="#3498db" stroke-width="3"/>
+<circle cx="60" cy="180" r="5" fill="#2980b9"/>
+<circle cx="200" cy="180" r="5" fill="#2980b9"/>
+<circle cx="130" cy="60" r="5" fill="#2980b9"/>
+<text x="48" y="200" font-size="13" font-weight="bold">A</text>
+<text x="206" y="200" font-size="13" font-weight="bold">B</text>
+<text x="126" y="52" font-size="13" font-weight="bold">C</text>
+<text x="130" y="215" text-anchor="middle" font-size="12">△ABC</text>
+
+<line x1="320" y1="180" x2="460" y2="180" stroke="#e74c3c" stroke-width="3"/>
+<line x1="320" y1="180" x2="390" y2="60" stroke="#e74c3c" stroke-width="3"/>
+<line x1="460" y1="180" x2="390" y2="60" stroke="#e74c3c" stroke-width="3"/>
+<circle cx="320" cy="180" r="5" fill="#c0392b"/>
+<circle cx="460" cy="180" r="5" fill="#c0392b"/>
+<circle cx="390" cy="60" r="5" fill="#c0392b"/>
+<text x="308" y="200" font-size="13" font-weight="bold">A₁</text>
+<text x="466" y="200" font-size="13" font-weight="bold">B₁</text>
+<text x="386" y="52" font-size="13" font-weight="bold">C₁</text>
+<text x="390" y="215" text-anchor="middle" font-size="12">△A₁B₁C₁</text>
+
+<text x="260" y="120" text-anchor="middle" font-size="20">=</text>
+<text x="280" y="30" text-anchor="middle" font-size="12" fill="#27ae60" font-weight="bold">AB = A₁B₁, AC = A₁C₁, BC = B₁C₁</text>
+<text x="280" y="46" text-anchor="middle" font-size="12" fill="#27ae60" font-weight="bold">∠A = ∠A₁, ∠B = ∠B₁, ∠C = ∠C₁</text>
+</svg>
+<p><strong>Рис. 2:</strong> Равные треугольники: при наложении совпадают вершины, стороны и углы. Запись: △ABC = △A₁B₁C₁</p>
+</div>
+
+<div class="diagram">
+<h4>Первый признак: две стороны и угол между ними</h4>
+<svg width="440" height="220" viewBox="0 0 440 220">
+<!-- Треугольник: A(100,180), B(340,180), C(200,50).
+Выделены: сторона AB (синяя, жирная), сторона AC (синяя, жирная), угол ∠A (оранжевая дуга).
+AB направление 0°, длина 240 px.
+AC направление от A к C: вектор (100,-130), α = atan2(130,100) ≈ 52,4°. Длина AC = √(100²+130²) ≈ 164 px.
+Дуга ∠A: r=30, от 0° до 52,4°. Начало (130,180); конец (100+30·cos52,4°, 180-30·sin52,4°) = (118,3; 156,3).
+Подпись «∠A» на биссектрисе 26,2°, r=46: (100+46·cos26,2°, 180-46·sin26,2°) = (141,2; 159,7).
+Значки равенства на AB и AC (засечки). -->
+<line x1="100" y1="180" x2="340" y2="180" stroke="#3498db" stroke-width="5"/>
+<line x1="100" y1="180" x2="200" y2="50" stroke="#3498db" stroke-width="5"/>
+<line x1="340" y1="180" x2="200" y2="50" stroke="#7f8c8d" stroke-width="2" stroke-dasharray="5,4"/>
+<path d="M 130,180 A 30,30 0 0 0 118.3,156.3" fill="none" stroke="#f39c12" stroke-width="3"/>
+<!-- Засечки равенства на AB (середина 220,180) -->
+<line x1="215" y1="174" x2="225" y2="186" stroke="#e74c3c" stroke-width="2"/>
+<line x1="220" y1="174" x2="230" y2="186" stroke="#e74c3c" stroke-width="2"/>
+<!-- Засечки равенства на AC (середина 150,115) -->
+<line x1="145" y1="112" x2="155" y2="118" stroke="#e74c3c" stroke-width="2"/>
+<circle cx="100" cy="180" r="5" fill="#2c3e50"/>
+<circle cx="340" cy="180" r="5" fill="#2c3e50"/>
+<circle cx="200" cy="50" r="5" fill="#2c3e50"/>
+<text x="88" y="200" font-size="14" font-weight="bold">A</text>
+<text x="346" y="200" font-size="14" font-weight="bold">B</text>
+<text x="196" y="42" font-size="14" font-weight="bold">C</text>
+<text x="141" y="160" font-size="12" fill="#f39c12" font-weight="bold">∠A</text>
+<text x="220" y="215" text-anchor="middle" font-size="12" fill="#2c3e50" font-weight="bold">Две стороны и угол МЕЖДУ ними → треугольник определён однозначно</text>
+</svg>
+<p><strong>Рис. 3:</strong> Если известны две стороны (AB и AC) и угол между ними (∠A) — треугольник построен однозначно. Это и есть первый признак!</p>
+</div>
+
+<div class="diagram">
+<h4>К доказательству: наложение △ABC на △A₁B₁C₁</h4>
+<svg width="560" height="230" viewBox="0 0 560 230">
+<!-- Два треугольника с равными AB=A₁B₁, AC=A₁C₁, ∠A=∠A₁.
+△ABC: A(60,190), B(220,190), C(120,60). AB=160, AC направление ≈ 52°.
+△A₁B₁C₁: A₁(320,190), B₁(480,190), C₁(380,60).
+Стрелка «накладываем» от △ABC к △A₁B₁C₁.
+После наложения: A совмещается с A₁, сторона AB ложится на A₁B₁ (т.к. ∠A=∠A₁ и AB=A₁B₁), сторона AC — на A₁C₁ (т.к. AC=A₁C₁). Значит, B=B₁ и C=C₁, следовательно BC=B₁C₁. -->
+<line x1="60" y1="190" x2="220" y2="190" stroke="#3498db" stroke-width="3"/>
+<line x1="60" y1="190" x2="120" y2="60" stroke="#3498db" stroke-width="3"/>
+<line x1="220" y1="190" x2="120" y2="60" stroke="#3498db" stroke-width="3"/>
+<circle cx="60" cy="190" r="5" fill="#2980b9"/>
+<circle cx="220" cy="190" r="5" fill="#2980b9"/>
+<circle cx="120" cy="60" r="5" fill="#2980b9"/>
+<text x="48" y="208" font-size="13" font-weight="bold">A</text>
+<text x="226" y="208" font-size="13" font-weight="bold">B</text>
+<text x="116" y="52" font-size="13" font-weight="bold">C</text>
+<text x="140" y="225" text-anchor="middle" font-size="11">△ABC</text>
+
+<text x="270" y="130" font-size="22">→</text>
+<text x="270" y="150" text-anchor="middle" font-size="10" fill="#7f8c8d">наложение</text>
+
+<line x1="320" y1="190" x2="480" y2="190" stroke="#e74c3c" stroke-width="3"/>
+<line x1="320" y1="190" x2="380" y2="60" stroke="#e74c3c" stroke-width="3"/>
+<line x1="480" y1="190" x2="380" y2="60" stroke="#e74c3c" stroke-width="3"/>
+<circle cx="320" cy="190" r="5" fill="#c0392b"/>
+<circle cx="480" cy="190" r="5" fill="#c0392b"/>
+<circle cx="380" cy="60" r="5" fill="#c0392b"/>
+<text x="308" y="208" font-size="13" font-weight="bold">A₁</text>
+<text x="486" y="208" font-size="13" font-weight="bold">B₁</text>
+<text x="376" y="52" font-size="13" font-weight="bold">C₁</text>
+<text x="400" y="225" text-anchor="middle" font-size="11">△A₁B₁C₁</text>
+
+<text x="280" y="25" text-anchor="middle" font-size="11" fill="#2c3e50">Дано: AB = A₁B₁, AC = A₁C₁, ∠A = ∠A₁</text>
+<text x="280" y="40" text-anchor="middle" font-size="11" fill="#27ae60" font-weight="bold">Вывод: △ABC = △A₁B₁C₁</text>
+</svg>
+<p><strong>Рис. 4:</strong> Идея доказательства: при наложении вершина A совмещается с A₁, стороны AB и AC ложатся на A₁B₁ и A₁C₁ (из равенства углов и сторон), значит B=B₁ и C=C₁ — треугольники совпали</p>
+</div>
+
+</div>
+
+<div class="card">
+<h3>📐 Главные правила</h3>
+<div class="highlight">
+<strong>🌟 Правило 1: Элементы треугольника</strong><br>
+У треугольника 3 вершины, 3 стороны и 3 угла. Сумма длин сторон — <strong>периметр</strong>: P = AB + BC + CA.<br>
+<em>Что это значит?</em> Любой треугольник однозначно задаётся тремя вершинами; записывают △ABC (порядок букв важен!).
+</div>
+<div class="highlight">
+<strong>🌟 Правило 2: Равенство треугольников</strong><br>
+Треугольники равны, если их можно совместить наложением. Тогда <strong>соответственные</strong> стороны равны и соответственные углы равны.<br>
+<em>Важно:</em> в равных треугольниках против равных сторон лежат равные углы, и наоборот.
+</div>
+<div class="highlight">
+<strong>🌟 Правило 3: Первый признак равенства (ТЕОРЕМА)</strong><br>
+Если <strong>две стороны и угол между ними</strong> одного треугольника соответственно равны двум сторонам и углу между ними другого — такие треугольники <strong>равны</strong>.<br>
+<em>Кратко:</em> по двум сторонам и углу между ними (ДСУ).
+</div>
+<div class="highlight">
+<strong>🌟 Правило 4: Что такое «доказательство»</strong><br>
+Доказательство — это цепочка логических шагов, где каждый шаг опирается либо на условие, либо на известное свойство (аксиому, определение, ранее доказанную теорему). Последний шаг — то, что требовалось доказать.<br>
+<em>Пример:</em> в доказательстве первого признака мы «накладываем» один треугольник на другой и показываем, что они совпали.
+</div>
+<div class="highlight">
+<strong>🌟 Правило 5: Как применять признак на практике</strong><br>
+Чтобы доказать равенство двух треугольников: <br>
+1) найди в них <strong>пару равных сторон</strong>; <br>
+2) найди <strong>вторую пару равных сторон</strong>; <br>
+3) покажи, что <strong>углы МЕЖДУ этими сторонами</strong> тоже равны; <br>
+4) сделай вывод: «по первому признаку △... = △...».
+</div>
+
+<div class="warning">
+<strong>⚠️ Важно запомнить:</strong><br>
+• Угол должен быть <strong>между</strong> равными сторонами, а не «где-то в треугольнике»!<br>
+• Равенство треугольников записывают с соблюдением порядка вершин: если △ABC = △A₁B₁C₁, то A↔A₁, B↔B₁, C↔C₁<br>
+• Первый признак — самый частый инструмент: он есть почти в каждой задаче на доказательство<br>
+• «Соответственные» элементы — те, которые совмещаются при наложении
+</div>
+</div>
+
+<hr>
+<h2>🛠 Блок 2. Закрепление (20–25 мин)</h2>
+<p>Задания из учебника (стр. 30–33). Решай в тетради с линейкой, угольником и транспортиром. После выполнения открой подсказку и проверь себя!</p>
+
+<div class="card">
+<h3><span class="badge badge-must">№92</span> Базовый уровень</h3>
+<p><strong>Задание:</strong> Начертите треугольник и обозначьте его вершины буквами M, N и P. а) Назовите все углы и стороны треугольника; б) с помощью масштабной линейки измерьте стороны и найдите периметр треугольника.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Начерти любой треугольник и подпиши вершины M, N, P.</div>
+<div class="step"><strong>Шаг 2:</strong> Выпиши стороны: MN, NP, PM. Углы: ∠M (при вершине M), ∠N, ∠P (или ∠MNP, ∠NPM, ∠PMN).</div>
+<div class="step"><strong>Шаг 3:</strong> Измерь линейкой каждую сторону в сантиметрах (с точностью до мм).</div>
+<div class="step"><strong>Шаг 4:</strong> Сложи три длины — получишь периметр: P = MN + NP + PM.</div>
+<p><strong>Пример ответа:</strong> MN = 4,2 см, NP = 5,1 см, PM = 3,8 см → P = 4,2 + 5,1 + 3,8 = 13,1 см.</p>
+<p><em>Твои числа будут другими — это нормально, главное — верный способ.</em></p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-must">№95</span> Базовый уровень</h3>
+<p><strong>Задание:</strong> Сторона AB треугольника ABC равна 17 см, сторона AC вдвое больше стороны AB, а сторона BC на 10 см меньше стороны AC. Найдите периметр треугольника ABC.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> AB = 17 см.</div>
+<div class="step"><strong>Шаг 2:</strong> AC = 2 · AB = 2 · 17 = 34 см.</div>
+<div class="step"><strong>Шаг 3:</strong> BC = AC − 10 = 34 − 10 = 24 см.</div>
+<div class="step"><strong>Шаг 4:</strong> P = AB + AC + BC = 17 + 34 + 24 = 75 см.</div>
+<p><strong>Ответ:</strong> <strong>P = 75 см</strong>.</p>
+<p><strong>Проверка:</strong> 17 + 34 + 24 = 75 ✓; AC = 2·17 = 34 ✓; BC = 34 − 10 = 24 ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-should">№96</span> Средний уровень</h3>
+<p><strong>Задание:</strong> Периметр треугольника равен 48 см, а одна из сторон равна 18 см. Найдите две другие стороны, если их разность равна 4,6 см.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Обозначим неизвестные стороны x и y (x &gt; y). Известно: x + y = 48 − 18 = 30 см и x − y = 4,6 см.</div>
+<div class="step"><strong>Шаг 2:</strong> Сложим уравнения: (x + y) + (x − y) = 30 + 4,6 → 2x = 34,6 → x = 17,3 см.</div>
+<div class="step"><strong>Шаг 3:</strong> y = 30 − 17,3 = 12,7 см.</div>
+<p><strong>Ответ:</strong> <strong>17,3 см и 12,7 см</strong>.</p>
+<p><strong>Проверка:</strong> 18 + 17,3 + 12,7 = 48 ✓; 17,3 − 12,7 = 4,6 ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-should">№97</span> Средний уровень</h3>
+<p><strong>Задание:</strong> Периметр одного треугольника больше периметра другого. Могут ли быть равными эти треугольники?</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Если треугольники равны, то их соответственные стороны равны (по определению равенства фигур).</div>
+<div class="step"><strong>Шаг 2:</strong> Периметр — это сумма сторон. Если стороны попарно равны, то и суммы равны: P₁ = P₂.</div>
+<div class="step"><strong>Шаг 3:</strong> Но по условию P₁ &gt; P₂ — противоречие.</div>
+<p><strong>Ответ:</strong> <strong>нет, не могут</strong>: у равных треугольников периметры обязательно равны.</p>
+<p><strong>Вывод:</strong> если периметры разные — треугольники точно не равны (а вот если одинаковые — ещё не факт, что равны).</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-should">№99</span> Средний уровень</h3>
+<p><strong>Задание:</strong> На рисунке 58 AB = AC, ∠1 = ∠2. а) Докажите, что треугольники ABD и ACD равны; б) найдите BD и AB, если AC = 15 см, DC = 5 см.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<p><em>(Сверяйся с рисунком 58 в учебнике: D — точка, соединённая с A, B и C; ∠1 и ∠2 — углы при вершине A.)</em></p>
+<p><strong>а) Доказательство:</strong></p>
+<div class="step">Рассмотрим △ABD и △ACD.</div>
+<div class="step">AB = AC (по условию) — первая пара равных сторон.</div>
+<div class="step">∠1 = ∠2 (по условию) — угол МЕЖДУ сторонами AB и AD в △ABD равен углу МЕЖДУ сторонами AC и AD в △ACD.</div>
+<div class="step">AD — общая сторона — вторая пара равных сторон.</div>
+<div class="step">По двум сторонам и углу между ними: <strong>△ABD = △ACD</strong> (первый признак).</div>
+<p><strong>б) Нахождение:</strong></p>
+<div class="step">Из равенства △ABD = △ACD следует: BD = CD (соответственные стороны).</div>
+<div class="step">CD = 5 см → <strong>BD = 5 см</strong>.</div>
+<div class="step">AB = AC (по условию) = 15 см → <strong>AB = 15 см</strong>.</div>
+<p><strong>Ответ:</strong> <strong>BD = 5 см, AB = 15 см</strong>.</p>
+<p><strong>Проверка:</strong> в △ABD и △ACD: AB=AC=15, AD общая, ∠1=∠2 → равны по первому признаку ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-aspire">№102</span> Продвинутый уровень</h3>
+<p><strong>Задание:</strong> Отрезки AC и BD точкой пересечения делятся пополам. Докажите, что △ABC = △CDA.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Обозначим точку пересечения O. По условию: AO = OC и BO = OD.</div>
+<div class="step"><strong>Шаг 2:</strong> Рассмотрим △AOB и △COD: AO = OC, BO = OD, ∠AOB = ∠COD (вертикальные углы — равны). По первому признаку △AOB = △COD.</div>
+<div class="step"><strong>Шаг 3:</strong> Из равенства △AOB = △COD следует: AB = CD (соответственные стороны) и ∠OAB = ∠OCD (соответственные углы), то есть ∠BAC = ∠DCA.</div>
+<div class="step"><strong>Шаг 4:</strong> Рассмотрим △ABC и △CDA: AB = CD (из шага 3), ∠BAC = ∠DCA (из шага 3), AC — общая сторона.</div>
+<div class="step"><strong>Шаг 5:</strong> По двум сторонам и углу между ними: <strong>△ABC = △CDA</strong>.</div>
+<p><strong>Ответ:</strong> △ABC = △CDA (доказано).</p>
+<p><strong>Проверка:</strong> все три шага используют только первый признак и свойства вертикальных углов ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-aspire">№103</span> Продвинутый уровень</h3>
+<p><strong>Задание:</strong> В треугольниках ABC и A₁B₁C₁ AB = A₁B₁, AC = A₁C₁, ∠A = ∠A₁. На сторонах AB и A₁B₁ отмечены точки P и P₁ так, что AP = AP₁. Докажите, что △BPC = △B₁P₁C₁.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> По условию AB = A₁B₁ и AP = AP₁. Значит, BP = AB − AP = A₁B₁ − A₁P₁ = B₁P₁.</div>
+<div class="step"><strong>Шаг 2:</strong> △ABC = △A₁B₁C₁ по первому признаку (AB = A₁B₁, AC = A₁C₁, ∠A = ∠A₁). Значит, BC = B₁C₁ и ∠B = ∠B₁.</div>
+<div class="step"><strong>Шаг 3:</strong> Рассмотрим △BPC и △B₁P₁C₁: BP = B₁P₁ (шаг 1), ∠B = ∠B₁ (шаг 2), BC = B₁C₁ (шаг 2).</div>
+<div class="step"><strong>Шаг 4:</strong> По двум сторонам и углу между ними: <strong>△BPC = △B₁P₁C₁</strong>.</div>
+<p><strong>Ответ:</strong> △BPC = △B₁P₁C₁ (доказано).</p>
+<p><strong>Проверка:</strong> каждый шаг опирается либо на условие, либо на уже доказанное равенство ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-aspire">№104</span> Продвинутый уровень</h3>
+<p><strong>Задание:</strong> На сторонах угла CAD отмечены точки B и E так, что точка B лежит на луче AC, а точка E — на луче AD, причём AC = AD и AB = AE. Докажите, что ∠CBD = ∠DEC.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Рассмотрим △ABC и △AED: AB = AE (по условию), ∠A — общий, AC = AD (по условию). По первому признаку <strong>△ABC = △AED</strong>.</div>
+<div class="step"><strong>Шаг 2:</strong> Из равенства △ABC = △AED следует: ∠ABC = ∠AED (соответственные углы при вершинах B и E).</div>
+<div class="step"><strong>Шаг 3:</strong> Углы CBD и ABC — смежные (точки A, B, C лежат на одном луче, значит B — между A и C, и угол CBD дополняет ∠ABC до развёрнутого). То есть ∠CBD = 180° − ∠ABC.</div>
+<div class="step"><strong>Шаг 4:</strong> Аналогично ∠DEC и ∠AED — смежные: ∠DEC = 180° − ∠AED.</div>
+<div class="step"><strong>Шаг 5:</strong> Так как ∠ABC = ∠AED (шаг 2), то и 180° − ∠ABC = 180° − ∠AED, то есть <strong>∠CBD = ∠DEC</strong>.</div>
+<p><strong>Ответ:</strong> ∠CBD = ∠DEC (доказано).</p>
+<p><strong>Проверка:</strong> цепочка: △ABC = △AED (1-й признак) → ∠ABC = ∠AED → смежные с ними равны ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3>💡 Методическая подсказка</h3>
+<ul>
+<li><strong>Если не видишь равные элементы:</strong> перечисли все данные условия и отметь на чертеже равные стороны одинаковыми засечками, равные углы — одинаковыми дугами. Часто «общая сторона» или «вертикальные углы» — это скрытая пара!</li>
+<li><strong>Главная ловушка:</strong> угол должен быть <em>между</em> равными сторонами. Если равны две стороны и угол, но угол НЕ между ними — первый признак не работает (это будет «второй признак», о нём позже).</li>
+<li><strong>Порядок букв в равенстве:</strong> если △ABC = △A₁B₁C₁, то A↔A₁, B↔B₁, C↔C₁. Это помогает сразу видеть, какие стороны и углы равны.</li>
+<li><strong>Для доказательства:</strong> чётко выдели три пары (сторона-сторона-угол) и укажи, откуда каждая пара взята (условие, общая, вертикальные и т. д.).</li>
+<li><strong>Красивая связь:</strong> первый признак — это «геометрический паспорт»: по трём данным (ДСУ) треугольник определяется однозначно, как отпечаток пальца.</li>
+</ul>
+</div>
+
+</body>
+</html>

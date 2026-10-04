@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Второй и третий признаки равенства треугольников — Геометрия 7 класс</title>
+<!-- Урок 10 курса. Глава II «Треугольники», §3. Все координаты SVG вычислены по формулам x = cx + r·cos α, y = cy − r·sin α. Расчёты — в комментариях внутри SVG. -->
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f9f9fb; }
+h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+h2 { color: #2980b9; margin-top: 30px; }
+h3 { color: #16a085; }
+.card { background: #fff; border-radius: 12px; padding: 20px; margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.highlight { background-color: #e8f4f8; padding: 15px; border-left: 5px solid #3498db; border-radius: 5px; margin: 15px 0; }
+.warning { background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; border-radius: 5px; margin: 15px 0; }
+details { background: #f4f6f7; border-radius: 8px; padding: 10px 15px; margin: 10px 0; cursor: pointer; }
+summary { font-weight: bold; color: #2980b9; outline: none; }
+details[open] summary { margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 5px;}
+table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background-color: #3498db; color: white; }
+.badge { display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 0.8em; font-weight: bold; color: white; margin-right: 5px;}
+.badge-must { background: #2ecc71; }
+.badge-should { background: #f39c12; }
+.badge-aspire { background: #9b59b6; }
+.diagram { background: #fff; border: 2px solid #ecf0f1; border-radius: 8px; padding: 15px; margin: 15px 0; text-align: center; }
+.diagram svg { max-width: 100%; height: auto; }
+.step { background: #f8f9fa; padding: 10px; margin: 8px 0; border-radius: 5px; border-left: 3px solid #3498db; }
+</style>
+</head>
+<body>
+<h1>🔺 Второй и третий признаки равенства треугольников</h1>
+<p><strong>Геометрия 7 класс • Глава II, §3 • Страницы 39–44</strong></p>
+<div class="card">
+<p>Привет! 👋 Сегодня ты познакомишься с ещё двумя признаками равенства треугольников. Если первый признак работает по «двум сторонам и углу между ними», то второй — по «стороне и двум прилежащим углам», а третий — по «трём сторонам». Ты узнаешь, почему треугольник — самая «жёсткая» фигура, и научишься выбирать нужный признак для каждой задачи! 🔍</p>
+</div>
+
+<h2>🌾 Блок 1. Изучение (15–20 мин)</h2>
+<div class="card">
+<h3>🪝 Разминка: Почему мосты не складываются?</h3>
+<p>Посмотри на металлические фермы мостов и кранов — они собраны из треугольников! Почему инженеры выбирают именно треугольники, а не четырёхугольники? Дело в том, что если взять три рейки и скрепить их концы гвоздями — получится жёсткая фигура, которую невозможно деформировать без слома. А вот четыре рейки легко складываются в ромб. Это свойство треугольника — <strong>жёсткость</strong> — и есть следствие третьего признака равенства! 🏗️</p>
+</div>
+
+<div class="card">
+<h3>📖 Ключевые термины</h3>
+<table>
+<tr>
+<th>Термин</th>
+<th>Что это?</th>
+<th>Как обозначаем</th>
+</tr>
+<tr>
+<td><strong>Второй признак равенства</strong></td>
+<td>Если сторона и два прилежащих к ней угла одного треугольника равны стороне и двум прилежащим к ней углам другого — треугольники равны.</td>
+<td>по стороне и двум прилежащим углам (СПУ)</td>
+</tr>
+<tr>
+<td><strong>Третий признак равенства</strong></td>
+<td>Если три стороны одного треугольника равны трём сторонам другого — треугольники равны.</td>
+<td>по трём сторонам (ССС)</td>
+</tr>
+<tr>
+<td><strong>Жёсткость треугольника</strong></td>
+<td>Свойство треугольника: если заданы три стороны, форму треугольника изменить нельзя (в отличие от четырёхугольника).</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Теорема</strong></td>
+<td>Утверждение, справедливость которого устанавливается путём рассуждений (доказательства).</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Доказательство</strong></td>
+<td>Цепочка логических шагов, обосновывающих истинность утверждения.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Соответственные элементы</strong></td>
+<td>Стороны и углы, которые совмещаются при наложении равных фигур.</td>
+<td>в △ABC = △A₁B₁C₁: AB↔A₁B₁, ∠A↔∠A₁ и т. д.</td>
+</tr>
+</table>
+</div>
+
+<div class="card">
+<h3>📐 Графические иллюстрации</h3>
+
+<div class="diagram">
+<h4>Второй признак: сторона и два прилежащих угла</h4>
+<svg width="440" height="220" viewBox="0 0 440 220">
+<!-- △ABC: B(80,170), C(340,170), A(200,50).
+Напр. BA: от B к A — (120,-120), α = atan2(120,120) = 45°.
+Напр. BC: от B к C — (260,0), α = 0°.
+Дуга ∠B r=24: от 0° до 45°. Начало (104,170); конец (80+24·cos45°, 170-24·sin45°) = (97.0, 153.0).
+Напр. CA: от C к A — (-140,-120), α = atan2(120,-140) ≈ 139.4° (cos=-0.766, sin=0.643).
+Напр. CB: от C к B — (-260,0), α = 180°.
+Дуга ∠C r=24: от 139.4° до 180°. Начало (340+24·cos139.4°, 170-24·sin139.4°) = (321.8, 154.4); конец (316, 170).
+Сторона BC выделена жирным. -->
+<line x1="80" y1="170" x2="340" y2="170" stroke="#3498db" stroke-width="5"/>
+<line x1="80" y1="170" x2="200" y2="50" stroke="#7f8c8d" stroke-width="2" stroke-dasharray="5,4"/>
+<line x1="340" y1="170" x2="200" y2="50" stroke="#7f8c8d" stroke-width="2" stroke-dasharray="5,4"/>
+<path d="M 104,170 A 24,24 0 0 0 97,153" fill="none" stroke="#e74c3c" stroke-width="2"/>
+<path d="M 321.8,154.4 A 24,24 0 0 0 316,170" fill="none" stroke="#e74c3c" stroke-width="2"/>
+<circle cx="80" cy="170" r="5" fill="#2c3e50"/>
+<circle cx="340" cy="170" r="5" fill="#2c3e50"/>
+<circle cx="200" cy="50" r="5" fill="#2c3e50"/>
+<text x="68" y="190" font-size="14" font-weight="bold">B</text>
+<text x="348" y="190" font-size="14" font-weight="bold">C</text>
+<text x="200" y="40" text-anchor="middle" font-size="14" font-weight="bold">A</text>
+<text x="110" y="160" font-size="12" fill="#e74c3c" font-weight="bold">∠B</text>
+<text x="318" y="160" font-size="12" fill="#e74c3c" font-weight="bold">∠C</text>
+<text x="210" y="205" text-anchor="middle" font-size="12" fill="#2c3e50" font-weight="bold">Сторона BC и углы B, C при ней → треугольник определён однозначно</text>
+</svg>
+<p><strong>Рис. 1:</strong> Второй признак: если известны сторона BC и углы при ней (∠B и ∠C) — треугольник построен однозначно</p>
+</div>
+
+<div class="diagram">
+<h4>Третий признак: три стороны</h4>
+<svg width="440" height="220" viewBox="0 0 440 220">
+<!-- △ABC: A(200,50), B(80,170), C(340,170). Засечки на всех трёх сторонах (по три — для ССС).
+Засечки на AB (середина 140,110): напр. AB (120,-120), единичный (0.707,-0.707), перпендикуляр (0.707,0.707).
+Засечки на BC (середина 210,170): вертикальные.
+Засечки на CA (середина 270,110): напр. CA (-140,-120), единичный (-0.766,-0.643), перпендикуляр (0.643,-0.766). -->
+<line x1="80" y1="170" x2="340" y2="170" stroke="#3498db" stroke-width="5"/>
+<line x1="80" y1="170" x2="200" y2="50" stroke="#3498db" stroke-width="5"/>
+<line x1="340" y1="170" x2="200" y2="50" stroke="#3498db" stroke-width="5"/>
+<!-- Засечки на AB (тройные) -->
+<line x1="135" y1="107" x2="145" y2="113" stroke="#e74c3c" stroke-width="2"/>
+<line x1="137" y1="110" x2="147" y2="116" stroke="#e74c3c" stroke-width="2"/>
+<line x1="139" y1="113" x2="149" y2="119" stroke="#e74c3c" stroke-width="2"/>
+<!-- Засечки на BC (тройные) -->
+<line x1="207" y1="165" x2="207" y2="175" stroke="#e74c3c" stroke-width="2"/>
+<line x1="210" y1="165" x2="210" y2="175" stroke="#e74c3c" stroke-width="2"/>
+<line x1="213" y1="165" x2="213" y2="175" stroke="#e74c3c" stroke-width="2"/>
+<!-- Засечки на CA (тройные) -->
+<line x1="266" y1="116" x2="276" y2="108" stroke="#e74c3c" stroke-width="2"/>
+<line x1="268" y1="119" x2="278" y2="111" stroke="#e74c3c" stroke-width="2"/>
+<line x1="270" y1="122" x2="280" y2="114" stroke="#e74c3c" stroke-width="2"/>
+<circle cx="200" cy="50" r="5" fill="#2c3e50"/>
+<circle cx="80" cy="170" r="5" fill="#2c3e50"/>
+<circle cx="340" cy="170" r="5" fill="#2c3e50"/>
+<text x="200" y="40" text-anchor="middle" font-size="14" font-weight="bold">A</text>
+<text x="68" y="190" font-size="14" font-weight="bold">B</text>
+<text x="348" y="190" font-size="14" font-weight="bold">C</text>
+<text x="220" y="205" text-anchor="middle" font-size="12" fill="#2c3e50" font-weight="bold">Три стороны заданы → треугольник жёсткий (определён однозначно)</text>
+</svg>
+<p><strong>Рис. 2:</strong> Третий признак: если заданы три стороны — треугольник полностью определён (не может «сложиться»)</p>
+</div>
+
+<div class="diagram">
+<h4>Жёсткость треугольника vs нежёсткость четырёхугольника</h4>
+<svg width="560" height="200" viewBox="0 0 560 200">
+<!-- Треугольник: K(80,160), L(200,60), M(320,160). Соединён в жёсткую фигуру.
+Четырёхугольник: P(400,160), Q(440,60), R(560,80), S(520,160) — деформирован.
+Стрелка между ними. -->
+<polygon points="80,160 200,60 320,160" fill="none" stroke="#27ae60" stroke-width="4"/>
+<circle cx="80" cy="160" r="5" fill="#2c3e50"/>
+<circle cx="200" cy="60" r="5" fill="#2c3e50"/>
+<circle cx="320" cy="160" r="5" fill="#2c3e50"/>
+<text x="80" y="180" text-anchor="middle" font-size="12" font-weight="bold">K</text>
+<text x="200" y="50" text-anchor="middle" font-size="12" font-weight="bold">L</text>
+<text x="320" y="180" text-anchor="middle" font-size="12" font-weight="bold">M</text>
+<text x="200" y="195" text-anchor="middle" font-size="11" fill="#27ae60" font-weight="bold">жёсткий (нельзя деформировать)</text>
+
+<text x="360" y="110" font-size="22">→</text>
+
+<polygon points="400,160 440,60 560,80 520,160" fill="none" stroke="#e74c3c" stroke-width="4" stroke-dasharray="6,4"/>
+<circle cx="400" cy="160" r="5" fill="#2c3e50"/>
+<circle cx="440" cy="60" r="5" fill="#2c3e50"/>
+<circle cx="560" cy="80" r="5" fill="#2c3e50"/>
+<circle cx="520" cy="160" r="5" fill="#2c3e50"/>
+<text x="400" y="180" text-anchor="middle" font-size="12" font-weight="bold">P</text>
+<text x="440" y="50" text-anchor="middle" font-size="12" font-weight="bold">Q</text>
+<text x="572" y="78" font-size="12" font-weight="bold">R</text>
+<text x="520" y="180" text-anchor="middle" font-size="12" font-weight="bold">S</text>
+<text x="480" y="195" text-anchor="middle" font-size="11" fill="#e74c3c" font-weight="bold">не жёсткий (можно сложить)</text>
+</svg>
+<p><strong>Рис. 3:</strong> Треугольник с заданными сторонами — жёсткая фигура; четырёхугольник с теми же «рейками» можно деформировать</p>
+</div>
+
+<div class="diagram">
+<h4>К доказательству второго признака: наложение △ABC на △A₁B₁C₁</h4>
+<svg width="560" height="230" viewBox="0 0 560 230">
+<!-- Два △: △ABC: A(120,50), B(60,180), C(200,180). △A₁B₁C₁: A₁(400,50), B₁(340,180), C₁(480,180).
+Дано: BC=B₁C₁, ∠B=∠B₁, ∠C=∠C₁.
+Стрелка «накладываем». -->
+<line x1="60" y1="180" x2="200" y2="180" stroke="#3498db" stroke-width="3"/>
+<line x1="60" y1="180" x2="120" y2="50" stroke="#3498db" stroke-width="3"/>
+<line x1="200" y1="180" x2="120" y2="50" stroke="#3498db" stroke-width="3"/>
+<circle cx="120" cy="50" r="5" fill="#2980b9"/>
+<circle cx="60" cy="180" r="5" fill="#2980b9"/>
+<circle cx="200" cy="180" r="5" fill="#2980b9"/>
+<text x="120" y="40" text-anchor="middle" font-size="13" font-weight="bold">A</text>
+<text x="48" y="198" font-size="13" font-weight="bold">B</text>
+<text x="210" y="198" font-size="13" font-weight="bold">C</text>
+<text x="130" y="215" text-anchor="middle" font-size="11">△ABC</text>
+
+<text x="280" y="130" font-size="22">→</text>
+<text x="280" y="150" text-anchor="middle" font-size="10" fill="#7f8c8d">наложение</text>
+
+<line x1="340" y1="180" x2="480" y2="180" stroke="#e74c3c" stroke-width="3"/>
+<line x1="340" y1="180" x2="400" y2="50" stroke="#e74c3c" stroke-width="3"/>
+<line x1="480" y1="180" x2="400" y2="50" stroke="#e74c3c" stroke-width="3"/>
+<circle cx="400" cy="50" r="5" fill="#c0392b"/>
+<circle cx="340" cy="180" r="5" fill="#c0392b"/>
+<circle cx="480" cy="180" r="5" fill="#c0392b"/>
+<text x="400" y="40" text-anchor="middle" font-size="13" font-weight="bold">A₁</text>
+<text x="328" y="198" font-size="13" font-weight="bold">B₁</text>
+<text x="490" y="198" font-size="13" font-weight="bold">C₁</text>
+<text x="410" y="215" text-anchor="middle" font-size="11">△A₁B₁C₁</text>
+
+<text x="280" y="25" text-anchor="middle" font-size="11" fill="#2c3e50">Дано: BC = B₁C₁, ∠B = ∠B₁, ∠C = ∠C₁</text>
+<text x="280" y="225" text-anchor="middle" font-size="11" fill="#27ae60" font-weight="bold">Вывод: △ABC = △A₁B₁C₁ (по стороне и двум прилежащим углам)</text>
+</svg>
+<p><strong>Рис. 4:</strong> Идея доказательства второго признака: при наложении сторона BC совмещается с B₁C₁, а из равенства углов следует, что лучи BA и CA попадают на лучи B₁A₁ и C₁A₁ — значит, A совпадает с A₁</p>
+</div>
+
+<div class="diagram">
+<h4>К доказательству третьего признака: вспомогательный треугольник</h4>
+<svg width="560" height="240" viewBox="0 0 560 240">
+<!-- △ABC: A(140,50), B(60,180), C(220,180).
+△A₁B₁C₁ приложен так, что A₁=A, B₁=B, а C₁ по другую сторону от AB: C₁(280,130).
+Соединяем C и C₁ — получается △ACC₁ и △BCC₁. -->
+<line x1="60" y1="180" x2="220" y2="180" stroke="#3498db" stroke-width="3"/>
+<line x1="60" y1="180" x2="140" y2="50" stroke="#3498db" stroke-width="3"/>
+<line x1="220" y1="180" x2="140" y2="50" stroke="#3498db" stroke-width="3"/>
+<line x1="60" y1="180" x2="280" y2="130" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,4"/>
+<line x1="220" y1="180" x2="280" y2="130" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,4"/>
+<line x1="140" y1="50" x2="280" y2="130" stroke="#9b59b6" stroke-width="2" stroke-dasharray="4,3"/>
+<circle cx="140" cy="50" r="5" fill="#2c3e50"/>
+<circle cx="60" cy="180" r="5" fill="#2c3e50"/>
+<circle cx="220" cy="180" r="5" fill="#2c3e50"/>
+<circle cx="280" cy="130" r="5" fill="#c0392b"/>
+<text x="140" y="40" text-anchor="middle" font-size="13" font-weight="bold">A = A₁</text>
+<text x="48" y="198" font-size="13" font-weight="bold">B = B₁</text>
+<text x="228" y="198" font-size="13" font-weight="bold">C</text>
+<text x="292" y="128" font-size="13" font-weight="bold" fill="#c0392b">C₁</text>
+<text x="380" y="60" font-size="11" fill="#9b59b6">△ACC₁ — равнобедренный</text>
+<text x="380" y="76" font-size="11" fill="#9b59b6">(AC = A₁C₁ = AC₁)</text>
+<text x="380" y="200" font-size="11" fill="#9b59b6">△BCC₁ — равнобедренный</text>
+<text x="380" y="216" font-size="11" fill="#9b59b6">(BC = B₁C₁ = BC₁)</text>
+<text x="280" y="235" text-anchor="middle" font-size="11" fill="#27ae60" font-weight="bold">∠ACB = ∠AC₁B → △ABC = △A₁B₁C₁ по первому признаку</text>
+</svg>
+<p><strong>Рис. 5:</strong> Идея доказательства третьего признака: прикладываем △A₁B₁C₁ к △ABC так, чтобы равные стороны совпали; достраиваем до равнобедренных △ и используем свойство углов при основании</p>
+</div>
+
+</div>
+
+<div class="card">
+<h3>📐 Главные правила</h3>
+<div class="highlight">
+<strong>🌟 Правило 1: Второй признак равенства треугольников (ТЕОРЕМА)</strong><br>
+Если <strong>сторона и два прилежащих к ней угла</strong> одного треугольника соответственно равны стороне и двум прилежащим к ней углам другого — такие треугольники <strong>равны</strong>.<br>
+<em>Кратко:</em> по стороне и двум прилежащим углам (СПУ).<br>
+<em>Почему работает?</em> При наложении сторона совмещается, а из равенства углов следует, что лучи двух других сторон попадают на соответствующие лучи — значит, третьи вершины совпадают.
+</div>
+<div class="highlight">
+<strong>🌟 Правило 2: Третий признак равенства треугольников (ТЕОРЕМА)</strong><br>
+Если <strong>три стороны</strong> одного треугольника соответственно равны трём сторонам другого — такие треугольники <strong>равны</strong>.<br>
+<em>Кратко:</em> по трём сторонам (ССС).<br>
+<em>Почему работает?</em> Доказательство использует вспомогательное построение и свойство углов при основании равнобедренного треугольника (рис. 5).
+</div>
+<div class="highlight">
+<strong>🌟 Правило 3: Жёсткость треугольника</strong><br>
+Треугольник с заданными тремя сторонами — <strong>жёсткая фигура</strong>: его нельзя деформировать без изменения длин сторон.<br>
+<em>Применение:</em> это свойство используют в строительстве (фермы мостов, краны, опоры линий электропередач) — рис. 3.
+</div>
+<div class="highlight">
+<strong>🌟 Правило 4: Три признака — три инструмента</strong><br>
+Чтобы доказать равенство двух треугольников, можно использовать:<br>
+• <strong>Первый признак (ДСУ):</strong> две стороны и угол МЕЖДУ ними;<br>
+• <strong>Второй признак (СПУ):</strong> сторона и два угла ПРИ НЕЙ;<br>
+• <strong>Третий признак (ССС):</strong> три стороны.
+</div>
+<div class="highlight">
+<strong>🌟 Правило 5: Как выбрать признак</strong><br>
+Внимательно читай условие и отмечай на чертеже известные равные элементы:<br>
+• Видишь две равные стороны и угол между ними? → первый признак.<br>
+• Видишь равную сторону и два равных угла при ней? → второй признак.<br>
+• Видишь три пары равных сторон? → третий признак.<br>
+Иногда нужно сначала доказать равенство каких-то элементов через другие свойства (вертикальные углы, биссектриса, медиана и т. д.).
+</div>
+
+<div class="warning">
+<strong>⚠️ Важно запомнить:</strong><br>
+• Во втором признаке углы должны быть ПРИЛЕЖАЩИМИ к данной стороне, а не «где-то в треугольнике»!<br>
+• В третьем признаке важны именно ТРИ стороны — двух сторон недостаточно (может получиться «складывающийся» четырёхугольник)<br>
+• Жёсткость треугольника — это следствие третьего признака<br>
+• В равных треугольниках против равных сторон лежат равные углы, и наоборот — это помогает находить новые равные элементы<br>
+• Часто в одной задаче приходится применять два признака последовательно
+</div>
+</div>
+
+<hr>
+<h2>🛠 Блок 2. Закрепление (20–25 мин)</h2>
+<p>Задания из учебника (стр. 39–44). Решай в тетради с линейкой и угольником. После выполнения открой подсказку и проверь себя!</p>
+
+<div class="card">
+<h3><span class="badge badge-must">№126</span> Базовый уровень</h3>
+<p><strong>Задание:</strong> Отрезки AB и CD пересекаются в середине O отрезка AB. ∠OAD = ∠OBC. Докажите, что △BCO = △ADO; найдите BC и CO, если CD = 26 см, AD = 15 см.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> O — середина AB, значит AO = OB (первая пара равных сторон).</div>
+<div class="step"><strong>Шаг 2:</strong> ∠OAD = ∠OBC (по условию) — вторая пара равных элементов.</div>
+<div class="step"><strong>Шаг 3:</strong> ∠AOD = ∠BOC (вертикальные углы) — третья пара.</div>
+<div class="step"><strong>Шаг 4:</strong> В △AOD и △BOC: сторона AO = OB, прилежащие к ней углы ∠OAD = ∠OBC и ∠AOD = ∠BOC. По второму признаку <strong>△AOD = △BOC</strong>.</div>
+<div class="step"><strong>Шаг 5:</strong> Из равенства треугольников: BC = AD = 15 см; OD = OC.</div>
+<div class="step"><strong>Шаг 6:</strong> Так как OD = OC и CD = 26 см, то CO = CD : 2 = 13 см.</div>
+<p><strong>Ответ:</strong> △BCO = △ADO (доказано); <strong>BC = 15 см, CO = 13 см</strong>.</p>
+<p><strong>Проверка:</strong> CO + OD = 13 + 13 = 26 = CD ✓; BC = AD = 15 ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-must">№127</span> Базовый уровень</h3>
+<p><strong>Задание:</strong> На рисунке 59 ∠1 = ∠2, ∠3 = ∠4. а) Докажите, что △ABC = △CDA; б) найдите AB и BC, если AD = 19 см, CD = 11 см.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<p><em>(Сверяйся с рисунком 59 в учебнике: AC — общая диагональ, ∠1 и ∠2 — при AC с разных сторон, ∠3 и ∠4 — тоже при AC.)</em></p>
+<p><strong>а) Доказательство:</strong></p>
+<div class="step">Рассмотрим △ABC и △CDA.</div>
+<div class="step">AC — общая сторона (первая пара равных элементов).</div>
+<div class="step">∠1 = ∠2 (по условию) — прилежащие углы к AC с одной стороны.</div>
+<div class="step">∠3 = ∠4 (по условию) — прилежащие углы к AC с другой стороны.</div>
+<div class="step">По стороне и двум прилежащим углам (второй признак): <strong>△ABC = △CDA</strong>.</div>
+<p><strong>б) Нахождение:</strong></p>
+<div class="step">Из равенства △ABC = △CDA следует: AB = CD (соответственные стороны) и BC = AD.</div>
+<div class="step">AB = CD = 11 см; BC = AD = 19 см.</div>
+<p><strong>Ответ:</strong> <strong>AB = 11 см, BC = 19 см</strong>.</p>
+<p><strong>Проверка:</strong> соответственные стороны равны ✓; второй признак применён корректно ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-should">№128</span> Средний уровень</h3>
+<p><strong>Задание:</strong> На биссектрисе угла A взята точка D, а на сторонах угла — точки B и C так, что ∠ADB = ∠ADC. Докажите, что BD = CD.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Рассмотрим △ABD и △ACD.</div>
+<div class="step"><strong>Шаг 2:</strong> AD — общая сторона.</div>
+<div class="step"><strong>Шаг 3:</strong> ∠BAD = ∠CAD (так как AD — биссектриса угла A).</div>
+<div class="step"><strong>Шаг 4:</strong> ∠ADB = ∠ADC (по условию).</div>
+<div class="step"><strong>Шаг 5:</strong> По стороне AD и двум прилежащим к ней углам (второй признак): △ABD = △ACD.</div>
+<div class="step"><strong>Шаг 6:</strong> Из равенства треугольников: BD = CD (соответственные стороны).</div>
+<p><strong>Ответ:</strong> BD = CD (доказано).</p>
+<p><strong>Проверка:</strong> все три элемента (сторона и два угла) — прилежащие к AD ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-should">№130</span> Средний уровень</h3>
+<p><strong>Задание:</strong> На рисунке 80 ∠DAC = ∠DBC, AO = BO. Докажите, что ∠C = ∠D и AC = BD.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<p><em>(Рисунок 80: отрезки AB и CD пересекаются в точке O.)</em></p>
+<div class="step"><strong>Шаг 1:</strong> Рассмотрим △AOD и △BOC.</div>
+<div class="step"><strong>Шаг 2:</strong> AO = BO (по условию).</div>
+<div class="step"><strong>Шаг 3:</strong> ∠AOD = ∠BOC (вертикальные углы).</div>
+<div class="step"><strong>Шаг 4:</strong> ∠OAD = ∠OBC (по условию ∠DAC = ∠DBC).</div>
+<div class="step"><strong>Шаг 5:</strong> По второму признаку: △AOD = △BOC.</div>
+<div class="step"><strong>Шаг 6:</strong> Из равенства: OD = OC и ∠D = ∠C.</div>
+<div class="step"><strong>Шаг 7:</strong> Теперь рассмотрим △AOC и △BOD: AO = BO, OC = OD (из шага 6), ∠AOC = ∠BOD (вертикальные).</div>
+<div class="step"><strong>Шаг 8:</strong> По первому признаку: △AOC = △BOD, откуда AC = BD.</div>
+<p><strong>Ответ:</strong> ∠C = ∠D и AC = BD (доказано).</p>
+<p><strong>Проверка:</strong> применили второй признак к △AOD и △BOC, затем первый — к △AOC и △BOD ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-should">№131</span> Средний уровень</h3>
+<p><strong>Задание:</strong> На рисунке 80 ∠DAB = ∠CBA, ∠CAB = ∠DBA, AC = 13 см. Найдите BD.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Рассмотрим △ACB и △BDA.</div>
+<div class="step"><strong>Шаг 2:</strong> AB — общая сторона.</div>
+<div class="step"><strong>Шаг 3:</strong> ∠CAB = ∠DBA (по условию) — прилежащий угол к AB.</div>
+<div class="step"><strong>Шаг 4:</strong> ∠CBA = ∠DAB (по условию) — второй прилежащий угол к AB.</div>
+<div class="step"><strong>Шаг 5:</strong> По второму признаку (сторона AB и два прилежащих угла): △ACB = △BDA.</div>
+<div class="step"><strong>Шаг 6:</strong> Из равенства треугольников: AC = BD (соответственные стороны).</div>
+<div class="step"><strong>Шаг 7:</strong> Так как AC = 13 см, то BD = 13 см.</div>
+<p><strong>Ответ:</strong> <strong>BD = 13 см</strong>.</p>
+<p><strong>Проверка:</strong> соответственные стороны равны ✓; второй признак применён корректно ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-aspire">№132</span> Продвинутый уровень</h3>
+<p><strong>Задание:</strong> В треугольниках ABC и A₁B₁C₁ AB = A₁B₁, BC = B₁C₁, ∠B = ∠B₁. На сторонах AB и A₁B₁ отмечены точки K и K₁ так, что ∠ACK = ∠A₁C₁K₁. Докажите, что △BCK = △B₁C₁K₁.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> По первому признаку (AB = A₁B₁, BC = B₁C₁, ∠B = ∠B₁): △ABC = △A₁B₁C₁.</div>
+<div class="step"><strong>Шаг 2:</strong> Из равенства △: ∠C = ∠C₁ (соответственные углы).</div>
+<div class="step"><strong>Шаг 3:</strong> ∠BCK = ∠C − ∠ACK; ∠B₁C₁K₁ = ∠C₁ − ∠A₁C₁K₁. Так как ∠C = ∠C₁ и ∠ACK = ∠A₁C₁K₁ (по условию), то ∠BCK = ∠B₁C₁K₁.</div>
+<div class="step"><strong>Шаг 4:</strong> В △BCK и △B₁C₁K₁: BC = B₁C₁, ∠B = ∠B₁, ∠BCK = ∠B₁C₁K₁.</div>
+<div class="step"><strong>Шаг 5:</strong> По второму признаку: <strong>△BCK = △B₁C₁K₁</strong>.</div>
+<p><strong>Ответ:</strong> △BCK = △B₁C₁K₁ (доказано).</p>
+<p><strong>Проверка:</strong> сначала установили равенство больших △ (1-й признак), затем выразили равные углы и применили 2-й признак ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-aspire">№133</span> Продвинутый уровень</h3>
+<p><strong>Задание:</strong> Докажите, что в равных треугольниках биссектрисы, проведённые к соответственным равным сторонам, равны.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Пусть △ABC = △A₁B₁C₁, причём AB = A₁B₁ (соответственные равные стороны). Проведём биссектрисы AL и A₁L₁ к сторонам BC и B₁C₁.</div>
+<div class="step"><strong>Шаг 2:</strong> Из равенства △ABC = △A₁B₁C₁: ∠B = ∠B₁, ∠A = ∠A₁, AB = A₁B₁.</div>
+<div class="step"><strong>Шаг 3:</strong> Биссектрисы делят углы пополам: ∠BAL = ∠A/2 и ∠B₁A₁L₁ = ∠A₁/2. Так как ∠A = ∠A₁, то ∠BAL = ∠B₁A₁L₁.</div>
+<div class="step"><strong>Шаг 4:</strong> Рассмотрим △ABL и △A₁B₁L₁: AB = A₁B₁, ∠B = ∠B₁, ∠BAL = ∠B₁A₁L₁.</div>
+<div class="step"><strong>Шаг 5:</strong> По второму признаку: △ABL = △A₁B₁L₁.</div>
+<div class="step"><strong>Шаг 6:</strong> Из равенства △: AL = A₁L₁ (соответственные стороны).</div>
+<p><strong>Ответ:</strong> биссектрисы AL и A₁L₁ равны (доказано).</p>
+<p><strong>Проверка:</strong> использовали равенство больших △, затем равенство половин углов и второй признак ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-aspire">№135</span> Продвинутый уровень</h3>
+<p><strong>Задание:</strong> В треугольниках ABC и A₁B₁C₁ отрезки CO и C₁O₁ — медианы, BC = B₁C₁, ∠B = ∠B₁, ∠C = ∠C₁. Докажите, что: а) △ACO = △A₁C₁O₁; б) △BCO = △B₁C₁O₁.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> В △ABC и △A₁B₁C₁: BC = B₁C₁, ∠B = ∠B₁, ∠C = ∠C₁. По второму признаку: △ABC = △A₁B₁C₁.</div>
+<div class="step"><strong>Шаг 2:</strong> Из равенства △: AC = A₁C₁, AB = A₁B₁, ∠A = ∠A₁.</div>
+<div class="step"><strong>Шаг 3:</strong> O и O₁ — середины AB и A₁B₁ (т. к. CO и C₁O₁ — медианы), значит AO = A₁O₁ и BO = B₁O₁.</div>
+<p><strong>а) △ACO = △A₁C₁O₁:</strong></p>
+<div class="step">AC = A₁C₁ (шаг 2), ∠A = ∠A₁ (шаг 2), AO = A₁O₁ (шаг 3). По первому признаку: <strong>△ACO = △A₁C₁O₁</strong>.</div>
+<p><strong>б) △BCO = △B₁C₁O₁:</strong></p>
+<div class="step">BC = B₁C₁ (условие), ∠B = ∠B₁ (условие), BO = B₁O₁ (шаг 3). По первому признаку: <strong>△BCO = △B₁C₁O₁</strong>.</div>
+<p><strong>Ответ:</strong> △ACO = △A₁C₁O₁ и △BCO = △B₁C₁O₁ (доказано).</p>
+<p><strong>Проверка:</strong> сначала установили равенство больших △ (2-й признак), затем применили 1-й признак к меньшим △ ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3>💡 Методическая подсказка</h3>
+<ul>
+<li><strong>Если не знаешь, какой признак применить:</strong> отметь на чертеже все известные равные элементы (сторонами с засечками, углами с дугами) и посмотри, какие три элемента образуют «готовую комбинацию» для одного из трёх признаков.</li>
+<li><strong>Главная ловушка второго признака:</strong> углы должны быть ПРИЛЕЖАЩИМИ к данной стороне, а не «где-то в треугольнике». Проверяй: сторона — общая для обоих углов?</li>
+<li><strong>В сложных задачах:</strong> часто нужно сначала доказать равенство «больших» треугольников, а потом перейти к «меньшим» — как в №130, 132, 135.</li>
+<li><strong>Красивая связь:</strong> жёсткость треугольника (третий признак) — это то, почему фермы мостов и краны делают из треугольников, а не из четырёхугольников!</li>
+<li><strong>Проверка доказательства:</strong> в каждом шаге чётко указывай, какой признак применяешь и откуда взялись равные элементы (условие, общая сторона, вертикальные углы, биссектриса и т. д.).</li>
+</ul>
+</div>
+
+</body>
+</html>
