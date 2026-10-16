@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Повторение главы II — Геометрия 7 класс</title>
+<!-- Урок 12 курса. Урок-повторение главы II «Треугольники»: вопросы для повторения 1–21 и доп. задачи 161–190. Все координаты SVG вычислены по формулам x = cx + r·cos α, y = cy − r·sin α. Расчёты — в комментариях внутри SVG. -->
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f9f9fb; }
+h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+h2 { color: #2980b9; margin-top: 30px; }
+h3 { color: #16a085; }
+h4 { color: #2980b9; margin-bottom: 8px; }
+.card { background: #fff; border-radius: 12px; padding: 20px; margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.highlight { background-color: #e8f4f8; padding: 15px; border-left: 5px solid #3498db; border-radius: 5px; margin: 15px 0; }
+.warning { background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; border-radius: 5px; margin: 15px 0; }
+details { background: #f4f6f7; border-radius: 8px; padding: 10px 15px; margin: 10px 0; cursor: pointer; }
+summary { font-weight: bold; color: #2980b9; outline: none; }
+details[open] summary { margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 5px;}
+table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background-color: #3498db; color: white; }
+.badge { display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 0.8em; font-weight: bold; color: white; margin-right: 5px;}
+.badge-must { background: #2ecc71; }
+.badge-should { background: #f39c12; }
+.badge-aspire { background: #9b59b6; }
+.qnum { display: inline-block; min-width: 26px; height: 26px; padding: 0 8px; border-radius: 13px; background: #2980b9; color: white; text-align: center; font-weight: bold; margin-right: 8px; line-height: 26px; font-size: 0.9em; }
+.diagram { background: #fff; border: 2px solid #ecf0f1; border-radius: 8px; padding: 15px; margin: 15px 0; text-align: center; }
+.diagram svg { max-width: 100%; height: auto; }
+.step { background: #f8f9fa; padding: 10px; margin: 8px 0; border-radius: 5px; border-left: 3px solid #3498db; }
+</style>
+</head>
+<body>
+<h1>🎓 Повторение главы II: Треугольники</h1>
+<p><strong>Геометрия 7 класс • Вопросы для повторения 1–21 • Дополнительные задачи 161–190 • Страницы 49–52</strong></p>
+<div class="card">
+<p>Привет! 👋 Этот урок — большое повторение всей главы II. Сначала ты проверишь себя по 21 устному вопросу: от определения треугольника до построения середины отрезка. Потом — 9 ключевых дополнительных задач трёх уровней сложности. Здесь собрано всё главное: признаки равенства △, свойства равнобедренного △, окружность, построения циркулем и линейкой. Пройди урок целиком — и ты будешь готов к контрольной по главе II! 🎯</p>
+</div>
+
+<h2>🌾 Блок 1. Устное повторение (15–20 мин)</h2>
+<p>Открывай каждый вопрос, думай над ответом, потом читай краткую подсказку. Если подсказка не совпадает с твоим ответом — вернись к соответствующему параграфу.</p>
+
+<div class="card">
+<h3>📐 Карточка A. Треугольник и его элементы</h3>
+<details>
+<summary><span class="qnum">1</span>Какая фигура называется треугольником? Что такое периметр?</summary>
+<p><strong>Треугольник</strong> — фигура, состоящая из трёх точек, не лежащих на одной прямой, и трёх отрезков, попарно их соединяющих. Точки — <strong>вершины</strong>, отрезки — <strong>стороны</strong>. <strong>Периметр</strong> — сумма длин всех сторон: P = AB + BC + AC.</p>
+</details>
+<details>
+<summary><span class="qnum">2</span>Какие треугольники называются равными?</summary>
+<p>Треугольники называются <strong>равными</strong>, если их можно совместить наложением. В равных треугольниках против равных сторон лежат равные углы, и наоборот.</p>
+</details>
+<details>
+<summary><span class="qnum">3</span>Что такое теорема и доказательство теоремы?</summary>
+<p><strong>Теорема</strong> — утверждение, справедливость которого устанавливается путём рассуждений. <strong>Доказательство</strong> — цепочка логических шагов, обосновывающих истинность теоремы.</p>
+</details>
+</div>
+
+<div class="card">
+<h3>📐 Карточка B. Признаки равенства треугольников</h3>
+<details>
+<summary><span class="qnum">4</span>Сформулируйте и докажите первый признак равенства треугольников</summary>
+<p><strong>Первый признак (ДСУ):</strong> если две стороны и угол МЕЖДУ ними одного △ равны двум сторонам и углу между ними другого △, то треугольники равны. <strong>Доказательство:</strong> накладываем один △ на другой так, чтобы равные стороны и угол совпали — тогда совпадут и третьи вершины.</p>
+</details>
+<details>
+<summary><span class="qnum">14</span>Сформулируйте второй признак равенства треугольников</summary>
+<p><strong>Второй признак (СПУ):</strong> если сторона и два прилежащих к ней угла одного △ равны стороне и двум прилежащим к ней углам другого △, то треугольники равны. Доказывается наложением: сторона совмещается, а из равенства углов следует совпадение лучей двух других сторон.</p>
+</details>
+<details>
+<summary><span class="qnum">15</span>Сформулируйте третий признак равенства треугольников</summary>
+<p><strong>Третий признак (ССС):</strong> если три стороны одного △ равны трём сторонам другого △, то треугольники равны. Доказательство использует вспомогательное построение и свойство углов при основании равнобедренного △.</p>
+</details>
+</div>
+
+<div class="card">
+<h3>📐 Карточка C. Перпендикуляр, медиана, биссектриса, высота</h3>
+<details>
+<summary><span class="qnum">5</span>Какой отрезок называется перпендикуляром из точки к прямой?</summary>
+<p><strong>Перпендикуляр</strong> — отрезок, проведённый из данной точки к данной прямой под прямым углом. Конец отрезка на прямой называется <strong>основанием перпендикуляра</strong>.</p>
+</details>
+<details>
+<summary><span class="qnum">6</span>Теорема о перпендикуляре из точки к прямой</summary>
+<p><strong>Теорема:</strong> из точки, не лежащей на прямой, можно провести перпендикуляр к этой прямой, и притом только один. Доказательство — методом от противного, используя сумму углов треугольника (через 180°).</p>
+</details>
+<details>
+<summary><span class="qnum">7</span>Что такое медиана треугольника?</summary>
+<p><strong>Медиана</strong> — отрезок, соединяющий вершину △ с серединой противоположной стороны. У треугольника <strong>3 медианы</strong>, они пересекаются в одной точке.</p>
+</details>
+<details>
+<summary><span class="qnum">8</span>Что такое биссектриса треугольника?</summary>
+<p><strong>Биссектриса</strong> — отрезок биссектрисы угла △, соединяющий вершину с точкой на противоположной стороне. У треугольника <strong>3 биссектрисы</strong>.</p>
+</details>
+<details>
+<summary><span class="qnum">9</span>Что такое высота треугольника?</summary>
+<p><strong>Высота</strong> — перпендикуляр, проведённый из вершины △ к прямой, содержащей противоположную сторону. У треугольника <strong>3 высоты</strong>; в тупоугольном △ две высоты попадают на продолжения сторон.</p>
+</details>
+<details>
+<summary><span class="qnum">13</span>Теорема о биссектрисе равнобедренного треугольника</summary>
+<p><strong>Теорема:</strong> в равнобедренном △ биссектриса, проведённая к основанию, является одновременно медианой и высотой. Доказывается через △ABH = △ACH (по 1-му признаку: AB=AC, AH — общая, ∠BAH=∠CAH).</p>
+</details>
+</div>
+
+<div class="card">
+<h3>📐 Карточка D. Равнобедренный треугольник, окружность и построения</h3>
+<details>
+<summary><span class="qnum">10</span>Какой треугольник называется равнобедренным?</summary>
+<p><strong>Равнобедренный</strong> — △, у которого две стороны равны. Равные стороны — <strong>боковые</strong>, третья — <strong>основание</strong>.</p>
+</details>
+<details>
+<summary><span class="qnum">11</span>Какой треугольник называется равносторонним?</summary>
+<p><strong>Равносторонний</strong> — △, у которого все три стороны равны. Все его углы равны 60°.</p>
+</details>
+<details>
+<summary><span class="qnum">12</span>Докажите, что углы при основании равнобедренного треугольника равны</summary>
+<p>Пусть △ABC — равнобедренный, AB = AC. Проведём биссектрису AH из A. Тогда △ABH = △ACH по 1-му признаку (AB=AC, AH — общая, ∠BAH=∠CAH). Значит, ∠B = ∠C.</p>
+</details>
+<details>
+<summary><span class="qnum">16</span>Что такое определение? Дайте определение окружности</summary>
+<p><strong>Определение</strong> — предложение, разъясняющее смысл выражения или названия. <strong>Окружность</strong> — фигура из всех точек плоскости, расположенных на заданном расстоянии от данной точки (центра). <strong>Радиус</strong> — отрезок из центра к точке окружности; <strong>хорда</strong> — отрезок между двумя точками окружности; <strong>диаметр</strong> — хорда через центр, d = 2r.</p>
+</details>
+<details>
+<summary><span class="qnum">17</span>Как отложить на луче отрезок, равный данному?</summary>
+<p>Проводим окружность с центром в начале луча и радиусом, равным данному отрезку. Точка пересечения окружности с лучом — конец искомого отрезка.</p>
+</details>
+<details>
+<summary><span class="qnum">18</span>Как отложить от луча угол, равный данному?</summary>
+<p>1) Окружность с центром в вершине данного угла → точки B и C на сторонах. 2) Окружность того же радиуса с центром в начале луча → точка D. 3) Окружность с центром D и радиусом BC → точка E. ∠MOE = ∠A. Доказательство: △ODE = △ABC (3-й признак).</p>
+</details>
+<details>
+<summary><span class="qnum">19</span>Как построить биссектрису угла?</summary>
+<p>1) Окружность с центром в вершине A → точки B и C на сторонах. 2) Две окружности одинакового радиуса BC с центрами B и C → точка E внутри угла. 3) Луч AE — биссектриса. Доказательство: △ACE = △ABE (3-й признак).</p>
+</details>
+<details>
+<summary><span class="qnum">20</span>Как построить перпендикуляр из точки на прямой к этой прямой?</summary>
+<p>1) На лучах прямой из данной точки M отложить MA = MB. 2) Две окружности с центрами A и B радиуса AB → точки P и Q. 3) Прямая MP — искомый перпендикуляр. Доказательство: PM — медиана равнобедренного △PAB, а значит и высота.</p>
+</details>
+<details>
+<summary><span class="qnum">21</span>Как построить середину отрезка?</summary>
+<p>1) Две окружности с центрами A и B радиуса AB → точки P и Q. 2) Прямая PQ пересекает AB в середине O. Доказательство: △APQ = △BPQ (3-й признак), значит PO — биссектриса равнобедренного △APB, а значит и медиана. Прямая PQ — <strong>серединный перпендикуляр</strong> к AB.</p>
+</details>
+</div>
+
+<div class="card">
+<h3>🔑 Три ключа главы II</h3>
+<div class="highlight">
+<strong>1. Три признака равенства треугольников</strong> — два △ равны, если у них равны: <strong>(ДСУ)</strong> две стороны и угол между ними; <strong>(СПУ)</strong> сторона и два прилежащих угла; <strong>(ССС)</strong> три стороны.
+</div>
+<div class="highlight">
+<strong>2. Свойства равнобедренного треугольника</strong> — углы при основании равны; биссектриса, проведённая к основанию, является одновременно медианой и высотой.
+</div>
+<div class="highlight">
+<strong>3. Жёсткость треугольника и построения циркулем и линейкой</strong> — треугольник с заданными сторонами определён однозначно (3-й признак); этого достаточно, чтобы строить равные углы, биссектрисы, перпендикуляры и середины отрезков только циркулем и линейкой без делений.
+</div>
+</div>
+
+<hr>
+<h2>🛠 Блок 2. Практика (20–25 мин)</h2>
+
+<div class="card">
+<h3>🔢 Разминка: считаем элементы треугольника</h3>
+<details>
+<summary>💡 Задача 1. Сколько пар вершин у треугольника?</summary>
+<p>У △ 3 вершины. Число пар вершин = C(3, 2) = 3. Эти пары как раз и образуют <strong>3 стороны треугольника</strong>.</p>
+</details>
+<details>
+<summary>💡 Задача 2. Сколько особых отрезков в треугольнике?</summary>
+<p>Из каждой вершины можно провести по одной медиане, одной биссектрисе и одной высоте. Всего: 3 медианы + 3 биссектрисы + 3 высоты = <strong>9 отрезков</strong>.</p>
+</details>
+<details>
+<summary>💡 Задача 3. Сколько пар равных элементов нужно для признака равенства?</summary>
+<p><strong>3 пары</strong> для каждого признака: 1-й — 2 стороны + 1 угол; 2-й — 1 сторона + 2 угла; 3-й — 3 стороны. Меньше трёх — недостаточно (например, по двум сторонам равенство не доказать).</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-must">№161</span> Базовый уровень</h3>
+<p><strong>Задание:</strong> Периметр треугольника ABC равен 15 см. Сторона BC больше стороны AB на 2 см, а сторона AB меньше стороны AC на 1 см. Найдите стороны треугольника.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Запишем условия в виде уравнений. BC = AB + 2; AB = AC − 1, то есть AC = AB + 1.</div>
+<div class="step"><strong>Шаг 2:</strong> Периметр: P = AB + BC + AC = AB + (AB + 2) + (AB + 1) = 3·AB + 3.</div>
+<div class="step"><strong>Шаг 3:</strong> По условию P = 15 см. Значит, 3·AB + 3 = 15, откуда 3·AB = 12 и AB = 4 см.</div>
+<div class="step"><strong>Шаг 4:</strong> Тогда BC = AB + 2 = 6 см; AC = AB + 1 = 5 см.</div>
+<p><strong>Ответ:</strong> <strong>AB = 4 см, BC = 6 см, AC = 5 см</strong>.</p>
+<p><strong>Проверка:</strong> 4 + 6 + 5 = 15 ✓; неравенства треугольника: 4 + 5 > 6, 4 + 6 > 5, 5 + 6 > 4 ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-must">№162</span> Базовый уровень</h3>
+<p><strong>Задание:</strong> В равнобедренном треугольнике основание больше боковой стороны на 2 см, но меньше суммы боковых сторон на 3 см. Найдите стороны треугольника.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Пусть b — боковая сторона, a — основание. По условию: a = b + 2 и a = 2b − 3 (так как основание меньше суммы боковых сторон на 3).</div>
+<div class="step"><strong>Шаг 2:</strong> Приравняем: b + 2 = 2b − 3, откуда b = 5 см.</div>
+<div class="step"><strong>Шаг 3:</strong> Тогда a = b + 2 = 7 см.</div>
+<p><strong>Ответ:</strong> <strong>боковые стороны по 5 см, основание 7 см</strong>.</p>
+<p><strong>Проверка:</strong> a = b + 2 → 7 = 5 + 2 ✓; a = 2b − 3 → 7 = 10 − 3 ✓; неравенство △: 5 + 5 > 7 ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-should">№163</span> Средний уровень</h3>
+<p><strong>Задание:</strong> Основание равнобедренного треугольника равно 8 см. Медиана, проведённая к боковой стороне, разбивает треугольник на два треугольника так, что периметр одного треугольника на 2 см больше периметра другого. Найдите боковую сторону данного треугольника.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Пусть △ABC — равнобедренный, AC = 8 см (основание), AB = BC = x (боковые). Проведём медиану CM к стороне AB; M — середина AB, AM = MB = x/2.</div>
+<div class="step"><strong>Шаг 2:</strong> Медиана CM общая для обоих △ACM и △BCM. Их периметры: P(ACM) = AC + CM + AM = 8 + CM + x/2; P(BCM) = BC + CM + BM = x + CM + x/2.</div>
+<div class="step"><strong>Шаг 3:</strong> Разница: P(BCM) − P(ACM) = (x + CM + x/2) − (8 + CM + x/2) = x − 8. По условию |P(BCM) − P(ACM)| = 2 см, значит |x − 8| = 2.</div>
+<div class="step"><strong>Шаг 4:</strong> Отсюда x = 10 или x = 6. Проверим неравенство треугольника для каждого: при x = 10 → 10 + 10 > 8 ✓; при x = 6 → 6 + 6 > 8 ✓. Оба значения допустимы. Обычно в задаче подразумевается, что боковая сторона больше основания — тогда x = 10.</div>
+<p><strong>Ответ:</strong> <strong>боковая сторона 10 см</strong> (возможен также вариант 6 см, если боковая сторона меньше основания).</p>
+<p><strong>Проверка:</strong> при x = 10: AM = MB = 5; разница периметров = 10 − 8 = 2 ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-should">№173</span> Средний уровень</h3>
+<p><strong>Задание:</strong> В треугольнике ABC ∠A = 38°, ∠B = 110°, ∠C = 32°. На стороне AC отмечены точки D и E так, что точка D лежит на отрезке AE, BD = DA, BE = EC. Найдите угол DBE.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> BD = DA → △ABD равнобедренный с основанием AB. Значит, углы при основании AB равны: ∠ABD = ∠BAD = ∠A = 38°. Тогда ∠ADB = 180° − 2·38° = 104°.</div>
+<div class="step"><strong>Шаг 2:</strong> BE = EC → △BEC равнобедренный с основанием BC. Углы при основании BC равны: ∠EBC = ∠BCE = ∠C = 32°. Тогда ∠BEC = 180° − 2·32° = 116°.</div>
+<div class="step"><strong>Шаг 3:</strong> Луч BD лежит внутри ∠ABC (так как D на AC), и луч BE тоже внутри ∠ABC. Угол ∠ABC = 110° разбивается на три части: ∠ABD + ∠DBE + ∠EBC = ∠ABC.</div>
+<div class="step"><strong>Шаг 4:</strong> ∠DBE = ∠ABC − ∠ABD − ∠EBC = 110° − 38° − 32° = 40°.</div>
+<p><strong>Ответ:</strong> <strong>∠DBE = 40°</strong>.</p>
+<p><strong>Проверка:</strong> 38° + 40° + 32° = 110° = ∠B ✓; сумма углов △ABD: 38° + 38° + 104° = 180° ✓; сумма углов △BEC: 32° + 32° + 116° = 180° ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3>📐 К задаче №173</h3>
+<div class="diagram">
+<svg width="460" height="280" viewBox="0 0 460 280">
+<!-- △ABC: A(80,200), C(360,200). ∠A=38°, ∠C=32°, ∠B=110°.
+- B = пересечение луча из A под 38° (матем.) и луча из C под 148° (матем.).
+  Из A: (80+t·cos38°, 200-t·sin38°) = (80+0,788t; 200-0,616t).
+  Из C: (360+s·cos148°, 200-s·sin148°) = (360-0,848s; 200-0,530s).
+  Решение: t ≈ 157,9; s ≈ 183,5. B = (204,5; 102,7).
+- D на AC: BD=DA. BD²=(x_D-204,5)²+(200-102,7)²; DA²=(x_D-80)².
+  (x_D-80)² = (x_D-204,5)² + 97,3² → 24,9·x_D ≈ 4487 → x_D ≈ 180,2. D=(180,2; 200).
+- E на AC: BE=EC. BE²=(x_E-204,5)²+97,3²; EC²=(360-x_E)².
+  (x_E-204,5)² + 97,3² = (360-x_E)² → 311·x_E ≈ 78337 → x_E ≈ 251,9. E=(251,9; 200).
+Проверки: AD=sqrt(100,2²)=100,2; BD=sqrt(24,3²+97,3²)=100,3 ✓
+BE=sqrt(47,4²+97,3²)=108,2; EC=sqrt(108,1²)=108,1 ✓
+∠DBE: atan2(97,3; -24,3)≈104°; atan2(97,3; 47,4)≈64°; разница 40° ✓ -->
+<line x1="80" y1="200" x2="360" y2="200" stroke="#7f8c8d" stroke-width="2"/>
+<line x1="80" y1="200" x2="204.5" y2="102.7" stroke="#2c3e50" stroke-width="3"/>
+<line x1="360" y1="200" x2="204.5" y2="102.7" stroke="#2c3e50" stroke-width="3"/>
+<line x1="204.5" y1="102.7" x2="180.2" y2="200" stroke="#e74c3c" stroke-width="2"/>
+<line x1="204.5" y1="102.7" x2="251.9" y2="200" stroke="#27ae60" stroke-width="2"/>
+<!-- Дуга угла B (∠ABC = 110°), r=28 вокруг B(204,5; 102,7).
+- Точка на BA (матем. 142°) на расстоянии 28: B + 28·(cos142°; -sin142°) = (204,5-22,0; 102,7-17,2) = (182,5; 85,5).
+  Проверка направления BA: atan2(97,3; -124,5) = 180° - atan(97,3/124,5) = 180° - 38° = 142° ✓.
+- Точка на BC (матем. 32°) на расстоянии 28: B + 28·(cos32°; -sin32°) = (204,5+23,7; 102,7-14,8) = (228,2; 87,9).
+  Проверка направления BC: atan2(97,3; 155,5) = atan(97,3/155,5) ≈ 32° ✓.
+- В SVG-координатах: старт при θ=-142° (=218°), финиш при θ=-32° (=328°). Возрастание θ на 110° → обход=1 (по часовой), флаг_большой_дуги=0. -->
+<path d="M 182.5,85.5 A 28,28 0 0 1 228.2,87.9" fill="none" stroke="#9b59b6" stroke-width="2"/>
+<text x="204.5" y="80" text-anchor="middle" font-size="11" fill="#9b59b6" font-weight="bold">110°</text>
+<circle cx="80" cy="200" r="4" fill="#2c3e50"/>
+<circle cx="360" cy="200" r="4" fill="#2c3e50"/>
+<circle cx="204.5" cy="102.7" r="4" fill="#2c3e50"/>
+<circle cx="180.2" cy="200" r="4" fill="#e74c3c"/>
+<circle cx="251.9" cy="200" r="4" fill="#27ae60"/>
+<text x="68" y="217" font-size="14" font-weight="bold">A</text>
+<text x="364" y="217" font-size="14" font-weight="bold">C</text>
+<text x="208" y="95" font-size="14" font-weight="bold">B</text>
+<text x="170" y="220" font-size="13" font-weight="bold" fill="#e74c3c">D</text>
+<text x="246" y="220" font-size="13" font-weight="bold" fill="#27ae60">E</text>
+<text x="100" y="190" font-size="11" fill="#7f8c8d">38°</text>
+<text x="335" y="190" font-size="11" fill="#7f8c8d">32°</text>
+</svg>
+<p><strong>Рис. 1:</strong> К задаче №173. D и E на стороне AC, BD = DA, BE = EC. Искомый ∠DBE — угол между красным и зелёным отрезками из B</p>
+</div>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-should">№174</span> Средний уровень</h3>
+<p><strong>Задание:</strong> На рисунке 101 OC = OD, OB = OE. Докажите, что AB = EF. Объясните способ измерения ширины озера (отрезка AB на рисунке 101), основанный на этой задаче.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<p><em>(Рисунок 101 учебника: точка O — пересечение двух прямых; на одной прямой по разные стороны от O лежат точки A и B; на другой прямой — точки E и F, так что OB = OE и OC = OD.)</em></p>
+<div class="step"><strong>Шаг 1:</strong> Рассмотрим △AOB и △FOE. У них: ∠AOB = ∠FOE (вертикальные углы), OA = OF и OB = OE (по условию).</div>
+<div class="step"><strong>Шаг 2:</strong> По первому признаку (две стороны и угол между ними) △AOB = △FOE.</div>
+<div class="step"><strong>Шаг 3:</strong> Из равенства треугольников: AB = EF (соответственные стороны).</div>
+<p><strong>Способ измерения ширины озера:</strong> ширина озера — отрезок AB, где A и B на противоположных берегах. На продолжении отрезка AB за точку A выбираем точку O. Из O проводим луч под произвольным углом к AB и откладываем на нём отрезок OE = OB. На другом луче из O откладываем OF = OA. Тогда EF = AB (доказано выше), и отрезок EF лежит на суше — его можно измерить рулеткой. Это и есть ширина озера.</p>
+<p><strong>Ответ:</strong> AB = EF (доказано). Способ: построить симметричную конфигурацию на суше и измерить равный отрезок EF.</p>
+<p><strong>Проверка:</strong> △AOB = △FOE по 1-му признаку (две стороны OA = OF, OB = OE и вертикальный угол между ними) ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-should">№177</span> Средний уровень</h3>
+<p><strong>Задание:</strong> На рисунке 102 AC = AD, AB ⊥ CD. Докажите, что BC = BD и ∠ACB = ∠ADB.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="diagram">
+<svg width="420" height="290" viewBox="0 0 420 290">
+<!-- △ACD равнобедренный с AC = AD; AB ⊥ CD, H — точка пересечения AB и CD, H — середина CD.
+A(210, 40), B(210, 250), H(210, 145).
+C(80, 145), D(340, 145). CD — горизонтально, AB — вертикально. -->
+<line x1="210" y1="40" x2="210" y2="250" stroke="#2c3e50" stroke-width="3"/>
+<line x1="80" y1="145" x2="340" y2="145" stroke="#7f8c8d" stroke-width="2"/>
+<line x1="210" y1="40" x2="80" y2="145" stroke="#3498db" stroke-width="3"/>
+<line x1="210" y1="40" x2="340" y2="145" stroke="#3498db" stroke-width="3"/>
+<line x1="80" y1="145" x2="210" y2="250" stroke="#e74c3c" stroke-width="2"/>
+<line x1="340" y1="145" x2="210" y2="250" stroke="#e74c3c" stroke-width="2"/>
+<!-- Прямой угол в точке H (квадратик) -->
+<path d="M 200,145 L 200,135 L 210,135" fill="none" stroke="#2c3e50" stroke-width="2"/>
+<circle cx="210" cy="40" r="4" fill="#2c3e50"/>
+<circle cx="210" cy="250" r="4" fill="#2c3e50"/>
+<circle cx="80" cy="145" r="4" fill="#2c3e50"/>
+<circle cx="340" cy="145" r="4" fill="#2c3e50"/>
+<circle cx="210" cy="145" r="4" fill="#2c3e50"/>
+<text x="218" y="40" font-size="14" font-weight="bold">A</text>
+<text x="218" y="265" font-size="14" font-weight="bold">B</text>
+<text x="60" y="140" font-size="14" font-weight="bold">C</text>
+<text x="345" y="140" font-size="14" font-weight="bold">D</text>
+<text x="218" y="155" font-size="13" font-weight="bold">H</text>
+<!-- Засечки на AC и AD (одинаковые) -->
+<line x1="138" y1="85" x2="148" y2="92" stroke="#3498db" stroke-width="2"/>
+<line x1="282" y1="85" x2="272" y2="92" stroke="#3498db" stroke-width="2"/>
+</svg>
+<p><strong>Рис. 2:</strong> К задаче №177. AC = AD (засечки), AB ⊥ CD в точке H. Доказываем BC = BD и ∠ACB = ∠ADB</p>
+</div>
+<div class="step"><strong>Шаг 1:</strong> △ACD — равнобедренный (AC = AD по условию). AH — высота к основанию CD (так как AB ⊥ CD). По теореме о биссектрисе равнобедренного △ (в. 13) высота AH является и медианой, то есть CH = HD.</div>
+<div class="step"><strong>Шаг 2:</strong> Рассмотрим △BCH и △BDH. У них: BH — общая сторона; CH = HD (из шага 1); ∠BHC = ∠BHD = 90° (AB ⊥ CD).</div>
+<div class="step"><strong>Шаг 3:</strong> По первому признаку (две стороны и угол между ними) △BCH = △BDH. Значит, BC = BD.</div>
+<div class="step"><strong>Шаг 4:</strong> Теперь рассмотрим △ABC и △ABD. У них: AC = AD (по условию), BC = BD (из шага 3), AB — общая сторона.</div>
+<div class="step"><strong>Шаг 5:</strong> По третьему признаку (три стороны) △ABC = △ABD. Значит, ∠ACB = ∠ADB.</div>
+<p><strong>Ответ:</strong> BC = BD и ∠ACB = ∠ADB (доказано).</p>
+<p><strong>Проверка:</strong> AH — медиана △ACD (равнобедренный) ✓; △BCH = △BDH (1-й признак) ✓; △ABC = △ABD (3-й признак) ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-aspire">№167</span> Продвинутый уровень</h3>
+<p><strong>Задание:</strong> На рисунке 98 треугольник ADE равнобедренный, DE — основание. Докажите, что: а) если BD = CE, то ∠CAD = ∠BAE и AB = AC; б) если ∠CAD = ∠BAE, то BD = CE и AB = AC.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="diagram">
+<svg width="420" height="260" viewBox="0 0 420 260">
+<!-- △ADE равнобедренный с AD = AE, DE — основание.
+A(210, 40), D(70, 220), E(350, 220). AD=sqrt(140²+180²)=sqrt(52000)=228; AE=sqrt(140²+180²)=228 ✓.
+B и C на DE: B(140, 220), C(280, 220). BD=70, CE=70, BC=140. -->
+<line x1="70" y1="220" x2="350" y2="220" stroke="#2c3e50" stroke-width="3"/>
+<line x1="210" y1="40" x2="70" y2="220" stroke="#2c3e50" stroke-width="3"/>
+<line x1="210" y1="40" x2="350" y2="220" stroke="#2c3e50" stroke-width="3"/>
+<line x1="210" y1="40" x2="140" y2="220" stroke="#e74c3c" stroke-width="2"/>
+<line x1="210" y1="40" x2="280" y2="220" stroke="#e74c3c" stroke-width="2"/>
+<circle cx="210" cy="40" r="4" fill="#2c3e50"/>
+<circle cx="70" cy="220" r="4" fill="#2c3e50"/>
+<circle cx="350" cy="220" r="4" fill="#2c3e50"/>
+<circle cx="140" cy="220" r="4" fill="#e74c3c"/>
+<circle cx="280" cy="220" r="4" fill="#e74c3c"/>
+<text x="218" y="38" font-size="14" font-weight="bold">A</text>
+<text x="56" y="237" font-size="14" font-weight="bold">D</text>
+<text x="354" y="237" font-size="14" font-weight="bold">E</text>
+<text x="132" y="237" font-size="14" font-weight="bold" fill="#e74c3c">B</text>
+<text x="274" y="237" font-size="14" font-weight="bold" fill="#e74c3c">C</text>
+<!-- Засечки на AD и AE (одинаковые) -->
+<line x1="135" y1="125" x2="145" y2="132" stroke="#9b59b6" stroke-width="2"/>
+<line x1="285" y1="125" x2="275" y2="132" stroke="#9b59b6" stroke-width="2"/>
+</svg>
+<p><strong>Рис. 3:</strong> К задаче №167. △ADE равнобедренный (AD = AE), точки B и C на основании DE. Красные отрезки AB и AC проведены из вершины A</p>
+</div>
+<p><strong>а) Дано: BD = CE. Доказать: ∠CAD = ∠BAE и AB = AC.</strong></p>
+<div class="step"><strong>Шаг 1:</strong> △ADE равнобедренный (AD = AE), DE — основание. Значит, ∠D = ∠E (углы при основании).</div>
+<div class="step"><strong>Шаг 2:</strong> Рассмотрим △ABD и △AEC. У них: AD = AE (по условию △ADE равнобедренный), BD = CE (по условию), ∠ADB = ∠AEC (так как ∠D = ∠E).</div>
+<div class="step"><strong>Шаг 3:</strong> По первому признаку (две стороны и угол между ними) △ABD = △AEC. Отсюда AB = AC (соответственные стороны) и ∠BAD = ∠CAE (соответственные углы).</div>
+<div class="step"><strong>Шаг 4:</strong> Заметим: ∠CAD = ∠BAD + ∠BAC и ∠BAE = ∠CAE + ∠BAC. Так как ∠BAD = ∠CAE, то ∠CAD = ∠BAE.</div>
+<p><strong>б) Дано: ∠CAD = ∠BAE. Доказать: BD = CE и AB = AC.</strong></p>
+<div class="step"><strong>Шаг 5:</strong> ∠CAD = ∠BAE. Вычтем из обеих частей ∠BAC: ∠CAD − ∠BAC = ∠BAE − ∠BAC, то есть ∠BAD = ∠CAE.</div>
+<div class="step"><strong>Шаг 6:</strong> Рассмотрим △ABD и △AEC. У них: AD = AE (△ADE равнобедренный), ∠ADB = ∠AEC (углы при основании), ∠BAD = ∠CAE (из шага 5).</div>
+<div class="step"><strong>Шаг 7:</strong> По второму признаку (сторона и два прилежащих угла) △ABD = △AEC. Отсюда AB = AC и BD = CE.</div>
+<p><strong>Ответ:</strong> а) AB = AC и ∠CAD = ∠BAE (доказано); б) BD = CE и AB = AC (доказано).</p>
+<p><strong>Проверка:</strong> в обоих пунктах использовано свойство углов при основании равнобедренного △ и один из признаков равенства △ ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-aspire">№169</span> Продвинутый уровень</h3>
+<p><strong>Задание:</strong> На сторонах равностороннего треугольника ABC отложены равные отрезки AD, BE и CF, как показано на рисунке 99. Точки D, E, F соединены отрезками. Докажите, что треугольник DEF — равносторонний.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="diagram">
+<svg width="440" height="350" viewBox="0 0 440 350">
+<!-- Равносторонний △ABC. A(220, 50), B(80, 292), C(360, 292). Сторона = 280.
+Точки на сторонах (AD = BE = CF = k, k = 1/3·стороны = 93,3):
+- D на AC: D = A + (1/3)(C−A) = (220+(360−220)/3; 50+(292−50)/3) = (266,7; 130,8).
+- E на AB: E = B + (1/3)(A−B) = (80+(220−80)/3; 292+(50−292)/3) = (126,7; 211,7).
+- F на BC: F = C + (1/3)(B−C) = (360+(80−360)/3; 292+0) = (266,7; 292).
+Проверки: AD = sqrt(46,7² + 80,8²) = sqrt(2178+6534) = sqrt(8712) ≈ 93,3 ✓
+BE = sqrt(46,7² + 80,8²) ≈ 93,3 ✓
+CF = sqrt(93,3² + 0) = 93,3 ✓
+DE = sqrt((266,7−126,7)² + (130,8−211,7)²) = sqrt(140² + 80,8²) = sqrt(19600+6534) ≈ 161,7
+EF = sqrt((266,7−126,7)² + (292−211,7)²) = sqrt(140² + 80,3²) ≈ 161,5
+FD = sqrt((266,7−266,7)² + (292−130,8)²) = 161,2
+→ DEF равносторонний (с точностью до округления). -->
+<polygon points="220,50 80,292 360,292" fill="none" stroke="#3498db" stroke-width="3"/>
+<polygon points="266.7,130.8 126.7,211.7 266.7,292" fill="none" stroke="#e74c3c" stroke-width="3"/>
+<line x1="220" y1="50" x2="266.7" y2="130.8" stroke="#9b59b6" stroke-width="3"/>
+<line x1="80" y1="292" x2="126.7" y2="211.7" stroke="#9b59b6" stroke-width="3"/>
+<line x1="360" y1="292" x2="266.7" y2="292" stroke="#9b59b6" stroke-width="3"/>
+<circle cx="220" cy="50" r="5" fill="#2c3e50"/>
+<circle cx="80" cy="292" r="5" fill="#2c3e50"/>
+<circle cx="360" cy="292" r="5" fill="#2c3e50"/>
+<circle cx="266.7" cy="130.8" r="5" fill="#e74c3c"/>
+<circle cx="126.7" cy="211.7" r="5" fill="#e74c3c"/>
+<circle cx="266.7" cy="292" r="5" fill="#e74c3c"/>
+<text x="220" y="40" text-anchor="middle" font-size="14" font-weight="bold">A</text>
+<text x="68" y="305" font-size="14" font-weight="bold">B</text>
+<text x="365" y="305" font-size="14" font-weight="bold">C</text>
+<text x="278" y="128" font-size="14" font-weight="bold" fill="#e74c3c">D</text>
+<text x="115" y="208" font-size="14" font-weight="bold" fill="#e74c3c">E</text>
+<text x="270" y="307" font-size="14" font-weight="bold" fill="#e74c3c">F</text>
+</svg>
+<p><strong>Рис. 4:</strong> К задаче №169. Равносторонний △ABC; на его сторонах отложены равные отрезки AD (фиолетовый), BE (фиолетовый), CF (фиолетовый). Внутренний △DEF (красный) — равносторонний</p>
+</div>
+<div class="step"><strong>Шаг 1:</strong> △ABC равносторонний, значит AB = BC = AC и ∠A = ∠B = ∠C = 60°.</div>
+<div class="step"><strong>Шаг 2:</strong> По условию AD = BE = CF = k. Найдём оставшиеся части сторон: DC = AC − AD = AC − k; AE = AB − BE = AB − k = AC − k (так как AB = AC); BF = BC − CF = BC − k = AC − k. Итак, AE = BF = DC = AC − k.</div>
+<div class="step"><strong>Шаг 3:</strong> Рассмотрим △ADE, △BEF и △CFD. В △ADE: AD = k, AE = AC − k, ∠DAE = ∠A = 60°. В △BEF: BE = k, BF = AC − k, ∠EBF = ∠B = 60°. В △CFD: CF = k, CD = AC − k, ∠FCD = ∠C = 60°.</div>
+<div class="step"><strong>Шаг 4:</strong> Все три треугольника имеют по две равных соответствующих стороны и равный угол между ними (60°). По первому признаку △ADE = △BEF = △CFD.</div>
+<div class="step"><strong>Шаг 5:</strong> Из равенства этих треугольников: DE = EF = FD (соответственные стороны). Значит, △DEF — равносторонний.</div>
+<p><strong>Ответ:</strong> △DEF — равносторонний (доказано).</div>
+<p><strong>Проверка:</strong> все три △ (ADE, BEF, CFD) равны по 1-му признаку ✓; соответственные стороны DE, EF, FD равны ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-aspire">№181*</span> Продвинутый уровень</h3>
+<p><strong>Задание:</strong> При решении геометрических задач часто используют дополнительные построения. Одно из таких построений связано с <em>методом удвоения медианы</em>: если AM — медиана треугольника ABC, то строится отрезок AK такой, что точка M является его серединой. Докажите с помощью метода удвоения медианы, что треугольники ABC и A₁B₁C₁ равны, если AB = A₁B₁, AC = A₁C₁, AM = A₁M₁, где AM и A₁M₁ — медианы треугольников.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="diagram">
+<svg width="500" height="430" viewBox="0 0 500 430">
+<!-- △ABC, AM — медиана (M — середина BC). K — точка, симметричная A относительно M.
+A(200, 40), B(60, 220), C(380, 200).
+M = середина BC = (220, 210).
+K = 2M − A = (240, 380).
+Проверки: AM = sqrt(20²+170²) = sqrt(400+28900) = sqrt(29300) ≈ 171,2.
+MK = sqrt(20²+170²) ≈ 171,2 ✓ (AM = MK)
+AB = sqrt(140²+180²) = sqrt(19600+32400) = sqrt(52000) ≈ 228,0.
+KC = sqrt((240−380)²+(380−200)²) = sqrt(19600+32400) ≈ 228,0 ✓ (AB = KC)
+AC = sqrt(180²+160²) = sqrt(32400+25600) = sqrt(58000) ≈ 240,8.
+BK = sqrt((240−60)²+(380−220)²) = sqrt(32400+25600) ≈ 240,8 ✓ (AC = BK)
+→ ABKC — параллелограмм (диагонали AK и BC делятся в одной точке M пополам). -->
+<polygon points="200,40 60,220 380,200" fill="none" stroke="#3498db" stroke-width="3"/>
+<line x1="200" y1="40" x2="220" y2="210" stroke="#9b59b6" stroke-width="3"/>
+<line x1="200" y1="40" x2="240" y2="380" stroke="#9b59b6" stroke-width="2" stroke-dasharray="5,3"/>
+<line x1="220" y1="210" x2="240" y2="380" stroke="#9b59b6" stroke-width="3"/>
+<line x1="60" y1="220" x2="240" y2="380" stroke="#e74c3c" stroke-width="2"/>
+<line x1="380" y1="200" x2="240" y2="380" stroke="#e74c3c" stroke-width="2"/>
+<circle cx="200" cy="40" r="5" fill="#2c3e50"/>
+<circle cx="60" cy="220" r="5" fill="#2c3e50"/>
+<circle cx="380" cy="200" r="5" fill="#2c3e50"/>
+<circle cx="220" cy="210" r="5" fill="#27ae60"/>
+<circle cx="240" cy="380" r="5" fill="#9b59b6"/>
+<text x="200" y="32" text-anchor="middle" font-size="14" font-weight="bold">A</text>
+<text x="48" y="232" font-size="14" font-weight="bold">B</text>
+<text x="385" y="195" font-size="14" font-weight="bold">C</text>
+<text x="232" y="220" font-size="13" font-weight="bold" fill="#27ae60">M</text>
+<text x="248" y="395" font-size="14" font-weight="bold" fill="#9b59b6">K</text>
+<text x="170" y="135" font-size="11" fill="#9b59b6">AM</text>
+<text x="245" y="300" font-size="11" fill="#9b59b6">MK</text>
+</svg>
+<p><strong>Рис. 5:</strong> Метод удвоения медианы. AM — медиана △ABC, K симметрична A относительно M (AM = MK). Четырёхугольник ABKC — параллелограмм, поэтому BK = AC и KC = AB</p>
+</div>
+<div class="step"><strong>Шаг 1 (построение):</strong> В △ABC проведём медиану AM (M — середина BC). Отложим на луче AM отрезок MK = AM. Получим точку K. Аналогично для △A₁B₁C₁: медиана A₁M₁, точка K₁ с M₁K₁ = A₁M₁.</div>
+<div class="step"><strong>Шаг 2 (параллелограмм):</strong> В четырёхугольнике ABKC диагонали AK и BC пересекаются в точке M и делятся ею пополам (AM = MK по построению, BM = MC так как AM — медиана). Значит, ABKC — параллелограмм.</div>
+<div class="step"><strong>Шаг 3:</strong> В параллелограмме противоположные стороны равны: BK = AC и KC = AB. Аналогично в △A₁B₁C₁: B₁K₁ = A₁C₁ и K₁C₁ = A₁B₁.</div>
+<div class="step"><strong>Шаг 4 (равенство △ABK и △A₁B₁K₁):</strong> Стороны △ABK: AB, BK = AC, AK = 2·AM. Стороны △A₁B₁K₁: A₁B₁, B₁K₁ = A₁C₁, A₁K₁ = 2·A₁M₁. По условию AB = A₁B₁, AC = A₁C₁, AM = A₁M₁. Значит, три стороны △ABK равны трём сторонам △A₁B₁K₁.</div>
+<div class="step"><strong>Шаг 5:</strong> По третьему признаку △ABK = △A₁B₁K₁. Отсюда ∠ABK = ∠A₁B₁K₁, то есть ∠ABM = ∠A₁B₁M₁ (так как K на продолжении AM за M).</div>
+<div class="step"><strong>Шаг 6 (равенство △ABM и △A₁B₁M₁):</strong> В △ABM и △A₁B₁M₁: AB = A₁B₁ (условие), AM = A₁M₁ (условие), ∠ABM = ∠A₁B₁M₁ (шаг 5). По первому признаку △ABM = △A₁B₁M₁. Отсюда BM = B₁M₁, и значит BC = 2·BM = 2·B₁M₁ = B₁C₁.</div>
+<div class="step"><strong>Шаг 7 (равенство △ABC и △A₁B₁C₁):</strong> В △ABC и △A₁B₁C₁: AB = A₁B₁ (условие), AC = A₁C₁ (условие), BC = B₁C₁ (шаг 6). По третьему признаку △ABC = △A₁B₁C₁.</div>
+<p><strong>Ответ:</strong> △ABC = △A₁B₁C₁ (доказано методом удвоения медианы).</p>
+<p><strong>Проверка:</strong> ABKC — параллелограмм (диагонали делятся пополам) ✓; △ABK = △A₁B₁K₁ (3-й признак) ✓; △ABM = △A₁B₁M₁ (1-й признак) ✓; △ABC = △A₁B₁C₁ (3-й признак) ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3>💡 Методическая подсказка</h3>
+<ul>
+<li><strong>Алгоритм перебора случаев:</strong> сначала чертёж, потом вычисления. Если в задаче есть несколько возможных конфигураций (как в №163 с двумя ответами) — рассмотри каждую отдельно и проверь неравенство треугольника для каждой.</li>
+<li><strong>Доказательство через равенство треугольников:</strong> найди на чертеже два треугольника, равенство которых (по одному из трёх признаков) даёт нужное равенство сторон или углов. Сначала выписывай три пары равных элементов, потом называй признак, потом — вывод.</li>
+<li><strong>Метод удвоения медианы (№181*):</strong> если в условии есть медиана, построй точку, симметричную вершине относительно середины противоположной стороны. Получится параллелограмм, который свяжет стороны треугольника с удвоенной медианой.</li>
+<li><strong>Задачи на построение:</strong> всегда после построения доказывай, что построенная фигура обладает нужным свойством — через равенство вспомогательных треугольников. Это превращает «геометрический рецепт» в настоящее математическое рассуждение.</li>
+<li><strong>Повторение перед контрольной:</strong> пройди все 21 вопрос устно, потом реши 3–4 задачи разного уровня. Если в задаче застрял — отметь все известные равные элементы на чертеже засечками и дугами, и ищи «готовую комбинацию» для одного из признаков.</li>
+</ul>
+</div>
+
+</body>
+</html>
