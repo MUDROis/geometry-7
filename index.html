@@ -132,12 +132,29 @@
             border-top: 1px solid #dfe4ea; font-size: 0.85em; color: #95a5a6; line-height: 1.7;
         }
     </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<meta name="description" content="Интерактивный курс уроков по учебнику Л. С. Атанасяна. Глава за главой: от точек и прямых до симметрии.">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:title" content="Геометрия 7 класс — курс уроков">
+<meta property="og:description" content="Интерактивный курс уроков по учебнику Л. С. Атанасяна. Глава за главой: от точек и прямых до симметрии.">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Геометрия 7 класс — курс уроков">
+<meta name="twitter:description" content="Интерактивный курс уроков по учебнику Л. С. Атанасяна. Глава за главой: от точек и прямых до симметрии.">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/">
 </head>
 <body>
 <div class="wrap">
 
     <header class="hero">
-        <h1>📐 Геометрия — 7 класс</h1>
+        <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;"><img class="course-logo" src="assets/logo.png" alt="Логотип курса «Геометрия 7 класс»"><h1 style="margin:0;">📐 Геометрия — 7 класс</h1></div>
         <p class="subtitle">Интерактивный курс уроков по учебнику Л. С. Атанасяна. Глава за главой: от точек и прямых до симметрии.</p>
         <div class="progress-text">Прогресс курса: <b>10 из 19 параграфов</b> готово (≈ 53%)</div>
         <div class="progress-bar"><div class="progress-fill" style="width:53%"></div></div>
@@ -153,7 +170,8 @@
     </div>
 
     <!-- ================= ГЛАВА 1 ================= -->
-    <details class="chapter" open style="--acc:#3498db">
+    <div style="background:#fff;padding:16px;border-radius:14px;margin-bottom:16px;box-shadow:0 4px 10px rgba(44,62,80,.08);"><input id="course-search" type="search" placeholder="Поиск по курсу…"></div>
+<details class="chapter" open style="--acc:#3498db">
         <summary>
             <span class="chapter-num">Глава I</span>
             <h2 class="chapter-title">Начальные геометрические сведения</h2>
@@ -626,5 +644,10 @@
     </footer>
 
 </div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
 </body>
 </html>
