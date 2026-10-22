@@ -23,6 +23,9 @@ h2[id]{scroll-margin-top:16px;}
   .toc-sidebar a{display:block;padding:4px 8px;margin:2px 0;color:#2c3e50;text-decoration:none;border-left:3px solid transparent;border-radius:0 6px 6px 0;}
   .toc-sidebar a:hover{background:#eaf6fd;}
   .toc-sidebar a.active{background:#eaf6fd;border-left-color:#3498db;font-weight:700;}
+  .toc-sidebar details{border-top:1px solid #dfe4ea;margin-top:6px;}
+  .toc-sidebar summary{cursor:pointer;font-weight:700;font-size:.85rem;padding:4px 0;color:#2c3e50;list-style:none;}
+  .toc-sidebar summary::-webkit-details-marker{display:none;}
 }
 
 /* Самопроверка (задел) */
