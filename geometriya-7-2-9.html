@@ -138,8 +138,8 @@ footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4
 <line x1="240" y1="50" x2="100" y2="200" stroke="#2c3e50" stroke-width="3"/>
 <!-- Медиана AM1 (красная) -->
 <line x1="100" y1="200" x2="330" y2="125" stroke="#e74c3c" stroke-width="3"/>
-<!-- Биссектриса BB1 (синяя) — из B к точке на AC. Для простоты: B(420,200) к точке на AC. -->
-<line x1="420" y1="200" x2="170" y2="125" stroke="#3498db" stroke-width="3"/>
+<!-- Биссектриса BB1 (синяя) — из B к точке на AC, делящей AC в отношении AB:BC (теорема о биссектрисе). -->
+<line x1="420" y1="200" x2="181" y2="113" stroke="#3498db" stroke-width="3"/>
 <!-- Высота CH (зелёная) -->
 <line x1="240" y1="50" x2="240" y2="200" stroke="#27ae60" stroke-width="3"/>
 <path d="M 240,188 L 252,188 L 252,200" fill="none" stroke="#f39c12" stroke-width="2"/>
@@ -149,13 +149,13 @@ footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4
 <circle cx="420" cy="200" r="5" fill="#2c3e50"/>
 <circle cx="240" cy="50" r="5" fill="#2c3e50"/>
 <circle cx="330" cy="125" r="4" fill="#e74c3c"/>
-<circle cx="170" cy="125" r="4" fill="#3498db"/>
+<circle cx="181" cy="113" r="4" fill="#3498db"/>
 <circle cx="240" cy="200" r="4" fill="#27ae60"/>
 <text x="88" y="218" font-size="14" font-weight="bold">A</text>
 <text x="428" y="218" font-size="14" font-weight="bold">B</text>
 <text x="240" y="40" text-anchor="middle" font-size="14" font-weight="bold">C</text>
 <text x="340" y="118" font-size="12" fill="#e74c3c" font-weight="bold">M₁</text>
-<text x="158" y="118" font-size="12" fill="#3498db" font-weight="bold">B₁</text>
+<text x="188" y="106" font-size="12" fill="#3498db" font-weight="bold">B₁</text>
 <text x="250" y="218" font-size="12" fill="#27ae60" font-weight="bold">H</text>
 <text x="200" y="160" font-size="11" fill="#e74c3c">медиана AM₁</text>
 <text x="310" y="170" font-size="11" fill="#3498db">биссектриса BB₁</text>
@@ -351,11 +351,11 @@ BC = 287.9 - 132.1 = 155.8. AC = √((210-287.9)² + (40-175)²) ≈ 155.9. Вс
 <details>
 <summary>💡 Проверить решение</summary>
 <div class="step"><strong>Шаг 1:</strong> △ABC равнобедренный с AB = BC, значит основание — AC, углы при основании: ∠A = ∠C.</div>
-<div class="step"><strong>Шаг 2:</strong> ∠1 — внешний угол при вершине B (смежный с внутренним ∠B). Значит ∠B = 180° − 130° = 50°.</div>
-<div class="step"><strong>Шаг 3:</strong> Сумма углов △ABC: ∠A + ∠B + ∠C = 180°. Так как ∠A = ∠C, то 2∠A + 50° = 180° → 2∠A = 130° → ∠A = 65°.</div>
-<div class="step"><strong>Шаг 4:</strong> ∠2 — угол при основании, значит ∠2 = ∠A = 65°.</div>
-<p><strong>Ответ:</strong> <strong>∠2 = 65°</strong>.</p>
-<p><strong>Проверка:</strong> 65° + 65° + 50° = 180° ✓; 130° + 50° = 180° (смежные) ✓</p>
+<div class="step"><strong>Шаг 2:</strong> На рисунке 73 (а) ∠1 — внешний угол при вершине C (смежный с внутренним ∠C). Значит ∠C = 180° − 130° = 50°.</div>
+<div class="step"><strong>Шаг 3:</strong> Так как ∠A = ∠C, то ∠A = 50°.</div>
+<div class="step"><strong>Шаг 4:</strong> ∠2 — внешний угол при вершине A (смежный с внутренним ∠A). Значит ∠2 = 180° − 50° = 130°.</div>
+<p><strong>Ответ:</strong> <strong>∠2 = 130°</strong>.</p>
+<p><strong>Проверка:</strong> 50° + 50° + 80° = 180° (внутренние углы) ✓; 130° + 50° = 180° (смежные) ✓</p>
 </details>
 </div>
 

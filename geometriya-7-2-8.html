@@ -393,10 +393,10 @@ AC направление от A к C: вектор (100,-130), α = atan2(130,1
 
 <div class="card">
 <h3><span class="badge badge-aspire">№103</span> Продвинутый уровень</h3>
-<p><strong>Задание:</strong> В треугольниках ABC и A₁B₁C₁ AB = A₁B₁, AC = A₁C₁, ∠A = ∠A₁. На сторонах AB и A₁B₁ отмечены точки P и P₁ так, что AP = AP₁. Докажите, что △BPC = △B₁P₁C₁.</p>
+<p><strong>Задание:</strong> В треугольниках ABC и A₁B₁C₁ AB = A₁B₁, AC = A₁C₁, ∠A = ∠A₁. На сторонах AB и A₁B₁ отмечены точки P и P₁ так, что AP = A₁P₁. Докажите, что △BPC = △B₁P₁C₁.</p>
 <details>
 <summary>💡 Проверить решение</summary>
-<div class="step"><strong>Шаг 1:</strong> По условию AB = A₁B₁ и AP = AP₁. Значит, BP = AB − AP = A₁B₁ − A₁P₁ = B₁P₁.</div>
+<div class="step"><strong>Шаг 1:</strong> По условию AB = A₁B₁ и AP = A₁P₁. Значит, BP = AB − AP = A₁B₁ − A₁P₁ = B₁P₁.</div>
 <div class="step"><strong>Шаг 2:</strong> △ABC = △A₁B₁C₁ по первому признаку (AB = A₁B₁, AC = A₁C₁, ∠A = ∠A₁). Значит, BC = B₁C₁ и ∠B = ∠B₁.</div>
 <div class="step"><strong>Шаг 3:</strong> Рассмотрим △BPC и △B₁P₁C₁: BP = B₁P₁ (шаг 1), ∠B = ∠B₁ (шаг 2), BC = B₁C₁ (шаг 2).</div>
 <div class="step"><strong>Шаг 4:</strong> По двум сторонам и углу между ними: <strong>△BPC = △B₁P₁C₁</strong>.</div>
@@ -407,16 +407,15 @@ AC направление от A к C: вектор (100,-130), α = atan2(130,1
 
 <div class="card">
 <h3><span class="badge badge-aspire">№104</span> Продвинутый уровень</h3>
-<p><strong>Задание:</strong> На сторонах угла CAD отмечены точки B и E так, что точка B лежит на луче AC, а точка E — на луче AD, причём AC = AD и AB = AE. Докажите, что ∠CBD = ∠DEC.</p>
+<p><strong>Задание:</strong> На сторонах угла CAD отмечены точки B и E так, что точка B лежит на отрезке AC, а точка E — на отрезке AD, причём AC = AD и AB = AE. Докажите, что ∠CBD = ∠DEC.</p>
 <details>
 <summary>💡 Проверить решение</summary>
-<div class="step"><strong>Шаг 1:</strong> Рассмотрим △ABC и △AED: AB = AE (по условию), ∠A — общий, AC = AD (по условию). По первому признаку <strong>△ABC = △AED</strong>.</div>
-<div class="step"><strong>Шаг 2:</strong> Из равенства △ABC = △AED следует: ∠ABC = ∠AED (соответственные углы при вершинах B и E).</div>
-<div class="step"><strong>Шаг 3:</strong> Углы CBD и ABC — смежные (точки A, B, C лежат на одном луче, значит B — между A и C, и угол CBD дополняет ∠ABC до развёрнутого). То есть ∠CBD = 180° − ∠ABC.</div>
-<div class="step"><strong>Шаг 4:</strong> Аналогично ∠DEC и ∠AED — смежные: ∠DEC = 180° − ∠AED.</div>
-<div class="step"><strong>Шаг 5:</strong> Так как ∠ABC = ∠AED (шаг 2), то и 180° − ∠ABC = 180° − ∠AED, то есть <strong>∠CBD = ∠DEC</strong>.</div>
+<div class="step"><strong>Шаг 1:</strong> Так как B лежит на отрезке AC, а E — на отрезке AD, то BC = AC − AB и ED = AD − AE. Но AC = AD и AB = AE (по условию), значит <strong>BC = ED</strong>.</div>
+<div class="step"><strong>Шаг 2:</strong> В равнобедренном треугольнике ACD (AC = AD) углы при основании CD равны: ∠ACD = ∠ADC, то есть <strong>∠BCD = ∠EDC</strong>.</div>
+<div class="step"><strong>Шаг 3:</strong> Рассмотрим △BCD и △EDC: BC = ED (шаг 1), ∠BCD = ∠EDC (шаг 2), CD — общая сторона. По первому признаку <strong>△BCD = △EDC</strong>.</div>
+<div class="step"><strong>Шаг 4:</strong> Из равенства треугольников следует равенство соответственных углов: <strong>∠CBD = ∠DEC</strong>.</div>
 <p><strong>Ответ:</strong> ∠CBD = ∠DEC (доказано).</p>
-<p><strong>Проверка:</strong> цепочка: △ABC = △AED (1-й признак) → ∠ABC = ∠AED → смежные с ними равны ✓</p>
+<p><strong>Проверка:</strong> цепочка: BC = ED → ∠BCD = ∠EDC → △BCD = △EDC (1-й признак) → ∠CBD = ∠DEC ✓</p>
 </details>
 </div>
 

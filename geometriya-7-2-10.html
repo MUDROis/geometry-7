@@ -236,31 +236,30 @@ footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4
 
 <div class="diagram">
 <h4>К доказательству третьего признака: вспомогательный треугольник</h4>
-<svg width="560" height="240" viewBox="0 0 560 240">
-<!-- △ABC: A(140,50), B(60,180), C(220,180).
-△A₁B₁C₁ приложен так, что A₁=A, B₁=B, а C₁ по другую сторону от AB: C₁(280,130).
-Соединяем C и C₁ — получается △ACC₁ и △BCC₁. -->
-<line x1="60" y1="180" x2="220" y2="180" stroke="#3498db" stroke-width="3"/>
-<line x1="60" y1="180" x2="140" y2="50" stroke="#3498db" stroke-width="3"/>
-<line x1="220" y1="180" x2="140" y2="50" stroke="#3498db" stroke-width="3"/>
-<line x1="60" y1="180" x2="280" y2="130" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,4"/>
-<line x1="220" y1="180" x2="280" y2="130" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,4"/>
-<line x1="140" y1="50" x2="280" y2="130" stroke="#9b59b6" stroke-width="2" stroke-dasharray="4,3"/>
-<circle cx="140" cy="50" r="5" fill="#2c3e50"/>
-<circle cx="60" cy="180" r="5" fill="#2c3e50"/>
-<circle cx="220" cy="180" r="5" fill="#2c3e50"/>
-<circle cx="280" cy="130" r="5" fill="#c0392b"/>
-<text x="140" y="40" text-anchor="middle" font-size="13" font-weight="bold">A = A₁</text>
-<text x="48" y="198" font-size="13" font-weight="bold">B = B₁</text>
-<text x="228" y="198" font-size="13" font-weight="bold">C</text>
-<text x="292" y="128" font-size="13" font-weight="bold" fill="#c0392b">C₁</text>
-<text x="380" y="60" font-size="11" fill="#9b59b6">△ACC₁ — равнобедренный</text>
-<text x="380" y="76" font-size="11" fill="#9b59b6">(AC = A₁C₁ = AC₁)</text>
-<text x="380" y="200" font-size="11" fill="#9b59b6">△BCC₁ — равнобедренный</text>
-<text x="380" y="216" font-size="11" fill="#9b59b6">(BC = B₁C₁ = BC₁)</text>
-<text x="280" y="235" text-anchor="middle" font-size="11" fill="#27ae60" font-weight="bold">∠ACB = ∠AC₁B → △ABC = △A₁B₁C₁ по первому признаку</text>
+<svg width="560" height="320" viewBox="0 0 560 320">
+<!-- △ABC: A(220,80), B(90,190), C(350,190). Прикладываем △A₁B₁C₁ так, чтобы B₁=B, C₁=C, а A₁ — по другую сторону от BC: A₁(220,300). Соединяем A и A₁ — равнобедренные △ABA₁ и △ACA₁. -->
+<line x1="90" y1="190" x2="350" y2="190" stroke="#3498db" stroke-width="3"/>
+<line x1="90" y1="190" x2="220" y2="80" stroke="#3498db" stroke-width="3"/>
+<line x1="350" y1="190" x2="220" y2="80" stroke="#3498db" stroke-width="3"/>
+<line x1="90" y1="190" x2="220" y2="300" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,4"/>
+<line x1="350" y1="190" x2="220" y2="300" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,4"/>
+<line x1="220" y1="80" x2="220" y2="300" stroke="#9b59b6" stroke-width="2" stroke-dasharray="4,3"/>
+<circle cx="220" cy="80" r="5" fill="#2c3e50"/>
+<circle cx="90" cy="190" r="5" fill="#2c3e50"/>
+<circle cx="350" cy="190" r="5" fill="#2c3e50"/>
+<circle cx="220" cy="300" r="5" fill="#c0392b"/>
+<text x="220" y="70" text-anchor="middle" font-size="13" font-weight="bold">A</text>
+<text x="72" y="208" font-size="13" font-weight="bold">B = B₁</text>
+<text x="358" y="208" font-size="13" font-weight="bold">C = C₁</text>
+<text x="220" y="318" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">A₁</text>
+<text x="392" y="120" font-size="11" fill="#9b59b6">△ABA₁ — равнобедренный</text>
+<text x="392" y="136" font-size="11" fill="#9b59b6">(AB = A₁B)</text>
+<text x="392" y="240" font-size="11" fill="#9b59b6">△ACA₁ — равнобедренный</text>
+<text x="392" y="256" font-size="11" fill="#9b59b6">(AC = A₁C)</text>
+<text x="280" y="20" text-anchor="middle" font-size="11" fill="#2c3e50">Дано: BC = B₁C₁, AB = A₁B₁, AC = A₁C₁</text>
+<text x="280" y="40" text-anchor="middle" font-size="11" fill="#27ae60" font-weight="bold">∠ABC = ∠A₁BC → △ABC = △A₁B₁C₁ по первому признаку</text>
 </svg>
-<p><strong>Рис. 5:</strong> Идея доказательства третьего признака: прикладываем △A₁B₁C₁ к △ABC так, чтобы равные стороны совпали; достраиваем до равнобедренных △ и используем свойство углов при основании</p>
+<p><strong>Рис. 5:</strong> Идея доказательства третьего признака: прикладываем △A₁B₁C₁ к △ABC так, чтобы равные стороны BC и B₁C₁ совпали (B₁=B, C₁=C); вершина A₁ оказывается по другую сторону от BC. Достраиваем до равнобедренных △ABA₁ и △ACA₁ и используем свойство углов при основании</p>
 </div>
 
 </div>
