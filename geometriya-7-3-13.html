@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Признаки параллельности двух прямых — Геометрия 7 класс | Интерактивная школа «МУДРО»</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --success: #27ae60;
+            --warning: #e74c3c;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--bg);
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 10px;
+            font-size: 2em;
+        }
+        h2 {
+            color: var(--accent);
+            margin-top: 30px;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: var(--primary);
+        }
+        .block {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent);
+        }
+        .block-study { border-left-color: #9b59b6; }
+        .block-practice { border-left-color: var(--success); }
+        .block-hint { border-left-color: #f39c12; background: #fffdf5; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+        }
+        details {
+            background: #f8fbff;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 12px 0;
+            border: 1px solid #d6e4f0;
+        }
+        details[open] {
+            background: #eaf2f8;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--accent);
+            font-size: 1.05em;
+            outline: none;
+        }
+        summary:hover {
+            text-decoration: underline;
+        }
+        .step {
+            margin: 8px 0;
+            padding-left: 8px;
+            border-left: 2px solid #bdc3c7;
+        }
+        .rule {
+            background: #e8f8f5;
+            border-left: 4px solid var(--success);
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 6px;
+        }
+        .warning {
+            background: #fdedec;
+            border-left: 4px solid var(--warning);
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 6px;
+        }
+        .figure {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            white-space: pre;
+            font-size: 0.9em;
+            color: var(--primary);
+        }
+        .figure-caption {
+            display: block;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #7f8c8d;
+            font-size: 0.85em;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .task-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .level {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            color: white;
+            background: #95a5a6;
+            margin-left: 8px;
+        }
+        .level-base { background: var(--success); }
+        .level-med { background: #f39c12; }
+        .level-adv { background: var(--warning); }
+        .angle-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 15px 0;
+        }
+        .angle-card {
+            background: #f8fbff;
+            border: 1px solid #d6e4f0;
+            border-radius: 8px;
+            padding: 12px;
+        }
+        .angle-card h4 {
+            margin: 0 0 8px 0;
+            color: var(--accent);
+            font-size: 1em;
+        }
+        .angle-card ul {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 0.95em;
+        }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Признаки параллельности двух прямых — Геометрия 7 класс">
+<meta property="og:title" content="Признаки параллельности двух прямых — Геометрия 7 класс">
+<meta property="og:description" content="Признаки параллельности двух прямых — Геометрия 7 класс">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-3-13.html">
+<meta name="twitter:title" content="Признаки параллельности двух прямых — Геометрия 7 класс">
+<meta name="twitter:description" content="Признаки параллельности двух прямых — Геометрия 7 класс">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-3-13.html">
+</head>
+<body>
+
+    <h1>📐 Признаки параллельности двух прямых</h1>
+    <p><strong>Геометрия 7 класс • Глава III, §1 • Страницы 54–58</strong></p>
+    <p>Привет! 👋 Мы начинаем новую главу — «Параллельные прямые». Сегодня ты узнаешь, как по углам, которые образует секущая, определить — параллельны ли прямые или нет. Эти три признака — фундамент для огромного количества задач в геометрии! 🔑</p>
+
+    <div class="block block-study">
+        <h2>🌾 Блок 1. Изучение (15–20 мин)</h2>
+        
+        <h3>🪝 Разминка: Где в жизни встречаются параллельные прямые?</h3>
+        <p>Посмотри вокруг: железнодорожные рельсы 🚆, противоположные края книги 📖, ступени эскалатора, провода на столбах — все это примеры параллельных линий. Они никогда не пересекаются, сколько бы их ни продолжали. Но как <strong>доказать</strong>, что прямые параллельны, если мы не можем «дотянуть» их до бесконечности? На помощь приходит <strong>секущая</strong> и углы! 📏</p>
+
+        <h3>📖 Ключевые термины</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Термин</th>
+                    <th>Что это?</th>
+                    <th>Обозначение</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Параллельные прямые</strong></td>
+                    <td>Две прямые на плоскости, которые не пересекаются.</td>
+                    <td>a ∥ b</td>
+                </tr>
+                <tr>
+                    <td><strong>Параллельные отрезки</strong></td>
+                    <td>Отрезки, лежащие на параллельных прямых.</td>
+                    <td>AB ∥ CD</td>
+                </tr>
+                <tr>
+                    <td><strong>Секущая</strong></td>
+                    <td>Прямая, которая пересекает две данные прямые в двух точках.</td>
+                    <td>прямая c</td>
+                </tr>
+                <tr>
+                    <td><strong>Накрест лежащие углы</strong></td>
+                    <td>Углы, лежащие по разные стороны от секущей, «между» параллельными (внутренние, перекрёстные).</td>
+                    <td>∠3 и ∠5; ∠4 и ∠6</td>
+                </tr>
+                <tr>
+                    <td><strong>Односторонние углы</strong></td>
+                    <td>Углы, лежащие по одну сторону от секущей, «между» прямыми.</td>
+                    <td>∠4 и ∠5; ∠3 и ∠6</td>
+                </tr>
+                <tr>
+                    <td><strong>Соответственные углы</strong></td>
+                    <td>Углы, лежащие по одну сторону от секущей и занимающие одинаковое положение относительно прямых (один «сверху», другой «сверху» и т.п.).</td>
+                    <td>∠1 и ∠5; ∠2 и ∠6; ∠3 и ∠7; ∠4 и ∠8</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>📐 Графические иллюстрации</h3>
+
+        <div class="figure">
+      a ═══════════════════
+               ╲  1 │ 2
+                ╲ ───┼───    ← секущая c
+                 ╲ 4 │ 3
+      b ═══════════════════
+               ╲  5 │ 6
+                ╲ ───┼───
+                 ╲ 8 │ 7
+            <span class="figure-caption">Рис. 1: Секущая c пересекает прямые a и b. Образуются 8 углов.</span>
+        </div>
+
+        <div class="angle-table">
+            <div class="angle-card">
+                <h4>✖ Накрест лежащие</h4>
+                <ul>
+                    <li>∠3 и ∠5</li>
+                    <li>∠4 и ∠6</li>
+                    <li>«Буква Z» на рисунке</li>
+                </ul>
+            </div>
+            <div class="angle-card">
+                <h4>📐 Односторонние</h4>
+                <ul>
+                    <li>∠4 и ∠5</li>
+                    <li>∠3 и ∠6</li>
+                    <li>«Буква C» на рисунке</li>
+                </ul>
+            </div>
+            <div class="angle-card">
+                <h4>🔺 Соответственные</h4>
+                <ul>
+                    <li>∠1 и ∠5</li>
+                    <li>∠2 и ∠6</li>
+                    <li>∠3 и ∠7</li>
+                    <li>∠4 и ∠8</li>
+                </ul>
+            </div>
+            <div class="angle-card">
+                <h4>💡 Что важно</h4>
+                <ul>
+                    <li>Вертикальные углы равны</li>
+                    <li>Смежные дают 180°</li>
+                    <li>Их знание — ключ к доказательствам</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>📐 Три признака параллельности прямых</h3>
+        <div class="rule">
+            <strong>🌟 Признак 1 (по накрест лежащим углам)</strong><br>
+            Если при пересечении двух прямых секущей <u>накрест лежащие углы равны</u>, то прямые параллельны.<br>
+            <em>∠3 = ∠5 или ∠4 = ∠6  ⇒  a ∥ b</em>
+        </div>
+        <div class="rule">
+            <strong>🌟 Признак 2 (по соответственным углам)</strong><br>
+            Если при пересечении двух прямых секущей <u>соответственные углы равны</u>, то прямые параллельны.<br>
+            <em>∠1 = ∠5 или ∠2 = ∠6 или ∠3 = ∠7 или ∠4 = ∠8  ⇒  a ∥ b</em>
+        </div>
+        <div class="rule">
+            <strong>🌟 Признак 3 (по односторонним углам)</strong><br>
+            Если при пересечении двух прямых секущей <u>сумма односторонних углов равна 180°</u>, то прямые параллельны.<br>
+            <em>∠4 + ∠5 = 180° или ∠3 + ∠6 = 180°  ⇒  a ∥ b</em>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Важно запомнить:</strong>
+            <ul>
+                <li>Параллельность — это <strong>отсутствие пересечения</strong>. Две прямые на плоскости либо пересекаются в одной точке, либо параллельны.</li>
+                <li>Через точку, не лежащую на данной прямой, можно провести <strong>единственную</strong> прямую, параллельную данной (аксиома параллельных — подробнее в §2).</li>
+                <li>Все три признака <strong>равносильны</strong>: если прямые параллельны, то выполняются все три условия одновременно.</li>
+                <li>На практике параллельные прямые строят с помощью <strong>чертёжного треугольника и линейки</strong> или <strong>рейсшины</strong> (столярный инструмент).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="block block-practice">
+        <h2>🛠 Блок 2. Закрепление (20–25 мин)</h2>
+        <p>Задачи из учебника (№ 24–26). Решай в тетради, внимательно отмечая углы на чертеже. После выполнения открой подсказку и проверь себя!</p>
+
+        <p class="task-title">№191 (а) <span class="level level-base">Базовый уровень</span></p>
+        <p><strong>Задание:</strong> Прямые a и b пересечены прямой c. Докажите, что a ∥ b, если ∠1 = 37°, ∠7 = 143°.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Найдём связь между углами 1 и 7. Угол 1 и угол 3 — вертикальные, значит ∠3 = ∠1 = 37°.</div>
+            <div class="step"><strong>Шаг 2:</strong> Углы 3 и 7 — соответственные (лежат по одну сторону от секущей и в одинаковом положении относительно прямых a и b).</div>
+            <div class="step"><strong>Шаг 3:</strong> Найдём угол 7 относительно угла 3. Нам дано: ∠7 = 143°. Проверим сумму ∠3 + ∠7 = 37° + 143° = 180°.</div>
+            <div class="step"><strong>Шаг 4:</strong> Но удобнее через угол 6 (смежный с 7): ∠6 = 180° − 143° = 37°.</div>
+            <div class="step"><strong>Шаг 5:</strong> Теперь видим: ∠3 = 37° и ∠6 = 37° — это накрест лежащие углы! ∠3 = ∠6.</div>
+            <div class="step"><strong>Шаг 6:</strong> По признаку 1 (накрест лежащие углы равны) прямые a и b параллельны.</div>
+            <p><strong>Ответ:</strong> a ∥ b (доказано).</p>
+        </details>
+
+        <p class="task-title">№191 (б) <span class="level level-base">Базовый уровень</span></p>
+        <p><strong>Задание:</strong> Прямые a и b пересечены прямой c. Докажите, что a ∥ b, если ∠1 = ∠6.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Дано: ∠1 = ∠6.</div>
+            <div class="step"><strong>Шаг 2:</strong> Заметим, что ∠1 и ∠3 — вертикальные углы, значит ∠1 = ∠3.</div>
+            <div class="step"><strong>Шаг 3:</strong> Из двух равенств: ∠1 = ∠6 и ∠1 = ∠3 следует, что ∠3 = ∠6.</div>
+            <div class="step"><strong>Шаг 4:</strong> Углы 3 и 6 — накрест лежащие.</div>
+            <div class="step"><strong>Шаг 5:</strong> По признаку 1 (накрест лежащие равны) получаем a ∥ b.</div>
+            <p><strong>Ответ:</strong> a ∥ b (доказано).</p>
+            <p><strong>Альтернатива:</strong> Можно было заметить, что ∠1 и ∠6 — соответственные углы (через цепочку равенств с вертикальными), и применить признак 2.</p>
+        </details>
+
+        <p class="task-title">№193 <span class="level level-med">Средний уровень</span></p>
+        <p><strong>Задание:</strong> Отрезки AB и CD пересекаются в их общей середине. Докажите, что прямые AC и BD параллельны.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Пусть O — общая середина отрезков AB и CD. Тогда AO = OB и CO = OD.</div>
+            <div class="step"><strong>Шаг 2:</strong> Рассмотрим △AOC и △BOD.</div>
+            <div class="step"><strong>Шаг 3:</strong> AO = OB (по условию), CO = OD (по условию).</div>
+            <div class="step"><strong>Шаг 4:</strong> ∠AOC = ∠BOD как вертикальные углы.</div>
+            <div class="step"><strong>Шаг 5:</strong> По первому признаку (две стороны и угол между ними) △AOC = △BOD.</div>
+            <div class="step"><strong>Шаг 6:</strong> Из равенства треугольников: ∠OAC = ∠OBD (соответственные углы).</div>
+            <div class="step"><strong>Шаг 7:</strong> Рассмотрим прямые AC и BD и секущую AB. Углы ∠OAC и ∠OBD — это накрест лежащие углы при прямых AC, BD и секущей AB.</div>
+            <div class="step"><strong>Шаг 8:</strong> Так как ∠OAC = ∠OBD, то по признаку 1 (накрест лежащие углы равны) прямые AC ∥ BD.</div>
+            <p><strong>Ответ:</strong> AC ∥ BD (доказано).</p>
+        </details>
+
+        <p class="task-title">№196 <span class="level level-med">Средний уровень</span></p>
+        <p><strong>Задание:</strong> Отрезок BK — биссектриса треугольника ABC. Через точку K проведена прямая, пересекающая сторону BC в точке M так, что BM = MK. Докажите, что прямые KM и AB параллельны.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> BK — биссектриса △ABC, значит ∠ABK = ∠KBC (обозначим эту величину через α).</div>
+            <div class="step"><strong>Шаг 2:</strong> Рассмотрим △BMK. По условию BM = MK, значит этот треугольник равнобедренный с основанием BK.</div>
+            <div class="step"><strong>Шаг 3:</strong> По свойству равнобедренного треугольника углы при основании равны: ∠MBK = ∠MKB.</div>
+            <div class="step"><strong>Шаг 4:</strong> Угол ∠MBK — это тот же угол, что и ∠KBC (точка M лежит на BC). Значит ∠MBK = α.</div>
+            <div class="step"><strong>Шаг 5:</strong> Следовательно, ∠MKB = α (так как ∠MBK = ∠MKB).</div>
+            <div class="step"><strong>Шаг 6:</strong> Теперь рассмотрим прямые KM и AB и секущую BK. Углы ∠ABK и ∠MKB — это накрест лежащие углы.</div>
+            <div class="step"><strong>Шаг 7:</strong> Мы выяснили: ∠ABK = α и ∠MKB = α, то есть ∠ABK = ∠MKB.</div>
+            <div class="step"><strong>Шаг 8:</strong> По признаку 1 (накрест лежащие равны) прямые KM и AB параллельны.</div>
+            <p><strong>Ответ:</strong> KM ∥ AB (доказано).</p>
+        </details>
+
+        <p class="task-title">№197 <span class="level level-med">Средний уровень</span></p>
+        <p><strong>Задание:</strong> В треугольнике ABC ∠A = 40°, а угол BCE, смежный с углом ACB, равен 80°. Докажите, что биссектриса угла BCE параллельна прямой AB.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Дано: ∠A = 40°, ∠BCE = 80° (смежный с ∠ACB). CK — биссектриса ∠BCE.</div>
+            <div class="step"><strong>Шаг 2:</strong> Так как CK — биссектриса, то она делит угол BCE пополам: ∠BCK = ∠KCE = 80° / 2 = 40°.</div>
+            <div class="step"><strong>Шаг 3:</strong> Рассмотрим прямые AB и CK и секущую AC.</div>
+            <div class="step"><strong>Шаг 4:</strong> Углы ∠BAC (он же ∠A) и ∠BCK — это накрест лежащие углы при прямых AB и CK и секущей AC.</div>
+            <div class="step"><strong>Шаг 5:</strong> ∠BAC = 40° (по условию), ∠BCK = 40° (нашли в шаге 2).</div>
+            <div class="step"><strong>Шаг 6:</strong> Значит, ∠BAC = ∠BCK = 40° — накрест лежащие углы равны.</div>
+            <div class="step"><strong>Шаг 7:</strong> По признаку 1 прямые AB и CK параллельны.</div>
+            <p><strong>Ответ:</strong> CK ∥ AB (доказано).</p>
+        </details>
+
+        <p class="task-title">№198 <span class="level level-adv">Продвинутый уровень</span></p>
+        <p><strong>Задание:</strong> В треугольнике ABC ∠A = 40°, ∠B = 70°. Через вершину B проведена прямая BD так, что луч BC — биссектриса угла ABD. Докажите, что прямые AC и BD параллельны.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Дано: ∠A = 40°, ∠ABC = 70°, BC — биссектриса ∠ABD.</div>
+            <div class="step"><strong>Шаг 2:</strong> Найдём ∠C в △ABC. Сумма углов треугольника = 180°.<br>
+            ∠C = 180° − ∠A − ∠ABC = 180° − 40° − 70° = 70°.</div>
+            <div class="step"><strong>Шаг 3:</strong> Так как BC — биссектриса ∠ABD, то ∠ABC = ∠DBC. Значит ∠DBC = 70°.</div>
+            <div class="step"><strong>Шаг 4:</strong> Рассмотрим прямые AC и BD и секущую BC.</div>
+            <div class="step"><strong>Шаг 5:</strong> Углы ∠ACB (= 70°) и ∠DBC (= 70°) — это накрест лежащие углы при прямых AC и BD и секущей BC.</div>
+            <div class="step"><strong>Шаг 6:</strong> ∠ACB = ∠DBC = 70° — накрест лежащие углы равны.</div>
+            <div class="step"><strong>Шаг 7:</strong> По признаку 1 (накрест лежащие равны) прямые AC и BD параллельны.</div>
+            <p><strong>Ответ:</strong> AC ∥ BD (доказано).</p>
+            <p><strong>Интересный факт:</strong> △ABC оказался равнобедренным (∠B = ∠C = 70°), значит AB = AC. Но для доказательства параллельности нам это не понадобилось — хватило только суммы углов и свойства биссектрисы!</p>
+        </details>
+    </div>
+
+    <div class="block block-hint">
+        <h2>💡 Методическая подсказка</h2>
+        <ul>
+            <li><strong>Главный приём:</strong> При доказательстве параллельности прямых всегда <em>выделяй</em> на чертеже секущую и пару углов, к которым применяется признак. Часто секущая — это сторона какого-то треугольника, а нужные углы «спрятаны» как накрест лежащие или соответственные.</li>
+            <li><strong>Мнемоника для признаков:</strong><br>
+                🔹 <strong>Накрест лежащие</strong> — буква <strong>Z</strong> (углы по «диагонали»)<br>
+                🔹 <strong>Односторонние</strong> — буква <strong>C</strong> (углы по одну сторону)<br>
+                🔹 <strong>Соответственные</strong> — буква <strong>F</strong> (углы на «полочках»)</li>
+            <li><strong>Типичная ловушка:</strong> Не путай <em>смежные углы</em> (дают 180° по определению) с <em>односторонними</em> (их сумма = 180° только если прямые параллельны). В задаче это легко перепутать!</li>
+            <li><strong>Связь с прошлой главой:</strong> Для доказательства равенства углов часто приходится использовать <strong>первый признак равенства треугольников</strong> (см. задачу №193) или <strong>свойства равнобедренного треугольника</strong> (см. задачу №196). Так что прошлый материал пригодится!</li>
+            <li><strong>Практика построения:</strong> Если нужно <em>начертить</em> параллельные прямые — приложи чертёжный треугольник к прямой a, к его другой стороне приложи линейку, и «скользи» треугольником вдоль линейки — так ты сохраняешь равные соответственные углы, а значит и параллельность. ✏️</li>
+            <li><strong>Подготовка к §2:</strong> В следующем параграфе мы изучим <em>аксиому параллельных прямых</em> и следствия из неё — они понадобятся для решения задач на доказательство «от противного».</li>
+        </ul>
+    </div>
+
+    <footer>
+    <p><strong>Геометрия 7 класс • Глава III, §1 • Страницы 54–58</strong></p>
+    <div class="legal">
+        © 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+        Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+    </div>
+</footer>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

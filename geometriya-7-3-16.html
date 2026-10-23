@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дополнительные задачи к главе III — Геометрия 7 класс | Интерактивная школа «МУДРО»</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --success: #27ae60;
+            --warning: #e74c3c;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--bg);
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 10px;
+            font-size: 2em;
+        }
+        h2 {
+            color: var(--accent);
+            margin-top: 30px;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: var(--primary);
+        }
+        .block {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent);
+        }
+        .block-study { border-left-color: #9b59b6; }
+        .block-practice { border-left-color: var(--success); }
+        .block-hint { border-left-color: #f39c12; background: #fffdf5; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+        }
+        details {
+            background: #f8fbff;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 12px 0;
+            border: 1px solid #d6e4f0;
+        }
+        details[open] {
+            background: #eaf2f8;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--accent);
+            font-size: 1.05em;
+            outline: none;
+        }
+        summary:hover {
+            text-decoration: underline;
+        }
+        .step {
+            margin: 8px 0;
+            padding-left: 8px;
+            border-left: 2px solid #bdc3c7;
+        }
+        .rule {
+            background: #e8f8f5;
+            border-left: 4px solid var(--success);
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 6px;
+        }
+        .warning {
+            background: #fdedec;
+            border-left: 4px solid var(--warning);
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 6px;
+        }
+        .figure {
+            background: #f4f6f8;
+            border: 1px dashed #b0bec5;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin: 14px 0;
+            font-family: "Courier New", monospace;
+            font-size: 0.95em;
+            white-space: pre-line;
+            text-align: center;
+        }
+        .figure-caption {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 0.85em;
+            color: #7f8c8d;
+            margin-top: 8px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .task-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .level {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            color: white;
+            background: #95a5a6;
+            margin-left: 8px;
+        }
+        .level-base { background: var(--success); }
+        .level-med { background: #f39c12; }
+        .level-adv { background: var(--warning); }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Дополнительные задачи к главе III — Геометрия 7 класс">
+<meta property="og:title" content="Дополнительные задачи к главе III — Геометрия 7 класс">
+<meta property="og:description" content="Дополнительные задачи к главе III — Геометрия 7 класс">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-3-16.html">
+<meta name="twitter:title" content="Дополнительные задачи к главе III — Геометрия 7 класс">
+<meta name="twitter:description" content="Дополнительные задачи к главе III — Геометрия 7 класс">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-3-16.html">
+</head>
+<body>
+
+    <h1>📐 Дополнительные задачи к главе III: Параллельные прямые</h1>
+    <p><strong>Геометрия 7 класс • Глава III • Страница 68, № 218–227</strong></p>
+    <p>Привет! 👋 Это урок-практикум по самым интересным задачам главы «Параллельные прямые». Здесь признаки и свойства параллельности соединяются с равными треугольниками, равнобедренными треугольниками и аксиомой параллельных прямых. Именно такие задачи учат главному геометрическому навыку — <strong>видеть на чертеже скрытые связи</strong>! 🔑</p>
+
+    <div class="block block-study">
+        <h2>🌾 Блок 1. Настрой на решение (10–15 мин)</h2>
+
+        <h3>🪝 Разминка: Чем «дополнительные» задачи отличаются от обычных?</h3>
+        <p>В обычных задачах глава говорит прямо: «даны параллельные прямые» или «докажите параллельность». В дополнительных задачах это <strong>спрятано</strong>: параллельность нужно сначала «добыть» через равные треугольники, серединный перпендикуляр или аксиому параллельных. Ты — детектив: улики (равные отрезки и углы) разбросаны по чертежу, а вывод «прямые параллельны» или «точки на одной прямой» нужно собрать по цепочке! 🕵️‍♂️</p>
+
+        <h3>📖 Ключевые идеи задач (инструментарий)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Что нужно получить</th>
+                    <th>Каким инструментом</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Доказать: прямые параллельны</strong></td>
+                    <td>Признаки параллельности (накрест лежащие, соответственные углы, сумма односторонних = 180°); транзитивность (обе параллельны третьей); две прямые, перпендикулярные третьей.</td>
+                </tr>
+                <tr>
+                    <td><strong>Доказать: прямые пересекаются</strong></td>
+                    <td>Доказательство от противного + аксиома параллельных (через точку лишь одна параллельная) или следствие 1 из аксиомы.</td>
+                </tr>
+                <tr>
+                    <td><strong>Доказать: точки лежат на одной прямой</strong></td>
+                    <td>Аксиома параллельных: через точку A прошли «две» прямые, параллельные одной и той же, — значит, это одна прямая (№ 226).</td>
+                </tr>
+                <tr>
+                    <td><strong>«Добыть» равные углы или отрезки</strong></td>
+                    <td>Равные треугольники (три признака), вертикальные углы, равнобедренный треугольник, серединный перпендикуляр (точка на нём равноудалена от концов отрезка).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>📐 Графические иллюстрации к задачам</h3>
+        <div class="figure">B————C
+ \      |\
+  K—————E \
+  |      | \
+  A——————D——F
+CE = ED, BE = EF, KE ∥ AF
+<div class="figure-caption">Рис. 128 (к № 218): отрезки BF и CD пересекаются в точке E — середины обеих «половинок» равны, и вокруг точки E живут вертикальные углы</div></div>
+
+        <div class="figure">а)        ∠1
+         /\
+   —————/——\————— a
+   65° /    \ 121°
+      /      \
+  ———/————————\——— b
+  115°        \
+     c         d
+
+б)   A————————E
+    /78°      /
+102°/        /
+  /   48°  /
+ /———————/——————
+ D         F
+<div class="figure-caption">Рис. 129 (к № 220–221): а) углы 65°, 115°, 121° — сначала докажи a ∥ b, потом считай ∠1; б) DE — биссектриса ∠ADF</div></div>
+
+        <h3>📐 Главные правила практикума</h3>
+        <div class="rule">
+            <strong>🌟 Правило 1: «Фабрика параллельности» — вертикальные углы + первый признак</strong><br>
+            Если на чертеже два отрезка пересекаются в точке и делятся ею пополам (как в № 218 и № 226), сразу ищи пару равных треугольников по двум сторонам и углу между ними (вертикальному!). Из равенства треугольников получишь равные накрест лежащие углы — а это готовая параллельность.
+        </div>
+        <div class="rule">
+            <strong>🌟 Правило 2: Серединный перпендикуляр даёт равнобедренный треугольник</strong><br>
+            Любая точка серединного перпендикуляра к отрезку равноудалена от его концов (задача 165 главы II). В № 219 прямая через середину AD перпендикулярна AD — значит, MA = MD, треугольник AMD равнобедренный, и углы при основании AD равны. Дальше — признак параллельности по накрест лежащим углам.
+        </div>
+        <div class="rule">
+            <strong>🌟 Правило 3: Схема доказательства от противного</strong><br>
+            1) Предположи обратное тому, что требуется доказать; 2) разверни цепочку следствий; 3) приди к противоречию с условием, аксиомой параллельных или доказанной теоремой; 4) сделай вывод: предположение неверно, значит, верно требуемое. Так работают № 222, 224*, 225.
+        </div>
+        <div class="warning">
+            <strong>⚠️ Ловушка № 220:</strong> не принимай a ∥ b «на глаз»! Сначала <u>докажи</u> параллельность: 65° + 115° = 180° — это односторонние углы при прямых a и b и секущей c, значит a ∥ b. Только после этого можно переносить угол 121° с прямой b на прямую a.
+        </div>
+    </div>
+
+    <div class="block block-practice">
+        <h2>🛠 Блок 2. Решение задач (25–30 мин)</h2>
+        <p>Задачи из учебника (стр. 68, № 218–227). Черти рисунок, пиши «Дано / Доказать», рассуждай вслух на бумаге. После решения открой подсказку и сверься!</p>
+
+        <p class="task-title">№ 218 <span class="level level-med">Средний уровень</span></p>
+        <p><strong>Задание:</strong> На рисунке 128 CE = ED, BE = EF и KE ∥ AF. Докажите, что KE ∥ BC.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Отрезки BF и CD пересекаются в точке E, причём BE = EF и CE = ED (по условию).</div>
+            <div class="step"><strong>Шаг 2:</strong> △BEC и △FED: BE = FE, CE = DE, ∠BEC = ∠FED (вертикальные). По первому признаку △BEC = △FED.</div>
+            <div class="step"><strong>Шаг 3:</strong> Из равенства треугольников: ∠EBC = ∠EFD, т. е. ∠CBF = ∠DFB. Это накрест лежащие углы при прямых BC и AF и секущей BF → BC ∥ AF.</div>
+            <div class="step"><strong>Шаг 4:</strong> По условию KE ∥ AF. Две прямые (KE и BC), параллельные третьей (AF), параллельны между собой → KE ∥ BC.</div>
+            <p><strong>Ответ:</strong> доказано.</p>
+        </details>
+
+        <p class="task-title">№ 219 <span class="level level-med">Средний уровень</span></p>
+        <p><strong>Задание:</strong> Прямая, проходящая через середину биссектрисы AD треугольника ABC и перпендикулярная к AD, пересекает сторону AC в точке M. Докажите, что MD ∥ AB.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Пусть O — середина AD. Прямая через O перпендикулярна AD, т. е. это серединный перпендикуляр к отрезку AD, и M лежит на нём.</div>
+            <div class="step"><strong>Шаг 2:</strong> △MOA и △MOD: OA = OD, MO — общая, ∠MOA = ∠MOD = 90°. По первому признаку △MOA = △MOD, значит MA = MD.</div>
+            <div class="step"><strong>Шаг 3:</strong> △AMD — равнобедренный с основанием AD → ∠MAD = ∠MDA (углы при основании).</div>
+            <div class="step"><strong>Шаг 4:</strong> AD — биссектриса угла A: ∠MAD = ∠DAC = DAB. Следовательно, ∠MDA = ∠DAB.</div>
+            <div class="step"><strong>Шаг 5:</strong> ∠MDA и ∠DAB — накрест лежащие углы при прямых MD и AB и секущей AD → MD ∥ AB.</div>
+            <p><strong>Ответ:</strong> доказано.</p>
+        </details>
+
+        <p class="task-title">№ 220 <span class="level level-base">Базовый уровень</span></p>
+        <p><strong>Задание:</strong> По данным рисунка 129, а) найдите угол 1 (даны углы 65°, 121°, 115°).</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Углы 65° и 115° — односторонние при прямых a и b и секущей c. Так как 65° + 115° = 180°, по признаку параллельности a ∥ b.</div>
+            <div class="step"><strong>Шаг 2:</strong> Угол 121° отмечен при прямой b и секущей d. Так как a ∥ b, соответственный ему угол при прямой a тоже равен 121°.</div>
+            <div class="step"><strong>Шаг 3:</strong> В треугольнике, образованном прямыми c, d и a: угол при левой вершине равен 65° (вертикальный к отмеченному), угол при правой вершине равен 180° − 121° = 59° (смежный с углом 121°).</div>
+            <div class="step"><strong>Шаг 4:</strong> По теореме о сумме углов треугольника: ∠1 = 180° − 65° − 59° = 56°.</div>
+            <p><strong>Ответ:</strong> ∠1 = 56°.</p>
+            <p><strong>Проверка:</strong> 65° + 59° + 56° = 180° ✓</p>
+        </details>
+
+        <p class="task-title">№ 221 <span class="level level-base">Базовый уровень</span></p>
+        <p><strong>Задание:</strong> На рисунке 129, б) DE — биссектриса угла ADF. По данным рисунка (78°, 102°, 48°) найдите углы треугольника ADE.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> DE — биссектриса ∠ADF, поэтому ∠ADE = ∠EDF = 48°.</div>
+            <div class="step"><strong>Шаг 2:</strong> Угол при вершине A внутри треугольника: ∠DAE = 180° − 102° = 78° (смежные углы; на рисунке он и отмечен как 78°).</div>
+            <div class="step"><strong>Шаг 3:</strong> По теореме о сумме углов треугольника: ∠AED = 180° − 78° − 48° = 54°.</div>
+            <p><strong>Ответ:</strong> ∠DAE = 78°, ∠ADE = 48°, ∠AED = 54°.</p>
+            <p><strong>Проверка:</strong> 78° + 48° + 54° = 180° ✓; биссектриса: ∠ADF = 96° = 2 · 48° ✓</p>
+        </details>
+
+        <p class="task-title">№ 222 и № 224* <span class="level level-adv">Продвинутый уровень</span></p>
+        <p><strong>Задание 222:</strong> Прямые a и b параллельны прямой c. Докажите, что любая прямая, пересекающая прямую a, пересекает также и прямую b.<br>
+        <strong>Задание 224*:</strong> Даны две прямые a и b. Докажите, что если любая прямая, пересекающая прямую a, пересекает и прямую b, то прямые a и b параллельны.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>№ 222, шаг 1:</strong> a ∥ c и b ∥ c → a ∥ b (следствие 2 из аксиомы параллельных: две прямые, параллельные третьей, параллельны).</div>
+            <div class="step"><strong>№ 222, шаг 2:</strong> Пусть прямая d пересекает a в точке M. Предположим, d не пересекает b. Тогда d ∥ b. Но и a ∥ b, причём a и d — различные прямые, проходящие через M. Получили две параллельные b прямые через одну точку — противоречие с аксиомой параллельных. Значит, d пересекает b.</div>
+            <div class="step"><strong>№ 224*, шаг 1:</strong> Предположим обратное: a и b не параллельны, т. е. пересекаются в некоторой точке M.</div>
+            <div class="step"><strong>№ 224*, шаг 2:</strong> Возьмём на a точку P ≠ M и проведём через P прямую c ∥ b (аксиома параллельных; c ≠ a, так как a пересекает b).</div>
+            <div class="step"><strong>№ 224*, шаг 3:</strong> Прямая c пересекает a (в точке P), но не пересекает b (она ей параллельна). Это противоречит условию «любая прямая, пересекающая a, пересекает и b». Значит, предположение неверно: a ∥ b.</div>
+            <p><strong>Ответ:</strong> обе теоремы доказаны (от противного, через аксиому параллельных). Задачи 222 и 224* — взаимно обратные утверждения!</p>
+        </details>
+
+        <p class="task-title">№ 223 и № 225 <span class="level level-med">Средний уровень</span></p>
+        <p><strong>Задание 223:</strong> Прямые a и b пересекаются. Можно ли провести такую прямую, которая пересекает прямую a и параллельна прямой b? Ответ обоснуйте.<br>
+        <strong>Задание 225:</strong> Докажите, что если при пересечении двух прямых a и b секущей накрест лежащие углы не равны, то прямые a и b пересекаются.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>№ 223, ответ:</strong> да, можно.</div>
+            <div class="step"><strong>№ 223, обоснование:</strong> Пусть M = a ∩ b. Возьмём на a точку P ≠ M и проведём через P прямую c ∥ b (аксиома параллельных). Прямая c ≠ a (ведь a пересекает b, а c — нет), значит, c пересекает a в точке P и при этом c ∥ b. Искомая прямая существует — и притом через каждую точку a, кроме M, проходит ровно одна такая прямая.</div>
+            <div class="step"><strong>№ 225, шаг 1:</strong> Предположим противное: прямые a и b не пересекаются. Тогда по определению a ∥ b.</div>
+            <div class="step"><strong>№ 225, шаг 2:</strong> Но при пересечении двух параллельных прямых секущей накрест лежащие углы равны (свойство параллельных прямых). Это противоречит условию «накрест лежащие углы не равны».</div>
+            <div class="step"><strong>№ 225, шаг 3:</strong> Значит, предположение неверно: прямые a и b пересекаются.</div>
+            <p><strong>Ответ:</strong> № 223 — да; № 225 — доказано от противного.</p>
+        </details>
+
+        <p class="task-title">№ 226 <span class="level level-adv">Продвинутый уровень</span></p>
+        <p><strong>Задание:</strong> Даны треугольник ABC и точки M и N такие, что середина отрезка BM совпадает с серединой стороны AC, а середина отрезка CN — с серединой стороны AB. Докажите, что точки M, N и A лежат на одной прямой.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Пусть O₁ — общая середина BM и AC. △AO₁M и △CO₁B: AO₁ = CO₁, MO₁ = BO₁, ∠AO₁M = ∠CO₁B (вертикальные). По первому признаку △AO₁M = △CO₁B.</div>
+            <div class="step"><strong>Шаг 2:</strong> Из равенства: ∠MAO₁ = ∠BCO₁, т. е. ∠MAC = BCA. Это накрест лежащие углы при прямых AM и CB и секущей AC → AM ∥ CB.</div>
+            <div class="step"><strong>Шаг 3:</strong> Пусть O₂ — общая середина CN и AB. △AO₂N и △BO₂C: AO₂ = BO₂, NO₂ = CO₂, ∠AO₂N = ∠BO₂C (вертикальные). По первому признаку △AO₂N = △BO₂C.</div>
+            <div class="step"><strong>Шаг 4:</strong> Из равенства: ∠NAO₂ = ∠CBO₂, т. е. ∠NAB = ∠CBA — накрест лежащие при прямых AN и CB и секущей AB → AN ∥ CB.</div>
+            <div class="step"><strong>Шаг 5:</strong> Через точку A прошли две прямые (AM и AN), параллельные прямой CB. По аксиоме параллельных такая прямая единственна, значит, прямые AM и AN совпадают. Следовательно, точки M, N и A лежат на одной прямой.</div>
+            <p><strong>Ответ:</strong> доказано.</p>
+        </details>
+
+        <p class="task-title">№ 227 <span class="level level-adv">Продвинутый уровень</span></p>
+        <p><strong>Задание:</strong> Даны прямая a и точка A, не лежащая на ней. С помощью циркуля и линейки через точку A проведите прямую, параллельную прямой a.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Способ 1 (через два перпендикуляра), шаг 1:</strong> Циркулем из точки A проведём дугу, пересекающую a в точках P и Q; затем дугами того же радиуса из P и Q найдём вторую точку A′, равноудалённую от P и Q. Прямая AA′ — перпендикуляр p к прямой a.</div>
+            <div class="step"><strong>Шаг 2:</strong> На прямой p от точки A отложим в обе стороны равные отрезки AP′ = AQ′ и построим серединный перпендикуляр q к отрезку P′Q′ (дуги равных радиусов из P′ и Q′). Прямая q проходит через A и q ⊥ p.</div>
+            <div class="step"><strong>Шаг 3:</strong> Обоснование: a ⊥ p и q ⊥ p, а две прямые, перпендикулярные третьей, параллельны → q ∥ a, и q проходит через A.</div>
+            <div class="step"><strong>Способ 2 (через равные углы):</strong> проведём через A любую прямую, пересекающую a в точке B (секущая), и отложим при вершине A угол, равный углу при вершине B, как соответственный (построение «угол, равный данному»). Полученная прямая параллельна a по признаку параллельности соответственных углов.</div>
+            <p><strong>Ответ:</strong> построение выполнено; параллельность обоснована признаками (перпендикулярность к третьей прямой или равенство соответственных углов).</p>
+        </details>
+    </div>
+
+    <div class="block block-hint">
+        <h2>💡 Методическая подсказка</h2>
+        <ul>
+            <li><strong>Главный приём главы:</strong> увидел на чертеже точку пересечения отрезков с равными «половинками» (CE = ED, BE = EF в № 218; середины BM и AC в № 226) — сразу ищи пару равных треугольников по первому признаку с вертикальным углом. Из равенства треугольников «выпадают» равные накрест лежащие углы, а за ними — параллельность.</li>
+            <li><strong>Связь с главой II:</strong> № 219 опирается на задачу 165 главы II (серединный перпендикуляр): точка M равноудалена от A и D → равнобедренный △AMD → равные углы → параллельность. Геометрия глав II и III здесь работает в одной связке!</li>
+            <li><strong>Аксиома параллельных — рабочий инструмент:</strong> в № 222, 224*, 225 она создаёт противоречие, а в № 226 — доказывает совпадение двух прямых. Запомни формулу-сигнал: «через одну точку получили две параллельные одной и той же → ищи противоречие или совпадение прямых».</li>
+            <li><strong>Ловушка в № 220:</strong> параллельность a ∥ b не дана — её надо доказать через односторонние углы (65° + 115° = 180°). Без этого шага перенос угла 121° на прямую a незаконен.</li>
+            <li><strong>Взаимно обратные утверждения:</strong> № 222 и № 224* — прекрасная пара: прямая и обратная теоремы. Сравни их доказательства — оба от противного, но противоречия получаются в разных местах. Это лучшая тренировка к теме «обратные теоремы».</li>
+        </ul>
+    </div>
+
+    <footer>
+    <p><strong>Геометрия 7 класс • Глава III • Дополнительные задачи, № 218–227 • Страница 68</strong></p>
+    <div class="legal">
+        © 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+        Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+    </div>
+</footer>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>

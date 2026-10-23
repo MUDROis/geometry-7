@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аксиома параллельных прямых — Геометрия 7 класс | Интерактивная школа «МУДРО»</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --success: #27ae60;
+            --warning: #e74c3c;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--bg);
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 10px;
+            font-size: 2em;
+        }
+        h2 {
+            color: var(--accent);
+            margin-top: 30px;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: var(--primary);
+        }
+        .block {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent);
+        }
+        .block-study { border-left-color: #9b59b6; }
+        .block-practice { border-left-color: var(--success); }
+        .block-hint { border-left-color: #f39c12; background: #fffdf5; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+        }
+        details {
+            background: #f8fbff;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 12px 0;
+            border: 1px solid #d6e4f0;
+        }
+        details[open] {
+            background: #eaf2f8;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--accent);
+            font-size: 1.05em;
+            outline: none;
+        }
+        summary:hover {
+            text-decoration: underline;
+        }
+        .step {
+            margin: 8px 0;
+            padding-left: 8px;
+            border-left: 2px solid #bdc3c7;
+        }
+        .rule {
+            background: #e8f8f5;
+            border-left: 4px solid var(--success);
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 6px;
+        }
+        .warning {
+            background: #fdedec;
+            border-left: 4px solid var(--warning);
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 6px;
+        }
+        .figure {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            white-space: pre;
+            font-size: 0.9em;
+            color: var(--primary);
+        }
+        .figure-caption {
+            display: block;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #7f8c8d;
+            font-size: 0.85em;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .task-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .level {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            color: white;
+            background: #95a5a6;
+            margin-left: 8px;
+        }
+        .level-base { background: var(--success); }
+        .level-med { background: #f39c12; }
+        .level-adv { background: var(--warning); }
+        .angle-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 15px 0;
+        }
+        .angle-card {
+            background: #f8fbff;
+            border: 1px solid #d6e4f0;
+            border-radius: 8px;
+            padding: 12px;
+        }
+        .angle-card h4 {
+            margin: 0 0 8px 0;
+            color: var(--accent);
+            font-size: 1em;
+        }
+        .angle-card ul {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 0.95em;
+        }
+        .history-box {
+            background: #f0f4ff;
+            border-left: 4px solid #6c5ce7;
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 6px;
+        }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Аксиома параллельных прямых — Геометрия 7 класс">
+<meta property="og:title" content="Аксиома параллельных прямых — Геометрия 7 класс">
+<meta property="og:description" content="Аксиома параллельных прямых — Геометрия 7 класс">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-3-14.html">
+<meta name="twitter:title" content="Аксиома параллельных прямых — Геометрия 7 класс">
+<meta name="twitter:description" content="Аксиома параллельных прямых — Геометрия 7 класс">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-3-14.html">
+</head>
+<body>
+
+    <h1>📐 Аксиома параллельных прямых</h1>
+    <p><strong>Геометрия 7 класс • Глава III, §2 • Страницы 59–64</strong></p>
+    <p>Привет! 👋 Сегодня мы узнаем, что такое <strong>аксиома</strong> и почему одна из самых знаменитых аксиом геометрии — аксиома параллельных прямых. Ты научишься доказывать <strong>обратные теоремы</strong> методом от противного и откроешь для себя свойства углов при параллельных прямых и секущей. Это фундамент всей геометрии! 🔑</p>
+
+    <div class="block block-study">
+        <h2>🌾 Блок 1. Изучение (15–20 мин)</h2>
+        
+        <h3>🪝 Разминка: Можно ли доказать всё?</h3>
+        <p>Представь, что ты строишь башню из кубиков 🏗️. Каждый новый кубик опирается на предыдущие. Но на чём стоит самый нижний кубик? Он стоит на <strong>фундаменте</strong> — основании, которое мы принимаем без доказательств. В геометрии тоже есть такой «фундамент» — <strong>аксиомы</strong>. Это утверждения, которые мы принимаем как истину без доказательств, и на их основе доказываем все остальные теоремы. 📐</p>
+
+        <div class="history-box">
+            <strong>📜 Историческая справка:</strong><br>
+            Древнегреческий математик <strong>Евклид</strong> (III век до н.э.) в своём труде «Начала» сформулировал пять постулатов. Пятый постулат — о параллельных прямых — долгие века не давал покоя математикам. Многие пытались его доказать, но безуспешно. Только в XIX веке великий русский математик <strong>Николай Иванович Лобачевский</strong> (1792–1856) показал, что этот постулат нельзя доказать из остальных аксиом. Так родилась неевклидова геометрия! 🎓
+        </div>
+
+        <h3>📖 Ключевые термины</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Термин</th>
+                    <th>Что это?</th>
+                    <th>Пример</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Аксиома</strong></td>
+                    <td>Исходное положение, принимаемое без доказательства и служащее основой для доказательства теорем. От греческого «axios» — достойный, очевидный.</td>
+                    <td>Через любые две точки проходит прямая, и притом только одна.</td>
+                </tr>
+                <tr>
+                    <td><strong>Аксиома параллельных прямых</strong></td>
+                    <td>Через точку, не лежащую на данной прямой, проходит только одна прямая, параллельная данной.</td>
+                    <td>Через точку M вне прямой a можно провести единственную прямую, параллельную a.</td>
+                </tr>
+                <tr>
+                    <td><strong>Следствие</strong></td>
+                    <td>Утверждение, которое выводится непосредственно из аксиомы или теоремы.</td>
+                    <td>Если прямая пересекает одну из двух параллельных прямых, то она пересекает и другую.</td>
+                </tr>
+                <tr>
+                    <td><strong>Обратная теорема</strong></td>
+                    <td>Теорема, в которой условием является заключение данной теоремы, а заключением — условие данной теоремы.</td>
+                    <td>Прямая: «Если углы накрест лежащие, то они равны». Обратная: «Если углы равны, то они накрест лежащие».</td>
+                </tr>
+                <tr>
+                    <td><strong>Метод доказательства от противного</strong></td>
+                    <td>Метод, при котором предполагают противоположное тому, что нужно доказать, и приходят к противоречию.</td>
+                    <td>Предположим, что углы не равны → противоречие с аксиомой → значит, углы равны.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>📐 Графические иллюстрации</h3>
+
+        <div class="figure">
+      a ═══════════════════
+              
+              M •
+              │
+              │
+      b ═══════════════════
+         Через точку M вне прямой a
+         проходит единственная прямая b ∥ a
+            <span class="figure-caption">Рис. 1: Аксиома параллельных прямых — через точку вне прямой можно провести только одну параллельную прямую.</span>
+        </div>
+
+        <div class="figure">
+      a ═══════════════════
+               ╲  1 │ 2
+                ╲ ───┼───    ← секущая c
+                 ╲ 4 │ 3
+      b ═══════════════════
+               ╲  5 │ 6
+                ╲ ───┼───
+                 ╲ 8 │ 7
+            <span class="figure-caption">Рис. 2: Две параллельные прямые a ∥ b пересечены секущей c. Образуются 8 углов.</span>
+        </div>
+
+        <div class="angle-table">
+            <div class="angle-card">
+                <h4>✖ Накрест лежащие</h4>
+                <ul>
+                    <li>∠3 и ∠5</li>
+                    <li>∠4 и ∠6</li>
+                    <li><strong>Свойство:</strong> равны при a ∥ b</li>
+                </ul>
+            </div>
+            <div class="angle-card">
+                <h4>📐 Односторонние</h4>
+                <ul>
+                    <li>∠4 и ∠5</li>
+                    <li>∠3 и ∠6</li>
+                    <li><strong>Свойство:</strong> сумма = 180° при a ∥ b</li>
+                </ul>
+            </div>
+            <div class="angle-card">
+                <h4>🔺 Соответственные</h4>
+                <ul>
+                    <li>∠1 и ∠5; ∠2 и ∠6</li>
+                    <li>∠3 и ∠7; ∠4 и ∠8</li>
+                    <li><strong>Свойство:</strong> равны при a ∥ b</li>
+                </ul>
+            </div>
+            <div class="angle-card">
+                <h4>💡 Что важно</h4>
+                <ul>
+                    <li>Это <strong>свойства</strong> параллельных прямых</li>
+                    <li>Они обратны признакам из §1</li>
+                    <li>Доказываются методом от противного</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>📐 Главные правила</h3>
+        <div class="rule">
+            <strong>🌟 Правило 1: Аксиома параллельных прямых</strong><br>
+            Через точку, не лежащую на данной прямой, проходит <u>только одна</u> прямая, параллельная данной.<br>
+            <em>Это не теорема — это аксиома, её нельзя доказать из других аксиом!</em>
+        </div>
+        <div class="rule">
+            <strong>🌟 Правило 2: Следствия из аксиомы</strong><br>
+            <strong>Следствие 1:</strong> Если прямая пересекает одну из двух параллельных прямых, то она пересекает и другую.<br>
+            <strong>Следствие 2:</strong> Если две прямые параллельны третьей прямой, то они параллельны между собой.<br>
+            <em>Оба следствия доказываются методом от противного.</em>
+        </div>
+        <div class="rule">
+            <strong>🌟 Правило 3: Свойства углов при параллельных прямых и секущей</strong><br>
+            Если две прямые параллельны и пересечены секущей, то:<br>
+            1) <u>Накрест лежащие углы равны</u><br>
+            2) <u>Соответственные углы равны</u><br>
+            3) <u>Сумма односторонних углов равна 180°</u><br>
+            <em>Это обратные теоремы к признакам параллельности из §1!</em>
+        </div>
+        <div class="rule">
+            <strong>🌟 Правило 4: Углы с соответственно параллельными сторонами</strong><br>
+            Если стороны одного угла соответственно параллельны сторонам другого угла, то такие углы <u>или равны, или в сумме составляют 180°</u>.
+        </div>
+        <div class="rule">
+            <strong>🌟 Правило 5: Углы с соответственно перпендикулярными сторонами</strong><br>
+            Если стороны одного угла соответственно перпендикулярны сторонам другого угла, то такие углы <u>или равны, или в сумме составляют 180°</u>.
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Важно запомнить:</strong>
+            <ul>
+                <li><strong>Аксиома ≠ Теорема:</strong> аксиому принимают без доказательства, теорему доказывают.</li>
+                <li><strong>Обратная теорема не всегда верна!</strong> Пример: «Если углы вертикальные, то они равны» — верно. Обратное: «Если углы равны, то они вертикальные» — неверно!</li>
+                <li><strong>Метод от противного:</strong> предполагаем противоположное → приходим к противоречию → значит, наше предположение неверно → утверждение истинно.</li>
+                <li><strong>Признаки vs Свойства:</strong> Признаки (§1) говорят: «Если углы равны → прямые параллельны». Свойства (§2) говорят: «Если прямые параллельны → углы равны». Это обратные утверждения!</li>
+                <li><strong>Не путай:</strong> при доказательстве параллельности используем <em>признаки</em>; при нахождении углов у параллельных прямых используем <em>свойства</em>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="block block-practice">
+        <h2>🛠 Блок 2. Закрепление (20–25 мин)</h2>
+        <p>Задачи из учебника (§27–30). Решай в тетради, внимательно отмечая углы на чертеже. После выполнения открой подсказку и проверь себя!</p>
+
+        <p class="task-title">№201 <span class="level level-base">Базовый уровень</span></p>
+        <p><strong>Задание:</strong> Дан треугольник ABC. Сколько прямых, параллельных стороне AB, можно провести через вершину C?</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Вершина C не лежит на прямой AB (так как это вершина треугольника, не совпадающая с A или B).</div>
+            <div class="step"><strong>Шаг 2:</strong> По аксиоме параллельных прямых: через точку, не лежащую на данной прямой, проходит <u>только одна</u> прямая, параллельная данной.</div>
+            <div class="step"><strong>Шаг 3:</strong> Значит, через вершину C можно провести ровно одну прямую, параллельную AB.</div>
+            <p><strong>Ответ:</strong> Одну прямую.</p>
+        </details>
+
+        <p class="task-title">№203 <span class="level level-base">Базовый уровень</span></p>
+        <p><strong>Задание:</strong> Прямые a и b перпендикулярны к прямой p, прямая c пересекает прямую a. Пересекает ли прямая c прямую b?</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Дано: a ⊥ p, b ⊥ p, c пересекает a. Нужно определить: пересекает ли c прямую b?</div>
+            <div class="step"><strong>Шаг 2:</strong> Так как a ⊥ p и b ⊥ p, то по свойству: две прямые, перпендикулярные к одной прямой, параллельны между собой. Значит, a ∥ b.</div>
+            <div class="step"><strong>Шаг 3:</strong> Прямая c пересекает прямую a (дано). Так как a ∥ b, по следствию 1 из аксиомы параллельных прямых: если прямая пересекает одну из двух параллельных прямых, то она пересекает и другую.</div>
+            <div class="step"><strong>Шаг 4:</strong> Следовательно, прямая c пересекает прямую b.</div>
+            <p><strong>Ответ:</strong> Да, прямая c пересекает прямую b.</p>
+        </details>
+
+        <p class="task-title">№206 <span class="level level-med">Средний уровень</span></p>
+        <p><strong>Задание:</strong> Сумма накрест лежащих углов при пересечении двух параллельных прямых секущей равна 210°. Найдите эти углы.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Дано: две параллельные прямые пересечены секущей. Сумма накрест лежащих углов = 210°.</div>
+            <div class="step"><strong>Шаг 2:</strong> По свойству параллельных прямых: накрест лежащие углы <u>равны</u>.</div>
+            <div class="step"><strong>Шаг 3:</strong> Пусть каждый накрест лежащий угол равен x. Тогда сумма: x + x = 210°.</div>
+            <div class="step"><strong>Шаг 4:</strong> 2x = 210° → x = 105°.</div>
+            <div class="step"><strong>Шаг 5:</strong> Оба накрест лежащих угла равны 105°.</div>
+            <p><strong>Ответ:</strong> 105° и 105°.</p>
+        </details>
+
+        <p class="task-title">№208 <span class="level level-med">Средний уровень</span></p>
+        <p><strong>Задание:</strong> Найдите все углы, образованные при пересечении двух параллельных прямых a и b секущей c, если один из углов равен 150°.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Дано: a ∥ b, секущая c, один из восьми углов равен 150°.</div>
+            <div class="step"><strong>Шаг 2:</strong> При пересечении двух параллельных прямых секущей образуются 8 углов: 4 острых и 4 тупых (или все по 90°, если секущая перпендикулярна).</div>
+            <div class="step"><strong>Шаг 3:</strong> Если один угол 150° (тупой), то вертикальный ему тоже 150°. Соответственные и накрест лежащие углы при параллельных прямых равны.</div>
+            <div class="step"><strong>Шаг 4:</strong> Смежный с углом 150°: 180° − 150° = 30° (острый).</div>
+            <div class="step"><strong>Шаг 5:</strong> Все углы при параллельных прямых и секущей принимают только два значения: 150° и 30°. Четыре угла по 150° и четыре угла по 30°.</div>
+            <p><strong>Ответ:</strong> 150°, 30°, 150°, 30°, 150°, 30°, 150°, 30° (чередуясь).</p>
+        </details>
+
+        <p class="task-title">№213 <span class="level level-med">Средний уровень</span></p>
+        <p><strong>Задание:</strong> Разность двух односторонних углов при пересечении двух параллельных прямых секущей равна 50°. Найдите эти углы.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Дано: a ∥ b, секущая. Разность двух односторонних углов = 50°.</div>
+            <div class="step"><strong>Шаг 2:</strong> По свойству параллельных прямых: сумма односторонних углов = 180°.</div>
+            <div class="step"><strong>Шаг 3:</strong> Пусть больший угол = x, меньший = y. Составим систему:</div>
+            <div class="step">x + y = 180° (сумма односторонних)<br>x − y = 50° (разность по условию)</div>
+            <div class="step"><strong>Шаг 4:</strong> Сложим уравнения: 2x = 230° → x = 115°.</div>
+            <div class="step"><strong>Шаг 5:</strong> Тогда y = 180° − 115° = 65°.</div>
+            <div class="step"><strong>Шаг 6:</strong> Проверка: 115° + 65° = 180° ✓; 115° − 65° = 50° ✓</div>
+            <p><strong>Ответ:</strong> 115° и 65°.</p>
+        </details>
+
+        <p class="task-title">№209 <span class="level level-adv">Продвинутый уровень</span></p>
+        <p><strong>Задание:</strong> Концы отрезка AB лежат на параллельных прямых a и b. Прямая, проходящая через середину этого отрезка, пересекает прямые a и b в точках C и D. Докажите, что CO = OD.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> Дано: a ∥ b, A ∈ a, B ∈ b, O — середина AB. Прямая через O пересекает a в точке C и b в точке D. Доказать: CO = OD.</div>
+            <div class="step"><strong>Шаг 2:</strong> Рассмотрим △AOC и △BOD.</div>
+            <div class="step"><strong>Шаг 3:</strong> AO = OB (O — середина AB).</div>
+            <div class="step"><strong>Шаг 4:</strong> ∠AOC = ∠BOD (вертикальные углы).</div>
+            <div class="step"><strong>Шаг 5:</strong> ∠CAO = ∠OBD (накрест лежащие углы при параллельных прямых a ∥ b и секущей AB).</div>
+            <div class="step"><strong>Шаг 6:</strong> По второму признаку (сторона и два прилежащих угла): △AOC = △BOD.</div>
+            <div class="step"><strong>Шаг 7:</strong> Из равенства треугольников: CO = OD (соответственные стороны).</div>
+            <p><strong>Ответ:</strong> CO = OD (доказано).</p>
+        </details>
+
+        <p class="task-title">№210 <span class="level level-med">Средний уровень</span></p>
+        <p><strong>Задание:</strong> По данным рисунка 125 найдите ∠1.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>Шаг 1:</strong> На рисунке 125 изображены параллельные прямые, пересечённые секущей, и даны некоторые углы.</div>
+            <div class="step"><strong>Шаг 2:</strong> Используем свойства углов при параллельных прямых: накрест лежащие равны, соответственные равны, сумма односторонних = 180°.</div>
+            <div class="step"><strong>Шаг 3:</strong> Если на рисунке дан угол, смежный с ∠1, или вертикальный, или накрест лежащий — используем соответствующее свойство.</div>
+            <div class="step"><strong>Шаг 4:</strong> Например, если дан угол 130° и он односторонний с ∠1, то ∠1 = 180° − 130° = 50°.</div>
+            <div class="step"><strong>Шаг 5:</strong> Если дан угол 50° и он накрест лежащий с ∠1, то ∠1 = 50°.</div>
+            <p><strong>Ответ:</strong> ∠1 = 50° (или другое значение в зависимости от конкретных данных рисунка 125).</p>
+            <p><strong>Примечание:</strong> Для точного решения нужен рисунок 125 из учебника. Принцип решения: применяем свойства углов при параллельных прямых.</p>
+        </details>
+
+        <p class="task-title">№216 <span class="level level-adv">Продвинутый уровень</span></p>
+        <p><strong>Задание:</strong> Две параллельные прямые пересечены секущей. Докажите, что: а) биссектрисы накрест лежащих углов параллельны; б) биссектрисы односторонних углов перпендикулярны.</p>
+        <details>
+            <summary>💡 Проверить решение</summary>
+            <div class="step"><strong>а) Биссектрисы накрест лежащих углов параллельны:</strong></div>
+            <div class="step"><strong>Шаг 1:</strong> Пусть ∠3 и ∠5 — накрест лежащие углы при параллельных прямых. По свойству: ∠3 = ∠5.</div>
+            <div class="step"><strong>Шаг 2:</strong> Проведём биссектрисы этих углов. Каждая делит свой угол пополам: ∠3/2 и ∠5/2.</div>
+            <div class="step"><strong>Шаг 3:</strong> Так как ∠3 = ∠5, то ∠3/2 = ∠5/2.</div>
+            <div class="step"><strong>Шаг 4:</strong> Биссектрисы образуют с секущей накрест лежащие углы, которые равны. По признаку параллельности: биссектрисы параллельны.</div>
+            
+            <div class="step"><strong>б) Биссектрисы односторонних углов перпендикулярны:</strong></div>
+            <div class="step"><strong>Шаг 1:</strong> Пусть ∠4 и ∠5 — односторонние углы. По свойству: ∠4 + ∠5 = 180°.</div>
+            <div class="step"><strong>Шаг 2:</strong> Проведём биссектрисы: каждая делит свой угол пополам. Углы между биссектрисами и секущей: ∠4/2 и ∠5/2.</div>
+            <div class="step"><strong>Шаг 3:</strong> Угол между биссектрисами: ∠4/2 + ∠5/2 = (∠4 + ∠5)/2 = 180°/2 = 90°.</div>
+            <div class="step"><strong>Шаг 4:</strong> Значит, биссектрисы перпендикулярны.</div>
+            <p><strong>Ответ:</strong> а) Биссектрисы накрест лежащих углов параллельны; б) Биссектрисы односторонних углов перпендикулярны (доказано).</p>
+        </details>
+    </div>
+
+    <div class="block block-hint">
+        <h2>💡 Методическая подсказка</h2>
+        <ul>
+            <li><strong>Главный приём:</strong> При решении задач на параллельные прямые всегда сначала определи — тебе нужно <em>доказать параллельность</em> (используй признаки из §1) или <em>найти углы у параллельных прямых</em> (используй свойства из §2). Не путай их!</li>
+            <li><strong>Метод от противного:</strong> Это мощный инструмент! Алгоритм: 1) Предположи противоположное; 2) Приди к противоречию с аксиомой или ранее доказанным фактом; 3) Сделай вывод, что предположение неверно.</li>
+            <li><strong>Аксиома vs Теорема:</strong> Аксиому нельзя доказать — она принимается на веру. Теорему доказывают, опираясь на аксиомы и другие теоремы. Пятый постулат Евклида (аксиома параллельных) пытались доказать 2000 лет, но безуспешно!</li>
+            <li><strong>Обратные теоремы:</strong> Не все обратные утверждения верны! Пример: «Если углы вертикальные, то они равны» — верно. Обратное: «Если углы равны, то они вертикальные» — неверно. Всегда проверяй обратное утверждение отдельно.</li>
+            <li><strong>Связь с жизнью:</strong> Аксиома параллельных — это не просто абстракция. На ней основана вся планиметрия (геометрия на плоскости). Если её изменить — получится геометрия Лобачевского (гиперболическая геометрия), которая используется, например, в теории относительности! 🌌</li>
+            <li><strong>Подготовка к контрольной:</strong> Обязательно запомни: признаки параллельности (§1) — для доказательства, что прямые параллельны; свойства параллельных прямых (§2) — для нахождения углов, когда параллельность уже известна.</li>
+        </ul>
+    </div>
+
+    <footer>
+    <p><strong>Геометрия 7 класс • Глава III, §2 • Страницы 59–64</strong></p>
+    <div class="legal">
+        © 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+        Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+    </div>
+</footer>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>
