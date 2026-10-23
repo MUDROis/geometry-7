@@ -129,7 +129,6 @@
       initSearch();
       initToc();
       initSelfCheck();
-      initContentsSidebar();
     }
   };
 
