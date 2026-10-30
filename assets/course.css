@@ -48,9 +48,23 @@ h2[id]{scroll-margin-top:16px;}
 .widget .w-feedback.ok{color:#1e8449;}
 .widget .w-feedback.bad{color:#c0392b;}
 
+/* Навигация между уроками */
+.lesson-nav{display:flex;justify-content:space-between;align-items:stretch;gap:14px;margin:30px 0 4px;flex-wrap:wrap;}
+.lesson-nav .nav-link{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;max-width:100%;background:#fff;border:2px solid #d6dce4;border-radius:12px;color:#2c3e50;text-decoration:none;font-weight:700;font-size:.95rem;box-shadow:0 2px 6px rgba(44,62,80,.06);transition:border-color .15s, box-shadow .15s, transform .15s;}
+.lesson-nav .nav-link:hover{border-color:#3498db;box-shadow:0 3px 10px rgba(52,152,219,.2);transform:translateY(-1px);}
+.lesson-nav .nav-arrow{font-size:1.15rem;color:#3498db;line-height:1;flex:0 0 auto;}
+.lesson-nav .nav-text{display:flex;flex-direction:column;line-height:1.25;min-width:0;}
+.lesson-nav .nav-dir{font-size:.72rem;font-weight:600;color:#7f8c8d;text-transform:uppercase;letter-spacing:.5px;}
+.lesson-nav .nav-title{white-space:normal;}
+.lesson-nav .nav-link.prev{margin-right:auto;}
+.lesson-nav .nav-link.next{margin-left:auto;background:linear-gradient(135deg,#2c3e50,#3498db);border-color:transparent;color:#fff;text-align:right;}
+.lesson-nav .nav-link.next .nav-dir{color:#cfd9e6;}
+.lesson-nav .nav-link.next .nav-arrow{color:#fff;}
+.lesson-nav .nav-link.next:hover{background:linear-gradient(135deg,#34495e,#4aa3df);border-color:transparent;}
+
 /* Печать */
 @media print{
-  .toolbar,#course-search,.toc-sidebar,.course-logo{display:none !important;}
+  .toolbar,#course-search,.toc-sidebar,.course-logo,.lesson-nav{display:none !important;}
   .card,.highlight,.warning,.step,.hero{box-shadow:none !important;border:1px solid #ccc !important;page-break-inside:avoid;}
   details{display:block !important;}
   body{background:#fff !important;max-width:100% !important;padding:0 !important;}
