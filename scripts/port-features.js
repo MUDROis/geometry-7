@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const DIR = 'C:/Users/Lenovo/Downloads/geometry-7';
+const DIR = path.join(__dirname, '..');
 const BASE = 'https://интерактивнаяшкола.рф/geometry-7';
 const SITE = 'Геометрия 7 класс';
 
