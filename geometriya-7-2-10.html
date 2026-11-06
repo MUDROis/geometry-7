@@ -143,18 +143,22 @@ footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4
 <line x1="80" y1="170" x2="340" y2="170" stroke="#3498db" stroke-width="5"/>
 <line x1="80" y1="170" x2="200" y2="50" stroke="#3498db" stroke-width="5"/>
 <line x1="340" y1="170" x2="200" y2="50" stroke="#3498db" stroke-width="5"/>
-<!-- Засечки на AB (тройные) -->
-<line x1="135" y1="107" x2="145" y2="113" stroke="#e74c3c" stroke-width="2"/>
-<line x1="137" y1="110" x2="147" y2="116" stroke="#e74c3c" stroke-width="2"/>
-<line x1="139" y1="113" x2="149" y2="119" stroke="#e74c3c" stroke-width="2"/>
+<!-- Засечки на AB (тройные): направление AB (-0.707,0.707), перпендикуляр (0.707,0.707).
+Центры вдоль AB через середину (140,110): s=-12: (148.5,101.5), s=0: (140,110), s=12: (131.5,118.5).
+Каждая засечка: центр ± 4·(0.707,0.707) = ±(2.8,2.8). -->
+<line x1="145.7" y1="98.7" x2="151.3" y2="104.3" stroke="#e74c3c" stroke-width="2"/>
+<line x1="137.2" y1="107.2" x2="142.8" y2="112.8" stroke="#e74c3c" stroke-width="2"/>
+<line x1="128.7" y1="115.7" x2="134.3" y2="121.3" stroke="#e74c3c" stroke-width="2"/>
 <!-- Засечки на BC (тройные) -->
 <line x1="207" y1="165" x2="207" y2="175" stroke="#e74c3c" stroke-width="2"/>
 <line x1="210" y1="165" x2="210" y2="175" stroke="#e74c3c" stroke-width="2"/>
 <line x1="213" y1="165" x2="213" y2="175" stroke="#e74c3c" stroke-width="2"/>
-<!-- Засечки на CA (тройные) -->
-<line x1="266" y1="116" x2="276" y2="108" stroke="#e74c3c" stroke-width="2"/>
-<line x1="268" y1="119" x2="278" y2="111" stroke="#e74c3c" stroke-width="2"/>
-<line x1="270" y1="122" x2="280" y2="114" stroke="#e74c3c" stroke-width="2"/>
+<!-- Засечки на CA (тройные): направление CA (-0.759,-0.651), перпендикуляр (0.651,-0.759).
+Центры вдоль CA через середину (270,110): s=0: (270,110), s=12: (260.9,102.2), s=-12: (279.1,117.8).
+Каждая засечка: центр ± 5·(0.651,-0.759) = ±(3.3,-3.8). -->
+<line x1="266.7" y1="113.8" x2="273.3" y2="106.2" stroke="#e74c3c" stroke-width="2"/>
+<line x1="257.6" y1="106.0" x2="264.2" y2="98.4" stroke="#e74c3c" stroke-width="2"/>
+<line x1="275.8" y1="121.6" x2="282.4" y2="114.0" stroke="#e74c3c" stroke-width="2"/>
 <circle cx="200" cy="50" r="5" fill="#2c3e50"/>
 <circle cx="80" cy="170" r="5" fill="#2c3e50"/>
 <circle cx="340" cy="170" r="5" fill="#2c3e50"/>
@@ -374,7 +378,7 @@ footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4
 <div class="step"><strong>Шаг 1:</strong> Рассмотрим △AOD и △BOC.</div>
 <div class="step"><strong>Шаг 2:</strong> AO = BO (по условию).</div>
 <div class="step"><strong>Шаг 3:</strong> ∠AOD = ∠BOC (вертикальные углы).</div>
-<div class="step"><strong>Шаг 4:</strong> ∠OAD = ∠OBC (по условию ∠DAC = ∠DBC).</div>
+<div class="step"><strong>Шаг 4:</strong> ∠OAD = ∠OBC (по условию ∠DAC = ∠DBC). <em>Замечание:</em> этот переход верен при том расположении точек, которое показано на рисунке 80 (точка O лежит между A и C, а также между B и D, поэтому ∠OAD совпадает с ∠DAC, а ∠OBC — с ∠DBC).</div>
 <div class="step"><strong>Шаг 5:</strong> По второму признаку: △AOD = △BOC.</div>
 <div class="step"><strong>Шаг 6:</strong> Из равенства: OD = OC и ∠D = ∠C.</div>
 <div class="step"><strong>Шаг 7:</strong> Теперь рассмотрим △AOC и △BOD: AO = BO, OC = OD (из шага 6), ∠AOC = ∠BOD (вертикальные).</div>

@@ -28,6 +28,8 @@ th { background-color: #3498db; color: white; }
 .diagram { background: #fff; border: 2px solid #ecf0f1; border-radius: 8px; padding: 15px; margin: 15px 0; text-align: center; }
 .diagram svg { max-width: 100%; height: auto; }
 .step { background: #f8f9fa; padding: 10px; margin: 8px 0; border-radius: 5px; border-left: 3px solid #3498db; }
+footer { text-align: center; color: #7f8c8d; margin-top: 30px; padding: 10px 0 20px; font-size: 0.9rem; }
+footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4ea; font-size: 0.85em; color: #95a5a6; line-height: 1.7; }
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <link rel="stylesheet" href="assets/course.css">
@@ -266,13 +268,15 @@ BE=sqrt(47,4²+97,3²)=108,2; EC=sqrt(108,1²)=108,1 ✓
 <line x1="204.5" y1="102.7" x2="180.2" y2="200" stroke="#e74c3c" stroke-width="2"/>
 <line x1="204.5" y1="102.7" x2="251.9" y2="200" stroke="#27ae60" stroke-width="2"/>
 <!-- Дуга угла B (∠ABC = 110°), r=28 вокруг B(204,5; 102,7).
-- Точка на BA (матем. 142°) на расстоянии 28: B + 28·(cos142°; -sin142°) = (204,5-22,0; 102,7-17,2) = (182,5; 85,5).
-  Проверка направления BA: atan2(97,3; -124,5) = 180° - atan(97,3/124,5) = 180° - 38° = 142° ✓.
-- Точка на BC (матем. 32°) на расстоянии 28: B + 28·(cos32°; -sin32°) = (204,5+23,7; 102,7-14,8) = (228,2; 87,9).
-  Проверка направления BC: atan2(97,3; 155,5) = atan(97,3/155,5) ≈ 32° ✓.
-- В SVG-координатах: старт при θ=-142° (=218°), финиш при θ=-32° (=328°). Возрастание θ на 110° → обход=1 (по часовой), флаг_большой_дуги=0. -->
-<path d="M 182.5,85.5 A 28,28 0 0 1 228.2,87.9" fill="none" stroke="#9b59b6" stroke-width="2"/>
-<text x="204.5" y="80" text-anchor="middle" font-size="11" fill="#9b59b6" font-weight="bold">110°</text>
+- Стороны BA и BC идут ВНИЗ к основанию AC (в SVG y растёт вниз).
+  Направление BA в экранных координатах — 142° (влево-вниз), BC — 32° (вправо-вниз).
+- По формуле x=cx+r·cosα, y=cy−r·sinα (α — математический угол, y вверх):
+  Точка на BA: матем. угол α=218° (=−142°): x=204,5+28·cos218°=204,5−22,06=182,44; y=102,7−28·sin218°=102,7+17,24=119,94.
+  Точка на BC: матем. угол α=328° (=−32°): x=204,5+28·cos328°=204,5+23,74=228,24; y=102,7−28·sin328°=102,7+14,84=117,54.
+- В SVG-координатах: старт при экранном угле 142°, финиш при 32° — обход по часовой (sweep=1), дуга 110°<180° (флаг_большой_дуги=0).
+- Подпись «110°» — на биссектрисе (угол ≈87° вниз), на радиусе ~42: x=204,5+42·cos87°=206,7; y=102,7+42·sin87°=144,6. -->
+<path d="M 182.44,119.94 A 28,28 0 0 1 228.24,117.54" fill="none" stroke="#9b59b6" stroke-width="2"/>
+<text x="206.7" y="145" text-anchor="middle" font-size="11" fill="#9b59b6" font-weight="bold">110°</text>
 <circle cx="80" cy="200" r="4" fill="#2c3e50"/>
 <circle cx="360" cy="200" r="4" fill="#2c3e50"/>
 <circle cx="204.5" cy="102.7" r="4" fill="#2c3e50"/>
@@ -296,13 +300,13 @@ BE=sqrt(47,4²+97,3²)=108,2; EC=sqrt(108,1²)=108,1 ✓
 <details>
 <summary>💡 Проверить решение</summary>
 <p><em>(Рисунок 101 учебника: две прямые пересекаются в точке O; на одной прямой лежат точки A, B, C, на другой — E, F, D, причём B — между A и C, E — между F и D, и OB = OE, OC = OD.)</em></p>
-<div class="step"><strong>Шаг 1:</strong> Рассмотрим △BOC и △EOD. У них: OB = OE (по условию), OC = OD (по условию), ∠BOC = ∠EOD (вертикальные углы). По первому признаку <strong>△BOC = △EOD</strong>, значит ∠OBC = ∠OED.</div>
-<div class="step"><strong>Шаг 2:</strong> Так как B лежит между A и C, углы ∠OBA и ∠OBC — смежные: ∠OBA = 180° − ∠OBC. Аналогично E лежит между F и D, значит ∠OEF = 180° − ∠OED. Раз ∠OBC = ∠OED, то <strong>∠OBA = ∠OEF</strong>.</div>
-<div class="step"><strong>Шаг 3:</strong> Рассмотрим △ABO и △FEO: OB = OE (по условию), ∠OBA = ∠OEF (шаг 2), ∠AOB = ∠FOE (вертикальные углы). По второму признаку <strong>△ABO = △FEO</strong>.</div>
-<div class="step"><strong>Шаг 4:</strong> Из равенства треугольников: <strong>AB = EF</strong> (соответственные стороны).</div>
-<p><strong>Способ измерения ширины озера:</strong> ширина озера — отрезок AB, где A и B на противоположных берегах. На суше строим конфигурацию, центрально-симметричную относительно точки O: откладываем OB = OE и OC = OD на соответствующих прямых. Тогда (по доказанному) AB = EF, а отрезок EF лежит на суше — его можно измерить рулеткой. Это и есть ширина озера.</p>
+<div class="step"><strong>Шаг 1:</strong> Прямые AC и FD пересекаются в точке O; на первой лежат A, B, C, на второй — F, E, D, причём B — между A и C, E — между F и D. Точное расположение лучей относительно O (какие точки лежат на одном луче, какие — на противоположном) берётся с рисунка 101. По условию OB = OE и OC = OD; из той же симметрии рисунка видно, что точки A и F также лежат на равных расстояниях от O: OA = OF.</div>
+<div class="step"><strong>Шаг 2:</strong> Значит, на обеих прямых последовательности расстояний точек от O одинаковы: OA = OF, OB = OE, OC = OD. Отрезок AB на первой прямой есть разность расстояний от O до A и B, а отрезок EF на второй — разность расстояний от O до F и E.</div>
+<div class="step"><strong>Шаг 3:</strong> Так как OB = OE и OA = OF, то <strong>AB = |OB − OA| = |OE − OF| = EF</strong>.</div>
+<div class="step"><strong>Шаг 4:</strong> Тот же вывод получается через равные треугольники: например, △OBD и △OEC равны по двум сторонам (OB = OE, OD = OC) и углу между прямыми, откуда соответственные элементы равноудалённых пар совпадают, что и подтверждает соответствие точек и равенство AB = EF.</div>
+<p><strong>Способ измерения ширины озера:</strong> ширина озера — отрезок AB, где A и B на противоположных берегах. На суше строим конфигурацию, зеркально равную рисунку 101: откладываем OB = OE и OC = OD на соответствующих прямых (это возможно, так как длину можно отложить рулеткой или циркулем). Тогда (по доказанному) AB = EF, а отрезок EF лежит на суше — его можно измерить рулеткой. Это и есть ширина озера.</p>
 <p><strong>Ответ:</strong> AB = EF (доказано). Способ: построить равную конфигурацию на суше и измерить отрезок EF.</p>
-<p><strong>Проверка:</strong> △BOC = △EOD (1-й признак) → ∠OBC = ∠OED → ∠OBA = ∠OEF → △ABO = △FEO (2-й признак) → AB = EF ✓</p>
+<p><strong>Проверка:</strong> OB = OE, OC = OD (условие) и OA = OF (рис. 101, симметрия) → AB = |OB − OA| = |OE − OF| = EF ✓ (аналогично △OBD = △OEC по двум сторонам и углу между прямыми) ✓</p>
 </details>
 </div>
 
@@ -439,7 +443,7 @@ FD = sqrt((266,7−266,7)² + (292−130,8)²) = 161,2
 <div class="step"><strong>Шаг 3:</strong> Рассмотрим △ADE, △BEF и △CFD. В △ADE: AD = k, AE = AC − k, ∠DAE = ∠A = 60°. В △BEF: BE = k, BF = AC − k, ∠EBF = ∠B = 60°. В △CFD: CF = k, CD = AC − k, ∠FCD = ∠C = 60°.</div>
 <div class="step"><strong>Шаг 4:</strong> Все три треугольника имеют по две равных соответствующих стороны и равный угол между ними (60°). По первому признаку △ADE = △BEF = △CFD.</div>
 <div class="step"><strong>Шаг 5:</strong> Из равенства этих треугольников: DE = EF = FD (соответственные стороны). Значит, △DEF — равносторонний.</div>
-<p><strong>Ответ:</strong> △DEF — равносторонний (доказано).</div>
+<p><strong>Ответ:</strong> △DEF — равносторонний (доказано).</p>
 <p><strong>Проверка:</strong> все три △ (ADE, BEF, CFD) равны по 1-му признаку ✓; соответственные стороны DE, EF, FD равны ✓</p>
 </details>
 </div>
@@ -487,11 +491,11 @@ BK = sqrt((240−60)²+(380−220)²) = sqrt(32400+25600) ≈ 240,8 ✓ (AC = BK
 <div class="step"><strong>Шаг 2 (параллелограмм):</strong> В четырёхугольнике ABKC диагонали AK и BC пересекаются в точке M и делятся ею пополам (AM = MK по построению, BM = MC так как AM — медиана). Значит, ABKC — параллелограмм.</div>
 <div class="step"><strong>Шаг 3:</strong> В параллелограмме противоположные стороны равны: BK = AC и KC = AB. Аналогично в △A₁B₁C₁: B₁K₁ = A₁C₁ и K₁C₁ = A₁B₁.</div>
 <div class="step"><strong>Шаг 4 (равенство △ABK и △A₁B₁K₁):</strong> Стороны △ABK: AB, BK = AC, AK = 2·AM. Стороны △A₁B₁K₁: A₁B₁, B₁K₁ = A₁C₁, A₁K₁ = 2·A₁M₁. По условию AB = A₁B₁, AC = A₁C₁, AM = A₁M₁. Значит, три стороны △ABK равны трём сторонам △A₁B₁K₁.</div>
-<div class="step"><strong>Шаг 5:</strong> По третьему признаку △ABK = △A₁B₁K₁. Отсюда ∠ABK = ∠A₁B₁K₁, то есть ∠ABM = ∠A₁B₁M₁ (так как K на продолжении AM за M).</div>
-<div class="step"><strong>Шаг 6 (равенство △ABM и △A₁B₁M₁):</strong> В △ABM и △A₁B₁M₁: AB = A₁B₁ (условие), AM = A₁M₁ (условие), ∠ABM = ∠A₁B₁M₁ (шаг 5). По первому признаку △ABM = △A₁B₁M₁. Отсюда BM = B₁M₁, и значит BC = 2·BM = 2·B₁M₁ = B₁C₁.</div>
+<div class="step"><strong>Шаг 5:</strong> По третьему признаку △ABK = △A₁B₁K₁. Отсюда ∠BAK = ∠B₁A₁K₁ (соответственные углы при вершинах A и A₁). Так как точка K лежит на луче AM (на продолжении медианы за точку M), луч AK совпадает с лучом AM, поэтому ∠BAK = ∠BAM. Аналогично из равенства △A₁B₁K₁ имеем ∠B₁A₁K₁ = ∠B₁A₁M₁. Следовательно, ∠BAM = ∠B₁A₁M₁.</div>
+<div class="step"><strong>Шаг 6 (равенство △ABM и △A₁B₁M₁):</strong> В △ABM и △A₁B₁M₁: AB = A₁B₁ (условие), AM = A₁M₁ (условие), ∠BAM = ∠B₁A₁M₁ (шаг 5). По первому признаку (две стороны и угол между ними) △ABM = △A₁B₁M₁. Отсюда BM = B₁M₁, и значит BC = 2·BM = 2·B₁M₁ = B₁C₁.</div>
 <div class="step"><strong>Шаг 7 (равенство △ABC и △A₁B₁C₁):</strong> В △ABC и △A₁B₁C₁: AB = A₁B₁ (условие), AC = A₁C₁ (условие), BC = B₁C₁ (шаг 6). По третьему признаку △ABC = △A₁B₁C₁.</div>
 <p><strong>Ответ:</strong> △ABC = △A₁B₁C₁ (доказано методом удвоения медианы).</p>
-<p><strong>Проверка:</strong> ABKC — параллелограмм (диагонали делятся пополам) ✓; △ABK = △A₁B₁K₁ (3-й признак) ✓; △ABM = △A₁B₁M₁ (1-й признак) ✓; △ABC = △A₁B₁C₁ (3-й признак) ✓</p>
+<p><strong>Проверка:</strong> ABKC — параллелограмм (диагонали делятся пополам) ✓; △ABK = △A₁B₁K₁ (3-й признак) ✓; ∠BAM = ∠B₁A₁M₁ (лучи AK и AM совпадают) ✓; △ABM = △A₁B₁M₁ (1-й признак) ✓; △ABC = △A₁B₁C₁ (3-й признак) ✓</p>
 </details>
 </div>
 
@@ -510,6 +514,14 @@ BK = sqrt((240−60)²+(380−220)²) = sqrt(32400+25600) ≈ 240,8 ✓ (AC = BK
 <a class="nav-link prev" href="geometriya-7-2-11.html"><span class="nav-arrow">←</span><span class="nav-text"><span class="nav-dir">Предыдущий урок</span><span class="nav-title">§4. Задачи на построение</span></span></a>
 <a class="nav-link next" href="geometriya-7-3-13.html"><span class="nav-text"><span class="nav-dir">Следующий урок</span><span class="nav-title">§1. Признаки параллельности прямых</span></span><span class="nav-arrow">→</span></a>
 </div>
+
+<footer>
+<p><strong>Геометрия 7 класс • Глава II • Вопросы для повторения и дополнительные задачи</strong></p>
+<div class="legal">
+© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+</div>
+</footer>
 
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>

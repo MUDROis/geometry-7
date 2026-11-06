@@ -154,13 +154,13 @@ footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4
             <h4>Угол и его элементы</h4>
             <svg width="420" height="200" viewBox="0 0 420 200">
                 <!-- Вершина O(200,170). Сторона OB: направление 0°, B(340,170). Сторона OA: направление 120° (cos=−0,5; sin=0,866), r=140: A(130.0,48.8).
-                     Дуга r=35: начало на 0° (235,170), конец на 120° (182.5,139.7), sweep=0. Подпись на биссектрисе 60°, r=52: (226.0,125.0). -->
+                     Дуга r=28: начало на 0° (228,170), конец на 120° (186,145.8), sweep=0. Подпись на биссектрисе 60°, r=52: (226.0,125.0). -->
                 <line x1="200" y1="170" x2="340" y2="170" stroke="#3498db" stroke-width="3"/>
                 <line x1="200" y1="170" x2="130" y2="48.8" stroke="#9b59b6" stroke-width="3"/>
                 <circle cx="200" cy="170" r="6" fill="#2c3e50"/>
                 <circle cx="340" cy="170" r="4" fill="#2980b9"/>
                 <circle cx="130" cy="48.8" r="4" fill="#8e44ad"/>
-                <path d="M 235,170 A 35,35 0 0 0 182.5,139.7" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <path d="M 228,170 A 28,28 0 0 0 186,145.8" fill="none" stroke="#f39c12" stroke-width="2"/>
                 <text x="200" y="192" text-anchor="middle" font-size="15" font-weight="bold">O</text>
                 <text x="350" y="175" font-size="14" font-weight="bold">B</text>
                 <text x="120" y="42" font-size="14" font-weight="bold">A</text>
@@ -173,12 +173,12 @@ footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4
             <h4>Развёрнутый угол</h4>
             <svg width="420" height="140" viewBox="0 0 420 140">
                 <!-- Прямая y=80, x от 60 до 360. Вершина O(210,80). A(60,80), B(360,80).
-                     Дуга-полуокружность r=40: M 250,80 A 40,40 0 0 0 170,80 (проходит сверху). Подпись на 90°, r=58: (210,22). -->
+                     Дуга-полуокружность r=30: M 240,80 A 30,30 0 0 0 180,80 (проходит сверху). Подпись на 90°, r=58: (210,22). -->
                 <line x1="60" y1="80" x2="360" y2="80" stroke="#e74c3c" stroke-width="4"/>
                 <circle cx="210" cy="80" r="6" fill="#2c3e50"/>
                 <circle cx="60" cy="80" r="4" fill="#c0392b"/>
                 <circle cx="360" cy="80" r="4" fill="#c0392b"/>
-                <path d="M 250,80 A 40,40 0 0 0 170,80" fill="none" stroke="#f39c12" stroke-width="2" stroke-dasharray="4,3"/>
+                <path d="M 240,80 A 30,30 0 0 0 180,80" fill="none" stroke="#f39c12" stroke-width="2" stroke-dasharray="4,3"/>
                 <text x="60" y="102" text-anchor="middle" font-size="14" font-weight="bold">A</text>
                 <text x="210" y="102" text-anchor="middle" font-size="14" font-weight="bold">O</text>
                 <text x="360" y="102" text-anchor="middle" font-size="14" font-weight="bold">B</text>
@@ -225,14 +225,14 @@ footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4
                 <!-- Вершина O(200,180). Сторона OB: 0° → B(340,180). Сторона OA: 110° (cos=−0,342; sin=0,940), r=140 → A(152.1,48.4).
                      Луч OC: 55° (cos=0,574; sin=0,819), r=140 → C(280.3,65.3).
                      Дуга ∠AOC r=32: от 55° (218.4,153.8) до 110° (189.1,149.9), sweep=0.
-                     Дуга ∠COB r=40: от 0° (240,180) до 55° (222.9,147.2), sweep=0.
+                     Дуга ∠COB r=30: от 0° (230,180) до 55° (217.2,155.4), sweep=0.
                      Подписи: ∠AOC на 82,5°, r=50 → (206.5,130.4); ∠COB на 27,5°, r=58 → (251.4,153.2). -->
                 <line x1="200" y1="180" x2="340" y2="180" stroke="#3498db" stroke-width="3"/>
                 <line x1="200" y1="180" x2="152.1" y2="48.4" stroke="#9b59b6" stroke-width="3"/>
                 <line x1="200" y1="180" x2="280.3" y2="65.3" stroke="#e74c3c" stroke-width="3" stroke-dasharray="6,4"/>
                 <circle cx="200" cy="180" r="6" fill="#2c3e50"/>
                 <path d="M 218.4,153.8 A 32,32 0 0 0 189.1,149.9" fill="none" stroke="#27ae60" stroke-width="2"/>
-                <path d="M 240,180 A 40,40 0 0 0 222.9,147.2" fill="none" stroke="#27ae60" stroke-width="2"/>
+                <path d="M 230,180 A 30,30 0 0 0 217.2,155.4" fill="none" stroke="#27ae60" stroke-width="2"/>
                 <text x="200" y="200" text-anchor="middle" font-size="14" font-weight="bold">O</text>
                 <text x="350" y="185" font-size="13" font-weight="bold">B</text>
                 <text x="142" y="42" font-size="13" font-weight="bold">A</text>
@@ -341,7 +341,7 @@ footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4
         <p><strong>Задание:</strong> Начертите три луча <em>h</em>, <em>k</em> и <em>l</em> с общим началом. Назовите все углы, образованные данными лучами.</p>
         <details>
             <summary>💡 Проверить решение</summary>
-            <div class="step"><strong>Шаг 1:</strong> Поставь точку O и проведи из неё три луча «веером» (никие два не на одной прямой). Подпиши их h, k, l.</div>
+            <div class="step"><strong>Шаг 1:</strong> Поставь точку O и проведи из неё три луча «веером» (никакие два не на одной прямой). Подпиши их h, k, l.</div>
             <div class="step"><strong>Шаг 2:</strong> Угол образует каждая <strong>пара</strong> лучей. Перечисли пары: (h, k), (k, l), (h, l).</div>
             <p><strong>Ответ:</strong> <strong>3 угла: ∠hk, ∠kl, ∠hl</strong>.</p>
             <p><strong>Почему?</strong> Пар из трёх лучей ровно три — как три рукопожатия у троих друзей.</p>

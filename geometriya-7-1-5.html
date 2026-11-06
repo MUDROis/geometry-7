@@ -205,14 +205,14 @@ footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4
             <svg width="420" height="210" viewBox="0 0 420 210">
                 <!-- Вершина O(200,180). Сторона OB: 0° → (340,180). Луч OC: 40° → (307.2,90.0). Сторона OA: 100° → (175.7,42.1).
                      Дуга ∠COB r=24: M 224,180 A 24,24 0 0 0 218.4,164.6. Дуга ∠AOC r=24: M 218.4,164.6 A 24,24 0 0 0 195.8,156.4.
-                     Дуга ∠AOB r=36: M 236,180 A 36,36 0 0 0 193.7,144.5.
+                     Дуга ∠AOB r=30: M 230,180 A 30,30 0 0 0 194.8,150.5.
                      Подписи: 40° на 20°, r=34 → (231.9,168.4); 60° на 70°, r=34 → (211.6,148.1); 100° на 50°, r=48 → (230.9,143.2). -->
                 <line x1="200" y1="180" x2="340" y2="180" stroke="#3498db" stroke-width="3"/>
                 <line x1="200" y1="180" x2="307.2" y2="90" stroke="#e74c3c" stroke-width="3" stroke-dasharray="6,4"/>
                 <line x1="200" y1="180" x2="175.7" y2="42.1" stroke="#9b59b6" stroke-width="3"/>
                 <path d="M 224,180 A 24,24 0 0 0 218.4,164.6" fill="none" stroke="#27ae60" stroke-width="2"/>
                 <path d="M 218.4,164.6 A 24,24 0 0 0 195.8,156.4" fill="none" stroke="#27ae60" stroke-width="2"/>
-                <path d="M 236,180 A 36,36 0 0 0 193.7,144.5" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <path d="M 230,180 A 30,30 0 0 0 194.8,150.5" fill="none" stroke="#f39c12" stroke-width="2"/>
                 <circle cx="200" cy="180" r="6" fill="#2c3e50"/>
                 <text x="200" y="200" text-anchor="middle" font-size="14" font-weight="bold">O</text>
                 <text x="350" y="185" font-size="13" font-weight="bold">B</text>
@@ -220,7 +220,7 @@ footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4
                 <text x="166" y="36" font-size="13" font-weight="bold">A</text>
                 <text x="231.9" y="168.4" font-size="11" fill="#27ae60" font-weight="bold">40°</text>
                 <text x="211.6" y="148.1" font-size="11" fill="#27ae60" font-weight="bold">60°</text>
-                <text x="236" y="139" font-size="12" fill="#f39c12" font-weight="bold">100°</text>
+                <text x="230.9" y="143.2" font-size="12" fill="#f39c12" font-weight="bold">100°</text>
             </svg>
             <p><strong>Рис. 3:</strong> Луч OC делит угол AOB: ∠AOC + ∠COB = ∠AOB, то есть 60° + 40° = 100°</p>
         </div>
@@ -375,7 +375,7 @@ footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4
         <details>
             <summary>💡 Проверить решение</summary>
             <div class="step"><strong>Метод (а):</strong> измерь транспортиром «базовые» углы рисунка между соседними лучами; затем составляй нужные углы как сумму соседних (правило 4). Например, ∠AOB = ∠AOX − ∠BOX, если луч OX проходит вне угла AOB, или сумму — если внутри.</div>
-            <div class="step"><strong>Метод (б):</strong> переberi измеренные и составленные углы и выпиши те, чья мера равна 30°.</div>
+            <div class="step"><strong>Метод (б):</strong> перебери измеренные и составленные углы и выпиши те, чья мера равна 30°.</div>
             <div class="step"><strong>Метод (в):</strong> углы со стороной OA — это пары (OA, каждый другой луч): ∠AOB, ∠AOC, ∠AOD, ∠AOX… Их меры находятся суммированием соседних углов от OA до нужного луча.</div>
             <p><strong>Важно:</strong> числовые ответы зависят от рисунка 43 в твоём учебнике — измерь базовые углы сама и сложи по правилу суммы частей. Способ работает для любого набора лучей!</p>
         </details>

@@ -215,6 +215,14 @@
         <h3>📐 Графические иллюстрации к задачам</h3>
         <div class="figure">
             <svg viewBox="0 0 460 240" role="img" aria-label="Отрезки BF и CD пересекаются в точке E; KE ∥ AF" style="max-width:100%;height:auto">
+                <!-- РАСЧЁТ (Рис. 128, №218): верхняя прямая BC: y=80, B=(180,80), C=(350,80);
+                     нижняя прямая AF: y=200, A=(80,200), D=(250,200), F=(420,200); обе горизонтали (0°/180°).
+                     Отрезок BF: (180,80)→(420,200), приращение (240,120), k=0.5, уравнение y=0.5x−10.
+                     Отрезок CD: (350,80)→(250,200), приращение (−100,120), k=−1.2, уравнение y=−1.2x+500.
+                     Пересечение E=BF∩CD: 0.5x−10=−1.2x+500 → x=300, y=140 ⇒ E=(300,140) (красный кружок).
+                     Середина BF = ((180+420)/2,(80+200)/2)=(300,140)=E ⇒ BE=EF;
+                     середина CD = ((350+250)/2,(80+200)/2)=(300,140)=E ⇒ CE=ED.
+                     KE: горизонталь y=140 от K=(200,140) до E=(300,140) ⇒ KE ∥ BC (обе горизонтали) и KE ∥ AF. -->
                 <line x1="180" y1="80" x2="350" y2="80" stroke="#2c3e50" stroke-width="2"/>
                 <text x="166" y="84" font-size="15" fill="#2c3e50">B</text>
                 <text x="358" y="84" font-size="15" fill="#2c3e50">C</text>
@@ -236,30 +244,48 @@
         <div class="figure">
             <div style="display:flex;flex-wrap:wrap;gap:30px;justify-content:center;align-items:flex-start;">
                 <svg viewBox="0 0 300 280" role="img" aria-label="Углы при пересечении параллельных прямых a ∥ b секущими" style="max-width:100%;height:auto">
-                    <line x1="20" y1="70" x2="280" y2="70" stroke="#2c3e50" stroke-width="2"/>
-                    <text x="285" y="74" font-size="15" fill="#2c3e50">a</text>
-                    <line x1="20" y1="190" x2="280" y2="190" stroke="#2c3e50" stroke-width="2"/>
-                    <text x="285" y="194" font-size="15" fill="#2c3e50">b</text>
-                    <line x1="50" y1="30" x2="230" y2="230" stroke="#3498db" stroke-width="2"/>
-                    <line x1="150" y1="45" x2="70" y2="215" stroke="#e67e22" stroke-width="2"/>
-                    <text x="126" y="96" font-size="16" fill="#8e44ad">∠1</text>
-                    <text x="112" y="92" font-size="14" fill="#c0392b">65°</text>
-                    <text x="156" y="84" font-size="14" fill="#c0392b">121°</text>
-                    <text x="85" y="180" font-size="14" fill="#c0392b">115°</text>
+                    <!-- РАСЧЁТ (Рис. 129а, №220): a ∥ b горизонтальны: a:y=60, b:y=200 (x=20..280).
+                         Секущая c через (93.4,40)-(177.3,220): Δx=83.9, Δy=180, k=2.145, угол с горизонталью
+                         65° (cos65°=0.4226, sin65°=0.9063). Пересечения: с a (y=60): x=93.4+20/2.145≈102.7 ⇒
+                         (102.7,60); с b (y=200): x=93.4+160/2.145≈168.0 ⇒ (168.0,200).
+                         При прямой a угол 65° (метка «65°»); при прямой b со смежной стороны — 115°
+                         (метка «115°»; 65°+115°=180° — односторонние ⇒ a ∥ b).
+                         Секущая d через (200.1,40)-(91.9,220): Δx=−108.2, Δy=180, |k|=1.664,
+                         острый угол 59°, тупой 121° (метка «121°»); пересечения: с a ⇒ (188.1,60); с b ⇒ (103.9,200).
+                         Треугольник c,d,a: вершины (102.7,60), (188.1,60) и пересечение c∩d=(140,140);
+                         углы при основании 65° и 59°, поэтому ∠1=180°−65°−59°=56° (метка «∠1» у вершины). -->
+                    <line x1="20" y1="60" x2="280" y2="60" stroke="#2c3e50" stroke-width="2"/>
+                    <text x="285" y="64" font-size="15" fill="#2c3e50">a</text>
+                    <line x1="20" y1="200" x2="280" y2="200" stroke="#2c3e50" stroke-width="2"/>
+                    <text x="285" y="204" font-size="15" fill="#2c3e50">b</text>
+                    <line x1="93.4" y1="40" x2="177.3" y2="220" stroke="#3498db" stroke-width="2"/>
+                    <line x1="200.1" y1="40" x2="91.9" y2="220" stroke="#e67e22" stroke-width="2"/>
+                    <text x="136" y="156" font-size="16" fill="#8e44ad">∠1</text>
+                    <text x="122" y="88" font-size="14" fill="#c0392b">65°</text>
+                    <text x="92" y="182" font-size="14" fill="#c0392b">121°</text>
+                    <text x="176" y="184" font-size="14" fill="#c0392b">115°</text>
                 </svg>
                 <svg viewBox="0 0 280 280" role="img" aria-label="Треугольник ADE с биссектрисой DE угла ADF" style="max-width:100%;height:auto">
-                    <line x1="40" y1="60" x2="240" y2="60" stroke="#2c3e50" stroke-width="2"/>
-                    <text x="25" y="64" font-size="15" fill="#2c3e50">A</text>
-                    <text x="248" y="64" font-size="15" fill="#2c3e50">E</text>
-                    <line x1="40" y1="60" x2="70" y2="240" stroke="#2c3e50" stroke-width="2"/>
-                    <line x1="240" y1="60" x2="70" y2="240" stroke="#2c3e50" stroke-width="2"/>
-                    <line x1="70" y1="240" x2="260" y2="240" stroke="#2c3e50" stroke-width="2"/>
-                    <text x="55" y="248" font-size="15" fill="#2c3e50">D</text>
-                    <text x="268" y="244" font-size="15" fill="#2c3e50">F</text>
-                    <text x="72" y="96" font-size="14" fill="#c0392b">78°</text>
-                    <text x="30" y="82" font-size="13" fill="#27ae60">102°</text>
-                    <text x="186" y="92" font-size="14" fill="#c0392b">48°</text>
-                    <text x="92" y="186" font-size="14" fill="#8e44ad">48°</text>
+                    <!-- РАСЧЁТ (Рис. 129б, №221): треугольник ADE: A=(60,70), E=(240,70) — основание AE
+                         горизонтально (направление 0°/180°); D=(100.7,261.7).
+                         Луч AD: вниз-вправо, угол с AE 78° (tg=191.7/40.7≈4.71 ⇒ 78°); внешний угол при A
+                         102° (180°−78°, метка «102°»). Внутренний угол ∠DAE=78° (метка «78°»).
+                         Внутренний угол при E: ∠AED=54° (метка «54°»); проверка: 78°+48°+54°=180°.
+                         Угол при D: ∠ADE=48° (векторы D→A и D→E дают 48°, метка «48°»). Луч DF: D→F=(200,251),
+                         ∠EDF=48° (вторая метка «48°»), значит DE — биссектриса ∠ADF=48°+48°=96°. -->
+                    <line x1="60" y1="70" x2="240" y2="70" stroke="#2c3e50" stroke-width="2"/>
+                    <text x="47" y="74" font-size="15" fill="#2c3e50">A</text>
+                    <text x="248" y="74" font-size="15" fill="#2c3e50">E</text>
+                    <line x1="60" y1="70" x2="100.7" y2="261.7" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="240" y1="70" x2="100.7" y2="261.7" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="100.7" y1="261.7" x2="200" y2="251" stroke="#2c3e50" stroke-width="2"/>
+                    <text x="92" y="271" font-size="15" fill="#2c3e50">D</text>
+                    <text x="206" y="250" font-size="15" fill="#2c3e50">F</text>
+                    <text x="84" y="88" font-size="14" fill="#c0392b">78°</text>
+                    <text x="42" y="90" font-size="13" fill="#27ae60">102°</text>
+                    <text x="217" y="84" font-size="14" fill="#c0392b">54°</text>
+                    <text x="103" y="252" font-size="14" fill="#8e44ad">48°</text>
+                    <text x="128" y="245" font-size="14" fill="#8e44ad">48°</text>
                 </svg>
             </div>
             <span class="figure-caption">Рис. 129 (к № 220–221): а) углы 65°, 115°, 121° — сначала докажи a ∥ b, потом считай ∠1; б) DE — биссектриса ∠ADF</span>
@@ -305,7 +331,7 @@
             <div class="step"><strong>Шаг 1:</strong> Пусть O — середина AD. Прямая через O перпендикулярна AD, т. е. это серединный перпендикуляр к отрезку AD, и M лежит на нём.</div>
             <div class="step"><strong>Шаг 2:</strong> △MOA и △MOD: OA = OD, MO — общая, ∠MOA = ∠MOD = 90°. По первому признаку △MOA = △MOD, значит MA = MD.</div>
             <div class="step"><strong>Шаг 3:</strong> △AMD — равнобедренный с основанием AD → ∠MAD = ∠MDA (углы при основании).</div>
-            <div class="step"><strong>Шаг 4:</strong> AD — биссектриса угла A: ∠MAD = ∠DAC = DAB. Следовательно, ∠MDA = ∠DAB.</div>
+            <div class="step"><strong>Шаг 4:</strong> AD — биссектриса угла A: ∠MAD = ∠DAC = ∠DAB. Следовательно, ∠MDA = ∠DAB.</div>
             <div class="step"><strong>Шаг 5:</strong> ∠MDA и ∠DAB — накрест лежащие углы при прямых MD и AB и секущей AD → MD ∥ AB.</div>
             <p><strong>Ответ:</strong> доказано.</p>
         </details>
