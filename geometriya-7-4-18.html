@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Соотношения между сторонами и углами треугольника — Геометрия 7 класс</title>
+<!-- Урок 18 курса. Глава IV «Соотношения между сторонами и углами треугольника», §2. Все координаты SVG вычислены по формулам x = cx + r·cos α, y = cy − r·sin α. Расчёты — в комментариях внутри SVG. -->
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f9f9fb; }
+h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+h2 { color: #2980b9; margin-top: 30px; }
+h3 { color: #16a085; }
+.card { background: #fff; border-radius: 12px; padding: 20px; margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.highlight { background-color: #e8f4f8; padding: 15px; border-left: 5px solid #3498db; border-radius: 5px; margin: 15px 0; }
+.warning { background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; border-radius: 5px; margin: 15px 0; }
+details { background: #f4f6f7; border-radius: 8px; padding: 10px 15px; margin: 10px 0; cursor: pointer; }
+summary { font-weight: bold; color: #2980b9; outline: none; }
+details[open] summary { margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 5px;}
+table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background-color: #3498db; color: white; }
+.badge { display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 0.8em; font-weight: bold; color: white; margin-right: 5px;}
+.badge-must { background: #2ecc71; }
+.badge-should { background: #f39c12; }
+.badge-aspire { background: #9b59b6; }
+.diagram { background: #fff; border: 2px solid #ecf0f1; border-radius: 8px; padding: 15px; margin: 15px 0; text-align: center; }
+.diagram svg { max-width: 100%; height: auto; }
+.step { background: #f8f9fa; padding: 10px; margin: 8px 0; border-radius: 5px; border-left: 3px solid #3498db; }
+footer { text-align: center; color: #7f8c8d; margin-top: 30px; padding: 10px 0 20px; font-size: 0.9rem; }
+footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4ea; font-size: 0.85em; color: #95a5a6; line-height: 1.7; }
+.lesson-nav { display: flex; justify-content: space-between; align-items: stretch; gap: 14px; margin: 30px 0 4px; flex-wrap: wrap; }
+.lesson-nav .nav-link { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; max-width: 100%; background: #fff; border: 2px solid #d6dce4; border-radius: 12px; color: #2c3e50; text-decoration: none; font-weight: 700; font-size: .95rem; box-shadow: 0 2px 6px rgba(44,62,80,.06); transition: border-color .15s, box-shadow .15s, transform .15s; }
+.lesson-nav .nav-link:hover { border-color: #3498db; box-shadow: 0 3px 10px rgba(52,152,219,.2); transform: translateY(-1px); }
+.lesson-nav .nav-arrow { font-size: 1.15rem; color: #3498db; line-height: 1; flex: 0 0 auto; }
+.lesson-nav .nav-text { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.lesson-nav .nav-dir { font-size: .72rem; font-weight: 600; color: #7f8c8d; text-transform: uppercase; letter-spacing: .5px; }
+.lesson-nav .nav-title { white-space: normal; }
+.lesson-nav .nav-link.prev { margin-right: auto; }
+.lesson-nav .nav-link.next { margin-left: auto; background: linear-gradient(135deg,#2c3e50,#3498db); border-color: transparent; color: #fff; text-align: right; }
+.lesson-nav .nav-link.next .nav-dir { color: #cfd9e6; }
+.lesson-nav .nav-link.next .nav-arrow { color: #fff; }
+.lesson-nav .nav-link.next:hover { background: linear-gradient(135deg,#34495e,#4aa3df); border-color: transparent; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<meta name="description" content="Соотношения между сторонами и углами треугольника — Геометрия 7 класс">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:title" content="Соотношения между сторонами и углами треугольника — Геометрия 7 класс">
+<meta property="og:description" content="Соотношения между сторонами и углами треугольника — Геометрия 7 класс">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-4-18.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Соотношения между сторонами и углами треугольника — Геометрия 7 класс">
+<meta name="twitter:description" content="Соотношения между сторонами и углами треугольника — Геометрия 7 класс">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-4-18.html">
+</head>
+<body>
+<h1>⚖️ Соотношения между сторонами и углами треугольника</h1>
+<p><strong>Геометрия 7 класс • Глава IV, §2 • Страницы 72–75</strong></p>
+<div class="card">
+<p>Привет! 👋 Сегодня — две теоремы, которые учат треугольник «сравнивать себя с собой»: против большей стороны лежит больший угол, а каждая сторона меньше суммы двух других. С ними ты научишься сравнивать стороны и углы без линейки и транспортира и узнаешь, когда три отрезка вообще не сложатся в треугольник. Доказательства опираются на теорему о сумме углов из §1 и накрест лежащие углы из главы III — всё уже готово! ⚖️</p>
+</div>
+
+<h2>🌾 Блок 1. Изучение (15–20 мин)</h2>
+
+<div class="card">
+<h3>🚶 Разминка: короткий путь и три карандаша</h3>
+<p>От дома до школы ведёт прямая дорожка через двор, а второй маршрут — с заходом в киоск на углу. Ты много раз замечала: с заходом всегда дальше, и сегодня мы докажем это строго — <strong>каждая сторона треугольника меньше суммы двух других</strong>. А ещё возьми три карандаша длиной 7, 8 и 10 см: треугольник сложится; а длиной 2, 3 и 5 см — нет, сколько ни старайся. Причина проста: самая длинная сторона любого треугольника «смотрит» на самый большой угол, а сложиться в треугольник три отрезка могут только при одном условии, которое мы и докажем. 🔍</p>
+</div>
+
+<div class="card">
+<h3>📖 Ключевые термины</h3>
+<table>
+<tr><th>Термин</th><th>Что это?</th><th>Как обозначаем</th></tr>
+<tr><td><strong>Противолежащий угол (сторона)</strong></td><td>Угол, лежащий напротив стороны (или сторона напротив угла); именно эта пара «отвечает» за сравнение.</td><td>стороне AB противолежит ∠C</td></tr>
+<tr><td><strong>Теорема о соотношениях между сторонами и углами</strong></td><td>Против большей стороны лежит больший угол, и обратно: против большего угла лежит большая сторона.</td><td>AB &gt; AC ⇒ ∠C &gt; ∠B</td></tr>
+<tr><td><strong>Следствие 1</strong></td><td>В прямоугольном треугольнике гипотенуза больше катета.</td><td>AB — гипотенуза, AB &gt; AC</td></tr>
+<tr><td><strong>Следствие 2 (признак равнобедренного треугольника)</strong></td><td>Если два угла треугольника равны, то треугольник равнобедренный: стороны против равных углов равны.</td><td>∠B = ∠C ⇒ AB = AC</td></tr>
+<tr><td><strong>Неравенство треугольника</strong></td><td>Каждая сторона треугольника меньше суммы двух других сторон.</td><td>AB &lt; AC + CB</td></tr>
+<tr><td><strong>Неравенство треугольника для трёх точек</strong></td><td>Для любых трёх точек A, B и C, не лежащих на одной прямой, верны все три неравенства сразу.</td><td>AB &lt; AC + CB, AC &lt; AB + BC, BC &lt; BA + AC</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>📐 Графические иллюстрации</h3>
+
+<div class="diagram">
+<h4>Против большей стороны — больший угол</h4>
+<svg width="560" height="360" viewBox="28 22 324 208" role="img" aria-label="Треугольник ABC: стороны 10 см, 8,3 см, 7,2 см против углов 80, 55 и 45 градусов">
+<!-- Рис. 1. A(160.6,60.6), B(70,190), C(290,190); масштаб 22 px = 1 см. -->
+<!-- Стороны: AB = 158.0 px = 7,2 см (фиолетовая), BC = 220.0 px = 10 см (красная), AC = 183.0 px = 8,3 см (синяя). -->
+<!-- Углы (atan2): при A от 235.00° до 315.00° = 80.00°; при B от 0° до 55.00° = 55.00°; при C от 135° до 180° = 45.00°; сумма 180.00° ✓. -->
+<!-- Соответствие «против большей стороны — больший угол»: BC (10 см) ↔ ∠A = 80° (красные), AC (8,3 см) ↔ ∠B = 55° (синие), AB (7,2 см) ↔ ∠C = 45° (фиолетовые). Дуги r = 20, подписи на биссектрисах (275°, 27.5°, 157.5°) при r = 36. -->
+<polygon points="160.6,60.6 70,190 290,190" fill="none" stroke="#2c3e50" stroke-width="3"/>
+<line x1="70" y1="190" x2="290" y2="190" stroke="#e74c3c" stroke-width="4"/>
+<line x1="160.6" y1="60.6" x2="290" y2="190" stroke="#3498db" stroke-width="4"/>
+<line x1="160.6" y1="60.6" x2="70" y2="190" stroke="#9b59b6" stroke-width="4"/>
+<path d="M 149.1,77 A 20,20 0 0 0 174.7,74.7" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+<path d="M 90,190 A 20,20 0 0 0 81.5,173.6" fill="none" stroke="#3498db" stroke-width="2.5"/>
+<path d="M 275.9,175.9 A 20,20 0 0 0 270,190" fill="none" stroke="#9b59b6" stroke-width="2.5"/>
+<text x="163.7" y="96.5" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">80°</text>
+<text x="101.9" y="173.4" text-anchor="middle" font-size="14" font-weight="bold" fill="#3498db">55°</text>
+<text x="256.7" y="176.2" text-anchor="middle" font-size="14" font-weight="bold" fill="#9b59b6">45°</text>
+<text x="180" y="208" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c">10 см</text>
+<text x="235.2" y="115.4" text-anchor="middle" font-size="13" font-weight="bold" fill="#3498db" transform="rotate(45 235.2 115.4)">8,3 см</text>
+<text x="104.7" y="117.8" text-anchor="middle" font-size="13" font-weight="bold" fill="#9b59b6" transform="rotate(-55 104.7 117.8)">7,2 см</text>
+<text x="160.6" y="46" text-anchor="middle" font-size="16" font-style="italic" fill="#2c3e50">A</text>
+<text x="54" y="207" font-size="16" font-style="italic" fill="#2c3e50">B</text>
+<text x="299" y="207" font-size="16" font-style="italic" fill="#2c3e50">C</text>
+</svg>
+<p><strong>Рис. 1:</strong> стороны и противолежащие им углы окрашены парами: BC = 10 см ↔ ∠A = 80° (красные), AC = 8,3 см ↔ ∠B = 55° (синие), AB = 7,2 см ↔ ∠C = 45° (фиолетовые). Порядок сторон совпадает с порядком противолежащих углов: 10 &gt; 8,3 &gt; 7,2 и 80° &gt; 55° &gt; 45°</p>
+</div>
+
+<div class="diagram">
+<h4>К доказательству теоремы п. 33 (рис. 133 учебника)</h4>
+<svg width="500" height="490" viewBox="35 20 250 245" role="img" aria-label="Треугольник ABC, на стороне AB отложен отрезок AD, равный AC, углы 1 и 2 равны">
+<!-- Рис. 2 (к доказательству теоремы п. 33, рис. 133 учебника). A(130,50), B(70,240), C(255,175). -->
+<!-- AB = 199.2 px, AC = 176.8 px, значит AB > AC. На стороне AB отложен отрезок AD = AC = 176.8 px: -->
+<!-- D = A + (AC/AB)·(B − A) = (76.8, 218.6); AD/AB = 0.887, D между A и B (DB = 22.5 px) ✓. -->
+<!-- Треугольник ADC равнобедренный (AD = AC — засечки). Углы (atan2): угол 1 = ∠ACD при C от 135.00° до 193.74° = 58.74°; -->
+<!-- угол 2 = ∠ADC при D от 13.74° до 72.47° = 58.74° — равны ✓. Луч DC внутри угла ACB (135°–199.36°) ✓. -->
+<!-- Проверка теоремы: ∠C = 64.4° > ∠B = 53.1° против сторон AB = 199.2 > AC = 176.8 ✓. Дуги r = 16 и 14, подписи на биссектрисах при r = 32 и r = 27. -->
+<polygon points="130,50 255,175 76.8,218.6" fill="#eaf2f8" stroke="none"/>
+<polygon points="130,50 70,240 255,175" fill="none" stroke="#2c3e50" stroke-width="3"/>
+<circle cx="76.8" cy="218.6" r="3.5" fill="#2c3e50"/>
+<line x1="195.7" y1="109.3" x2="189.3" y2="115.7" stroke="#2c3e50" stroke-width="2.2"/>
+<line x1="107.7" y1="135.6" x2="99.1" y2="132.9" stroke="#2c3e50" stroke-width="2.2"/>
+<path d="M 243.7,163.7 A 16,16 0 0 0 239.5,178.8" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+<path d="M 90.4,215.2 A 14,14 0 0 0 81,205.2" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+<text x="224.2" y="166.4" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">1</text>
+<text x="96.5" y="200.1" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">2</text>
+<text x="130" y="36" text-anchor="middle" font-size="16" font-style="italic" fill="#2c3e50">A</text>
+<text x="70" y="258" text-anchor="middle" font-size="16" font-style="italic" fill="#2c3e50">B</text>
+<text x="266" y="183" font-size="16" font-style="italic" fill="#2c3e50">C</text>
+<text x="58" y="224" font-size="16" font-style="italic" fill="#2c3e50">D</text>
+</svg>
+<p><strong>Рис. 2:</strong> в треугольнике ABC сторона AB больше AC. На AB отложен отрезок AD = AC (засечки), получился равнобедренный △ADC с равными углами 1 и 2. Луч DC лежит внутри угла C, поэтому ∠C &gt; ∠1; угол 2 — внешний угол △BDC, поэтому ∠2 &gt; ∠B. Итог: ∠C &gt; ∠1 = ∠2 &gt; ∠B</p>
+</div>
+
+<div class="diagram">
+<h4>Следствие 1: гипотенуза больше катета</h4>
+<svg width="480" height="404" viewBox="82 38 195 164" role="img" aria-label="Прямоугольный треугольник: гипотенуза больше каждого катета">
+<!-- Рис. 4. C(120,170) — вершина прямого угла (квадратик s = 11: (120,159)-(131,159)-(131,170)); A(120,70), B(240,170). -->
+<!-- Катеты: AC = 100 px, CB = 120 px; гипотенуза AB = sqrt(120^2 + 100^2) = 156.2 px (красная). -->
+<!-- Углы (atan2): при A 50.19°, при B 39.81°, при C 90.00°; сумма 180.00° ✓. Гипотенуза 156.2 > 120 и > 100 — следствие 1 ✓. -->
+<polygon points="120,70 120,170 240,170" fill="none" stroke="#2c3e50" stroke-width="3"/>
+<line x1="120" y1="70" x2="240" y2="170" stroke="#e74c3c" stroke-width="3.5"/>
+<path d="M 120,159 L 131,159 L 131,170" fill="none" stroke="#e74c3c" stroke-width="2"/>
+<text x="189.6" y="108.5" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c" transform="rotate(39.8 189.6 108.5)">гипотенуза</text>
+<text x="106" y="120" text-anchor="middle" font-size="12" fill="#7f8c8d" transform="rotate(-90 106 120)">катет</text>
+<text x="180" y="190" text-anchor="middle" font-size="12" fill="#7f8c8d">катет</text>
+<text x="120" y="54" text-anchor="middle" font-size="16" font-style="italic" fill="#2c3e50">A</text>
+<text x="252" y="176" font-size="16" font-style="italic" fill="#2c3e50">B</text>
+<text x="104" y="190" font-size="16" font-style="italic" fill="#2c3e50">C</text>
+</svg>
+<p><strong>Рис. 3:</strong> в прямоугольном △ABC угол C прямой (квадратик). Гипотенуза AB — наибольшая сторона: она длиннее каждого из катетов, потому что лежит против прямого угла, а катеты — против острых</p>
+</div>
+
+<div class="diagram">
+<h4>Следствие 2: признак равнобедренного треугольника</h4>
+<svg width="560" height="326" viewBox="42 28 312 186" role="img" aria-label="Треугольник с двумя равными углами при вершинах B и C и равными сторонами AB и AC">
+<!-- Рис. 5 (следствие 2 — признак равнобедренного треугольника). B(80,180), C(280,180), A(180,60). -->
+<!-- AB = AC = sqrt(100^2 + 120^2) = 156.2 px (засечки — вывод). -->
+<!-- Углы (atan2): при B от 0° до 50.19° = 50.19°, при C от 129.81° до 180° = 50.19° — равны ✓ (красные дуги r = 20 — данные). Сумма углов 180.00° ✓. -->
+<polygon points="180,60 80,180 280,180" fill="none" stroke="#2c3e50" stroke-width="3"/>
+<path d="M 100,180 A 20,20 0 0 0 92.8,164.6" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+<path d="M 267.2,164.6 A 20,20 0 0 0 260,180" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+<line x1="133.5" y1="122.9" x2="126.5" y2="117.1" stroke="#2c3e50" stroke-width="2.2"/>
+<line x1="233.5" y1="117.1" x2="226.5" y2="122.9" stroke="#2c3e50" stroke-width="2.2"/>
+<text x="180" y="44" text-anchor="middle" font-size="16" font-style="italic" fill="#2c3e50">A</text>
+<text x="62" y="199" font-size="16" font-style="italic" fill="#2c3e50">B</text>
+<text x="291" y="199" font-size="16" font-style="italic" fill="#2c3e50">C</text>
+</svg>
+<p><strong>Рис. 4:</strong> если два угла равны (∠B = ∠C = 50,2° — красные дуги), то и стороны против них равны: AB = AC (засечки) — треугольник равнобедренный</p>
+</div>
+
+<div class="diagram">
+<h4>К доказательству неравенства треугольника (рис. 134 учебника)</h4>
+<svg width="560" height="314" viewBox="28 28 340 188" role="img" aria-label="Треугольник ABC, на продолжении стороны AC отложен отрезок CD, равный CB, углы 1 и 2 равны">
+<!-- Рис. 3 (к доказательству теоремы п. 34, рис. 134 учебника). A(60,185), C(200,185), B(150,60). -->
+<!-- Продолжение AC за точку C до D(334.6,185): CD = CB = 134.6 px (засечки) → треугольник BCD равнобедренный. -->
+<!-- AD = 274.6 px = AC + CB (140.0 + 134.6) ✓; AB = 154.0 px. -->
+<!-- Углы (atan2): угол 1 = ∠CBD при B от 291.80° до 325.87° = 34.10°; угол 2 = ∠BDC при D от 145.87° до 180° = 34.10° — равны ✓. -->
+<!-- ∠ABD = 91.65° > ∠1 = 34.10°. В треугольнике ABD: против ∠ABD (91.65°) лежит AD = 274.6 px, против ∠2 (34.10°) лежит AB = 154.0 px → AB < AD = AC + CB ✓. Дуги r = 16, подписи на биссектрисах при r = 30. -->
+<polygon points="60,185 150,60 200,185" fill="#eaf2f8" stroke="none"/>
+<polygon points="150,60 200,185 334.6,185" fill="#fef5e7" stroke="none"/>
+<polygon points="60,185 150,60 334.6,185" fill="none" stroke="#2c3e50" stroke-width="3"/>
+<line x1="200" y1="185" x2="150" y2="60" stroke="#2c3e50" stroke-width="3"/>
+<line x1="170.8" y1="124.2" x2="179.2" y2="120.8" stroke="#2c3e50" stroke-width="2.2"/>
+<line x1="267.3" y1="180.5" x2="267.3" y2="189.5" stroke="#2c3e50" stroke-width="2.2"/>
+<path d="M 155.9,74.9 A 16,16 0 0 0 163.2,69" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+<path d="M 321.4,176 A 16,16 0 0 0 318.6,185" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+<text x="168.8" y="83.4" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">1</text>
+<text x="305.9" y="176.2" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">2</text>
+<text x="44" y="202" font-size="16" font-style="italic" fill="#2c3e50">A</text>
+<text x="150" y="44" text-anchor="middle" font-size="16" font-style="italic" fill="#2c3e50">B</text>
+<text x="200" y="204" text-anchor="middle" font-size="16" font-style="italic" fill="#2c3e50">C</text>
+<text x="338" y="200" font-size="16" font-style="italic" fill="#2c3e50">D</text>
+</svg>
+<p><strong>Рис. 5:</strong> на продолжении стороны AC за точку C отложен отрезок CD = CB (засечки), поэтому △BCD равнобедренный и углы 1 и 2 равны (по 34,1°). В △ABD угол ABD больше угла 1, значит и больше угла 2, поэтому сторона AB меньше стороны AD — то есть AB &lt; AC + CB</p>
+</div>
+
+<div class="diagram">
+<h4>Неравенство треугольника на маршруте</h4>
+<svg width="500" height="375" viewBox="38 32 244 183" role="img" aria-label="Прямой путь AB короче объезда через точку C">
+<!-- Рис. 6 (неравенство треугольника на маршруте). A(70,180), B(250,180), C(160,70); масштаб 20 px = 1 см. -->
+<!-- Прямой путь AB = 180.0 px = 9,0 см (зелёный). Объезд A→C→B: AC = 142.1 px, CB = 142.1 px (красная ломаная). -->
+<!-- Проверка: AB = 9,0 см < AC + CB = 7,1 + 7,1 = 14,2 см ✓; также AC = 7,1 < 9,0 + 7,1 и CB = 7,1 < 9,0 + 7,1 ✓. -->
+<polyline points="70,180 160,70 250,180" fill="none" stroke="#e74c3c" stroke-width="3"/>
+<line x1="70" y1="180" x2="250" y2="180" stroke="#27ae60" stroke-width="3.5"/>
+<circle cx="70" cy="180" r="4" fill="#2c3e50"/>
+<circle cx="250" cy="180" r="4" fill="#2c3e50"/>
+<circle cx="160" cy="70" r="4" fill="#2c3e50"/>
+<text x="104.9" y="116.8" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c" transform="rotate(-50.7 104.9 116.8)">7,1 см</text>
+<text x="215.1" y="116.8" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c" transform="rotate(50.7 215.1 116.8)">7,1 см</text>
+<text x="160" y="200" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">9 см</text>
+<text x="54" y="196" font-size="16" font-style="italic" fill="#2c3e50">A</text>
+<text x="260" y="196" font-size="16" font-style="italic" fill="#2c3e50">B</text>
+<text x="160" y="54" text-anchor="middle" font-size="16" font-style="italic" fill="#2c3e50">C</text>
+</svg>
+<p><strong>Рис. 6:</strong> прямой путь AB = 9 см (зелёный) короче объезда A → C → B (красная ломаная): 9 см &lt; 7,1 см + 7,1 см = 14,2 см. Это и есть неравенство треугольника AB &lt; AC + CB</p>
+</div>
+
+</div>
+
+<div class="card">
+<h3>📐 Главные правила</h3>
+<div class="highlight">
+<strong>🌟 Правило 1: ТЕОРЕМА о соотношениях между сторонами и углами треугольника (п. 33)</strong><br>
+<strong>1) Против большей стороны лежит больший угол; 2) обратно, против большего угла лежит большая сторона.</strong> В записи: AB &gt; AC ⇒ ∠C &gt; ∠B, и наоборот: ∠C &gt; ∠B ⇒ AB &gt; AC.<br>
+<em>Что это значит?</em> Порядок сторон треугольника совпадает с порядком противолежащих углов: самая длинная сторона «смотрит» на самый большой угол (рис. 1).<br>
+<em>Почему это верно?</em> Пусть AB &gt; AC. Отложим на стороне AB отрезок AD = AC (рис. 2). Треугольник ADC равнобедренный, значит ∠1 = ∠2 — углы при основании DC. Луч DC лежит внутри угла C, поэтому ∠C &gt; ∠1. Угол 2 — внешний угол треугольника BDC, поэтому ∠2 &gt; ∠B. Итог: ∠C &gt; ∠1 = ∠2 &gt; ∠B. Обратное утверждение доказывается от противного: если бы против большего угла лежала меньшая сторона, то по п. 1 против этой меньшей стороны лежал бы меньший угол — противоречие.
+</div>
+<div class="highlight">
+<strong>🌟 Правило 2: СЛЕДСТВИЕ 1: гипотенуза больше катета</strong><br>
+<strong>В прямоугольном треугольнике гипотенуза больше катета.</strong><br>
+<em>Что это значит?</em> Самая большая сторона прямоугольного треугольника — та, что лежит против прямого угла (рис. 3).<br>
+<em>Почему?</em> Гипотенуза лежит против прямого угла (90°), а катет — против острого. По теореме п. 33 против большего угла лежит большая сторона, а 90° больше любого острого угла.
+</div>
+<div class="highlight">
+<strong>🌟 Правило 3: СЛЕДСТВИЕ 2: признак равнобедренного треугольника</strong><br>
+<strong>Если два угла треугольника равны, то треугольник равнобедренный</strong> — стороны, лежащие против равных углов, равны: ∠B = ∠C ⇒ AB = AC.<br>
+<em>Что это значит?</em> Равнобедренный треугольник теперь можно «опознать» не только по равным сторонам, но и по двум равным углам (рис. 4): это признак — по углам доказываем равенство сторон.<br>
+<em>Почему?</em> От противного: пусть ∠B = ∠C, а AB ≠ AC. Если бы AB &gt; AC, то по теореме п. 33 против большей стороны AB лежал бы больший угол: ∠C &gt; ∠B — противоречие. Случай AB &lt; AC аналогично невозможен. Значит, AB = AC.
+</div>
+<div class="highlight">
+<strong>🌟 Правило 4: ТЕОРЕМА — НЕРАВЕНСТВО ТРЕУГОЛЬНИКА (п. 34)</strong><br>
+<strong>Каждая сторона треугольника меньше суммы двух других сторон:</strong> AB &lt; AC + CB, AC &lt; AB + BC, BC &lt; BA + AC.<br>
+<em>Что это значит?</em> Короткий путь всегда короче: сторона AB меньше «объезда» A → C → B (рис. 6).<br>
+<em>Почему?</em> Отложим на продолжении стороны AC за точку C отрезок CD = CB (рис. 5). Треугольник BCD равнобедренный, поэтому ∠1 = ∠2. В треугольнике ABD угол ABD = ∠ABC + ∠CBD больше угла 1, а значит, больше и угла 2. Против большего угла лежит большая сторона: AB &lt; AD. Но AD = AC + CD = AC + CB, поэтому AB &lt; AC + CB.
+</div>
+<div class="highlight">
+<strong>🌟 Правило 5: Когда три отрезка образуют треугольник</strong><br>
+<strong>Три отрезка образуют треугольник тогда и только тогда, когда каждый из них меньше суммы двух других.</strong> Для любых трёх точек A, B и C, не лежащих на одной прямой, справедливы неравенства: AB &lt; AC + CB, AC &lt; AB + BC, BC &lt; BA + AC.<br>
+<em>Что это значит?</em> Достаточно проверить только наибольший отрезок: если сумма двух меньших строго больше него, остальные два неравенства верны автоматически.<br>
+<em>Пример:</em> отрезки 7, 10 и 5 см: наибольший 10, проверяем 7 + 5 = 12 &gt; 10 ✓ — треугольник существует. Для 1, 2 и 3: 1 + 2 = 3 — сумма равна наибольшей, а должна быть больше — треугольника нет.
+</div>
+
+<div class="warning">
+<strong>⚠️ Важно запомнить:</strong><br>
+• Соотношение «больше — больше» работает в обе стороны: сторона больше ⇒ противолежащий угол больше; угол больше ⇒ противолежащая сторона больше.<br>
+• Если сумма двух сторон равна третьей (a + b = c), треугольника НЕ существует: ломаная «сложится» в отрезок.<br>
+• В прямоугольном треугольнике гипотенуза — наибольшая сторона: она лежит против прямого угла, а катеты — против острых углов.<br>
+• Тупой угол в треугольнике может быть только один, и против него лежит наибольшая сторона.<br>
+• Равные углы ⇔ равные стороны: два равных угла делают треугольник равнобедренным (следствие 2), и наоборот — в равнобедренном треугольнике углы при основании равны.<br>
+• Полезное следствие: каждая сторона треугольника больше разности двух других (например, AB &gt; AC − CB) — пригодится для оценки неизвестной стороны.
+</div>
+</div>
+
+<hr>
+<h2>🛠 Блок 2. Закрепление (20–25 мин)</h2>
+<p>Задания из учебника (стр. 74–75). Решай в тетради: сначала чертёж, потом сравнения и вычисления, и каждый шаг подтверждай правилом. После решения открой подсказку и проверь себя!</p>
+
+<div class="card">
+<h3><span class="badge badge-must">№241</span> Базовый уровень</h3>
+<p><strong>Задание:</strong> Сравните углы треугольника ABC и выясните, может ли быть угол A тупым, если: а) AB &gt; BC &gt; AC; б) AB = AC &lt; BC.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<p><strong>а)</strong> AB &gt; BC &gt; AC.</p>
+<div class="step"><strong>Шаг 1:</strong> Выпишем пары «сторона — угол напротив неё»: AB ↔ ∠C, BC ↔ ∠A, AC ↔ ∠B.</div>
+<div class="step"><strong>Шаг 2:</strong> По теореме о соотношениях между сторонами и углами против большей стороны лежит больший угол. Так как AB &gt; BC &gt; AC, получаем ∠C &gt; ∠A &gt; ∠B.</div>
+<div class="step"><strong>Шаг 3:</strong> Может ли ∠A быть тупым? Тогда ∠C &gt; ∠A — тоже тупой, а двух тупых углов в треугольнике не бывает (их сумма была бы больше 180°). Значит, не может.</div>
+<p><strong>Ответ:</strong> ∠C &gt; ∠A &gt; ∠B; угол A тупым быть не может.</p>
+<p><strong>Проверка (вывод):</strong> наибольшая сторона AB — против неё наибольший угол C; тупой угол был бы только у наибольшей стороны, а это AB, значит тупым может быть лишь ∠C ✓</p>
+<p><strong>б)</strong> AB = AC &lt; BC.</p>
+<div class="step"><strong>Шаг 1:</strong> AB = AC — равные стороны лежат против равных углов: ∠C = ∠B.</div>
+<div class="step"><strong>Шаг 2:</strong> BC — наибольшая сторона, значит противолежащий ей угол A — наибольший: ∠A &gt; ∠B = ∠C.</div>
+<div class="step"><strong>Шаг 3:</strong> Угол A — наибольший, и он может быть тупым: например, ∠A = 100°, ∠B = ∠C = 40° — все условия выполнены, сумма 180°.</div>
+<p><strong>Ответ:</strong> ∠A &gt; ∠B = ∠C; угол A может быть тупым.</p>
+<p><strong>Проверка:</strong> 100° &gt; 40° = 40° и 100° + 40° + 40° = 180° ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-must">№242</span> Базовый уровень</h3>
+<p><strong>Задание:</strong> Сравните стороны треугольника ABC, если: а) ∠A &gt; ∠B &gt; ∠C; б) ∠A &gt; ∠B = ∠C.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Выпишем пары «угол — сторона напротив него»: ∠A ↔ BC, ∠B ↔ AC, ∠C ↔ AB.</div>
+<p><strong>а)</strong> ∠A &gt; ∠B &gt; ∠C.</p>
+<div class="step"><strong>Шаг 2:</strong> По теореме о соотношениях против большего угла лежит большая сторона. Значит, в том же порядке располагаются и стороны: BC &gt; AC &gt; AB.</div>
+<p><strong>Ответ:</strong> BC &gt; AC &gt; AB.</p>
+<p><strong>б)</strong> ∠A &gt; ∠B = ∠C.</p>
+<div class="step"><strong>Шаг 2:</strong> Против наибольшего угла A — наибольшая сторона BC. Равные углы B и C лежат против равных сторон: AC = AB.</div>
+<p><strong>Ответ:</strong> BC &gt; AC = AB.</p>
+<p><strong>Проверка (вывод):</strong> сравнение углов просто «переводится» в сравнение противолежащих сторон в том же порядке ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-aspire">№244</span> Продвинутый уровень</h3>
+<p><strong>Задание:</strong> Докажите, что в треугольнике медиана не меньше высоты, проведённой из той же вершины.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Пусть в треугольнике ABC из вершины A проведены медиана AM (M — середина стороны BC) и высота AH (H — основание перпендикуляра к прямой BC).</div>
+<div class="step"><strong>Шаг 2:</strong> Возможны два случая: точка H совпадает с M или нет. Разберём оба.</div>
+<div class="step"><strong>Шаг 3 (случай H = M):</strong> медиана и высота совпадают, поэтому AM = AH.</div>
+<div class="step"><strong>Шаг 4 (случай H ≠ M):</strong> AH ⊥ BC, значит, треугольник AHM прямоугольный с прямым углом H. В нём AM — гипотенуза, а AH — катет. По следствию 1 гипотенуза больше катета, поэтому AM &gt; AH.</div>
+<div class="step"><strong>Шаг 5:</strong> В обоих случаях AM ≥ AH, что и требовалось доказать.</div>
+<p><strong>Ответ:</strong> медиана не меньше высоты, проведённой из той же вершины (доказано).</p>
+<p><strong>Проверка (вывод):</strong> равенство достигается, только когда H и M совпадают — то есть когда медиана и высота совпадают ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-should">№249</span> Средний уровень</h3>
+<p><strong>Задание:</strong> Отрезок AD — биссектриса треугольника ABC. Через точку D проведена прямая, параллельная AC и пересекающая сторону AB в точке E. Докажите, что треугольник ADE равнобедренный.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> AD — биссектриса угла BAC, поэтому ∠BAD = ∠DAC.</div>
+<div class="step"><strong>Шаг 2:</strong> Прямая DE параллельна AC, а AD — секущая. Углы ADE и DAC — накрест лежащие при параллельных DE и AC, значит, ∠ADE = ∠DAC.</div>
+<div class="step"><strong>Шаг 3:</strong> Точка E лежит на стороне AB, поэтому ∠EAD = ∠BAD. Из шагов 1 и 2 следует: ∠EAD = ∠ADE.</div>
+<div class="step"><strong>Шаг 4:</strong> В треугольнике ADE два угла равны, значит, по следствию 2 (признаку равнобедренного треугольника) стороны, лежащие против них, равны: AE = DE.</div>
+<p><strong>Ответ:</strong> треугольник ADE равнобедренный с боковыми сторонами AE и DE (доказано).</p>
+<p><strong>Проверка (вывод):</strong> использованы оба условия задачи — биссектриса и параллельность прямой AC ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-must">№253</span> Базовый уровень</h3>
+<p><strong>Задание:</strong> Существует ли треугольник со сторонами: а) 1 м, 2 м и 3 м; б) 1,2 дм, 1 дм и 2,4 дм?</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Достаточно проверить наибольшую сторону: если сумма двух меньших строго больше неё, треугольник существует; если равна или меньше — нет.</div>
+<p><strong>а)</strong> стороны 1 м, 2 м, 3 м.</p>
+<div class="step"><strong>Шаг 2:</strong> Наибольшая сторона 3 м. Проверяем: 1 + 2 = 3 — сумма равна наибольшей стороне, а должна быть строго больше. Ломаная из отрезков 1 и 2 «сложится» в отрезок длины 3.</div>
+<p><strong>Ответ:</strong> треугольник не существует.</p>
+<p><strong>б)</strong> стороны 1,2 дм, 1 дм, 2,4 дм.</p>
+<div class="step"><strong>Шаг 2:</strong> Наибольшая сторона 2,4 дм. Проверяем: 1,2 + 1 = 2,2 дм &lt; 2,4 дм — неравенство треугольника нарушено.</div>
+<p><strong>Ответ:</strong> треугольник не существует.</p>
+<p><strong>Проверка (вывод):</strong> в обоих случаях нарушено (или «выродилось» в равенство) неравенство треугольника для наибольшей стороны ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-must">№254</span> Базовый уровень</h3>
+<p><strong>Задание:</strong> В равнобедренном треугольнике одна сторона равна 25 см, а другая равна 10 см. Какая из них является основанием?</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Треугольник равнобедренный, значит, третья сторона равна либо 25 см, либо 10 см. Переберём оба случая.</div>
+<div class="step"><strong>Шаг 2 (случай 1):</strong> основание 25 см, боковые стороны по 10 см. Проверка: 10 + 10 = 20 &lt; 25 — неравенство треугольника нарушено. Такой треугольник не существует.</div>
+<div class="step"><strong>Шаг 3 (случай 2):</strong> основание 10 см, боковые стороны по 25 см. Проверка: 10 + 25 = 35 &gt; 25 ✓ — треугольник существует.</div>
+<p><strong>Ответ:</strong> основание — сторона 10 см; боковые стороны — по 25 см.</p>
+<p><strong>Проверка:</strong> 25 + 25 &gt; 10 ✓ и 10 + 25 &gt; 25 ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-must">№255</span> Базовый уровень</h3>
+<p><strong>Задание:</strong> Найдите сторону равнобедренного треугольника, если две другие стороны равны: а) 7 см и 3 см; б) 8 см и 2 см; в) 10 см и 5 см.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<p><em>Искомая сторона равна одной из двух данных — рассматриваем оба варианта и проверяем неравенство треугольника.</em></p>
+<p><strong>а)</strong> даны 7 см и 3 см.</p>
+<div class="step"><strong>Шаг 1:</strong> если искомая сторона 3 см, то стороны 7, 3, 3: 3 + 3 = 6 &lt; 7 — невозможно.</div>
+<div class="step"><strong>Шаг 2:</strong> если искомая сторона 7 см, то стороны 7, 7, 3: 3 + 7 = 10 &gt; 7 ✓.</div>
+<p><strong>Ответ:</strong> 7 см. <strong>Проверка:</strong> 7 + 7 &gt; 3 ✓ и 7 + 3 &gt; 7 ✓</p>
+<p><strong>б)</strong> даны 8 см и 2 см.</p>
+<div class="step"><strong>Шаг 1:</strong> если искомая сторона 2 см, то стороны 8, 2, 2: 2 + 2 = 4 &lt; 8 — невозможно.</div>
+<div class="step"><strong>Шаг 2:</strong> если искомая сторона 8 см, то стороны 8, 8, 2: 2 + 8 = 10 &gt; 8 ✓.</div>
+<p><strong>Ответ:</strong> 8 см. <strong>Проверка:</strong> 8 + 8 &gt; 2 ✓ и 8 + 2 &gt; 8 ✓</p>
+<p><strong>в)</strong> даны 10 см и 5 см.</p>
+<div class="step"><strong>Шаг 1:</strong> если искомая сторона 5 см, то стороны 10, 5, 5: 5 + 5 = 10 — сумма равна третьей стороне, а должна быть строго больше — невозможно.</div>
+<div class="step"><strong>Шаг 2:</strong> если искомая сторона 10 см, то стороны 10, 10, 5: 5 + 10 = 15 &gt; 10 ✓.</div>
+<p><strong>Ответ:</strong> 10 см. <strong>Проверка:</strong> 10 + 10 &gt; 5 ✓ и 10 + 5 &gt; 10 ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-should">№257</span> Средний уровень</h3>
+<p><strong>Задание:</strong> Два внешних угла треугольника при разных вершинах равны. Периметр треугольника равен 74 см, а одна из сторон равна 16 см. Найдите две другие стороны треугольника.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Внешний угол смежен со «своим» внутренним: внутренний = 180° − внешний. Равные внешние углы дают равные внутренние углы, а против равных углов лежат равные стороны (следствие 2) — треугольник равнобедренный.</div>
+<div class="step"><strong>Шаг 2 (случай 1):</strong> сторона 16 см — основание. Тогда боковые стороны равны: (74 − 16) : 2 = 58 : 2 = 29 см.</div>
+<div class="step"><strong>Шаг 3 (проверка случая 1):</strong> 16 + 29 = 45 &gt; 29 ✓ — треугольник существует.</div>
+<div class="step"><strong>Шаг 4 (случай 2):</strong> сторона 16 см — боковая. Тогда вторая боковая тоже 16 см, а основание: 74 − 16 − 16 = 42 см. Но 16 + 16 = 32 &lt; 42 — неравенство треугольника нарушено, такой треугольник не существует.</div>
+<p><strong>Ответ:</strong> две другие стороны — 29 см и 29 см.</p>
+<p><strong>Проверка:</strong> 16 + 29 + 29 = 74 см ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3><span class="badge badge-aspire">№258</span> Продвинутый уровень</h3>
+<p><strong>Задание:</strong> Периметр равнобедренного треугольника равен 25 см, разность двух сторон равна 4 см, а один из его внешних углов — острый. Найдите стороны треугольника.</p>
+<details>
+<summary>💡 Проверить решение</summary>
+<div class="step"><strong>Шаг 1:</strong> Внешний угол острый, а смежный с ним внутренний угол равен 180° − внешний, то есть тупой.</div>
+<div class="step"><strong>Шаг 2:</strong> В равнобедренном треугольнике тупым может быть только угол при вершине (против основания): если бы тупым был угол при основании, то и второй угол при основании — тоже тупой, а двух тупых углов не бывает. Значит, основание — наибольшая сторона.</div>
+<div class="step"><strong>Шаг 3:</strong> Пусть боковая сторона равна x см. Основание — наибольшая сторона (шаг 2), поэтому именно на него приходится разность сторон: основание равно (x + 4) см. По периметру: x + x + (x + 4) = 25, откуда 3x = 21 и x = 7.</div>
+<div class="step"><strong>Шаг 4:</strong> Боковые стороны по 7 см, основание 7 + 4 = 11 см.</div>
+<p><strong>Ответ:</strong> 7 см, 7 см и 11 см.</p>
+<p><strong>Проверка:</strong> 7 + 7 + 11 = 25 ✓; 11 − 7 = 4 ✓; 7 + 7 = 14 &gt; 11 — треугольник существует ✓; угол при вершине лежит против наибольшей стороны 11, он наибольший и тупой, поэтому смежный с ним внешний угол острый ✓</p>
+</details>
+</div>
+
+<div class="card">
+<h3>💡 Методическая подсказка</h3>
+<ul>
+<li><strong>Сравнение — через противолежащий элемент:</strong> сравнивая стороны, сравнивай противолежащие углы, и наоборот. Выпиши пары «сторона ↔ угол напротив»: AB ↔ ∠C, BC ↔ ∠A, AC ↔ ∠B (№241, №242).</li>
+<li><strong>Существование треугольника проверяй по наибольшей стороне:</strong> сумма двух меньших должна быть строго больше неё; равенство — уже «нет» (№253–№255).</li>
+<li><strong>Равнобедренный треугольник + неизвестная сторона = два случая:</strong> искомая сторона может оказаться боковой или основанием; перебери оба варианта и отбрось невозможный неравенством треугольника (№254, №255, №257, №258).</li>
+<li><strong>Два равных угла — быстрый путь к равным сторонам:</strong> следствие 2 мгновенно даёт равнобедренность. Типовые источники равных углов — накрест лежащие углы при параллельных прямых и биссектриса (№249, №257).</li>
+<li><strong>Сначала чертёж, потом вычисления:</strong> отметь на чертеже большую сторону, большой угол, медиану и высоту — соотношения часто видны до всякого счёта (№244, №258).</li>
+</ul>
+</div>
+
+<div class="lesson-nav">
+<a class="nav-link prev" href="geometriya-7-4-17.html"><span class="nav-arrow">←</span><span class="nav-text"><span class="nav-dir">Предыдущий урок</span><span class="nav-title">§1. Сумма углов треугольника</span></span></a>
+</div>
+
+<footer>
+<p><strong>Геометрия 7 класс • Глава IV, §2 • Страницы 72–75</strong></p>
+<div class="legal">
+© 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+</div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>
