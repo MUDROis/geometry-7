@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прямоугольные треугольники — Геометрия 7 класс</title>
+    <!-- Урок 19 курса. Глава IV «Соотношения между сторонами и углами треугольника», §3. Все координаты SVG вычислены по формулам x = cx + r·cos α, y = cy − r·sin α. Расчёты — в комментариях внутри SVG. -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        /* Шапка урока */
+        .lesson-header {
+            margin-bottom: 25px;
+        }
+
+        .lesson-header h1 {
+            font-size: 2.2em;
+            color: #1a252f;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .lesson-header h1::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: #3498db;
+            margin-top: 12px;
+        }
+
+        .lesson-subtitle {
+            font-size: 1em;
+            color: #5a6c7d;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        /* Приветственный блок */
+        .intro {
+            background: #ffffff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            margin-bottom: 30px;
+            font-size: 1.05em;
+        }
+
+        /* Заголовки секций */
+        .section-title {
+            font-size: 1.6em;
+            color: #2980b9;
+            margin: 35px 0 20px 0;
+            font-weight: 700;
+        }
+
+        /* Карточки */
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .card h3 {
+            color: #16a085;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.25em;
+            font-weight: 600;
+        }
+
+        .card p {
+            margin: 10px 0;
+        }
+
+        /* Таблица терминов */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8f9fa;
+        }
+
+        /* Блок с иллюстрацией */
+        .diagram {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            text-align: center;
+        }
+
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .diagram p {
+            font-size: 0.95em;
+            color: #5a6c7d;
+            margin-top: 12px;
+            margin-bottom: 0;
+        }
+
+        /* Главные правила */
+        .highlight {
+            background-color: #eaf4fb;
+            border-left: 4px solid #3498db;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight h3 {
+            color: #2980b9;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.15em;
+        }
+
+        .highlight p {
+            margin: 8px 0;
+        }
+
+        /* Warning */
+        .warning {
+            background-color: #fef9e7;
+            border-left: 4px solid #f39c12;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning h3 {
+            color: #d68910;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.15em;
+        }
+
+        .warning ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        .warning li {
+            margin: 6px 0;
+        }
+
+        /* Карточки задач */
+        .task-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 22px 25px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 700;
+            margin-right: 10px;
+            color: #ffffff;
+            vertical-align: middle;
+        }
+
+        .badge-must { background-color: #2ecc71; }
+        .badge-should { background-color: #f39c12; }
+        .badge-aspire { background-color: #9b59b6; }
+
+        .task-card strong {
+            color: #1a252f;
+        }
+
+        details {
+            margin-top: 12px;
+            border-top: 1px dashed #dce1e6;
+            padding-top: 12px;
+        }
+
+        summary {
+            cursor: pointer;
+            color: #2980b9;
+            font-weight: 600;
+            outline: none;
+            padding: 5px 0;
+        }
+
+        summary:hover {
+            color: #1a6fa3;
+        }
+
+        .step {
+            margin: 10px 0;
+            padding: 10px 15px;
+            border-left: 3px solid #3498db;
+            background: #f8f9fa;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .step strong {
+            color: #2980b9;
+        }
+
+        /* Подвал */
+        footer {
+            margin-top: 50px;
+            padding: 25px 0;
+            text-align: center;
+            font-size: 0.95em;
+            color: #5a6c7d;
+            border-top: 1px solid #dce1e6;
+        }
+
+        .legal {
+            font-size: 0.85em;
+            color: #95a5a6;
+            margin-top: 12px;
+            line-height: 1.5;
+        }
+
+        .legal a {
+            color: #95a5a6;
+            text-decoration: underline;
+        }
+
+        .legal a:hover {
+            color: #3498db;
+        }
+
+        strong {
+            color: #1a252f;
+        }
+
+        /* Списки */
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        .lesson-nav { display: flex; justify-content: space-between; align-items: stretch; gap: 14px; margin: 30px 0 4px; flex-wrap: wrap; }
+        .lesson-nav .nav-link { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; max-width: 100%; background: #fff; border: 2px solid #d6dce4; border-radius: 12px; color: #2c3e50; text-decoration: none; font-weight: 700; font-size: .95rem; box-shadow: 0 2px 6px rgba(44,62,80,.06); transition: border-color .15s, box-shadow .15s, transform .15s; }
+        .lesson-nav .nav-link:hover { border-color: #3498db; box-shadow: 0 3px 10px rgba(52,152,219,.2); transform: translateY(-1px); }
+        .lesson-nav .nav-arrow { font-size: 1.15rem; color: #3498db; line-height: 1; flex: 0 0 auto; }
+        .lesson-nav .nav-text { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+        .lesson-nav .nav-dir { font-size: .72rem; font-weight: 600; color: #7f8c8d; text-transform: uppercase; letter-spacing: .5px; }
+        .lesson-nav .nav-title { white-space: normal; }
+        .lesson-nav .nav-link.prev { margin-right: auto; }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<meta name="description" content="Прямоугольные треугольники — Геометрия 7 класс">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:title" content="Прямоугольные треугольники — Геометрия 7 класс">
+<meta property="og:description" content="Прямоугольные треугольники — Геометрия 7 класс">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-4-19.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Прямоугольные треугольники — Геометрия 7 класс">
+<meta name="twitter:description" content="Прямоугольные треугольники — Геометрия 7 класс">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-4-19.html">
+</head>
+<body>
+    <div class="container">
+        <div class="lesson-header">
+            <h1>📐 Прямоугольные треугольники</h1>
+            <div class="lesson-subtitle">Геометрия 7 класс • Глава IV, §3 • Страницы 76–81</div>
+        </div>
+
+        <div class="intro">
+            <p>Привет! 👋 Сегодня разберёмся с прямоугольными треугольниками — одной из самых важных фигур в геометрии. Ты узнаешь, почему катет против угла 30° всегда равен половине гипотенузы, как медиана из прямого угла «делит» гипотенузу пополам и что такое расстояние от точки до прямой. Эти факты пригодятся не только в задачах, но и в реальной жизни — например, при расчёте длины стропил для крыши или пандуса. 📏</p>
+        </div>
+
+        <h2 class="section-title">🌽 Блок 1. Изучение (15–20 мин)</h2>
+
+        <div class="card">
+            <h3>🧍 Разминка: рампа и стропила</h3>
+            <p>Представь, что ты строишь рампу для скейтборда. Чтобы она была устойчивой, нужно точно знать длину доски (гипотенузы), если известна высота подъёма (катет) и угол наклона. Или когда архитектор чертит крышу дома: он использует свойства прямоугольного треугольника, чтобы рассчитать длину стропил. Давай научимся делать такие расчёты без ошибок!</p>
+        </div>
+
+        <div class="card">
+            <h3>📋 Ключевые термины</h3>
+            <table>
+                <tr>
+                    <th>Термин</th>
+                    <th>Что это?</th>
+                    <th>Как обозначаем</th>
+                </tr>
+                <tr>
+                    <td><strong>Прямоугольный треугольник</strong></td>
+                    <td>Треугольник, у которого один из углов равен 90°.</td>
+                    <td>△ABC, ∠C = 90°</td>
+                </tr>
+                <tr>
+                    <td><strong>Гипотенуза</strong></td>
+                    <td>Самая длинная сторона, лежащая напротив прямого угла.</td>
+                    <td>AB (если ∠C = 90°)</td>
+                </tr>
+                <tr>
+                    <td><strong>Катет</strong></td>
+                    <td>Боковая сторона, образующая прямой угол.</td>
+                    <td>AC, BC</td>
+                </tr>
+                <tr>
+                    <td><strong>Медиана к гипотенузе</strong></td>
+                    <td>Отрезок из вершины прямого угла к середине гипотенузы.</td>
+                    <td>CM, где M — середина AB</td>
+                </tr>
+                <tr>
+                    <td><strong>Перпендикуляр к прямой</strong></td>
+                    <td>Отрезок, проведённый из точки к прямой под прямым углом.</td>
+                    <td>AH ⊥ a</td>
+                </tr>
+                <tr>
+                    <td><strong>Наклонная</strong></td>
+                    <td>Любой другой отрезок из точки к прямой (не перпендикуляр).</td>
+                    <td>AM</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 1: Треугольник 30-60-90. Классическая ориентация: C внизу слева, AC вертикально вверх, BC горизонтально вправо. -->
+            <!-- Расчёты: C(150,250), A(150,163.4), B(300,250). Масштаб: CA=86.6px, CB=150px, AB=173.2px -->
+            <!-- Угол C=90°, Угол B=30°, Угол A=60° -->
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="150,250 150,163.4 300,250" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                
+                <!-- Прямой угол C (квадратик 12px): стороны идут вверх (270°) и вправо (0°) -->
+                <path d="M 150.0,238.0 L 162.0,238.0 L 162.0,250.0" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                
+                <!-- Угол B (30°): вершина (300,250). Стороны под углами 150° и 180°. Радиус дуги 20px -->
+                <path d="M 282.7,240.0 A 20,20 0 0 0 280.0,250.0" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                <text x="266.2" y="240.9" font-size="14" fill="#e74c3c">30°</text>
+                
+                <!-- Угол A (60°): вершина (150,163.4). Стороны под углами -90° и -30°. Радиус дуги 20px -->
+                <path d="M 150.0,183.4 A 20,20 0 0 0 167.3,173.4" fill="none" stroke="#3498db" stroke-width="2"/>
+                <text x="167.5" y="193.7" font-size="14" fill="#3498db">60°</text>
+                
+                <!-- Подписи вершин -->
+                <text x="135" y="265" font-size="14" fill="#2c3e50">C</text>
+                <text x="135" y="160" font-size="14" fill="#2c3e50">A</text>
+                <text x="310" y="265" font-size="14" fill="#2c3e50">B</text>
+                
+                <!-- Подписи сторон -->
+                <text x="210" y="270" font-size="12" fill="#7f8c8d">катет BC</text>
+                <text x="115" y="210" font-size="12" fill="#7f8c8d">катет AC</text>
+                <text x="235" y="195" font-size="12" fill="#7f8c8d">гипотенуза AB</text>
+            </svg>
+            <p><strong>Рис. 1:</strong> Прямоугольный треугольник с углами 30° и 60°. Катет AC лежит против угла 30° и равен половине гипотенузы AB.</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 2: Медиана к гипотенузе -->
+            <!-- Расчёты: C(200,250), A(200,150), B(320,250), M(260,200) — середина AB -->
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="200,250 200,150 320,250" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="200" y1="250" x2="260" y2="200" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,5"/>
+                <path d="M 200.0,238.0 L 212.0,238.0 L 212.0,250.0" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                <circle cx="260" cy="200" r="3" fill="#e74c3c"/>
+                <text x="205" y="265" font-size="14" fill="#2c3e50">C</text>
+                <text x="205" y="145" font-size="14" fill="#2c3e50">A</text>
+                <text x="325" y="265" font-size="14" fill="#2c3e50">B</text>
+                <text x="265" y="195" font-size="14" fill="#e74c3c">M</text>
+                <text x="140" y="230" font-size="12" fill="#e74c3c">CM = AM = BM</text>
+            </svg>
+            <p><strong>Рис. 2:</strong> Медиана CM, проведённая из вершины прямого угла к гипотенузе, равна половине гипотенузы: CM = AM = BM = AB/2.</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 3: Расстояние от точки до прямой -->
+            <!-- Расчёты: H(100,200), A(100,100), M(250,200). Прямая a горизонтальна -->
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <line x1="50" y1="200" x2="350" y2="200" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="100" y1="200" x2="100" y2="100" stroke="#e74c3c" stroke-width="2"/>
+                <line x1="250" y1="200" x2="100" y2="100" stroke="#3498db" stroke-width="2"/>
+                <path d="M 100.0,188.0 L 112.0,188.0 L 112.0,200.0" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                <text x="85" y="215" font-size="14" fill="#2c3e50">H</text>
+                <text x="85" y="95" font-size="14" fill="#2c3e50">A</text>
+                <text x="255" y="215" font-size="14" fill="#2c3e50">M</text>
+                <text x="360" y="205" font-size="14" fill="#2c3e50">a</text>
+                <text x="105" y="150" font-size="12" fill="#e74c3c">перпендикуляр AH</text>
+                <text x="185" y="145" font-size="12" fill="#3498db">наклонная AM</text>
+            </svg>
+            <p><strong>Рис. 3:</strong> Расстояние от точки A до прямой a — это длина перпендикуляра AH. Любая наклонная AM длиннее перпендикуляра.</p>
+        </div>
+
+        <div class="highlight">
+            <h3>Главное правило №1: Катет против 30°</h3>
+            <p><strong>Формулировка:</strong> В прямоугольном треугольнике катет, лежащий против угла 30°, равен половине гипотенузы.</p>
+            <p><strong>Что это значит:</strong> Если ты видишь угол 30° и знаешь длину гипотенузы, просто раздели её на два, чтобы найти короткий катет. И наоборот: умножь катет на два, чтобы найти гипотенузу.</p>
+            <p><strong>Почему так:</strong> Треугольник можно «дополнить» до равностороннего, где все стороны равны, а высота делит основание пополам.</p>
+        </div>
+
+        <div class="highlight">
+            <h3>Главное правило №2: Медиана к гипотенузе</h3>
+            <p><strong>Формулировка:</strong> Медиана, проведённая из вершины прямого угла к гипотенузе, равна половине гипотенузы.</p>
+            <p><strong>Что это значит:</strong> Точка M на середине гипотенузы находится на одинаковом расстоянии от всех трёх вершин треугольника (A, B и C).</p>
+            <p><strong>Вывод:</strong> CM = AM = BM = AB / 2.</p>
+        </div>
+
+        <div class="highlight">
+            <h3>Главное правило №3: Обратное утверждение</h3>
+            <p><strong>Формулировка:</strong> Если катет прямоугольного треугольника равен половине гипотенузы, то угол, лежащий против этого катета, равен 30°.</p>
+            <p><strong>Что это значит:</strong> Это «обратная» версия правила №1 — работает в обе стороны.</p>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ Важно запомнить</h3>
+            <ul>
+                <li>Сумма двух острых углов прямоугольного треугольника всегда равна 90°.</li>
+                <li>Если сумма двух углов треугольника равна 90°, то третий угол — прямой (треугольник прямоугольный).</li>
+                <li>Перпендикуляр всегда короче любой наклонной, проведённой из той же точки к той же прямой.</li>
+                <li>Признаки равенства прямоугольных треугольников работают быстрее обычных, так как один угол уже известен (90°).</li>
+                <li>Если в треугольнике медиана равна половине стороны, к которой она проведена, то треугольник прямоугольный.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">📝 Блок 2. Закрепление (20–25 мин)</h2>
+
+        <div class="card">
+            <p>Задания из учебника (стр. 81). Решай в тетради, пользуясь правилами выше. Открой подсказку, чтобы проверить себя. 🔍</p>
+        </div>
+
+        <div class="task-card">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 259.</strong> Найдите углы равнобедренного прямоугольного треугольника.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Угол C = 90° (так как треугольник прямоугольный).</div>
+                <div class="step"><strong>Шаг 2.</strong> Так как треугольник равнобедренный, углы при основании A и B равны.</div>
+                <div class="step"><strong>Шаг 3.</strong> Сумма острых углов 90°. Значит, ∠A + ∠B = 90°.</div>
+                <div class="step"><strong>Шаг 4.</strong> 2∠A = 90° ⇒ ∠A = 45°. Следовательно, ∠B = 45°.</div>
+                <p><strong>Ответ:</strong> 90°, 45°, 45°.</p>
+            </details>
+        </div>
+
+        <div class="task-card">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 261.</strong> Один из углов прямоугольного треугольника равен 60°, а сумма гипотенузы и меньшего из катетов равна 26,4 см. Найдите гипотенузу.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Если один острый угол 60°, то второй острый угол равен 90° − 60° = 30°.</div>
+                <div class="step"><strong>Шаг 2.</strong> Меньший катет лежит против меньшего угла (30°).</div>
+                <div class="step"><strong>Шаг 3.</strong> По свойству катета против 30°: катет = гипотенуза / 2. Обозначим гипотенузу за c, тогда катет a = c/2.</div>
+                <div class="step"><strong>Шаг 4.</strong> Сумма равна 26,4: c + c/2 = 26,4.</div>
+                <div class="step"><strong>Шаг 5.</strong> 1,5c = 26,4 ⇒ c = 26,4 / 1,5 = 17,6 см.</div>
+                <p><strong>Ответ:</strong> 17,6 см.</p>
+            </details>
+        </div>
+
+        <div class="task-card">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 262.</strong> В прямоугольном треугольнике ABC с прямым углом C внешний угол при вершине A равен 120°, AC + AB = 18 см. Найдите AC и AB.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Внутренний угол A смежен с внешним: ∠A = 180° − 120° = 60°.</div>
+                <div class="step"><strong>Шаг 2.</strong> Второй острый угол B = 90° − 60° = 30°.</div>
+                <div class="step"><strong>Шаг 3.</strong> Катет AC лежит против угла B (30°), значит AC = AB / 2.</div>
+                <div class="step"><strong>Шаг 4.</strong> Подставим в сумму: AC + AB = 18 ⇒ AB/2 + AB = 18 ⇒ 1,5·AB = 18.</div>
+                <div class="step"><strong>Шаг 5.</strong> AB = 12 см. Тогда AC = 12 / 2 = 6 см.</div>
+                <p><strong>Ответ:</strong> AB = 12 см, AC = 6 см.</p>
+            </details>
+        </div>
+
+        <div class="task-card">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 263.</strong> На середине стороны BC равностороннего треугольника ABC проведена прямая, перпендикулярная стороне AC и пересекающая её в точке M. Найдите AM, если AB = 12 см.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Треугольник ABC равносторонний, значит все углы по 60°, а стороны по 12 см.</div>
+                <div class="step"><strong>Шаг 2.</strong> D — середина BC, значит DC = 12 : 2 = 6 см.</div>
+                <div class="step"><strong>Шаг 3.</strong> Рассмотрим треугольник DMC. Угол M = 90° (по условию), угол C = 60° (угол равностороннего треугольника).</div>
+                <div class="step"><strong>Шаг 4.</strong> Значит, угол MDC = 30°.</div>
+                <div class="step"><strong>Шаг 5.</strong> В прямоугольном △DMC катет CM лежит против угла 30°, значит он равен половине гипотенузы: CM = DC : 2 = 6 : 2 = 3 см.</div>
+                <div class="step"><strong>Шаг 6.</strong> AM = AC − CM = 12 − 3 = 9 см.</div>
+                <p><strong>Ответ:</strong> 9 см.</p>
+            </details>
+        </div>
+
+        <div class="task-card">
+            <span class="badge badge-aspire">Продвинутый уровень</span>
+            <strong>Задача 264.</strong> Угол, противолежащий основанию равнобедренного треугольника, равен 120°. Высота, проведённая к боковой стороне, равна 9 см. Найдите основание треугольника.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть △ABC — равнобедренный (AB = AC), ∠A = 120°. Основание BC.</div>
+                <div class="step"><strong>Шаг 2.</strong> Углы при основании B и C равны: (180° − 120°) : 2 = 30°.</div>
+                <div class="step"><strong>Шаг 3.</strong> BD — высота к боковой стороне AC. Так как ∠A = 120° тупой, высота падает на продолжение стороны AC. В прямоугольном △ABD: ∠D = 90°, ∠DAB = 60° (смежный с ∠BAC = 120°), значит ∠ABD = 30°.</div>
+                <div class="step"><strong>Шаг 4.</strong> В △ABD катет AD лежит против угла 30°, значит AD = AB : 2.</div>
+                <div class="step"><strong>Шаг 5.</strong> Катет BD лежит против угла 60°, значит он в √3 раз больше катета AD: BD = AD · √3 = 9, откуда AD = 9 : √3 = 3√3 см, а AB = 2 · AD = 6√3 см.</div>
+                <div class="step"><strong>Шаг 6.</strong> Проведём высоту AH к основанию BC. В равнобедренном треугольнике она одновременно медиана, значит BH = HC = BC : 2.</div>
+                <div class="step"><strong>Шаг 7.</strong> В △ABH: ∠AHB = 90°, ∠ABH = 30°, значит ∠BAH = 60°. Катет AH лежит против угла 30°: AH = AB : 2 = 3√3 см. Катет BH лежит против угла 60°: BH = AH · √3 = 3√3 · √3 = 9 см.</div>
+                <div class="step"><strong>Шаг 8.</strong> BC = 2 · BH = 2 · 9 = 18 см.</div>
+                <p><strong>Ответ:</strong> 18 см.</p>
+            </details>
+        </div>
+
+        <div class="task-card">
+            <span class="badge badge-aspire">Продвинутый уровень</span>
+            <strong>Задача 268.</strong> Высоты, проведённые к боковым сторонам AB и AC остроугольного равнобедренного треугольника ABC, пересекаются в точке M. Найдите углы треугольника, если ∠BMC = 140°.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть высоты из B и C пересекаются в M. Используем свойство угла между высотами: для остроугольного треугольника ∠BMC = 180° − ∠A.</div>
+                <div class="step"><strong>Шаг 2.</strong> 140° = 180° − ∠A ⇒ ∠A = 40°.</div>
+                <div class="step"><strong>Шаг 3.</strong> Треугольник равнобедренный с основанием BC (так как высоты проведены к боковым сторонам AB и AC). Значит, ∠B = ∠C.</div>
+                <div class="step"><strong>Шаг 4.</strong> ∠B + ∠C = 180° − 40° = 140° ⇒ ∠B = ∠C = 70°.</div>
+                <p><strong>Ответ:</strong> 40°, 70°, 70°.</p>
+            </details>
+        </div>
+
+        <div class="card">
+            <h3>💡 Методическая подсказка</h3>
+            <ul>
+                <li>Всегда начинай с чертежа. Отметь прямой угол квадратиком.</li>
+                <li>Ищи углы 30° и 60°. Если они есть, вспоминай про «половину гипотенузы».</li>
+                <li>Для задач на расстояние помни: перпендикуляр — это кратчайший путь. Наклонная всегда длиннее.</li>
+                <li>Если дана медиана к гипотенузе, сразу рисуй окружность с центром в середине гипотенузы — все вершины будут на ней.</li>
+                <li>При доказательстве равенства прямоугольных треугольников достаточно двух элементов (вместо трёх у обычных треугольников), так как прямой угол уже известен.</li>
+            </ul>
+        </div>
+
+        <div class="lesson-nav">
+            <a class="nav-link prev" href="geometriya-7-4-18.html"><span class="nav-arrow">←</span><span class="nav-text"><span class="nav-dir">Предыдущий урок</span><span class="nav-title">§2. Соотношения между сторонами и углами треугольника</span></span></a>
+        </div>
+
+        <footer>
+            <p>Учебник: Геометрия, 7 класс, Л. С. Атанасян и др. | Пункт: §3. Прямоугольные треугольники | Страницы: 76–81</p>
+            <div class="legal">
+                © 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+                Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+            </div>
+        </footer>
+    </div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>
