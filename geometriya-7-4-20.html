@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Построение треугольника по трём элементам — Геометрия 7 класс</title>
+    <!-- Урок 20 курса. Глава IV «Соотношения между сторонами и углами треугольника», §4. Все координаты SVG вычислены по формулам x = cx + r·cos α, y = cy − r·sin α. Расчёты — в комментариях внутри SVG. -->
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 0 0 12px 12px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; font-size: 1.8em; }
+        .subtitle { font-size: 1.1em; opacity: 0.9; margin-top: 8px; }
+        .greeting {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-top: 0; }
+        h3 { color: var(--accent); margin-top: 20px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th { background-color: #f1f3f5; color: var(--primary); }
+        .highlight {
+            background-color: #e8f8f5;
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fef9e7;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .diagram {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+            color: white;
+            margin-right: 8px;
+        }
+        .badge-must { background-color: #2ecc71; }
+        .badge-should { background-color: #f39c12; }
+        .badge-aspire { background-color: #9b59b6; }
+        details {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-top: 10px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--accent);
+            outline: none;
+        }
+        .step {
+            margin: 10px 0;
+            padding-left: 15px;
+            border-left: 2px solid var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+        footer .legal {
+            font-size: 0.85em;
+            color: #95a5a6;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<meta name="description" content="Построение треугольника по трём элементам — Геометрия 7 класс">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:title" content="Построение треугольника по трём элементам — Геометрия 7 класс">
+<meta property="og:description" content="Построение треугольника по трём элементам — Геометрия 7 класс">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-4-20.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Построение треугольника по трём элементам — Геометрия 7 класс">
+<meta name="twitter:description" content="Построение треугольника по трём элементам — Геометрия 7 класс">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-4-20.html">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>📐 Построение треугольника по трём элементам</h1>
+        <div class="subtitle">Геометрия 7 класс • Глава IV, §4 • Страницы 81–88</div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="greeting">
+        <p>Привет! Сегодня мы научимся быть настоящими инженерами-конструкторами. Ты узнаешь, как с помощью только циркуля и линейки без делений «собрать» треугольник, если известны всего три его элемента. Это фундамент черчения и архитектуры!</p>
+    </div>
+
+    <!-- БЛОК 1. ИЗУЧЕНИЕ -->
+    <div class="card">
+        <h2>🔍 Блок 1. Изучение нового материала</h2>
+        
+        <h3>🛠️ Разминка</h3>
+        <p>Представь, что ты собираешь деревянную раму для картины. У тебя есть три планки определённой длины. Сможешь ли ты собрать из них треугольную раму? А если одна планка длиннее двух других вместе взятых? Оказывается, не из любых трёх отрезков можно построить треугольник. Сегодня мы выведем строгие правила для таких построений.</p>
+
+        <h3>📚 Ключевые термины</h3>
+        <table>
+            <tr>
+                <th>Термин</th>
+                <th>Что это?</th>
+                <th>Как обозначаем</th>
+            </tr>
+            <tr>
+                <td>Задача на построение</td>
+                <td>Задача, в которой требуется указать алгоритм получения фигуры с помощью циркуля и линейки без масштабных делений.</td>
+                <td>«Построить ∆ABC так, чтобы...»</td>
+            </tr>
+            <tr>
+                <td>Циркуль</td>
+                <td>Инструмент для откладывания отрезков заданной длины и построения окружностей.</td>
+                <td>Раствор циркуля = длина отрезка</td>
+            </tr>
+            <tr>
+                <td>Линейка (без делений)</td>
+                <td>Инструмент исключительно для проведения прямых линий, лучей и отрезков по уже существующим точкам.</td>
+                <td>Прямая a, луч AB</td>
+            </tr>
+            <tr>
+                <td>Неравенство треугольника</td>
+                <td>Каждая сторона треугольника строго меньше суммы двух других его сторон.</td>
+                <td>AB < AC + BC</td>
+            </tr>
+            <tr>
+                <td>Базовая задача на построение</td>
+                <td>Простейшее построение (отрезок или угол, равные данным, середина отрезка, перпендикуляр), которое выполняют без дополнительных пояснений.</td>
+                <td>«Отложим отрезок AB», «построим угол»</td>
+            </tr>
+            <tr>
+                <td>Метод геометрических мест точек</td>
+                <td>Третью вершину ищут как точку пересечения двух линий, каждая из которых описывает одно условие задачи.</td>
+                <td>Пересечение окружностей на Рис. 2</td>
+            </tr>
+        </table>
+
+        <h3>📐 Графические иллюстрации</h3>
+        
+        <div class="diagram">
+            <!-- SVG 1: Построение по двум сторонам и углу между ними (SAS) -->
+            <!-- Расчёт: Угол A = 60°. A=(100, 160). Сторона AB=120px по 0° -> B=(220, 160). Сторона AC=100px по 60° -> C=(100+100*0.5, 160-100*0.866) = (150, 73.4). Дуга угла r=24. Начало=(124, 160), конец=(100+24*0.5, 160-24*0.866)=(112, 139.2). Подпись на биссектрисе 30°, r=38: (100+38*0.866, 160-38*0.5) = (133, 141). -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <polygon points="100,160 220,160 150,73.4" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M 124,160 A 24,24 0 0 0 112,139.2" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                <text x="85" y="180" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                <text x="225" y="180" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                <text x="145" y="65" font-size="16" fill="#2c3e50" font-family="sans-serif">C</text>
+                <text x="133" y="141" font-size="14" fill="#e74c3c" font-family="sans-serif">60°</text>
+            </svg>
+            <p><strong>Рис. 1:</strong> Построение по двум сторонам и углу между ними. Сначала строим угол, затем циркулем откладываем длины сторон на его лучах.</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 2: Построение по трём сторонам (SSS) -->
+            <!-- Расчёт: AB=120, AC=90, BC=100. A=(80, 160), B=(200, 160). cos(A) = (120²+90²-100²)/(2*120*90) ≈ 0.5787. sin(A) ≈ 0.8155. C=(80+90*0.5787, 160-90*0.8155) = (132.1, 86.6). Окружности: центр A, r=90; центр B, r=100. -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <circle cx="80" cy="160" r="90" fill="none" stroke="#3498db" stroke-width="1.5" stroke-dasharray="5,5"/>
+                <circle cx="200" cy="160" r="100" fill="none" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="5,5"/>
+                <polygon points="80,160 200,160 132.1,86.6" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linejoin="round"/>
+                <text x="65" y="185" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                <text x="205" y="185" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                <text x="127" y="75" font-size="16" fill="#2c3e50" font-family="sans-serif">C</text>
+            </svg>
+            <p><strong>Рис. 2:</strong> Построение по трём сторонам. Вершина C находится в точке пересечения двух окружностей с центрами в A и B и радиусами, равными длинам сторон AC и BC.</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 3: Построение по стороне и двум прилежащим углам (ASA) -->
+            <!-- Расчёт: AB=120, ∠A=45°, ∠B=60°. A=(80, 160), B=(200, 160). C=(156.1, 84.0). Дуга A: r=24, от 0° до 45° (конец 97.0, 143.0). Подпись A: (115, 145). Дуга B: r=24, от 180° до 120° (конец 188.0, 139.2). Подпись B: (167, 141). -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <polygon points="80,160 200,160 156.1,84.0" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M 104,160 A 24,24 0 0 0 97.0,143.0" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                <path d="M 176,160 A 24,24 0 0 0 188.0,139.2" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                <text x="65" y="185" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                <text x="205" y="185" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                <text x="151" y="75" font-size="16" fill="#2c3e50" font-family="sans-serif">C</text>
+                <text x="115" y="145" font-size="14" fill="#e74c3c" font-family="sans-serif">45°</text>
+                <text x="167" y="141" font-size="14" fill="#e74c3c" font-family="sans-serif">60°</text>
+            </svg>
+            <p><strong>Рис. 3:</strong> Построение по стороне и двум прилежащим углам. Из концов отрезка проводим лучи под заданными углами; их пересечение даёт третью вершину.</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 4: Невозможность построения (нарушение неравенства треугольника) -->
+            <!-- Расчёт: AB=120, AC=40, BC=50. A=(80, 160), B=(200, 160). Окружности r=40 и r=50 не пересекаются (40+50 < 120). Зазор между x=120 и x=150. -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <line x1="80" y1="160" x2="200" y2="160" stroke="#2c3e50" stroke-width="2"/>
+                <circle cx="80" cy="160" r="40" fill="none" stroke="#3498db" stroke-width="1.5" stroke-dasharray="5,5"/>
+                <circle cx="200" cy="160" r="50" fill="none" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="5,5"/>
+                <path d="M 120,145 L 120,135 L 150,135 L 150,145" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+                <text x="135" y="125" font-size="14" fill="#e74c3c" font-family="sans-serif" text-anchor="middle">Зазор 30</text>
+                <text x="140" y="195" font-size="14" fill="#2c3e50" font-family="sans-serif" text-anchor="middle">40 + 50 < 120</text>
+                <text x="65" y="185" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                <text x="205" y="185" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+            </svg>
+            <p><strong>Рис. 4:</strong> Случай невозможности построения. Если сумма двух данных отрезков меньше третьего, окружности не пересекутся, и задача не имеет решения.</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 5: Построение высоты (перпендикуляра) -->
+            <!-- Расчёт: Прямая a на y=160 (от x=50 до 250). Точка C=(140, 80). Высота CH=80. H=(140, 160). Прямой угол: квадрат 12x12px от (140,148) до (152,160). -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <line x1="50" y1="160" x2="250" y2="160" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="140" y1="80" x2="140" y2="160" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4,4"/>
+                <path d="M 140,148 L 152,148 L 152,160" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+                <circle cx="140" cy="80" r="3" fill="#2c3e50"/>
+                <circle cx="140" cy="160" r="3" fill="#2c3e50"/>
+                <text x="125" y="70" font-size="16" fill="#2c3e50" font-family="sans-serif">C</text>
+                <text x="125" y="185" font-size="16" fill="#2c3e50" font-family="sans-serif">H</text>
+                <text x="260" y="165" font-size="16" fill="#2c3e50" font-family="sans-serif">a</text>
+            </svg>
+            <p><strong>Рис. 5:</strong> Построение перпендикуляра (высоты). Используется при построении треугольника по стороне, углу и высоте.</p>
+        </div>
+
+        <h3>💡 Главные правила</h3>
+        <div class="highlight">
+            <strong>Правило 1: Алгоритм построения.</strong> Любое построение начинается с анализа: какие элементы даны и в каком порядке их удобнее всего откладывать. Обычно сначала строят «базовый» элемент (сторону или угол), а затем «наращивают» на него остальные.
+        </div>
+        <div class="highlight">
+            <strong>Правило 2: Условие существования.</strong> Построить треугольник по трём сторонам можно <em>только</em> тогда, когда каждая из данных сторон меньше суммы двух других. Если это условие нарушено, окружности просто не пересекутся.
+        </div>
+        <div class="highlight">
+            <strong>Правило 3: Единственность.</strong> Если построение возможно, то все треугольники, построенные по одним и тем же трём элементам, равны друг другу. Поэтому говорят, что задача имеет <em>единственное решение</em> (с точностью до равенства фигур).
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Важно запомнить:</strong>
+            <ul>
+                <li>Линейка в задачах на построение используется <strong>только</strong> для проведения прямых, а не для измерения длин!</li>
+                <li>Для измерения и откладывания длин используется <strong>только</strong> циркуль.</li>
+                <li>Если в задаче даны три угла, построить единственный треугольник <strong>нельзя</strong>, так как не задан масштаб (длина хотя бы одной стороны).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- БЛОК 2. ЗАКРЕПЛЕНИЕ -->
+    <div class="card">
+        <h2>✏️ Блок 2. Закрепление</h2>
+        <p>Задания из учебника (стр. 84–88). Решай в тетради, следуя алгоритмам, затем открой подсказку и проверь себя.</p>
+
+        <div class="card" style="border-left: 4px solid var(--success); margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 292.</strong> Даны прямая \(a\) и отрезок \(AB\). Постройте прямую \(p\), параллельную прямой \(a\) так, чтобы расстояние между прямыми \(a\) и \(p\) было равно \(AB\).
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Отметим на прямой \(a\) произвольную точку \(C\).</div>
+                <div class="step"><strong>Шаг 2.</strong> Построим прямую \(b\), перпендикулярную прямой \(a\) и проходящую через точку \(C\) (базовое построение).</div>
+                <div class="step"><strong>Шаг 3.</strong> На прямой \(b\) от точки \(C\) отложим циркулем отрезок \(CD\), равный данному отрезку \(AB\).</div>
+                <div class="step"><strong>Шаг 4.</strong> Через точку \(D\) проведём прямую \(p\), перпендикулярную прямой \(b\).</div>
+                <div class="step"><strong>Проверка:</strong> По свойству перпендикулярных прямых, прямая \(p\) будет параллельна прямой \(a\), а расстояние между ними равно длине перпендикуляра \(CD\), который по построению равен \(AB\).</div>
+                <p><strong>Ответ:</strong> Прямая \(p\) построена.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #2ecc71; margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 298. а)</strong> Постройте прямоугольный треугольник по двум катетам.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Построим прямой угол с вершиной C.</div>
+                <div class="step"><strong>Шаг 2.</strong> На его сторонах отложим отрезки CA и CB, равные данным катетам.</div>
+                <div class="step"><strong>Шаг 3.</strong> Соединим точки A и B. ∆ABC — искомый.</div>
+                <p><strong>Ответ:</strong> Треугольник построен.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #2ecc71; margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 298. б)</strong> Постройте прямоугольный треугольник по катету и прилежащему к нему острому углу.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Построим прямой угол с вершиной C.</div>
+                <div class="step"><strong>Шаг 2.</strong> На одной стороне отложим отрезок CA, равный данному катету.</div>
+                <div class="step"><strong>Шаг 3.</strong> В точке A построим угол, равный данному острому углу, так, чтобы его вторая сторона пересекла вторую сторону прямого угла в точке B. ∆ABC — искомый.</div>
+                <p><strong>Ответ:</strong> Треугольник построен.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--warning); margin-bottom: 15px;">
+            <span class="badge badge-aspire">Продвинутый уровень</span>
+            <strong>Задача 300.</strong> Даны отрезки \(P_1Q_1\), \(P_2Q_2\) и \(PQ\). Постройте треугольник \(ABC\) так, чтобы \(AB = P_1Q_1\), \(BC = P_2Q_2\), \(CA = 2PQ\). Всегда ли задача имеет решение?
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> С помощью циркуля построим отрезок, равный \(2PQ\) (отложим отрезок \(PQ\) дважды на одном луче).</div>
+                <div class="step"><strong>Шаг 2.</strong> Построим треугольник по трём сторонам: \(AB = P_1Q_1\), \(BC = P_2Q_2\), \(CA = 2PQ\) (алгоритм из Рис. 2).</div>
+                <div class="step"><strong>Анализ существования:</strong> Задача имеет решение <strong>не всегда</strong>. Оно существует только тогда, когда выполнены три неравенства треугольника: <br>1) \(P_1Q_1 < P_2Q_2 + 2PQ\) <br>2) \(P_2Q_2 < P_1Q_1 + 2PQ\) <br>3) \(2PQ < P_1Q_1 + P_2Q_2\).</div>
+                <div class="step"><strong>Вывод:</strong> Если хотя бы одно из этих условий нарушено (например, один отрезок больше или равен сумме двух других), построить треугольник невозможно (см. Рис. 4).</div>
+                <p><strong>Ответ:</strong> Построение возможно только при выполнении неравенства треугольника для данных длин.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 301.</strong> Постройте треугольник по стороне, прилежащему к ней углу и высоте, проведённой к этой стороне.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Построим угол, равный данному углу. Пусть его вершина \(A\), а стороны — лучи \(AX\) и \(AY\).</div>
+                <div class="step"><strong>Шаг 2.</strong> На луче \(AX\) отложим отрезок \(AB\), равный данной стороне.</div>
+                <div class="step"><strong>Шаг 3.</strong> Построим прямую \(p\), параллельную прямой \(AB\) и находящуюся от неё на расстоянии, равном данной высоте \(h\) (используем алгоритм из задачи 292).</div>
+                <div class="step"><strong>Шаг 4.</strong> Точка пересечения прямой \(p\) с лучом \(AY\) будет вершиной \(C\) искомого треугольника.</div>
+                <div class="step"><strong>Шаг 5.</strong> Соединим точки \(B\) и \(C\).</div>
+                <div class="step"><strong>Проверка:</strong> В ∆ABC сторона \(AB\) равна данной, ∠A равен данному, а расстояние от \(C\) до \(AB\) (высота) равно \(h\) по свойству параллельных прямых.</div>
+                <p><strong>Ответ:</strong> ∆ABC построен.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 302.</strong> Постройте треугольник по двум сторонам и высоте, проведённой к одной из этих сторон.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Построим прямую и отметим на ней точку \(H\).</div>
+                <div class="step"><strong>Шаг 2.</strong> Восстановим перпендикуляр к этой прямой в точке \(H\) и отложим на нём отрезок \(CH\), равный данной высоте.</div>
+                <div class="step"><strong>Шаг 3.</strong> Из точки \(C\) как из центра опишем две окружности: одну радиусом, равным первой данной стороне, другую — второй данной стороне.</div>
+                <div class="step"><strong>Шаг 4.</strong> Точки пересечения этих окружностей с исходной прямой дадут вершины \(A\) и \(B\).</div>
+                <div class="step"><strong>Проверка:</strong> Возможны случаи, когда радиус окружности меньше высоты \(h\). В этом случае окружность не пересекает прямую, и задача не имеет решения.</div>
+                <p><strong>Ответ:</strong> ∆ABC построен (при условии, что каждая из сторон не меньше высоты).</p>
+            </details>
+        </div><div class="highlight" style="margin-top: 30px;">
+            <h3>🧠 Методическая подсказка</h3>
+            <p>При решении задач на построение треугольника по нестандартным наборам элементов (например, сторона, угол и высота) используй метод <strong>«геометрических мест точек»</strong>:</p>
+            <ol>
+                <li>Сначала построй элемент, который фиксирует форму или положение (например, сторону и угол).</li>
+                <li>Затем найди геометрическое место точек для третьей вершины (например, прямая, параллельная основанию на расстоянии высоты, или окружность заданного радиуса).</li>
+                <li>Третья вершина — это точка пересечения этих условий.</li>
+                <li><strong>Всегда</strong> проверяй, возможно ли пересечение (не меньше ли высота боковой стороны?).</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="lesson-nav">
+<a class="nav-link prev" href="geometriya-7-4-19.html"><span class="nav-arrow">←</span><span class="nav-text"><span class="nav-dir">Предыдущий урок</span><span class="nav-title">§3. Прямоугольные треугольники</span></span></a>
+</div>
+
+<footer>
+    <div class="container">
+        <p>Учебник: Л. С. Атанасян и др. «Геометрия, 7–9», Глава IV, §4, стр. 81–88.</p>
+        <div class="legal">
+            © 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+            Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+        </div>
+    </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>
