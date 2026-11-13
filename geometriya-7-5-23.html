@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Геометрические места точек — Геометрия 7 класс</title>
+    <!-- Урок 23 курса. Глава V «Геометрические места точек. Симметричные фигуры», §1. Все координаты SVG вычислены по формулам x = cx + r·cos α, y = cy − r·sin α. Расчёты — в комментариях внутри SVG. -->
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 0 0 12px 12px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; font-size: 1.8em; }
+        .subtitle { font-size: 1.1em; opacity: 0.9; margin-top: 8px; }
+        .greeting {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-top: 0; }
+        h3 { color: var(--accent); margin-top: 20px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th { background-color: #f1f3f5; color: var(--primary); }
+        .highlight {
+            background-color: #e8f8f5;
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fef9e7;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .diagram {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+            color: white;
+            margin-right: 8px;
+        }
+        .badge-must { background-color: #2ecc71; }
+        .badge-should { background-color: #f39c12; }
+        .badge-aspire { background-color: #9b59b6; }
+        details {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-top: 10px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary);
+            outline: none;
+        }
+        .step {
+            margin: 10px 0;
+            padding-left: 15px;
+            border-left: 2px solid var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+        footer .legal {
+            font-size: 0.85em;
+            color: #95a5a6;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<meta name="description" content="Геометрические места точек — Геометрия 7 класс">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:title" content="Геометрические места точек — Геометрия 7 класс">
+<meta property="og:description" content="Геометрические места точек — Геометрия 7 класс">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-5-23.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Геометрические места точек — Геометрия 7 класс">
+<meta name="twitter:description" content="Геометрические места точек — Геометрия 7 класс">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-5-23.html">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>📍 Геометрические места точек</h1>
+        <div class="subtitle">Геометрия 7 класс • Глава V, §1 • Страницы 92–96</div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="greeting">
+        <p>Привет! Сегодня мы открываем новую, очень красивую главу. Ты узнаешь, как находить «секретные тропы» на плоскости — линии, которые состоят из точек, обладающих одним и тем же свойством. Это фундамент для сложных геометрических построений и элегантных доказательств!</p>
+    </div>
+
+    <!-- БЛОК 1. ИЗУЧЕНИЕ -->
+    <div class="card">
+        <h2>🔍 Блок 1. Изучение нового материала</h2>
+        
+        <h3>🛠️ Разминка</h3>
+        <p>Представь, что ты играешь в «горячо-холодно» на огромном поле. Тебе дают задание: «Найди все точки, которые находятся на одинаковом расстоянии от двух высоких сосен». Оказывается, таких точек не одна и не две, а бесконечно много! И если их все отметить, они выстроятся в одну ровную прямую линию. В геометрии такая линия называется <strong>геометрическим местом точек</strong>.</p>
+
+        <h3>📚 Ключевые термины</h3>
+        <table>
+            <tr>
+                <th>Термин</th>
+                <th>Что это?</th>
+                <th>Как обозначаем</th>
+            </tr>
+            <tr>
+                <td>Геометрическое место точек (ГМТ)</td>
+                <td>Фигура, состоящая из всех точек плоскости, обладающих определённым свойством, и только из них.</td>
+                <td>ГМТ</td>
+            </tr>
+            <tr>
+                <td>Биссектриса угла (как ГМТ)</td>
+                <td>ГМТ точек, лежащих внутри неразвёрнутого угла и равноудалённых от его сторон.</td>
+                <td>Луч, делящий угол пополам</td>
+            </tr>
+            <tr>
+                <td>Серединный перпендикуляр</td>
+                <td>Прямая, проходящая через середину отрезка перпендикулярно ему. Это ГМТ точек, равноудалённых от концов отрезка.</td>
+                <td>Прямая \(m \perp AB\), \(AO = OB\)</td>
+            </tr>
+            <tr>
+                <td>Расстояние от точки до прямой</td>
+                <td>Длина перпендикуляра, проведённого из данной точки к данной прямой.</td>
+                <td>Отрезок \(MH \perp a\)</td>
+            </tr>
+            <tr>
+                <td>Инцентр</td>
+                <td>Точка пересечения биссектрис треугольника, равноудалённая от всех его сторон; центр вписанной окружности.</td>
+                <td>Точка O на Рис. 2</td>
+            </tr>
+            <tr>
+                <td>Центр описанной окружности</td>
+                <td>Точка пересечения серединных перпендикуляров к сторонам треугольника, равноудалённая от всех его вершин.</td>
+                <td>Точка O на Рис. 4</td>
+            </tr>
+        </table>
+
+        <h3>📐 Графические иллюстрации</h3>
+        
+        <div class="diagram">
+            <!-- SVG 1: Свойство биссектрисы угла -->
+            <!-- Расчёт: Угол 60°. Вершина A=(80, 160). Сторона 1: 0° -> (240, 160). Сторона 2: 60° -> (130, 73.4). Биссектриса: 30°. Точка M на биссектрисе на расстоянии 80: (80+80*0.866, 160-80*0.5) = (149.3, 120.0). Перпендикуляр MK на сторону 1: K=(149.3, 160.0). Перпендикуляр ML на сторону 2: L=(114.7, 100.0). Дуга угла r=24: начало (104, 160), конец (92, 139.2). -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <line x1="80" y1="160" x2="240" y2="160" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="80" y1="160" x2="130" y2="73.4" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="80" y1="160" x2="149.3" y2="120.0" stroke="#3498db" stroke-width="2" stroke-dasharray="4,4"/>
+                <line x1="149.3" y1="120.0" x2="149.3" y2="160.0" stroke="#e74c3c" stroke-width="2"/>
+                <line x1="149.3" y1="120.0" x2="114.7" y2="100.0" stroke="#e74c3c" stroke-width="2"/>
+                <!-- Прямой угол K -->
+                <path d="M 149.3,150 L 159.3,150 L 159.3,160" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+                <!-- Прямой угол L -->
+                <path d="M 119.7,91.3 L 128.4,96.3 L 123.4,105.0" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+                <!-- Дуга угла 60° -->
+                <path d="M 104,160 A 24,24 0 0 0 92,139.2" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                <text x="65" y="180" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                <text x="145" y="110" font-size="16" fill="#3498db" font-family="sans-serif">M</text>
+                <text x="152" y="175" font-size="16" fill="#2c3e50" font-family="sans-serif">K</text>
+                <text x="100" y="95" font-size="16" fill="#2c3e50" font-family="sans-serif">L</text>
+            </svg>
+            <p><strong>Рис. 1:</strong> Любая точка M на биссектрисе равноудалена от сторон угла (MK = ML).</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 2: Биссектрисы треугольника -->
+            <!-- Расчёт: Равносторонний треугольник A=(160, 6.8), B=(60, 180), C=(260, 180), сторона 200. Инцентр = центроид O=(160, 122.3). -->
+            <!-- Биссектриса из A: x=160 (ось симметрии). Из B: к середине AC (210, 93.4). Из C: к середине AB (110, 93.4). -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <polygon points="160,6.8 60,180 260,180" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linejoin="round"/>
+                <line x1="160" y1="6.8" x2="160" y2="180" stroke="#3498db" stroke-width="2" stroke-dasharray="4,4"/>
+                <line x1="60" y1="180" x2="210" y2="93.4" stroke="#3498db" stroke-width="2" stroke-dasharray="4,4"/>
+                <line x1="260" y1="180" x2="110" y2="93.4" stroke="#3498db" stroke-width="2" stroke-dasharray="4,4"/>
+                <circle cx="160" cy="122.3" r="4" fill="#e74c3c"/>
+                <text x="155" y="30" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                <text x="45" y="195" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                <text x="265" y="195" font-size="16" fill="#2c3e50" font-family="sans-serif">C</text>
+                <text x="165" y="105" font-size="16" fill="#e74c3c" font-family="sans-serif">O</text>
+            </svg>
+            <p><strong>Рис. 2:</strong> Биссектрисы треугольника пересекаются в одной точке O, равноудалённой от всех его сторон.</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 3: Серединный перпендикуляр -->
+            <!-- Расчёт: A=(80, 110), B=(240, 110). Середина O=(160, 110). Перпендикуляр x=160. Точка M=(160, 50). MA=MB=100. -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <line x1="40" y1="110" x2="280" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="160" y1="30" x2="160" y2="190" stroke="#3498db" stroke-width="2" stroke-dasharray="4,4"/>
+                <line x1="160" y1="50" x2="80" y2="110" stroke="#e74c3c" stroke-width="2"/>
+                <line x1="160" y1="50" x2="240" y2="110" stroke="#e74c3c" stroke-width="2"/>
+                <!-- Прямой угол O -->
+                <path d="M 160,100 L 170,100 L 170,110" fill="none" stroke="#3498db" stroke-width="1.5"/>
+                <circle cx="80" cy="110" r="3" fill="#2c3e50"/>
+                <circle cx="240" cy="110" r="3" fill="#2c3e50"/>
+                <circle cx="160" cy="110" r="3" fill="#3498db"/>
+                <circle cx="160" cy="50" r="3" fill="#e74c3c"/>
+                <text x="65" y="130" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                <text x="245" y="130" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                <text x="165" y="130" font-size="16" fill="#3498db" font-family="sans-serif">O</text>
+                <text x="165" y="45" font-size="16" fill="#e74c3c" font-family="sans-serif">M</text>
+            </svg>
+            <p><strong>Рис. 3:</strong> Любая точка M на серединном перпендикуляре равноудалена от концов отрезка (MA = MB).</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 4: Серединные перпендикуляры треугольника -->
+            <!-- Расчёт: Прямоугольный треугольник A=(100, 180), B=(100, 60), C=(220, 180). Центр описанной окружности O=(160, 120). -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <polygon points="100,180 100,60 220,180" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linejoin="round"/>
+                <line x1="40" y1="120" x2="280" y2="120" stroke="#3498db" stroke-width="2" stroke-dasharray="4,4"/>
+                <line x1="160" y1="40" x2="160" y2="200" stroke="#3498db" stroke-width="2" stroke-dasharray="4,4"/>
+                <!-- Прямые углы в серединах сторон -->
+                <path d="M 100,110 L 110,110 L 110,120" fill="none" stroke="#3498db" stroke-width="1.5"/>
+                <path d="M 160,170 L 170,170 L 170,180" fill="none" stroke="#3498db" stroke-width="1.5"/>
+                <circle cx="160" cy="120" r="4" fill="#e74c3c"/>
+                <text x="85" y="195" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                <text x="85" y="55" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                <text x="225" y="195" font-size="16" fill="#2c3e50" font-family="sans-serif">C</text>
+                <text x="165" y="115" font-size="16" fill="#e74c3c" font-family="sans-serif">O</text>
+            </svg>
+            <p><strong>Рис. 4:</strong> Серединные перпендикуляры к сторонам треугольника пересекаются в одной точке O, равноудалённой от всех его вершин.</p>
+        </div>
+
+        <h3>💡 Главные правила</h3>
+        <div class="highlight">
+            <strong>Правило 1: Двойное условие ГМТ.</strong> Чтобы доказать, что фигура является ГМТ, нужно проверить два факта: 1) каждая точка этой фигуры обладает заданным свойством; 2) любая точка плоскости, обладающая этим свойством, принадлежит данной фигуре.
+        </div>
+        <div class="highlight">
+            <strong>Правило 2: Биссектриса как ГМТ.</strong> Геометрическим местом точек, лежащих внутри неразвёрнутого угла и равноудалённых от его сторон, является биссектриса этого угла.
+        </div>
+        <div class="highlight">
+            <strong>Правило 3: Серединный перпендикуляр как ГМТ.</strong> Геометрическим местом точек плоскости, равноудалённых от концов данного отрезка, является серединный перпендикуляр к этому отрезку.
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Важно запомнить:</strong>
+            <ul>
+                <li>Не путай <strong>расстояние от точки до прямой</strong> (длина перпендикуляра) и <strong>расстояние от точки до точки</strong> (длина отрезка).</li>
+                <li>Точка пересечения биссектрис треугольника (инцентр) является центром <strong>вписанной</strong> окружности.</li>
+                <li>Точка пересечения серединных перпендикуляров (центр описанной окружности) может лежать <strong>вне</strong> треугольника, если он тупоугольный.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- БЛОК 2. ЗАКРЕПЛЕНИЕ -->
+    <div class="card">
+        <h2>✏️ Блок 2. Закрепление</h2>
+        <p>Задания из учебника (стр. 96). Решай в тетради, делай чертежи, затем открой подсказку и проверь себя.</p>
+
+        <div class="card" style="border-left: 4px solid var(--success); margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 331.</strong> Определите геометрическое место всех точек плоскости, равноудалённых от двух пересекающихся прямых.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Две пересекающиеся прямые образуют четыре угла (две пары вертикальных углов).</div>
+                <div class="step"><strong>Шаг 2.</strong> По свойству биссектрисы, точки, равноудалённые от сторон угла, лежат на его биссектрисе.</div>
+                <div class="step"><strong>Шаг 3.</strong> Следовательно, искомое ГМТ состоит из двух прямых, которые являются биссектрисами всех четырёх углов, образованных при пересечении данных прямых.</div>
+                <div class="step"><strong>Проверка:</strong> Эти две биссектрисы перпендикулярны друг другу, так как сумма смежных углов равна 180°, а их половины дают 90°.</div>
+                <p><strong>Ответ:</strong> пара взаимно перпендикулярных прямых (биссектрисы углов, образованных данными прямыми).</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--success); margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 332.</strong> Определите геометрическое место всех точек плоскости, равноудалённых от двух данных параллельных прямых.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть даны параллельные прямые \(a\) и \(b\). Расстояние между ними равно \(d\).</div>
+                <div class="step"><strong>Шаг 2.</strong> Точка, равноудалённая от \(a\) и \(b\), должна находиться на расстоянии \(d/2\) от каждой из них.</div>
+                <div class="step"><strong>Шаг 3.</strong> Множество точек, находящихся на данном расстоянии от прямой по одну сторону от неё, есть прямая, параллельная данной.</div>
+                <div class="step"><strong>Шаг 4.</strong> Следовательно, искомое ГМТ — это прямая, параллельная данным прямым \(a\) и \(b\) и проходящая ровно посередине между ними.</div>
+                <p><strong>Ответ:</strong> прямая, параллельная данным прямым и равноудалённая от них.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 333.</strong> Даны два отрезка AB и CD. Постройте точку M, такую, что MA = MB и MC = MD.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Условие MA = MB означает, что точка M должна лежать на серединном перпендикуляре к отрезку AB.</div>
+                <div class="step"><strong>Шаг 2.</strong> Условие MC = MD означает, что точка M должна лежать на серединном перпендикуляре к отрезку CD.</div>
+                <div class="step"><strong>Шаг 3.</strong> Построим серединный перпендикуляр к AB (через середину AB перпендикулярно AB).</div>
+                <div class="step"><strong>Шаг 4.</strong> Построим серединный перпендикуляр к CD (через середину CD перпендикулярно CD).</div>
+                <div class="step"><strong>Шаг 5.</strong> Точка пересечения этих двух серединных перпендикуляров и будет искомой точкой M.</div>
+                <div class="step"><strong>Проверка:</strong> Если серединные перпендикуляры параллельны (что бывает, если AB и CD лежат на параллельных прямых или одной прямой и их середины не совпадают), точка M не существует. В общем случае они пересекаются в одной точке.</div>
+                <p><strong>Ответ:</strong> точка M есть точка пересечения серединных перпендикуляров к отрезкам AB и CD.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 334.</strong> Даны угол и отрезок AB. Постройте точку M, равноудалённую от сторон угла и такую, что MA = MB.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Условие «равноудалённая от сторон угла» означает, что точка M должна лежать на биссектрисе данного угла.</div>
+                <div class="step"><strong>Шаг 2.</strong> Условие MA = MB означает, что точка M должна лежать на серединном перпендикуляре к отрезку AB.</div>
+                <div class="step"><strong>Шаг 3.</strong> Построим биссектрису данного угла.</div>
+                <div class="step"><strong>Шаг 4.</strong> Построим серединный перпендикуляр к отрезку AB.</div>
+                <div class="step"><strong>Шаг 5.</strong> Точка пересечения биссектрисы и серединного перпендикуляра будет искомой точкой M.</div>
+                <p><strong>Ответ:</strong> точка M есть точка пересечения биссектрисы угла и серединного перпендикуляра к отрезку AB.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--warning); margin-bottom: 15px;">
+            <span class="badge badge-aspire">Продвинутый уровень</span>
+            <strong>Задача 335.</strong> Биссектрисы внешних углов при вершинах B и C треугольника ABC пересекаются в точке O. Докажите, что точка O равноудалена от прямых AB, BC и CA.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Точка O лежит на биссектрисе внешнего угла при вершине B. По свойству биссектрисы, она равноудалена от прямых, содержащих стороны этого угла, то есть от прямых AB и BC.</div>
+                <div class="step"><strong>Шаг 2.</strong> Точка O также лежит на биссектрисе внешнего угла при вершине C. Следовательно, она равноудалена от прямых BC и CA.</div>
+                <div class="step"><strong>Шаг 3.</strong> Из шагов 1 и 2 следует, что расстояние от O до AB равно расстоянию от O до BC, а расстояние от O до BC равно расстоянию от O до CA.</div>
+                <div class="step"><strong>Шаг 4.</strong> По свойству транзитивности равенства, расстояние от O до AB равно расстоянию от O до CA. Значит, точка O равноудалена от всех трёх прямых, содержащих стороны треугольника ABC.</div>
+                <div class="step"><strong>Вывод:</strong> Точка O является центром одной из вневписанных окружностей треугольника ABC.</div>
+                <p><strong>Ответ:</strong> утверждение доказано.</p>
+            </details>
+        </div>
+
+        <div class="highlight" style="margin-top: 30px;">
+            <h3>🧠 Методическая подсказка</h3>
+            <p>При решении задач на построение точки по двум условиям используй метод <strong>«пересечения ГМТ»</strong>:</p>
+            <ol>
+                <li><strong>Разбей условие</strong> задачи на два независимых требования к искомой точке (например, «равноудалена от A и B» и «равноудалена от сторон угла»).</li>
+                <li><strong>Определи ГМТ</strong> для каждого требования в отдельности (серединный перпендикуляр и биссектриса).</li>
+                <li><strong>Построй обе фигуры</strong> (две линии) на одном чертеже.</li>
+                <li><strong>Найди точку пересечения</strong> этих линий. Она автоматически удовлетворяет обоим условиям одновременно.</li>
+                <li><strong>Проверь существование:</strong> всегда указывай, что решение существует, если построенные линии не параллельны.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="lesson-nav">
+<a class="nav-link prev" href="geometriya-7-4-22.html"><span class="nav-arrow">←</span><span class="nav-text"><span class="nav-dir">Предыдущий урок</span><span class="nav-title">Дополнительные задачи: глава IV</span></span></a>
+</div>
+
+<footer>
+    <div class="container">
+        <p>Учебник: Л. С. Атанасян и др. «Геометрия, 7–9», Глава V, §1, стр. 92–96.</p>
+        <div class="legal">
+            © 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+            Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+        </div>
+    </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>
