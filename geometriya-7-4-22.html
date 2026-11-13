@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дополнительные задачи к главе IV — Геометрия 7 класс</title>
+    <!-- Урок 22 курса. Глава IV «Соотношения между сторонами и углами треугольника» — дополнительные задачи (№ 304–314). -->
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 0 0 12px 12px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; font-size: 1.8em; }
+        .subtitle { font-size: 1.1em; opacity: 0.9; margin-top: 8px; }
+        .greeting {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-top: 0; }
+        h3 { color: var(--accent); margin-top: 20px; }
+        .highlight {
+            background-color: #e8f8f5;
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fef9e7;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .diagram {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .qnum {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+            background-color: var(--accent);
+            margin-right: 8px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+            color: white;
+            margin-right: 8px;
+        }
+        .badge-must { background-color: #2ecc71; }
+        .badge-should { background-color: #f39c12; }
+        .badge-aspire { background-color: #9b59b6; }
+        details {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-top: 10px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary);
+            outline: none;
+        }
+        .step {
+            margin: 10px 0;
+            padding-left: 15px;
+            border-left: 2px solid var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+        footer .legal {
+            font-size: 0.85em;
+            color: #95a5a6;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<meta name="description" content="Дополнительные задачи к главе IV — Геометрия 7 класс">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:title" content="Дополнительные задачи к главе IV — Геометрия 7 класс">
+<meta property="og:description" content="Дополнительные задачи к главе IV — Геометрия 7 класс">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-4-22.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Дополнительные задачи к главе IV — Геометрия 7 класс">
+<meta name="twitter:description" content="Дополнительные задачи к главе IV — Геометрия 7 класс">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-4-22.html">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>🎓 Дополнительные задачи к главе IV</h1>
+        <div class="subtitle">Геометрия 7 класс • Глава IV, §4 • Страницы 88–90 • Задачи 304–314</div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="greeting">
+        <p>Привет! Мы переходим к «высшему пилотажу» главы IV. Здесь собраны задачи, которые требуют не просто знания формул, а умения выстраивать логические цепочки, делать дополнительные построения и применять метод от противного. Не бойся сложных условий — разберём каждое по шагам!</p>
+    </div>
+
+    <!-- БЛОК 1. МЕТОДИЧЕСКАЯ РАЗМИНКА -->
+    <div class="card">
+        <h2>🧠 Блок 1. Настрой на решение (10–15 мин)</h2>
+        <p>Прежде чем браться за дополнительные задачи, быстро проверь три ключевых факта, которые понадобятся в решениях.</p>
+        
+        <details>
+            <summary><span class="qnum">Факт 1</span> Чему равен внешний угол треугольника?</summary>
+            <p>Внешний угол треугольника равен <strong>сумме двух внутренних углов, не смежных с ним</strong>. Это главный инструмент для «перебрасывания» значений углов по цепочке равнобедренных треугольников.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Факт 2</span> Как сравнить две наклонные, проведённые из одной точки к прямой?</summary>
+            <p>Из двух наклонных <strong>больше та, у которой больше проекция</strong> на данную прямую. Равные наклонные имеют равные проекции. Это следует из теоремы Пифагора.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Факт 3</span> Что говорит неравенство треугольника о точке внутри него?</summary>
+            <p>Если точка M лежит внутри △ABC, то сумма расстояний от неё до двух вершин строго меньше суммы двух соответствующих сторон: <strong>MB + MC < AB + AC</strong>.</p>
+        </details>
+    </div>
+
+    <!-- БЛОК 2. ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ -->
+    <div class="card">
+        <h2>🛠 Блок 2. Решение задач (25–30 мин)</h2>
+        <p>Решай в тетради, делай чертежи, а затем открывай подсказку для самопроверки.</p>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 304.</strong> В равнобедренном треугольнике ABC биссектрисы равных углов при основании пересекаются в точке O. Докажите, что угол BOC равен внешнему углу треугольника при вершине B.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть △ABC равнобедренный с основанием BC, тогда ∠ABC = ∠ACB = 2α.</div>
+                <div class="step"><strong>Шаг 2.</strong> Так как BO и CO — биссектрисы, то ∠OBC = ∠OCB = α.</div>
+                <div class="step"><strong>Шаг 3.</strong> В △BOC сумма углов равна 180°, поэтому ∠BOC = 180° − (α + α) = 180° − 2α.</div>
+                <div class="step"><strong>Шаг 4.</strong> Внешний угол при вершине B смежен с ∠ABC, значит, он равен 180° − ∠ABC = 180° − 2α.</div>
+                <div class="step"><strong>Вывод:</strong> ∠BOC и внешний угол при вершине B равны 180° − 2α, что и требовалось доказать.</div>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 306.</strong> На рисунке AD || BE, AC = AD и BC = BE. Докажите, что угол DCE — прямой.
+            <div class="diagram">
+                <!-- SVG для задачи 306: AD || BE, AC=AD, BC=BE. Доказательство, что ∠DCE = 90°. -->
+                <!-- Расчёт: C=(160, 160). A=(60, 160), B=(260, 160). AC=100, BC=100. -->
+                <!-- Угол DAC = 60°. D = (60 + 100*cos60, 160 - 100*sin60) = (110, 73.4). Вектор AD = (50, -86.6). -->
+                <!-- BE || AD, поэтому вектор BE = (50, -86.6). E = (260 + 50, 160 - 86.6) = (310, 73.4). -->
+                <!-- Проверка: BC=100, BE=sqrt(50^2+86.6^2)=100. Вектор CD = (-50, -86.6), CE = (150, -86.6). -->
+                <!-- Скалярное произведение CD·CE = -7500 + 7500 = 0. Угол DCE = 90°. -->
+                <!-- Прямой угол: квадрат 14px. Нормализованные векторы: CD_норм = (-0.5, -0.866), CE_норм = (0.866, -0.5). -->
+                <!-- P1 = C + 14*CD_норм = (153, 147.9). P2 = C + 14*CE_норм = (172.1, 153). P3 = P1 + 14*CE_норм = (165.1, 140.9). -->
+                <svg viewBox="0 0 360 220" width="100%" style="max-width: 450px;">
+                    <line x1="40" y1="160" x2="320" y2="160" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="60" y1="160" x2="110" y2="73.4" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="260" y1="160" x2="310" y2="73.4" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="110" y1="73.4" x2="160" y2="160" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="310" y1="73.4" x2="160" y2="160" stroke="#e74c3c" stroke-width="2"/>
+                    <path d="M 153,147.9 L 165.1,140.9 L 172.1,153" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+                    <text x="45" y="180" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                    <text x="155" y="185" font-size="16" fill="#2c3e50" font-family="sans-serif">C</text>
+                    <text x="265" y="180" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                    <text x="95" y="65" font-size="16" fill="#2c3e50" font-family="sans-serif">D</text>
+                    <text x="315" y="65" font-size="16" fill="#2c3e50" font-family="sans-serif">E</text>
+                </svg>
+                <p><strong>Рис. 1:</strong> К задаче 306. Схема построения с параллельными сторонами и равнобедренными треугольниками.</p>
+            </div>
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Точки A, C, B лежат на одной прямой, поэтому ∠ACB = 180°. Прямая AB — секущая для параллельных AD и BE, значит, ∠DAC + ∠EBC = 180° (внутренние односторонние).</div>
+                <div class="step"><strong>Шаг 2.</strong> △ACD равнобедренный (AC = AD), поэтому ∠ACD = (180° − ∠DAC) / 2 = 90° − ∠DAC / 2.</div>
+                <div class="step"><strong>Шаг 3.</strong> △BCE равнобедренный (BC = BE), поэтому ∠BCE = (180° − ∠EBC) / 2 = 90° − ∠EBC / 2.</div>
+                <div class="step"><strong>Шаг 4.</strong> ∠DCE = 180° − (∠ACD + ∠BCE) = 180° − (180° − (∠DAC + ∠EBC) / 2).</div>
+                <div class="step"><strong>Шаг 5.</strong> Подставляем ∠DAC + ∠EBC = 180°: ∠DCE = 180° − (180° − 90°) = 90°.</div>
+                <p><strong>Вывод:</strong> Угол DCE прямой, что и требовалось доказать.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--warning); margin-bottom: 15px;">
+            <span class="badge badge-aspire">Продвинутый уровень</span>
+            <strong>Задача 307.</strong> На рисунке AB = AC, AP = PQ = QR = RB = BC. Найдите угол A.
+            <div class="diagram">
+                <!-- SVG для задачи 307: Зигзаг равнобедренных треугольников. Схема. -->
+                <!-- Расчёт: A=(160, 40). Угол A = 20°. Направления AB=100°, AC=80°. -->
+                <!-- P на AB (dist 40): (153.1, 79.4). Q на AC (dist 75): (173.0, 113.9). -->
+                <!-- R на AB (dist 100): (142.6, 138.5). B на AB (dist 140): (135.7, 177.9). C на AC (dist 140): (184.3, 177.9). -->
+                <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                    <polygon points="160,40 135.7,177.9 184.3,177.9" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linejoin="round"/>
+                    <line x1="160" y1="40" x2="153.1" y2="79.4" stroke="#3498db" stroke-width="2"/>
+                    <line x1="153.1" y1="79.4" x2="173.0" y2="113.9" stroke="#3498db" stroke-width="2"/>
+                    <line x1="173.0" y1="113.9" x2="142.6" y2="138.5" stroke="#3498db" stroke-width="2"/>
+                    <line x1="142.6" y1="138.5" x2="135.7" y2="177.9" stroke="#3498db" stroke-width="2"/>
+                    <line x1="135.7" y1="177.9" x2="184.3" y2="177.9" stroke="#3498db" stroke-width="2"/>
+                    <text x="155" y="30" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                    <text x="140" y="75" font-size="14" fill="#3498db" font-family="sans-serif">P</text>
+                    <text x="178" y="110" font-size="14" fill="#3498db" font-family="sans-serif">Q</text>
+                    <text x="128" y="135" font-size="14" fill="#3498db" font-family="sans-serif">R</text>
+                    <text x="120" y="195" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                    <text x="190" y="195" font-size="16" fill="#2c3e50" font-family="sans-serif">C</text>
+                    <text x="230" y="210" font-size="12" fill="#95a5a6" font-family="sans-serif">* схема</text>
+                </svg>
+                <p><strong>Рис. 2:</strong> К задаче 307. Цепочка равнобедренных треугольников (схема).</p>
+            </div>
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Обозначим ∠A = x. В △APQ (AP = PQ) углы при основании равны: ∠AQP = x.</div>
+                <div class="step"><strong>Шаг 2.</strong> Внешний угол △APQ при вершине P: ∠QPR = ∠A + ∠AQP = 2x.</div>
+                <div class="step"><strong>Шаг 3.</strong> В △PQR (PQ = QR) углы при основании равны: ∠PRQ = ∠QPR = 2x.</div>
+                <div class="step"><strong>Шаг 4.</strong> Внешний угол △AQR при вершине Q: ∠RQC = ∠A + ∠ARQ = x + 2x = 3x.</div>
+                <div class="step"><strong>Шаг 5.</strong> В △QRB (QR = RB) углы при основании равны: ∠RBQ = ∠RQB = 3x.</div>
+                <div class="step"><strong>Шаг 6.</strong> Внешний угол для цепочки даёт ∠ACB = ∠A + ∠RBQ = x + 3x = 4x.</div>
+                <div class="step"><strong>Шаг 7.</strong> Так как AB = AC, то ∠ABC = ∠ACB = 4x. Сумма углов △ABC: x + 4x + 4x = 9x = 180°.</div>
+                <div class="step"><strong>Шаг 8.</strong> Отсюда x = 20°.</div>
+                <p><strong>Ответ:</strong> ∠A = 20°.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--success); margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 309.</strong> Из точки A к прямой a проведены перпендикуляр AH и наклонные AM₁ и AM₂. Докажите, что: а) если HM₁ = HM₂, то AM₁ = AM₂; б) если HM₁ < HM₂, то AM₁ < AM₂.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Решение а):</strong> Рассмотрим прямоугольные треугольники AHM₁ и AHM₂. У них катет AH общий, а катеты HM₁ и HM₂ равны по условию. Следовательно, △AHM₁ = △AHM₂ по двум катетам, откуда AM₁ = AM₂.</div>
+                <div class="step"><strong>Решение б):</strong> По теореме Пифагора: AM₁² = AH² + HM₁² и AM₂² = AH² + HM₂². Так как HM₁ < HM₂, то HM₁² < HM₂². Следовательно, AM₁² < AM₂², откуда AM₁ < AM₂.</div>
+                <p><strong>Вывод:</strong> Утверждения доказаны.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 311.</strong> Докажите, что в треугольнике ABC медиана AM меньше полусуммы сторон AB и AC.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Продолжим медиану AM за точку M и отложим отрезок MD = AM.</div>
+                <div class="step"><strong>Шаг 2.</strong> Соединим точки B и D. В △AMC и △DMB: AM = MD (по построению), CM = MB (так как AM — медиана), ∠AMC = ∠DMB (вертикальные). Следовательно, △AMC = △DMB по двум сторонам и углу между ними, откуда AC = BD.</div>
+                <div class="step"><strong>Шаг 3.</strong> В △ABD по неравенству треугольника: AD < AB + BD.</div>
+                <div class="step"><strong>Шаг 4.</strong> Так как AD = 2AM и BD = AC, получаем 2AM < AB + AC, откуда AM < (AB + AC) / 2.</div>
+                <p><strong>Вывод:</strong> Утверждение доказано.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 312.</strong> Докажите, что если точка M лежит внутри треугольника ABC, то MB + MC < AB + AC.
+            <div class="diagram">
+                <!-- SVG для задачи 312: Точка M внутри треугольника, продолжение BM до AC. -->
+                <!-- Расчёт: A=(160, 40), B=(60, 180), C=(260, 180). M=(160, 120). -->
+                <!-- Прямая BM: от (60,180) до (160,120). Пересечение с AC (от (160,40) до (260,180)) в точке D. -->
+                <!-- Параметрически: D = (200, 96). Проверка: M лежит между B и D. -->
+                <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                    <polygon points="160,40 60,180 260,180" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linejoin="round"/>
+                    <line x1="60" y1="180" x2="200" y2="96" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4,4"/>
+                    <line x1="160" y1="120" x2="260" y2="180" stroke="#3498db" stroke-width="2"/>
+                    <circle cx="160" cy="120" r="3" fill="#e74c3c"/>
+                    <circle cx="200" cy="96" r="3" fill="#e74c3c"/>
+                    <text x="155" y="30" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                    <text x="45" y="195" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                    <text x="265" y="195" font-size="16" fill="#2c3e50" font-family="sans-serif">C</text>
+                    <text x="165" y="115" font-size="16" fill="#e74c3c" font-family="sans-serif">M</text>
+                    <text x="205" y="90" font-size="16" fill="#e74c3c" font-family="sans-serif">D</text>
+                </svg>
+                <p><strong>Рис. 3:</strong> К задаче 312. Дополнительное построение: продолжение BM до пересечения с AC в точке D.</p>
+            </div>
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Продолжим отрезок BM до пересечения со стороной AC в точке D.</div>
+                <div class="step"><strong>Шаг 2.</strong> В △MDC по неравенству треугольника: MC < MD + DC.</div>
+                <div class="step"><strong>Шаг 3.</strong> Прибавим MB к обеим частям: MB + MC < MB + MD + DC = BD + DC.</div>
+                <div class="step"><strong>Шаг 4.</strong> В △ABD по неравенству треугольника: BD < AB + AD.</div>
+                <div class="step"><strong>Шаг 5.</strong> Следовательно, MB + MC < BD + DC < AB + AD + DC = AB + AC.</div>
+                <p><strong>Вывод:</strong> Утверждение доказано.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--success); margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 314.</strong> Докажите методом от противного: если для трех точек A, B и C справедливо равенство AB = AC + CB, то точки A, B и C лежат на одной прямой.
+            <div class="diagram">
+                <!-- SVG для задачи 314: Коллинеарные точки. -->
+                <!-- Расчёт: A=(60, 110), C=(160, 110), B=(260, 110). AC=100, CB=100, AB=200. -->
+                <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                    <line x1="40" y1="110" x2="280" y2="110" stroke="#2c3e50" stroke-width="2"/>
+                    <circle cx="60" cy="110" r="4" fill="#2c3e50"/>
+                    <circle cx="160" cy="110" r="4" fill="#e74c3c"/>
+                    <circle cx="260" cy="110" r="4" fill="#2c3e50"/>
+                    <text x="55" y="95" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                    <text x="155" y="95" font-size="16" fill="#e74c3c" font-family="sans-serif">C</text>
+                    <text x="255" y="95" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                    <text x="100" y="140" font-size="14" fill="#2c3e50" font-family="sans-serif">AC + CB = AB</text>
+                </svg>
+                <p><strong>Рис. 4:</strong> К задаче 314. Точка C лежит между A и B на одной прямой.</p>
+            </div>
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Предположим противное: точки A, B и C не лежат на одной прямой. Тогда они образуют треугольник ABC.</div>
+                <div class="step"><strong>Шаг 2.</strong> По неравенству треугольника для △ABC должно выполняться строгое неравенство: AB < AC + CB.</div>
+                <div class="step"><strong>Шаг 3.</strong> Это противоречит данному условию задачи AB = AC + CB.</div>
+                <div class="step"><strong>Шаг 4.</strong> Следовательно, наше предположение неверно, и точки A, B и C обязаны лежать на одной прямой (причём точка C лежит между A и B).</div>
+                <p><strong>Вывод:</strong> Утверждение доказано методом от противного.</p>
+            </details>
+        </div>
+
+        <div class="highlight" style="margin-top: 30px;">
+            <h3>🧠 Методическая подсказка</h3>
+            <p>При решении нестандартных задач на свойства треугольника используй этот алгоритм:</p>
+            <ol>
+                <li><strong>Сделай чертёж</strong> и отметь все равные элементы (штрихами, дугами).</li>
+                <li><strong>Ищи «цепочки»:</strong> если дано несколько равных отрезков (как в задаче 307), последовательно выражай углы через один неизвестный, используя свойство внешнего угла.</li>
+                <li><strong>Делай дополнительные построения:</strong> продолжение медианы на свою длину (задача 311) или продолжение отрезка до пересечения со стороной (задача 312) — классические приёмы, превращающие сложную фигуру в набор простых треугольников.</li>
+                <li><strong>Проверяй метод от противного:</strong> если требуется доказать коллинеарность или неравенство, предположи обратное и приди к противоречию с аксиомами или данными условия.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="lesson-nav">
+<a class="nav-link prev" href="geometriya-7-4-21.html"><span class="nav-arrow">←</span><span class="nav-text"><span class="nav-dir">Предыдущий урок</span><span class="nav-title">Повторение: глава IV</span></span></a>
+</div>
+
+<footer>
+    <div class="container">
+        <p>Учебник: Л. С. Атанасян и др. «Геометрия, 7–9», Глава IV, Дополнительные задачи, стр. 88–90.</p>
+        <div class="legal">
+            © 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+            Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+        </div>
+    </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>
