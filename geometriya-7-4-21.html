@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Повторение главы IV — Геометрия 7 класс</title>
+    <!-- Урок 21 курса. Глава IV «Соотношения между сторонами и углами треугольника» — урок-повторение (вопросы 1–23). -->
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 0 0 12px 12px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; font-size: 1.8em; }
+        .subtitle { font-size: 1.1em; opacity: 0.9; margin-top: 8px; }
+        .greeting {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-top: 0; }
+        h3 { color: var(--accent); margin-top: 20px; }
+        .highlight {
+            background-color: #e8f8f5;
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fef9e7;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .diagram {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .qnum {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+            background-color: var(--accent);
+            margin-right: 8px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+            color: white;
+            margin-right: 8px;
+        }
+        .badge-must { background-color: #2ecc71; }
+        .badge-should { background-color: #f39c12; }
+        .badge-aspire { background-color: #9b59b6; }
+        details {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-top: 10px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary);
+            outline: none;
+        }
+        .step {
+            margin: 10px 0;
+            padding-left: 15px;
+            border-left: 2px solid var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+        footer .legal {
+            font-size: 0.85em;
+            color: #95a5a6;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<meta name="description" content="Повторение главы IV — Геометрия 7 класс">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:title" content="Повторение главы IV — Геометрия 7 класс">
+<meta property="og:description" content="Повторение главы IV — Геометрия 7 класс">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-4-21.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Повторение главы IV — Геометрия 7 класс">
+<meta name="twitter:description" content="Повторение главы IV — Геометрия 7 класс">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-4-21.html">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>🎓 Повторение главы IV</h1>
+        <div class="subtitle">Геометрия 7 класс • Глава IV • Вопросы 1–23 • Страницы 69–90</div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="greeting">
+        <p>Привет! Мы завершили большую и важную главу. Сегодня мы не будем решать сложные новые задачи, а систематизируем всё, что ты узнала: от суммы углов до правил построения треугольника циркулем и линейкой. Открывай тетрадь, проверяй себя по подсказкам и закрепляй «три ключа» главы!</p>
+    </div>
+
+    <!-- БЛОК 1. УСТНОЕ ПОВТОРЕНИЕ -->
+    <div class="card">
+        <h2>🧠 Блок 1. Устное повторение</h2>
+        <p>Ответь на вопросы, затем нажми на них, чтобы проверить точность формулировок.</p>
+
+        <h3>Тема 1: Углы треугольника</h3>
+        <details>
+            <summary><span class="qnum">Вопрос 1</span> Сформулируйте и докажите теорему о сумме углов треугольника.</summary>
+            <p><strong>Сумма углов треугольника равна 180°.</strong> <em>Доказательство:</em> проводится через вершину треугольника прямая, параллельная противоположной стороне. Используются накрест лежащие углы при параллельных прямых и секущих, которые в сумме с углом при вершине дают развёрнутый угол (180°).</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопрос 2</span> Какой угол называется внешним углом треугольника? Чему он равен?</summary>
+            <p><strong>Внешний угол</strong> — это угол, смежный с каким-либо углом треугольника. <strong>Внешний угол треугольника равен сумме двух углов треугольника, не смежных с ним.</strong></p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопрос 3</span> Какие углы могут быть в треугольнике?</summary>
+            <p>В любом треугольнике <strong>либо все три угла острые</strong> (остроугольный), <strong>либо два угла острые, а третий тупой или прямой</strong> (тупоугольный или прямоугольный). Два тупых или два прямых угла быть не может, так как их сумма уже превысит 180°.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопросы 4, 5, 10</span> Виды треугольников и сумма острых углов прямоугольного треугольника.</summary>
+            <p><strong>Остроугольный</strong> — все углы острые. <strong>Тупоугольный</strong> — один угол тупой. <strong>Прямоугольный</strong> — один угол прямой (90°). Стороны прямоугольного треугольника: <strong>гипотенуза</strong> (против прямого угла) и два <strong>катета</strong>. Сумма двух острых углов прямоугольного треугольника всегда <strong>равна 90°</strong>.</p>
+        </details>
+
+        <h3>Тема 2: Соотношения между сторонами и углами</h3>
+        <details>
+            <summary><span class="qnum">Вопрос 6</span> Как связаны стороны и углы в треугольнике?</summary>
+            <p>1) <strong>Против большей стороны лежит больший угол.</strong> 2) Обратно: <strong>против большего угла лежит большая сторона.</strong></p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопрос 7</span> Сравните гипотенузу и катет прямоугольного треугольника.</summary>
+            <p><strong>Гипотенуза всегда больше любого из катетов,</strong> так как она лежит против наибольшего угла треугольника — прямого угла (90°).</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопрос 8</span> Признак равнобедренного треугольника по углам.</summary>
+            <p>Если <strong>два угла треугольника равны</strong>, то треугольник является <strong>равнобедренным</strong> (стороны, лежащие против равных углов, также равны).</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопрос 9</span> Что такое неравенство треугольника?</summary>
+            <p><strong>Каждая сторона треугольника меньше суммы двух других сторон.</strong> Это необходимое условие существования треугольника.</p>
+        </details>
+
+        <h3>Тема 3: Свойства и признаки прямоугольных треугольников</h3>
+        <details>
+            <summary><span class="qnum">Вопрос 11</span> Свойство катета, лежащего против угла в 30°, и обратное утверждение.</summary>
+            <p><strong>Прямая теорема:</strong> катет прямоугольного треугольника, лежащий против угла в 30°, равен половине гипотенузы. <strong>Обратная теорема:</strong> если катет прямоугольного треугольника равен половине гипотенузы, то угол, лежащий против этого катета, равен 30°.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопросы 12, 13</span> Признаки равенства прямоугольных треугольников.</summary>
+            <p>Два прямоугольных треугольника равны, если: 1) <strong>гипотенуза и острый угол</strong> одного соответственно равны гипотенузе и острому углу другого; 2) <strong>гипотенуза и катет</strong> одного соответственно равны гипотенузе и катету другого.</p>
+        </details>
+
+        <h3>Тема 4: Расстояния и построения</h3>
+        <details>
+            <summary><span class="qnum">Вопросы 14–17</span> Перпендикуляр, наклонная и расстояние от точки до прямой.</summary>
+            <p><strong>Наклонная</strong> — любой отрезок, соединяющий данную точку с данной прямой, кроме перпендикуляра. <strong>Проекция наклонной</strong> — отрезок на прямой между основанием перпендикуляра и основанием наклонной. <strong>Перпендикуляр меньше любой наклонной.</strong> <strong>Расстояние от точки до прямой</strong> — это длина перпендикуляра, проведённого из этой точки к прямой.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопросы 18–21</span> Расстояние между параллельными прямыми и ГМТ.</summary>
+            <p>Все точки каждой из двух параллельных прямых <strong>равноудалены</strong> от другой прямой. Это расстояние называется <strong>расстоянием между параллельными прямыми</strong>. <strong>Геометрическое место точек (ГМТ)</strong>, находящихся на данном расстоянии от данной прямой по одну сторону от неё, есть <strong>прямая, параллельная данной</strong>.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопросы 22, 23</span> Построение треугольника по трём элементам.</summary>
+            <p>Треугольник строится по: 1) двум сторонам и углу между ними; 2) стороне и двум прилежащим углам; 3) трём сторонам. <strong>Важно:</strong> задача построения по трём сторонам имеет решение <em>не всегда</em>, а только если выполняется неравенство треугольника для данных отрезков.</p>
+        </details>
+
+        <div class="highlight" style="margin-top: 25px;">
+            <h3>🔑 Три ключа главы IV</h3>
+            <p>1️⃣ Сумма внутренних углов любого треугольника строго равна <strong>180°</strong>, а внешний угол равен сумме двух внутренних, не смежных с ним.</p>
+            <p>2️⃣ В треугольнике против большей стороны всегда лежит больший угол, а каждая сторона строго <strong>меньше суммы двух других</strong> (неравенство треугольника).</p>
+            <p>3️⃣ В прямоугольном треугольнике катет, лежащий против угла в <strong>30°</strong>, равен ровно <strong>половине гипотенузы</strong>.</p>
+        </div>
+    </div>
+
+    <!-- БЛОК 2. ПРАКТИКА -->
+    <div class="card">
+        <h2>✏️ Блок 2. Практика: Проверь себя</h2>
+        <p>Концептуальные задачи на применение теории главы. Реши в уме или в тетради, затем открой проверку.</p>
+
+        <h3>🔥 Разминка: посчитай без ошибки</h3>
+        <details>
+            <summary><span class="qnum">Устно 1</span> Через каждую пару из пяти точек, никакие три из которых не лежат на одной прямой, проведена прямая. Сколько всего прямых получилось?</summary>
+            <p><strong>Ответ:</strong> каждая пара точек задаёт ровно одну прямую, значит прямых столько же, сколько пар: 5 · 4 : 2 = <strong>10</strong>.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Устно 2</span> Три луча выходят из одной точки. Сколько неразвёрнутых углов они образуют (считая каждую пару лучей одним углом)?</summary>
+            <p><strong>Ответ:</strong> углов столько же, сколько пар лучей: 3 · 2 : 2 = <strong>3</strong>.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Устно 3</span> В прямоугольном треугольнике один острый угол равен 30°. Чему равен второй острый угол и во сколько раз гипотенуза больше меньшего катета?</summary>
+            <p><strong>Ответ:</strong> второй острый угол равен 90° − 30° = <strong>60°</strong>; гипотенуза в <strong>2 раза</strong> больше катета, лежащего против угла 30°.</p>
+        </details>
+
+        <div class="card" style="border-left: 4px solid var(--success); margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача А.</strong> В треугольнике два угла равны 40° и 50°. Определите вид этого треугольника (остроугольный, прямоугольный или тупоугольный) и найдите его внешний угол при третьей вершине.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Найдём третий угол треугольника: 180° − (40° + 50°) = 180° − 90° = 90°.</div>
+                <div class="step"><strong>Шаг 2.</strong> Так как один из углов равен 90°, треугольник является <strong>прямоугольным</strong>.</div>
+                <div class="step"><strong>Шаг 3.</strong> Внешний угол при третьей вершине смежен с углом 90°, значит, он равен 180° − 90° = 90°. (Или по теореме: он равен сумме двух несмежных: 40° + 50° = 90°).</div>
+                <p><strong>Ответ:</strong> треугольник прямоугольный, внешний угол при третьей вершине равен 90°.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача Б.</strong> Даны три отрезка длиной 5 см, 7 см и 13 см. Можно ли построить из них треугольник? Ответ обоснуйте, ссылаясь на конкретное свойство.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Вспомним <strong>неравенство треугольника</strong> (Вопрос 9): каждая сторона должна быть строго меньше суммы двух других сторон.</div>
+                <div class="step"><strong>Шаг 2.</strong> Проверим самое «слабое» условие: сложим две меньшие стороны: 5 см + 7 см = 12 см.</div>
+                <div class="step"><strong>Шаг 3.</strong> Сравним с третьей стороной: 12 см < 13 см. Условие «третья сторона меньше суммы двух других» нарушено.</div>
+                <div class="step"><strong>Вывод:</strong> Геометрически окружности с радиусами 5 и 7, центры которых находятся на расстоянии 13, не пересекутся.</div>
+                <p><strong>Ответ:</strong> нет, построить такой треугольник невозможно.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--warning); margin-bottom: 15px;">
+            <span class="badge badge-aspire">Продвинутый уровень</span>
+            <strong>Задача В.</strong> В прямоугольном треугольнике ABC (∠C = 90°) проведена медиана CM к гипотенузе AB. Известно, что ∠A = 30°, а длина катета BC равна 6 см. Найдите длину медианы CM.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Используем свойство катета, лежащего против угла в 30° (Вопрос 11): катет BC равен половине гипотенузы AB. Значит, AB = 2 · BC = 2 · 6 см = 12 см.</div>
+                <div class="step"><strong>Шаг 2.</strong> Вспомним свойство медианы прямоугольного треугольника, проведённой к гипотенузе: она равна половине гипотенузы (так как является радиусом описанной окружности).</div>
+                <div class="step"><strong>Шаг 3.</strong> Вычислим CM: CM = AB / 2 = 12 см / 2 = 6 см.</div>
+                <p><strong>Ответ:</strong> 6 см.</p>
+            </details>
+        </div>
+
+        <div class="highlight" style="margin-top: 30px;">
+            <h3>🧠 Методическая подсказка</h3>
+            <p>При решении задач на соотношения в треугольнике всегда следуй алгоритму:</p>
+            <ol>
+                <li><strong>Сделай чертёж</strong> и отметь на нём все известные данные (углы, стороны, перпендикуляры).</li>
+                <li><strong>Проверь сумму углов:</strong> если известны два угла, сразу находи третий (180° − сумма).</li>
+                <li><strong>Ищи «особые» углы:</strong> увидел 30° или 60° в прямоугольном треугольнике — сразу применяй свойство «половины гипотенузы».</li>
+                <li><strong>Проверь неравенство треугольника:</strong> перед любым построением или выводом о существовании фигуры убедись, что большая сторона меньше суммы двух других.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="lesson-nav">
+<a class="nav-link prev" href="geometriya-7-4-20.html"><span class="nav-arrow">←</span><span class="nav-text"><span class="nav-dir">Предыдущий урок</span><span class="nav-title">§4. Построение треугольника по трём элементам</span></span></a>
+</div>
+
+<footer>
+    <div class="container">
+        <p>Учебник: Л. С. Атанасян и др. «Геометрия, 7–9», Глава IV, Вопросы 1–23.</p>
+        <div class="legal">
+            © 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+            Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+        </div>
+    </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>
