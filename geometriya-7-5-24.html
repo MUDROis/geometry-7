@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Окружность. Касательная к окружности — Геометрия 7 класс</title>
+    <!-- Урок 24 курса. Глава V «Геометрические места точек. Симметричные фигуры», §2. Все координаты SVG вычислены по формулам x = cx + r·cos α, y = cy − r·sin α. Расчёты — в комментариях внутри SVG. -->
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 0 0 12px 12px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; font-size: 1.8em; }
+        .subtitle { font-size: 1.1em; opacity: 0.9; margin-top: 8px; }
+        .greeting {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-top: 0; }
+        h3 { color: var(--accent); margin-top: 20px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th { background-color: #f1f3f5; color: var(--primary); }
+        .highlight {
+            background-color: #e8f8f5;
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fef9e7;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .diagram {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+            color: white;
+            margin-right: 8px;
+        }
+        .badge-must { background-color: #2ecc71; }
+        .badge-should { background-color: #f39c12; }
+        .badge-aspire { background-color: #9b59b6; }
+        details {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-top: 10px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary);
+            outline: none;
+        }
+        .step {
+            margin: 10px 0;
+            padding-left: 15px;
+            border-left: 2px solid var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+        footer .legal {
+            font-size: 0.85em;
+            color: #95a5a6;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<meta name="description" content="Окружность. Касательная к окружности — Геометрия 7 класс">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:title" content="Окружность. Касательная к окружности — Геометрия 7 класс">
+<meta property="og:description" content="Окружность. Касательная к окружности — Геометрия 7 класс">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-5-24.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Окружность. Касательная к окружности — Геометрия 7 класс">
+<meta name="twitter:description" content="Окружность. Касательная к окружности — Геометрия 7 класс">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-5-24.html">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>⭕ Окружность. Касательная к окружности</h1>
+        <div class="subtitle">Геометрия 7 класс • Глава V, §2 • Страницы 98–102</div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="greeting">
+        <p>Привет! Сегодня мы переходим к одной из самых красивых и симметричных фигур в геометрии — окружности. Ты узнаешь, как связаны хорды и диаметры, почему колесо катится, не подпрыгивая, и как строго математически доказать, что прямая лишь «касается» окружности, не разрезая её.</p>
+    </div>
+
+    <!-- БЛОК 1. ИЗУЧЕНИЕ -->
+    <div class="card">
+        <h2>🔍 Блок 1. Изучение (15–20 мин)</h2>
+        
+        <h3>🛠️ Разминка</h3>
+        <p>Представь, что ты проектируешь железнодорожные пути. Колесо поезда имеет форму круга, а рельс — это прямая линия. Чтобы поезд ехал плавно, рельс должен касаться колеса ровно в одной точке. Если бы прямая пересекала круг в двух точках, колесо бы «застревало», а если бы не пересекало вовсе — поезд бы парил в воздухе. Эта идеальная «одна точка» и есть касательная, свойства которой мы сегодня докажем.</p>
+
+        <h3>📚 Ключевые термины</h3>
+        <table>
+            <tr>
+                <th>Термин</th>
+                <th>Что это?</th>
+                <th>Как обозначаем</th>
+            </tr>
+            <tr>
+                <td>Хорда</td>
+                <td>Отрезок, соединяющий две любые точки окружности.</td>
+                <td>Отрезок \(CD\)</td>
+            </tr>
+            <tr>
+                <td>Диаметр</td>
+                <td>Хорда, проходящая через центр окружности. Это наибольшая хорда.</td>
+                <td>Отрезок \(AB\), \(O \in AB\)</td>
+            </tr>
+            <tr>
+                <td>Касательная</td>
+                <td>Прямая, имеющая с окружностью ровно одну общую точку (точку касания).</td>
+                <td>Прямая \(p\), точка \(A\)</td>
+            </tr>
+            <tr>
+                <td>Отрезки касательных</td>
+                <td>Отрезки касательных, проведённые из одной точки к окружности, равны и составляют равные углы с прямой, проходящей через эту точку и центр.</td>
+                <td>\(AB = AC\), \(\angle 1 = \angle 2\)</td>
+            </tr>
+            <tr>
+                <td>Точка касания</td>
+                <td>Единственная общая точка касательной и окружности.</td>
+                <td>Точка A на Рис. 3</td>
+            </tr>
+            <tr>
+                <td>Секущая</td>
+                <td>Прямая, имеющая с окружностью две общие точки.</td>
+                <td>Прямая, проходящая через хорду</td>
+            </tr>
+        </table>
+
+        <h3>📐 Графические иллюстрации</h3>
+        
+        <div class="diagram">
+            <!-- SVG 1: Диаметр, перпендикулярный хорде -->
+            <!-- Расчёт: Центр O=(160, 110), R=80. Хорда CD горизонтальна на y=150. Расстояние OM = 40. -->
+            <!-- Полухорда CM = sqrt(80^2 - 40^2) = sqrt(4800) ≈ 69.3. -->
+            <!-- C=(160-69.3, 150) = (90.7, 150). D=(160+69.3, 150) = (229.3, 150). -->
+            <!-- Диаметр AB вертикален: A=(160, 30), B=(160, 190). Точка M=(160, 150). -->
+            <!-- Прямой угол в M: квадрат 12px. Вектор MO=(0,-1), MD=(1,0). P1=M+12*(0,-1)=(160,138). P3=M+12*(1,0)=(172,150). P2=(172,138). -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <circle cx="160" cy="110" r="80" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="160" y1="30" x2="160" y2="190" stroke="#3498db" stroke-width="2"/>
+                <line x1="90.7" y1="150" x2="229.3" y2="150" stroke="#e74c3c" stroke-width="2"/>
+                <path d="M 160,138 L 172,138 L 172,150" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
+                <circle cx="160" cy="110" r="3" fill="#2c3e50"/>
+                <circle cx="160" cy="150" r="3" fill="#2c3e50"/>
+                <text x="165" y="105" font-size="16" fill="#2c3e50" font-family="sans-serif">O</text>
+                <text x="165" y="25" font-size="16" fill="#3498db" font-family="sans-serif">A</text>
+                <text x="165" y="205" font-size="16" fill="#3498db" font-family="sans-serif">B</text>
+                <text x="75" y="155" font-size="16" fill="#e74c3c" font-family="sans-serif">C</text>
+                <text x="235" y="155" font-size="16" fill="#e74c3c" font-family="sans-serif">D</text>
+                <text x="165" y="145" font-size="16" fill="#2c3e50" font-family="sans-serif">M</text>
+            </svg>
+            <p><strong>Рис. 1:</strong> Диаметр, проходящий через середину хорды, перпендикулярен этой хорде.</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 2: Угол, опирающийся на диаметр -->
+            <!-- Расчёт: Центр O=(160, 110), R=80. Диаметр AB горизонтален: A=(80, 110), B=(240, 110). -->
+            <!-- Точка C на окружности под углом 60° от центра. C=(160+80*cos60, 110+80*sin60) = (200, 179.3). (y вниз, поэтому +sin) -->
+            <!-- Вектор CA = (80-200, 110-179.3) = (-120, -69.3). Единичный = (-0.866, -0.5). -->
+            <!-- Вектор CB = (240-200, 110-179.3) = (40, -69.3). Единичный = (0.5, -0.866). -->
+            <!-- Прямой угол в C (квадрат 14px): P1 = C + 14*unit_CA = (187.9, 172.3). P3 = C + 14*unit_CB = (207, 167.2). P2 = (194.9, 160.2). -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <circle cx="160" cy="110" r="80" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="80" y1="110" x2="240" y2="110" stroke="#3498db" stroke-width="2"/>
+                <line x1="80" y1="110" x2="200" y2="179.3" stroke="#e74c3c" stroke-width="2"/>
+                <line x1="240" y1="110" x2="200" y2="179.3" stroke="#e74c3c" stroke-width="2"/>
+                <path d="M 187.9,172.3 L 194.9,160.2 L 207,167.2" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
+                <circle cx="160" cy="110" r="3" fill="#2c3e50"/>
+                <text x="155" y="100" font-size="16" fill="#2c3e50" font-family="sans-serif">O</text>
+                <text x="65" y="105" font-size="16" fill="#3498db" font-family="sans-serif">A</text>
+                <text x="245" y="105" font-size="16" fill="#3498db" font-family="sans-serif">B</text>
+                <text x="205" y="195" font-size="16" fill="#e74c3c" font-family="sans-serif">C</text>
+            </svg>
+            <p><strong>Рис. 2:</strong> Угол, опирающийся на диаметр окружности, всегда прямой (90°).</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 3: Свойство касательной -->
+            <!-- Расчёт: Центр O=(120, 110), R=60. Точка касания A под углом 30° (вниз от оси X). -->
+            <!-- A = (120+60*cos30, 110+60*sin30) = (172.0, 140.0). -->
+            <!-- Вектор OA = (52.0, 30.0). Единичный = (0.866, 0.5). -->
+            <!-- Касательная перпендикулярна OA. Единичный вектор касательной = (-0.5, 0.866). -->
+            <!-- Прямой угол в A (квадрат 14px): P1 = A + 14*(-0.866, -0.5) = (159.9, 133.0). P3 = A + 14*(-0.5, 0.866) = (165.0, 152.1). P2 = (152.9, 145.1). -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <circle cx="120" cy="110" r="60" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="120" y1="110" x2="172.0" y2="140.0" stroke="#3498db" stroke-width="2"/>
+                <line x1="132.0" y1="209.3" x2="212.0" y2="70.7" stroke="#e74c3c" stroke-width="2"/>
+                <path d="M 159.9,133.0 L 152.9,145.1 L 165.0,152.1" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
+                <circle cx="120" cy="110" r="3" fill="#2c3e50"/>
+                <circle cx="172.0" cy="140.0" r="3" fill="#2c3e50"/>
+                <text x="105" y="105" font-size="16" fill="#2c3e50" font-family="sans-serif">O</text>
+                <text x="177" y="135" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                <text x="215" y="65" font-size="16" fill="#e74c3c" font-family="sans-serif">p</text>
+            </svg>
+            <p><strong>Рис. 3:</strong> Касательная к окружности перпендикулярна радиусу, проведённому в точку касания.</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 4: Отрезки касательных из одной точки -->
+            <!-- Расчёт: Центр O=(120, 110), R=50. Внешняя точка A=(220, 110). OA=100. -->
+            <!-- В прям. треуг. OBA: OB=50, OA=100 => угол OAB=30°, угол AOB=60°. -->
+            <!-- Точка B (угол -60° от OA): B=(120+50*cos(-60), 110+50*sin(-60)) = (145, 66.7). -->
+            <!-- Точка C (угол 60° от OA): C=(120+50*cos(60), 110+50*sin(60)) = (145, 153.3). -->
+            <!-- Прямые углы в B и C (квадрат 12px). Вектор BO=(-0.5, 0.866), BA=(0.866, 0.5). -->
+            <!-- В B: P1=B+12*BO=(139, 77.1). P3=B+12*BA=(155.4, 72.7). P2=(149.4, 83.1). -->
+            <!-- В C: Вектор CO=(-0.5, -0.866), CA=(0.866, -0.5). P1=C+12*CO=(139, 142.9). P3=C+12*CA=(155.4, 147.3). P2=(149.4, 136.9). -->
+            <!-- Дуга угла AOB (60°): центр O, r=24. Начало (144, 110), конец (132, 89.2). -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <circle cx="120" cy="110" r="50" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                <line x1="120" y1="110" x2="220" y2="110" stroke="#3498db" stroke-width="2" stroke-dasharray="4,4"/>
+                <line x1="220" y1="110" x2="145" y2="66.7" stroke="#e74c3c" stroke-width="2"/>
+                <line x1="220" y1="110" x2="145" y2="153.3" stroke="#e74c3c" stroke-width="2"/>
+                <line x1="120" y1="110" x2="145" y2="66.7" stroke="#2c3e50" stroke-width="1.5"/>
+                <line x1="120" y1="110" x2="145" y2="153.3" stroke="#2c3e50" stroke-width="1.5"/>
+                <path d="M 139,77.1 L 149.4,83.1 L 155.4,72.7" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
+                <path d="M 139,142.9 L 149.4,136.9 L 155.4,147.3" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
+                <!-- Дуга 60° -->
+                <path d="M 144,110 A 24,24 0 0 0 132,89.2" fill="none" stroke="#f39c12" stroke-width="2"/>
+                <text x="138" y="95" font-size="14" fill="#f39c12" font-family="sans-serif">60°</text>
+                
+                <circle cx="120" cy="110" r="3" fill="#2c3e50"/>
+                <circle cx="220" cy="110" r="3" fill="#2c3e50"/>
+                <text x="105" y="105" font-size="16" fill="#2c3e50" font-family="sans-serif">O</text>
+                <text x="225" y="115" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                <text x="130" y="60" font-size="16" fill="#e74c3c" font-family="sans-serif">B</text>
+                <text x="130" y="170" font-size="16" fill="#e74c3c" font-family="sans-serif">C</text>
+            </svg>
+            <p><strong>Рис. 4:</strong> Отрезки касательных, проведённые из одной точки, равны и образуют равные углы с прямой, проходящей через центр.</p>
+        </div>
+
+        <h3>💡 Главные правила</h3>
+        <div class="highlight">
+            <strong>Правило 1: Диаметр и хорда.</strong> Если диаметр проходит через середину хорды (не являющейся диаметром), то он перпендикулярен этой хорде. И наоборот: диаметр, перпендикулярный хорде, делит её пополам.
+        </div>
+        <div class="highlight">
+            <strong>Правило 2: Угол и диаметр.</strong> Если угол опирается на диаметр окружности, то этот угол всегда прямой (равен 90°). Это мощный инструмент для доказательства перпендикулярности.
+        </div>
+        <div class="highlight">
+            <strong>Правило 3: Признак касательной.</strong> Если прямая проходит через конец радиуса, лежащий на окружности, и перпендикулярна этому радиусу, то она является касательной.
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Важно запомнить:</strong>
+            <ul>
+                <li>Касательная имеет с окружностью <strong>ровно одну</strong> общую точку. Все остальные точки касательной лежат вне окружности.</li>
+                <li>Не путай <strong>касательную</strong> (прямую) и <strong>отрезок касательной</strong> (часть этой прямой от внешней точки до точки касания).</li>
+                <li>Расстояние от центра окружности до касательной всегда в точности равно радиусу.</li>
+                <li>Диаметр — это <strong>самая длинная</strong> хорда в окружности. Любая другая хорда строго меньше диаметра.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- БЛОК 2. ЗАКРЕПЛЕНИЕ -->
+    <div class="card">
+        <h2>✏️ Блок 2. Закрепление (20–25 мин)</h2>
+        <p>Задания из учебника (стр. 103–105). Решай в тетради, делай чертежи, затем открой подсказку и проверь себя.</p>
+
+        <div class="card" style="border-left: 4px solid var(--success); margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 336.</strong> Докажите, что хорда, не проходящая через центр окружности, меньше диаметра.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть дана окружность с центром \(O\) и хорда \(AB\), не проходящая через \(O\).</div>
+                <div class="step"><strong>Шаг 2.</strong> Соединим концы хорды с центром окружности. Получим треугольник \(AOB\).</div>
+                <div class="step"><strong>Шаг 3.</strong> В этом треугольнике стороны \(OA\) и \(OB\) являются радиусами окружности, поэтому \(OA = OB = R\).</div>
+                <div class="step"><strong>Шаг 4.</strong> По неравенству треугольника длина любой стороны меньше суммы двух других: \(AB < OA + OB\).</div>
+                <div class="step"><strong>Шаг 5.</strong> Подставляем радиусы: \(AB < R + R\), следовательно, \(AB < 2R\).</div>
+                <div class="step"><strong>Вывод:</strong> Так как диаметр \(D = 2R\), получаем \(AB < D\), что и требовалось доказать.</div>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--success); margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 343.</strong> Докажите, что если расстояние от центра окружности до прямой равно радиусу, то прямая является касательной к окружности.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть расстояние от центра \(O\) до прямой \(p\) равно \(R\) (радиусу окружности).</div>
+                <div class="step"><strong>Шаг 2.</strong> По определению расстояния от точки до прямой, перпендикуляр \(OH\), опущенный из \(O\) на \(p\), имеет длину \(R\).</div>
+                <div class="step"><strong>Шаг 3.</strong> Точка \(H\) лежит на окружности, так как её расстояние до центра равно радиусу. Значит, \(H\) — общая точка прямой \(p\) и окружности.</div>
+                <div class="step"><strong>Шаг 4.</strong> Любая другая точка \(M\) на прямой \(p\) (\(M \neq H\)) является наклонной к прямой \(OH\). По свойству наклонной, \(OM > OH = R\).</div>
+                <div class="step"><strong>Шаг 5.</strong> Следовательно, все остальные точки прямой \(p\) лежат вне окружности.</div>
+                <div class="step"><strong>Вывод:</strong> Прямая \(p\) имеет с окружностью ровно одну общую точку (\(H\)), значит, по определению, она является касательной.</div>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 346.</strong> Найдите длину отрезка \(AB\) касательной к окружности с центром \(O\), где \(B\) — точка касания, если угол \(AOB\) равен 45°, а радиус окружности равен 12 см.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> По свойству касательной, радиус \(OB\) перпендикулярен касательной \(AB\). Значит, \(\triangle AOB\) — прямоугольный с прямым углом при вершине \(B\) (\(\angle OBA = 90^\circ\)).</div>
+                <div class="step"><strong>Шаг 2.</strong> В \(\triangle AOB\) известен острый угол \(\angle AOB = 45^\circ\). Сумма острых углов прямоугольного треугольника равна 90°, поэтому \(\angle OAB = 90^\circ - 45^\circ = 45^\circ\).</div>
+                <div class="step"><strong>Шаг 3.</strong> Так как \(\angle AOB = \angle OAB = 45^\circ\), треугольник \(AOB\) является равнобедренным с основанием \(OA\).</div>
+                <div class="step"><strong>Шаг 4.</strong> В равнобедренном треугольнике катеты равны: \(AB = OB\).</div>
+                <div class="step"><strong>Шаг 5.</strong> По условию радиус \(OB = 12\) см, следовательно, \(AB = 12\) см.</div>
+                <p><strong>Ответ:</strong> 12 см.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 349.</strong> Через точку \(A\) окружности проведены касательная и хорда, равная радиусу окружности. Найдите угол между ними.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть \(O\) — центр окружности, \(A\) — точка на окружности, \(AB\) — данная хорда, равная радиусу (\(AB = R\)).</div>
+                <div class="step"><strong>Шаг 2.</strong> Рассмотрим \(\triangle AOB\). Его стороны: \(OA = R\) (радиус), \(OB = R\) (радиус) и \(AB = R\) (по условию).</div>
+                <div class="step"><strong>Шаг 3.</strong> Все три стороны \(\triangle AOB\) равны, значит, он равносторонний. Следовательно, все его углы равны 60°, в частности \(\angle OAB = 60^\circ\).</div>
+                <div class="step"><strong>Шаг 4.</strong> Пусть прямая \(p\) — касательная к окружности в точке \(A\). По свойству касательной, \(p \perp OA\), то есть угол между радиусом \(OA\) и касательной \(p\) равен 90°.</div>
+                <div class="step"><strong>Шаг 5.</strong> Хорда \(AB\) лежит внутри этого прямого угла. Угол между касательной \(p\) и хордой \(AB\) равен разности: \(90^\circ - \angle OAB = 90^\circ - 60^\circ = 30^\circ\).</div>
+                <p><strong>Ответ:</strong> 30°.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 352.</strong> Даны окружность с центром \(O\) радиуса 4,5 см и точка \(A\). Через точку \(A\) проведены две касательные к окружности. Найдите угол между ними, если \(OA = 9\) см.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть \(B\) и \(C\) — точки касания касательных, проведённых из точки \(A\).</div>
+                <div class="step"><strong>Шаг 2.</strong> Рассмотрим прямоугольный \(\triangle OBA\) (\(\angle OBA = 90^\circ\), так как \(AB\) — касательная).</div>
+                <div class="step"><strong>Шаг 3.</strong> В этом треугольнике катет \(OB = 4,5\) см (радиус), а гипотенуза \(OA = 9\) см.</div>
+                <div class="step"><strong>Шаг 4.</strong> Заметим, что \(OB = \frac{1}{2} OA\) (\(4,5 = 9 / 2\)). По свойству прямоугольного треугольника, катет, равный половине гипотенузы, лежит против угла в 30°. Значит, \(\angle OAB = 30^\circ\).</div>
+                <div class="step"><strong>Шаг 5.</strong> По свойству отрезков касательных, прямая \(OA\) является биссектрисой угла между касательными. Следовательно, искомый угол \(\angle BAC = 2 \cdot \angle OAB = 2 \cdot 30^\circ = 60^\circ\).</div>
+                <p><strong>Ответ:</strong> 60°.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--warning); margin-bottom: 15px;">
+            <span class="badge badge-aspire">Продвинутый уровень</span>
+            <strong>Задача 358.</strong> Постройте касательную к данной окружности, параллельную данной прямой.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть дана окружность с центром \(O\) и прямая \(a\).</div>
+                <div class="step"><strong>Шаг 2.</strong> Построим прямую \(b\), проходящую через центр \(O\) и перпендикулярную данной прямой \(a\) (это базовое построение перпендикуляра из точки к прямой).</div>
+                <div class="step"><strong>Шаг 3.</strong> Прямая \(b\) пересечёт окружность в двух точках: назовём их \(M\) и \(N\).</div>
+                <div class="step"><strong>Шаг 4.</strong> Через точку \(M\) проведём прямую \(p_1\), перпендикулярную радиусу \(OM\). По признаку касательной, \(p_1\) будет касательной к окружности.</div>
+                <div class="step"><strong>Шаг 5.</strong> Через точку \(N\) проведём прямую \(p_2\), перпендикулярную радиусу \(ON\). Прямая \(p_2\) также будет касательной.</div>
+                <div class="step"><strong>Проверка:</strong> Так как \(p_1 \perp b\) и \(a \perp b\), то \(p_1 \parallel a\). Аналогично \(p_2 \parallel a\). Задача имеет два решения.</div>
+                <p><strong>Ответ:</strong> построены две касательные, параллельные данной прямой.</p>
+            </details>
+        </div>
+
+        <div class="highlight" style="margin-top: 30px;">
+            <h3>🧠 Методическая подсказка</h3>
+            <p>При решении задач на касательные и хорды всегда следуй этому алгоритму:</p>
+            <ol>
+                <li><strong>Проведи радиус в точку касания.</strong> Это автоматически создаёт прямоугольный треугольник, к которому можно применить теорему Пифагора или свойства углов.</li>
+                <li><strong>Ищи равнобедренные треугольники.</strong> Любые два радиуса, проведённые к концам хорды, образуют равнобедренный треугольник. Это даёт равные углы при основании.</li>
+                <li><strong>Используй свойство отрезков касательных.</strong> Если из одной точки проведены две касательные, сразу соединяй эту точку с центром окружности: эта прямая будет осью симметрии фигуры, биссектрисой угла и серединным перпендикуляром к хорде, соединяющей точки касания.</li>
+                <li><strong>Проверяй условие «половины гипотенузы».</strong> Если в прямоугольном треугольнике один катет ровно в два раза меньше гипотенузы, сразу делай вывод об угле 30° — это сильно упрощает вычисления.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="lesson-nav">
+<a class="nav-link prev" href="geometriya-7-5-23.html"><span class="nav-arrow">←</span><span class="nav-text"><span class="nav-dir">Предыдущий урок</span><span class="nav-title">§1. Геометрические места точек</span></span></a>
+</div>
+
+<footer>
+    <div class="container">
+        <p>Учебник: Л. С. Атанасян и др. «Геометрия, 7–9», Глава V, §2, стр. 98–102.</p>
+        <div class="legal">
+            © 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+            Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+        </div>
+    </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>
