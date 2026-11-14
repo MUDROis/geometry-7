@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Повторение главы V — Геометрия 7 класс</title>
+    <!-- Урок 26 курса. Глава V «Геометрические места точек. Симметричные фигуры» — урок-повторение (вопросы 1–30). -->
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 0 0 12px 12px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; font-size: 1.8em; }
+        .subtitle { font-size: 1.1em; opacity: 0.9; margin-top: 8px; }
+        .greeting {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-top: 0; }
+        h3 { color: var(--accent); margin-top: 20px; }
+        .highlight {
+            background-color: #e8f8f5;
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fef9e7;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .diagram {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .qnum {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+            background-color: var(--accent);
+            margin-right: 8px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+            color: white;
+            margin-right: 8px;
+        }
+        .badge-must { background-color: #2ecc71; }
+        .badge-should { background-color: #f39c12; }
+        .badge-aspire { background-color: #9b59b6; }
+        details {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-top: 10px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary);
+            outline: none;
+        }
+        .step {
+            margin: 10px 0;
+            padding-left: 15px;
+            border-left: 2px solid var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+        footer .legal {
+            font-size: 0.85em;
+            color: #95a5a6;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<meta name="description" content="Повторение главы V — Геометрия 7 класс">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:title" content="Повторение главы V — Геометрия 7 класс">
+<meta property="og:description" content="Повторение главы V — Геометрия 7 класс">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-5-26.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Повторение главы V — Геометрия 7 класс">
+<meta name="twitter:description" content="Повторение главы V — Геометрия 7 класс">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-5-26.html">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>🎓 Повторение главы V</h1>
+        <div class="subtitle">Геометрия 7 класс • Глава V • Вопросы 1–30 • Страницы 113–115</div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="greeting">
+        <p>Привет! Мы завершили большую и красивую главу. Сегодня мы не будем решать сложные новые задачи, а систематизируем всё, что ты узнала: от свойств касательных и вписанных окружностей до законов осевой симметрии. Открывай тетрадь, проверяй себя по подсказкам и закрепляй «три ключа» главы!</p>
+    </div>
+
+    <!-- БЛОК 1. УСТНОЕ ПОВТОРЕНИЕ -->
+    <div class="card">
+        <h2>🧠 Блок 1. Устное повторение (15–20 мин)</h2>
+        <p>Ответь на вопросы, затем нажми на них, чтобы проверить точность формулировок.</p>
+
+        <h3>Тема 1: Геометрические места точек</h3>
+        <details>
+            <summary><span class="qnum">Вопрос 1</span> Что такое геометрическое место точек (ГМТ)? Приведите примеры.</summary>
+            <p><strong>ГМТ</strong> — это фигура, состоящая из всех точек плоскости, обладающих определённым свойством, и только из них. <strong>Примеры:</strong> серединный перпендикуляр к отрезку, биссектриса угла, окружность.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопросы 2, 3</span> Сформулируйте и докажите теорему о биссектрисе угла. Где пересекаются биссектрисы треугольника?</summary>
+            <p><strong>Теорема:</strong> Каждая точка биссектрисы неразвернутого угла равноудалена от его сторон. Обратно: каждая точка, лежащая внутри угла и равноудаленная от его сторон, лежит на его биссектрисе. <strong>Следствие:</strong> Биссектрисы треугольника пересекаются в одной точке (центре вписанной окружности), равноудаленной от всех его сторон.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопросы 4–6</span> Что такое серединный перпендикуляр к отрезку? Где пересекаются серединные перпендикуляры треугольника?</summary>
+            <p><strong>Серединный перпендикуляр</strong> — это прямая, проходящая через середину отрезка и перпендикулярная к нему. <strong>Свойство:</strong> Каждая точка серединного перпендикуляра равноудалена от концов отрезка. <strong>Следствие:</strong> Серединные перпендикуляры к сторонам треугольника пересекаются в одной точке (центре описанной окружности), равноудаленной от всех его вершин.</p>
+        </details>
+
+        <h3>Тема 2: Окружность и касательная</h3>
+        <details>
+            <summary><span class="qnum">Вопросы 7–9</span> Дайте определения окружности, хорды, диаметра. Что значит «диаметр виден из точки под прямым углом»?</summary>
+            <p><strong>Окружность</strong> — ГМТ точек, равноудаленных от центра. <strong>Хорда</strong> — отрезок, соединяющий две точки окружности. <strong>Диаметр</strong> — хорда, проходящая через центр. <strong>Свойство:</strong> Угол, опирающийся на диаметр, всегда прямой (90°). Обратно: если отрезок виден из точки под прямым углом, эта точка лежит на окружности с данным отрезком в качестве диаметра.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопросы 10–13</span> Может ли окружность пересекать прямую более чем в двух точках? Дайте определение касательной и её свойство.</summary>
+            <p><strong>Нет</strong>, не может (три точки однозначно задают одну окружность). <strong>Касательная</strong> — прямая, имеющая с окружностью ровно одну общую точку (точку касания). <strong>Свойство:</strong> Касательная перпендикулярна к радиусу, проведенному в точку касания.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопросы 14–17</span> Что известно об отрезках касательных, проведенных из одной точки? Как провести касательную через данную точку окружности?</summary>
+            <p>Отрезки касательных, проведенных из одной точки, <strong>равны</strong> и составляют равные углы с прямой, проходящей через эту точку и центр. <strong>Построение:</strong> провести радиус в данную точку, затем построить прямую, перпендикулярную этому радиусу в данной точке.</p>
+        </details>
+
+        <h3>Тема 3: Вписанные и описанные окружности</h3>
+        <details>
+            <summary><span class="qnum">Вопросы 18–20</span> Какая окружность называется вписанной в треугольник? Сколько таких окружностей можно вписать?</summary>
+            <p>Окружность называется <strong>вписанной</strong>, если она касается всех сторон треугольника. В любой треугольник можно вписать <strong>ровно одну</strong> окружность. Её центр — точка пересечения биссектрис треугольника.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопросы 21–22</span> Какая окружность называется описанной около треугольника? Сколько таких окружностей можно описать?</summary>
+            <p>Окружность называется <strong>описанной</strong>, если все вершины треугольника лежат на ней. Около любого треугольника можно описать <strong>ровно одну</strong> окружность. Её центр — точка пересечения серединных перпендикуляров к его сторонам.</p>
+        </details>
+
+        <h3>Тема 4: Симметричные фигуры</h3>
+        <details>
+            <summary><span class="qnum">Вопросы 23–27</span> Какие точки называются симметричными относительно прямой? Как построить точку, симметричную данной?</summary>
+            <p>Две точки симметричны относительно прямой, если эта прямая проходит через середину отрезка, соединяющего эти точки, и <strong>перпендикулярна</strong> к нему. <strong>Построение:</strong> опустить перпендикуляр из данной точки на прямую и отложить на его продолжении за прямую отрезок, равный расстоянию от точки до прямой.</p>
+        </details>
+        <details>
+            <summary><span class="qnum">Вопросы 28–30</span> Если две прямые симметричны относительно некоторой прямой, может ли только одна из них пересекать ось симметрии? Равны ли расстояния между симметричными точками?</summary>
+            <p><strong>Нет</strong>, не может. Если симметричные прямые пересекаются, их точка пересечения обязательно лежит на оси симметрии (либо обе прямые параллельны оси). <strong>Да</strong>, осевая симметрия является движением, поэтому расстояния между любыми двумя точками и их образами равны.</p>
+        </details>
+
+        <div class="highlight" style="margin-top: 25px;">
+            <h3>🔑 Три ключа главы V</h3>
+            <p>1️⃣ Касательная к окружности перпендикулярна радиусу в точке касания, а отрезки касательных из одной точки равны.</p>
+            <p>2️⃣ В любой треугольник можно вписать ровно одну окружность (центр — пересечение биссектрис), и около любого треугольника можно описать ровно одну окружность (центр — пересечение серединных перпендикуляров).</p>
+            <p>3️⃣ Осевая симметрия сохраняет длины отрезков и величины углов, поэтому симметричные фигуры всегда равны.</p>
+        </div>
+    </div>
+
+    <!-- БЛОК 2. ПРАКТИКА -->
+    <div class="card">
+        <h2>✏️ Блок 2. Практика (20–25 мин)</h2>
+        
+        <h3>🛠️ Разминка</h3>
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px; padding: 15px;">
+            <p><strong>1.</strong> Сколько касательных можно провести к окружности из точки, лежащей вне её? <em>(Ровно две, так как центр окружности и точка касания образуют прямоугольный треугольник, и таких точек на окружности ровно две).</em></p>
+            <p><strong>2.</strong> Сколько осей симметрии имеет равнобедренный треугольник, не являющийся равносторонним? <em>(Ровно одну — прямую, содержащую высоту, проведённую к основанию).</em></p>
+            <p><strong>3.</strong> Сколько общих точек могут иметь две различные окружности? <em>(Ноль, одну или две. Более двух быть не может, так как три точки однозначно задают одну окружность).</em></p>
+        </div>
+
+        <p>Реши задачи в тетради, затем открой подсказку и проверь себя.</p>
+
+        <div class="card" style="border-left: 4px solid var(--success); margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 344.</strong> Прямая a касается окружности с центром O. Найдите расстояние от точки O до прямой a, если диаметр окружности равен 14 см.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> По свойству касательной, расстояние от центра окружности до касательной равно радиусу этой окружности.</div>
+                <div class="step"><strong>Шаг 2.</strong> Радиус равен половине диаметра: R = D / 2 = 14 см / 2 = 7 см.</div>
+                <p><strong>Ответ:</strong> 7 см.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--success); margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 352.</strong> Даны окружность с центром O радиуса 4,5 см и точка A. Через точку A проведены две касательные к окружности. Найдите угол между ними, если OA = 9 см.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть B и C — точки касания. Рассмотрим прямоугольный △OBA (∠OBA = 90°, так как AB — касательная).</div>
+                <div class="step"><strong>Шаг 2.</strong> В этом треугольнике катет OB = 4,5 см, а гипотенуза OA = 9 см. Заметим, что OB = ½ OA.</div>
+                <div class="step"><strong>Шаг 3.</strong> По свойству прямоугольного треугольника, катет, равный половине гипотенузы, лежит против угла в 30°. Значит, ∠OAB = 30°.</div>
+                <div class="step"><strong>Шаг 4.</strong> Прямая OA является биссектрисой угла между касательными. Следовательно, искомый угол ∠BAC = 2 · ∠OAB = 2 · 30° = 60°.</div>
+                <p><strong>Ответ:</strong> 60°.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 370.</strong> Стороны угла BAC, равного 60°, касаются окружности с центром O. Найдите длину отрезка OA, если радиус окружности равен 5 см.
+            <div class="diagram">
+                <!-- SVG: Касательные к окружности из точки A. Угол 60°, радиус 5. -->
+                <!-- Расчёт: O=(160, 110), R=50 (масштаб x10). Угол OAB = 30°. -->
+                <!-- OA = R / sin(30°) = 50 / 0.5 = 100. -->
+                <!-- A=(260, 110). Точка касания B: угол AOB = 60°. -->
+                <!-- B = (160 + 50*cos(60°), 110 - 50*sin(60°)) = (185.0, 66.7). -->
+                <!-- Точка касания C: C = (185.0, 153.3). -->
+                <!-- Прямой угол в B: вектор BO=(-0.5, 0.866), BA=(0.866, 0.5). Квадрат 12px. -->
+                <!-- P1 = B + 12*BO = (179.0, 77.1). P3 = B + 12*BA = (195.4, 72.7). P2 = (189.4, 83.1). -->
+                <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                    <circle cx="160" cy="110" r="50" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="160" y1="110" x2="260" y2="110" stroke="#3498db" stroke-width="2" stroke-dasharray="4,4"/>
+                    <line x1="260" y1="110" x2="185.0" y2="66.7" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="260" y1="110" x2="185.0" y2="153.3" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="160" y1="110" x2="185.0" y2="66.7" stroke="#2c3e50" stroke-width="1.5"/>
+                    <path d="M 179.0,77.1 L 189.4,83.1 L 195.4,72.7" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
+                    <circle cx="160" cy="110" r="3" fill="#2c3e50"/>
+                    <circle cx="260" cy="110" r="3" fill="#2c3e50"/>
+                    <text x="145" y="105" font-size="16" fill="#2c3e50" font-family="sans-serif">O</text>
+                    <text x="265" y="115" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                    <text x="175" y="60" font-size="16" fill="#e74c3c" font-family="sans-serif">B</text>
+                </svg>
+                <p><strong>Рис. 1:</strong> К задаче 370. Центр окружности лежит на биссектрисе угла.</p>
+            </div>
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Центр окружности, вписанной в угол, лежит на его биссектрисе. Значит, OA делит ∠BAC пополам, и ∠OAB = 60° / 2 = 30°.</div>
+                <div class="step"><strong>Шаг 2.</strong> Рассмотрим прямоугольный △OBA (∠OBA = 90°, так как AB — касательная).</div>
+                <div class="step"><strong>Шаг 3.</strong> В этом треугольнике катет OB (радиус) равен 5 см и лежит против угла 30°.</div>
+                <div class="step"><strong>Шаг 4.</strong> По свойству прямоугольного треугольника, гипотенуза OA в два раза больше катета, лежащего против угла 30°: OA = 2 · OB = 2 · 5 см = 10 см.</div>
+                <p><strong>Ответ:</strong> 10 см.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 385.</strong> Могут ли точки A и A₁ быть симметричными относительно прямой p, если расстояния от этих точек до прямой p равны: а) 4 см и 6 см; б) 7 см и 7 см; в) 11,3 см и 11,4 см?
+            <div class="diagram">
+                <!-- SVG: Симметричные точки относительно прямой -->
+                <!-- Расчёт: Прямая a вертикальна, x=160. Точка A=(100, 80). Расстояние до a = 60. -->
+                <!-- Точка A1 симметрична A: x = 160 + 60 = 220, y = 80. A1=(220, 80). -->
+                <!-- Середина M=(160, 80). Прямой угол в M: вектор MA=(-1, 0), направление прямой a=(0, -1). -->
+                <!-- Квадрат 12px: P1=M+(0,-12)=(160, 68), P3=M+(-12,0)=(148, 80), P2=(148, 68). -->
+                <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                    <line x1="160" y1="20" x2="160" y2="200" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5"/>
+                    <line x1="100" y1="80" x2="220" y2="80" stroke="#3498db" stroke-width="2"/>
+                    <path d="M 160,68 L 148,68 L 148,80" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
+                    <circle cx="100" cy="80" r="4" fill="#e74c3c"/>
+                    <circle cx="220" cy="80" r="4" fill="#e74c3c"/>
+                    <circle cx="160" cy="80" r="3" fill="#2c3e50"/>
+                    <text x="85" y="75" font-size="16" fill="#e74c3c" font-family="sans-serif">A</text>
+                    <text x="225" y="75" font-size="16" fill="#e74c3c" font-family="sans-serif">A₁</text>
+                    <text x="165" y="75" font-size="16" fill="#2c3e50" font-family="sans-serif">M</text>
+                    <text x="165" y="40" font-size="16" fill="#2c3e50" font-family="sans-serif">p</text>
+                </svg>
+                <p><strong>Рис. 2:</strong> К задаче 385. Симметричные точки лежат на одном перпендикуляре к оси и на равном расстоянии от неё.</p>
+            </div>
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Вспомним определение симметричных точек: они должны лежать на одном перпендикуляре к оси симметрии и находиться на строго равном расстоянии от неё по разные стороны.</div>
+                <div class="step"><strong>Шаг 2.</strong> Проверим варианты: расстояния должны быть равны. Варианты а) 4 см ≠ 6 см и в) 11,3 см ≠ 11,4 см невозможны.</div>
+                <div class="step"><strong>Шаг 3.</strong> Вариант б) 7 см = 7 см возможен (при условии, что точки лежат по разные стороны прямой и на одном перпендикуляре).</div>
+                <p><strong>Ответ:</strong> да, только в случае б).</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 389.</strong> Лежат ли точки A₁, B₁, C₁ на одной прямой, если они симметричны точкам A, B, C относительно некоторой прямой и известно, что: а) AB = 2 дм, AC = 10 дм, BC = 8 дм; б) AB = 1,1 см, BC = 5 см, CA = 6 см?
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Осевая симметрия сохраняет коллинеарность: если исходные точки лежат на одной прямой, то и симметричные им точки будут лежать на одной прямой. Если исходные точки образуют треугольник, то и симметричные образуют треугольник.</div>
+                <div class="step"><strong>Шаг 2.</strong> Случай а): AB + BC = 2 + 8 = 10 дм. Так как AB + BC = AC, точки A, B, C лежат на одной прямой (точка B между A и C). Значит, A₁, B₁, C₁ также лежат на одной прямой.</div>
+                <div class="step"><strong>Шаг 3.</strong> Случай б): AB + BC = 1,1 + 5 = 6,1 см. Так как 6,1 > 6 (AB + BC > CA), выполняется строгое неравенство треугольника. Точки A, B, C не лежат на одной прямой. Следовательно, A₁, B₁, C₁ также не лежат на одной прямой.</div>
+                <p><strong>Ответ:</strong> а) да, лежат; б) нет, не лежат.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--warning); margin-bottom: 15px;">
+            <span class="badge badge-aspire">Продвинутый уровень</span>
+            <strong>Задача 391.</strong> Точки A₁, B₁, C₁ симметричны вершинам треугольника ABC относительно некоторой прямой. Найдите периметр треугольника A₁B₁C₁, если AB = 4,5 см, BC = 5,5 см, CA = 8,1 см.
+            <div class="diagram">
+                <!-- SVG: Вписанная окружность (иллюстрация сохранения свойств при симметрии) -->
+                <!-- Расчёт: A=(160, 50), B=(70, 170), C=(250, 170). -->
+                <!-- Высота = 120. Основание = 180. Стороны = 150. Полупериметр p = 240. Площадь = 10800. r = 45. -->
+                <!-- O=(160, 125). Точки касания: K=(124, 98), L=(196, 98). -->
+                <!-- Квадрат в K (12px): P1=(133.6, 105.2), P3=(131.2, 88.4), P2=(140.8, 95.6). -->
+                <!-- Квадрат в L (12px): P1=(186.4, 105.2), P3=(188.8, 88.4), P2=(179.2, 95.6). -->
+                <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                    <polygon points="160,50 70,170 250,170" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linejoin="round"/>
+                    <circle cx="160" cy="125" r="45" fill="none" stroke="#3498db" stroke-width="2"/>
+                    <line x1="160" y1="125" x2="124" y2="98" stroke="#e74c3c" stroke-width="1.5"/>
+                    <line x1="160" y1="125" x2="196" y2="98" stroke="#e74c3c" stroke-width="1.5"/>
+                    <path d="M 133.6,105.2 L 140.8,95.6 L 131.2,88.4" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
+                    <path d="M 186.4,105.2 L 179.2,95.6 L 188.8,88.4" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
+                    <circle cx="160" cy="125" r="3" fill="#3498db"/>
+                    <text x="155" y="40" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                    <text x="55" y="185" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                    <text x="255" y="185" font-size="16" fill="#2c3e50" font-family="sans-serif">C</text>
+                    <text x="165" y="120" font-size="16" fill="#3498db" font-family="sans-serif">O</text>
+                </svg>
+                <p><strong>Рис. 3:</strong> Иллюстрация: симметрия сохраняет все метрические свойства фигур (длины, углы, периметры).</p>
+            </div>
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Осевая симметрия является движением плоскости, поэтому она сохраняет длины отрезков.</div>
+                <div class="step"><strong>Шаг 2.</strong> Следовательно, симметричный треугольник A₁B₁C₁ равен исходному треугольнику ABC, и его стороны равны: A₁B₁ = 4,5 см, B₁C₁ = 5,5 см, C₁A₁ = 8,1 см.</div>
+                <div class="step"><strong>Шаг 3.</strong> Периметр треугольника A₁B₁C₁ равен сумме его сторон: P = 4,5 + 5,5 + 8,1 = 18,1 см.</div>
+                <p><strong>Ответ:</strong> 18,1 см.</p>
+            </details>
+        </div>
+
+        <div class="highlight" style="margin-top: 30px;">
+            <h3>🧠 Методическая подсказка</h3>
+            <p>При решении задач на свойства окружностей и симметрию используй этот алгоритм:</p>
+            <ol>
+                <li><strong>Проведи радиус в точку касания.</strong> Это автоматически создаёт прямоугольный треугольник, к которому можно применить теорему Пифагора или свойство катета против угла 30°.</li>
+                <li><strong>Ищи центры окружностей.</strong> Центр вписанной окружности — пересечение биссектрис, центр описанной — пересечение серединных перпендикуляров. Это ключ к построению.</li>
+                <li><strong>Используй свойство сохранения при симметрии.</strong> Симметрия сохраняет длины отрезков, величины углов и коллинеарность точек. Если исходные точки лежат на одной прямой, их образы тоже будут лежать на одной прямой.</li>
+                <li><strong>Проверяй неравенство треугольника.</strong> Перед выводом о том, лежат ли три точки на одной прямой, проверь, выполняется ли равенство вида AB + BC = AC.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="lesson-nav">
+<a class="nav-link prev" href="geometriya-7-5-25.html"><span class="nav-arrow">←</span><span class="nav-text"><span class="nav-dir">Предыдущий урок</span><span class="nav-title">§3. Симметричные фигуры</span></span></a>
+</div>
+
+<footer>
+    <div class="container">
+        <p>Учебник: Л. С. Атанасян и др. «Геометрия, 7–9», Глава V, Вопросы для повторения, стр. 113–115.</p>
+        <div class="legal">
+            © 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+            Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+        </div>
+    </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>
