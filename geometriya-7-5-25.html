@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Симметричные фигуры — Геометрия 7 класс</title>
+    <!-- Урок 25 курса. Глава V «Геометрические места точек. Симметричные фигуры», §3. Все координаты SVG вычислены по формулам x = cx + r·cos α, y = cy − r·sin α. Расчёты — в комментариях внутри SVG. -->
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 0 0 12px 12px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; font-size: 1.8em; }
+        .subtitle { font-size: 1.1em; opacity: 0.9; margin-top: 8px; }
+        .greeting {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-top: 0; }
+        h3 { color: var(--accent); margin-top: 20px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th { background-color: #f1f3f5; color: var(--primary); }
+        .highlight {
+            background-color: #e8f8f5;
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fef9e7;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .diagram {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+            color: white;
+            margin-right: 8px;
+        }
+        .badge-must { background-color: #2ecc71; }
+        .badge-should { background-color: #f39c12; }
+        .badge-aspire { background-color: #9b59b6; }
+        details {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-top: 10px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary);
+            outline: none;
+        }
+        .step {
+            margin: 10px 0;
+            padding-left: 15px;
+            border-left: 2px solid var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+        footer .legal {
+            font-size: 0.85em;
+            color: #95a5a6;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<meta name="description" content="Симметричные фигуры — Геометрия 7 класс">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:title" content="Симметричные фигуры — Геометрия 7 класс">
+<meta property="og:description" content="Симметричные фигуры — Геометрия 7 класс">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-5-25.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Симметричные фигуры — Геометрия 7 класс">
+<meta name="twitter:description" content="Симметричные фигуры — Геометрия 7 класс">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-5-25.html">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>🦋 Симметричные фигуры</h1>
+        <div class="subtitle">Геометрия 7 класс • Глава V, §3 • Страницы 107–113</div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="greeting">
+        <p>Привет! Сегодня мы откроем для себя одну из самых гармоничных идей в геометрии — осевую симметрию. Ты узнаешь, почему крылья бабочки или фасад старинного здания выглядят так уравновешенно, и научишься строго доказывать, что две фигуры являются «зеркальными отражениями» друг друга.</p>
+    </div>
+
+    <!-- БЛОК 1. ИЗУЧЕНИЕ -->
+    <div class="card">
+        <h2>🔍 Блок 1. Изучение (15–20 мин)</h2>
+        
+        <h3>🛠️ Разминка</h3>
+        <p>Представь, что ты складываешь лист бумаги пополам, капаешь на одну половину краску и прижимаешь вторую половину. Когда ты раскроешь лист, ты увидишь два одинаковых пятна, расположенных зеркально относительно линии сгиба. В геометрии эта линия сгиба называется <strong>осью симметрии</strong>, а такие фигуры — симметричными. Это не просто красивый эффект, а строгое математическое правило, которое мы сейчас разберём.</p>
+
+        <h3>📚 Ключевые термины</h3>
+        <table>
+            <tr>
+                <th>Термин</th>
+                <th>Что это?</th>
+                <th>Как обозначаем</th>
+            </tr>
+            <tr>
+                <td>Симметричные точки</td>
+                <td>Две точки, которые лежат на одном перпендикуляре к данной прямой и на равном расстоянии от неё по разные стороны.</td>
+                <td>Точки \(A\) и \(A_1\) симметричны относительно прямой \(a\)</td>
+            </tr>
+            <tr>
+                <td>Ось симметрии</td>
+                <td>Прямая, относительно которой выполняется симметрия. Она является серединным перпендикуляром к отрезку, соединяющему симметричные точки.</td>
+                <td>Прямая \(a\)</td>
+            </tr>
+            <tr>
+                <td>Симметричные фигуры</td>
+                <td>Две фигуры, каждая точка одной из которых симметрична некоторой точке другой фигуры относительно одной и той же прямой.</td>
+                <td>Фигуры \(F\) и \(F_1\)</td>
+            </tr>
+            <tr>
+                <td>Фигура, симметричная сама себе</td>
+                <td>Фигура, которая при отражении относительно некоторой прямой переходит сама в себя (совпадает со своим отражением).</td>
+                <td>Равнобедренный треугольник, круг</td>
+            </tr>
+            <tr>
+                <td>Осевая симметрия</td>
+                <td>Отображение плоскости на себя, при котором каждая точка переходит в точку, симметричную ей относительно данной прямой (оси).</td>
+                <td>Отражение относительно прямой \(a\)</td>
+            </tr>
+            <tr>
+                <td>Движение плоскости</td>
+                <td>Отображение плоскости на себя, сохраняющее расстояния между точками. Осевая симметрия — движение.</td>
+                <td>\(AB = A_1B_1\)</td>
+            </tr>
+        </table>
+
+        <h3>📐 Графические иллюстрации</h3>
+        
+        <div class="diagram">
+            <!-- SVG 1: Симметричные точки относительно прямой -->
+            <!-- Расчёт: Прямая a вертикальна, x=160. Точка A=(100, 80). Расстояние до a = 60. -->
+            <!-- Точка A1 симметрична A: x = 160 + 60 = 220, y = 80. A1=(220, 80). -->
+            <!-- Середина M=(160, 80). Прямой угол в M: вектор MA=( -1, 0), направление прямой a=(0, 1). -->
+            <!-- Квадрат 12px: P1=M+(0,-12)=(160, 68), P3=M+(12,0)=(172, 80), P2=(172, 68). -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <line x1="160" y1="20" x2="160" y2="200" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5"/>
+                <line x1="100" y1="80" x2="220" y2="80" stroke="#3498db" stroke-width="2"/>
+                <path d="M 160,68 L 172,68 L 172,80" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
+                <circle cx="100" cy="80" r="4" fill="#e74c3c"/>
+                <circle cx="220" cy="80" r="4" fill="#e74c3c"/>
+                <circle cx="160" cy="80" r="3" fill="#2c3e50"/>
+                <text x="85" y="75" font-size="16" fill="#e74c3c" font-family="sans-serif">A</text>
+                <text x="225" y="75" font-size="16" fill="#e74c3c" font-family="sans-serif">A₁</text>
+                <text x="165" y="75" font-size="16" fill="#2c3e50" font-family="sans-serif">M</text>
+                <text x="165" y="40" font-size="16" fill="#2c3e50" font-family="sans-serif">a</text>
+            </svg>
+            <p><strong>Рис. 1:</strong> Точки \(A\) и \(A_1\) симметричны относительно прямой \(a\). Прямая \(a\) проходит через середину отрезка \(AA_1\) и перпендикулярна ему.</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 2: Фигуры, имеющие ось симметрии -->
+            <!-- Расчёт: Равнобедренный треугольник. Основание горизонтально. -->
+            <!-- Вершина C=(160, 50). Основание AB: A=(90, 160), B=(230, 160). -->
+            <!-- Ось симметрии: вертикальная прямая x=160. -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <polygon points="160,50 90,160 230,160" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linejoin="round"/>
+                <line x1="160" y1="30" x2="160" y2="190" stroke="#3498db" stroke-width="2" stroke-dasharray="4,4"/>
+                <circle cx="160" cy="50" r="3" fill="#2c3e50"/>
+                <circle cx="90" cy="160" r="3" fill="#2c3e50"/>
+                <circle cx="230" cy="160" r="3" fill="#2c3e50"/>
+                <text x="155" y="40" font-size="16" fill="#2c3e50" font-family="sans-serif">C</text>
+                <text x="75" y="175" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                <text x="235" y="175" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                <text x="165" y="40" font-size="16" fill="#3498db" font-family="sans-serif">a</text>
+            </svg>
+            <p><strong>Рис. 2:</strong> Равнобедренный треугольник имеет одну ось симметрии — прямую, содержащую его высоту, проведённую к основанию.</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 3: Сохранение расстояний при симметрии -->
+            <!-- Расчёт: Ось a горизонтальна, y=110. -->
+            <!-- A=(100, 60), B=(140, 80). -->
+            <!-- Симметричные точки: A1=(100, 160), B1=(140, 140). -->
+            <!-- Длина AB = sqrt(40^2 + 20^2) = sqrt(2000) ≈ 44.7. Длина A1B1 = sqrt(40^2 + (-20)^2) = 44.7. -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <line x1="40" y1="110" x2="280" y2="110" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5"/>
+                <line x1="100" y1="60" x2="140" y2="80" stroke="#e74c3c" stroke-width="2"/>
+                <line x1="100" y1="160" x2="140" y2="140" stroke="#e74c3c" stroke-width="2"/>
+                <circle cx="100" cy="60" r="3" fill="#2c3e50"/>
+                <circle cx="140" cy="80" r="3" fill="#2c3e50"/>
+                <circle cx="100" cy="160" r="3" fill="#2c3e50"/>
+                <circle cx="140" cy="140" r="3" fill="#2c3e50"/>
+                <text x="85" y="55" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                <text x="145" y="75" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                <text x="85" y="180" font-size="16" fill="#2c3e50" font-family="sans-serif">A₁</text>
+                <text x="145" y="160" font-size="16" fill="#2c3e50" font-family="sans-serif">B₁</text>
+                <text x="285" y="115" font-size="16" fill="#2c3e50" font-family="sans-serif">a</text>
+            </svg>
+            <p><strong>Рис. 3:</strong> При осевой симметрии расстояние между точками сохраняется: \(AB = A_1B_1\).</p>
+        </div>
+
+        <div class="diagram">
+            <!-- SVG 4: Пересечение симметричных прямых на оси -->
+            <!-- Расчёт: Ось a вертикальна, x=160. -->
+            <!-- Прямая b проходит через (160, 160) и (80, 80). -->
+            <!-- Прямая b1 симметрична b: проходит через (160, 160) и (240, 80). -->
+            <!-- Точка пересечения (160, 160) лежит на оси a. -->
+            <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                <line x1="160" y1="20" x2="160" y2="200" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5"/>
+                <line x1="80" y1="80" x2="160" y2="160" stroke="#e74c3c" stroke-width="2"/>
+                <line x1="240" y1="80" x2="160" y2="160" stroke="#e74c3c" stroke-width="2"/>
+                <circle cx="160" cy="160" r="4" fill="#f39c12"/>
+                <text x="165" y="40" font-size="16" fill="#2c3e50" font-family="sans-serif">a</text>
+                <text x="70" y="75" font-size="16" fill="#e74c3c" font-family="sans-serif">b</text>
+                <text x="245" y="75" font-size="16" fill="#e74c3c" font-family="sans-serif">b₁</text>
+                <text x="165" y="155" font-size="16" fill="#f39c12" font-family="sans-serif">K</text>
+            </svg>
+            <p><strong>Рис. 4:</strong> Если две прямые симметричны относительно оси \(a\) и пересекаются, то точка их пересечения лежит на оси \(a\).</p>
+        </div>
+
+        <h3>💡 Главные правила</h3>
+        <div class="highlight">
+            <strong>Правило 1: Сохранение длин.</strong> При осевой симметрии отрезок переходит в равный ему отрезок, угол — в равный ему угол, а треугольник — в равный ему треугольник. Симметрия является движением плоскости.
+        </div>
+        <div class="highlight">
+            <strong>Правило 2: Сохранение коллинеарности.</strong> Если три точки лежат на одной прямой, то и их симметричные образы будут лежать на одной прямой. Прямая переходит в прямую.
+        </div>
+        <div class="highlight">
+            <strong>Правило 3: Свойство пересекающихся симметричных прямых.</strong> Если две прямые симметричны относительно некоторой оси и не параллельны, то они обязательно пересекаются на этой оси симметрии.
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Важно запомнить:</strong>
+            <ul>
+                <li>Не путай <strong>ось симметрии фигуры</strong> (прямая, делящая саму фигуру на две зеркальные половины) и <strong>ось симметрии двух разных фигур</strong> (прямая, относительно которой одна фигура является отражением другой).</li>
+                <li>Ось симметрии может проходить <strong>вне</strong> фигуры (например, у двух симметричных отрезков) или <strong>внутри</strong> неё (у равнобедренного треугольника).</li>
+                <li>У окружности бесконечно много осей симметрии — это любая прямая, проходящая через её центр.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- БЛОК 2. ЗАКРЕПЛЕНИЕ -->
+    <div class="card">
+        <h2>✏️ Блок 2. Закрепление (20–25 мин)</h2>
+        <p>Задания из учебника (стр. 110–113). Решай в тетради, делай чертежи, затем открой подсказку и проверь себя.</p>
+
+        <div class="card" style="border-left: 4px solid var(--success); margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 385.</strong> Могут ли точки \(A\) и \(A_1\) быть симметричными относительно прямой \(p\), если расстояния от этих точек до прямой \(p\) равны: а) 4 см и 6 см; б) 7 см и 7 см; в) 11,3 см и 11,4 см? Ответ обоснуй.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Вспомним определение симметричных точек: они должны лежать на одном перпендикуляре к оси симметрии и находиться на <strong>равном</strong> расстоянии от неё по разные стороны.</div>
+                <div class="step"><strong>Шаг 2.</strong> Проверим варианты: расстояния должны быть строго равны.</div>
+                <div class="step"><strong>Шаг 3.</strong> Вариант а) 4 см ≠ 6 см — невозможно. Вариант в) 11,3 см ≠ 11,4 см — невозможно. Вариант б) 7 см = 7 см — возможно (при условии, что точки лежат по разные стороны прямой и на одном перпендикуляре).</div>
+                <p><strong>Ответ:</strong> да, только в случае б), так как расстояния от симметричных точек до оси симметрии должны быть равны.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--success); margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 386.</strong> Точки \(A_1\), \(B_1\), \(C_1\) симметричны точкам \(A\), \(B\), \(C\) относительно прямой \(p\). Найдите \(A_1B_1\), если известно, что точка \(B\) лежит между точками \(A\) и \(C\), \(AC = 5\) см, \(BC = 3\) см.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Так как точка \(B\) лежит между \(A\) и \(C\), длина отрезка \(AB\) равна разности длин отрезков \(AC\) и \(BC\): \(AB = AC - BC\).</div>
+                <div class="step"><strong>Шаг 2.</strong> Подставим числа: \(AB = 5\text{ см} - 3\text{ см} = 2\text{ см}\).</div>
+                <div class="step"><strong>Шаг 3.</strong> По свойству осевой симметрии, длины симметричных отрезков равны. Следовательно, \(A_1B_1 = AB\).</div>
+                <div class="step"><strong>Шаг 4.</strong> Получаем \(A_1B_1 = 2\) см.</div>
+                <p><strong>Ответ:</strong> 2 см.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 389.</strong> Лежат ли точки \(A_1\), \(B_1\), \(C_1\) на одной прямой, если они симметричны точкам \(A\), \(B\), \(C\) относительно некоторой прямой и известно, что: а) \(AB = 2\) дм, \(AC = 10\) дм, \(BC = 8\) дм; б) \(AB = 1,1\) см, \(BC = 5\) см, \(CA = 6\) см?
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Вспомним, что осевая симметрия сохраняет коллинеарность: если исходные точки лежат на одной прямой, то и симметричные им точки будут лежать на одной прямой. Если исходные точки образуют треугольник, то и симметричные образуют треугольник.</div>
+                <div class="step"><strong>Шаг 2.</strong> Проверим случай а): \(AB + BC = 2 + 8 = 10\) дм. Так как \(AB + BC = AC\), точки \(A\), \(B\), \(C\) лежат на одной прямой (точка \(B\) между \(A\) и \(C\)). Значит, \(A_1\), \(B_1\), \(C_1\) также лежат на одной прямой.</div>
+                <div class="step"><strong>Шаг 3.</strong> Проверим случай б): \(AB + BC = 1,1 + 5 = 6,1\) см. Так как \(6,1 > 6\) (\(AB + BC > CA\)), выполняется строгое неравенство треугольника. Точки \(A\), \(B\), \(C\) не лежат на одной прямой, они образуют треугольник. Следовательно, \(A_1\), \(B_1\), \(C_1\) также не лежат на одной прямой.</div>
+                <p><strong>Ответ:</strong> а) да, лежат; б) нет, не лежат.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 391.</strong> Точки \(A_1\), \(B_1\), \(C_1\) симметричны вершинам треугольника \(ABC\) относительно некоторой прямой. Найдите периметр треугольника \(A_1B_1C_1\), если \(AB = 4,5\) см, \(BC = 5,5\) см, \(CA = 8,1\) см.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Осевая симметрия является движением, поэтому она сохраняет длины отрезков. Симметричный треугольник \(A_1B_1C_1\) равен исходному треугольнику \(ABC\).</div>
+                <div class="step"><strong>Шаг 2.</strong> Следовательно, \(A_1B_1 = AB = 4,5\) см, \(B_1C_1 = BC = 5,5\) см, \(C_1A_1 = CA = 8,1\) см.</div>
+                <div class="step"><strong>Шаг 3.</strong> Периметр треугольника \(A_1B_1C_1\) равен сумме его сторон: \(P = 4,5 + 5,5 + 8,1 = 18,1\) см.</div>
+                <p><strong>Ответ:</strong> 18,1 см.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--warning); margin-bottom: 15px;">
+            <span class="badge badge-aspire">Продвинутый уровень</span>
+            <strong>Задача 392.</strong> Прямая \(BO\) — ось симметрии угла \(ABC\). Треугольник \(BA_1C_1\) симметричен треугольнику \(ABC\) относительно прямой \(BO\). Определите длины отрезков \(BA_1\) и \(BC_1\), если \(BA = 5,4\) см, \(BC = 3,5\) см.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> По условию треугольник \(BA_1C_1\) симметричен треугольнику \(ABC\) относительно прямой \(BO\).</div>
+                <div class="step"><strong>Шаг 2.</strong> При осевой симметрии соответственные отрезки равны. Вершине \(A\) соответствует вершина \(A_1\), а вершине \(C\) — вершина \(C_1\) (вершина \(B\) лежит на оси симметрии и переходит сама в себя).</div>
+                <div class="step"><strong>Шаг 3.</strong> Следовательно, длина отрезка \(BA_1\) равна длине отрезка \(BA\), а длина отрезка \(BC_1\) равна длине отрезка \(BC\).</div>
+                <div class="step"><strong>Шаг 4.</strong> Подставляем данные: \(BA_1 = 5,4\) см, \(BC_1 = 3,5\) см.</div>
+                <p><strong>Ответ:</strong> \(BA_1 = 5,4\) см, \(BC_1 = 3,5\) см.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--accent); margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 393.</strong> Докажите, что если треугольник имеет ось симметрии, то он равнобедренный, и осью симметрии является серединный перпендикуляр к основанию.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть прямая \(p\) — ось симметрии треугольника \(ABC\). Так как вершины \(A\), \(B\), \(C\) не лежат на одной прямой, то хотя бы одна из них не лежит на прямой \(p\).</div>
+                <div class="step"><strong>Шаг 2.</strong> Пусть для определённости вершина \(B\) не лежит на \(p\). При симметрии относительно \(p\) точка \(B\) должна перейти в какую-то другую вершину этого же треугольника (так как треугольник переходит сам в себя). Пусть \(B\) переходит в \(C\).</div>
+                <div class="step"><strong>Шаг 3.</strong> Тогда оставшаяся вершина \(A\) должна переходить сама в себя. Это возможно только если точка \(A\) лежит на оси симметрии \(p\).</div>
+                <div class="step"><strong>Шаг 4.</strong> Раз точки \(B\) и \(C\) симметричны относительно \(p\), то прямая \(p\) является серединным перпендикуляром к отрезку \(BC\).</div>
+                <div class="step"><strong>Шаг 5.</strong> Любая точка серединного перпендикуляра равноудалена от концов отрезка. Так как \(A\) лежит на \(p\), то \(AB = AC\). Следовательно, треугольник \(ABC\) равнобедренный.</div>
+                <p><strong>Вывод:</strong> Утверждение доказано.</p>
+            </details>
+        </div>
+
+        
+
+        <div class="highlight" style="margin-top: 30px;">
+            <h3>🧠 Методическая подсказка</h3>
+            <p>При решении задач на осевую симметрию используй этот алгоритм:</p>
+            <ol>
+                <li><strong>Найди ось симметрии.</strong> Если она не дана явно, ищи серединный перпендикуляр к отрезку, соединяющему известную точку и её образ.</li>
+                <li><strong>Используй свойство равенства.</strong> Симметрия сохраняет все метрические свойства: длины отрезков, величины углов, периметры и площади. Если что-то известно для исходной фигуры, это же верно и для её образа.</li>
+                <li><strong>Проверяй коллинеарность.</strong> Если нужно доказать, что точки лежат на одной прямой, проверь выполнение равенства \(AB + BC = AC\) для исходных точек. Симметрия перенесёт это свойство на образы.</li>
+                <li><strong>Строй перпендикуляры.</strong> Для построения симметричной точки всегда сначала опускай перпендикуляр на ось симметрии, а затем откладывай на нём равный отрезок в противоположную сторону.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="lesson-nav">
+<a class="nav-link prev" href="geometriya-7-5-24.html"><span class="nav-arrow">←</span><span class="nav-text"><span class="nav-dir">Предыдущий урок</span><span class="nav-title">§2. Окружность. Касательная к окружности</span></span></a>
+</div>
+
+<footer>
+    <div class="container">
+        <p>Учебник: Л. С. Атанасян и др. «Геометрия, 7–9», Глава V, §3, стр. 107–113.</p>
+        <div class="legal">
+            © 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+            Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+        </div>
+    </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>
