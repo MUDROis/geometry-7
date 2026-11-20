@@ -181,35 +181,34 @@ footer .legal { margin-top: 14px; padding-top: 12px; border-top: 1px solid #dfe4
 <div class="diagram">
 <h4>Построение отрезка, равного данному</h4>
 <svg width="560" height="220" viewBox="0 0 560 220">
-<!-- Левая панель (дано): луч OC: O(50;80) → C(250;80); отрезок AB: A(50;160), B(140;160), AB = 90.
-     Правая панель (построение): центр O(400;100), луч O → C(540;100).
+<!-- Левая панель (дано): луч с началом O(50;80), стрелка вправо (направление — точка C опущена: у луча есть только начальная точка O); отрезок AB: A(50;160), B(140;160), AB = 90.
+     Правая панель (построение): центр O(400;100), луч с началом O(400;100) и стрелкой вправо.
      Окружность (O, AB): r = 90 → x от 310 до 490, y от 10 до 190 (окружность целиком видна,
      разделитель x = 290 её не пересекает).
      Точка D — пересечение окружности с лучом: D(490;100), OD = 90 = AB ✓.
      Зелёный отрезок OD — радиус, равный AB. -->
-<line x1="50" y1="80" x2="250" y2="80" stroke="#2c3e50" stroke-width="2"/>
+<line x1="50" y1="80" x2="275" y2="80" stroke="#2c3e50" stroke-width="2"/>
+<polygon points="266,75 278,80 266,85" fill="#2c3e50"/>
 <line x1="50" y1="160" x2="140" y2="160" stroke="#2c3e50" stroke-width="3"/>
 <line x1="290" y1="40" x2="290" y2="200" stroke="#bdc3c7" stroke-width="1" stroke-dasharray="4,4"/>
 <circle cx="400" cy="100" r="90" fill="none" stroke="#3498db" stroke-width="2" stroke-dasharray="5,3"/>
 <line x1="400" y1="100" x2="540" y2="100" stroke="#2c3e50" stroke-width="2"/>
+<polygon points="530,95 542,100 530,105" fill="#2c3e50"/>
 <line x1="400" y1="100" x2="490" y2="100" stroke="#27ae60" stroke-width="4"/>
 <circle cx="50" cy="80" r="4" fill="#2c3e50"/>
-<circle cx="250" cy="80" r="4" fill="#2c3e50"/>
 <circle cx="50" cy="160" r="4" fill="#2c3e50"/>
 <circle cx="140" cy="160" r="4" fill="#2c3e50"/>
 <circle cx="400" cy="100" r="4" fill="#2c3e50"/>
 <circle cx="490" cy="100" r="5" fill="#27ae60"/>
 <text x="42" y="74" font-size="14" font-weight="bold">O</text>
-<text x="254" y="74" font-size="14" font-weight="bold">C</text>
 <text x="42" y="180" font-size="14" font-weight="bold">A</text>
 <text x="144" y="180" font-size="14" font-weight="bold">B</text>
 <text x="392" y="94" font-size="14" font-weight="bold">O</text>
-<text x="544" y="94" font-size="14" font-weight="bold">C</text>
 <text x="494" y="122" font-size="14" font-weight="bold" fill="#27ae60">D</text>
-<text x="150" y="210" font-size="12" fill="#7f8c8d" text-anchor="middle">(а) Дано: луч OC и отрезок AB</text>
+<text x="150" y="210" font-size="12" fill="#7f8c8d" text-anchor="middle">(а) Дано: луч с началом O и отрезок AB</text>
 <text x="430" y="210" font-size="12" fill="#7f8c8d" text-anchor="middle">(б) Окружность (O, AB) → точка D, OD = AB</text>
 </svg>
-<p><strong>Рис. 3:</strong> Чтобы отложить на луче OC отрезок, равный AB, проводим окружность с центром O и радиусом AB. Точка D пересечения окружности с лучом — искомая: OD = AB</p>
+<p><strong>Рис. 3:</strong> Чтобы отложить на луче с началом O отрезок, равный AB, проводим окружность с центром O и радиусом AB. Точка D пересечения окружности с лучом — искомая: OD = AB</p>
 </div>
 
 <div class="diagram">
