@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задачи повышенной трудности — Геометрия 7 класс</title>
+    <!-- Урок 28 курса. Заключительный урок: «Задачи повышенной трудности» (стр. 116–121). Все координаты SVG вычислены по формулам x = cx + r·cos α, y = cy − r·sin α. Расчёты — в комментариях внутри SVG. -->
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 0 0 12px 12px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; font-size: 1.8em; }
+        .subtitle { font-size: 1.1em; opacity: 0.9; margin-top: 8px; }
+        .greeting {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-top: 0; }
+        h3 { color: var(--accent); margin-top: 20px; }
+        .highlight {
+            background-color: #e8f8f5;
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fef9e7;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .diagram {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+            color: white;
+            margin-right: 8px;
+        }
+        .badge-must { background-color: #2ecc71; }
+        .badge-should { background-color: #f39c12; }
+        .badge-aspire { background-color: #9b59b6; }
+        details {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-top: 10px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary);
+            outline: none;
+        }
+        .step {
+            margin: 10px 0;
+            padding-left: 15px;
+            border-left: 2px solid var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+        footer .legal {
+            font-size: 0.85em;
+            color: #95a5a6;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .lesson-nav { display: flex; justify-content: space-between; align-items: stretch; gap: 14px; margin: 30px 0 4px; flex-wrap: wrap; }
+        .lesson-nav .nav-link { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; max-width: 100%; background: #fff; border: 2px solid #d6dce4; border-radius: 12px; color: #2c3e50; text-decoration: none; font-weight: 700; font-size: .95rem; box-shadow: 0 2px 6px rgba(44,62,80,.06); transition: border-color .15s, box-shadow .15s, transform .15s; }
+        .lesson-nav .nav-link:hover { border-color: #3498db; box-shadow: 0 3px 10px rgba(52,152,219,.2); transform: translateY(-1px); }
+        .lesson-nav .nav-arrow { font-size: 1.15rem; color: #3498db; line-height: 1; flex: 0 0 auto; }
+        .lesson-nav .nav-text { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+        .lesson-nav .nav-dir { font-size: .72rem; font-weight: 600; color: #7f8c8d; text-transform: uppercase; letter-spacing: .5px; }
+        .lesson-nav .nav-title { white-space: normal; }
+        .lesson-nav .nav-link.prev { margin-right: auto; }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/course.css">
+<meta name="description" content="Задачи повышенной трудности — Геометрия 7 класс">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Геометрия 7 класс">
+<meta property="og:title" content="Задачи повышенной трудности — Геометрия 7 класс">
+<meta property="og:description" content="Задачи повышенной трудности — Геометрия 7 класс">
+<meta property="og:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<meta property="og:url" content="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-5-28.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Задачи повышенной трудности — Геометрия 7 класс">
+<meta name="twitter:description" content="Задачи повышенной трудности — Геометрия 7 класс">
+<meta name="twitter:image" content="https://интерактивнаяшкола.рф/geometry-7/assets/logo.png">
+<link rel="canonical" href="https://интерактивнаяшкола.рф/geometry-7/geometriya-7-5-28.html">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>🏆 Задачи повышенной трудности</h1>
+        <div class="subtitle">Геометрия 7 класс • Заключительный урок • Страницы 116–121</div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="greeting">
+        <p>Привет! Это финальный аккорд всего курса геометрии. Здесь собраны самые сложные задачи года — они требуют не просто знать свойства, а уметь строить логические цепочки, делать дополнительные построения и доказывать от противного. Не бойся: если задача не решается с первого взгляда — это нормально. Разберём каждую по шагам!</p>
+    </div>
+
+    <!-- БЛОК 1. НАСТРОЙ НА РЕШЕНИЕ -->
+    <div class="card">
+        <h2>🧠 Блок 1. Настрой на решение (10–15 мин)</h2>
+        <p>Три ключевых инструмента, которые понадобятся в решениях.</p>
+
+        <details>
+            <summary><span class="badge badge-must">Факт 1</span> Против большей стороны — больший угол.</summary>
+            <p>В треугольнике против большей стороны лежит больший угол, и наоборот. Это главный способ сравнивать углы, не измеряя их. Следствие: если две стороны одного треугольника равны двум сторонам другого, а третьи стороны неравны, то против большей третьей стороны лежит больший угол.</p>
+        </details>
+        <details>
+            <summary><span class="badge badge-must">Факт 2</span> Дополнительное построение — продолжение медианы.</summary>
+            <p>Если медиану AM продолжить за точку M на отрезок MD = AM, то получится параллелограмм ABDC: его диагонали AD и BC делятся пополам в точке M, а стороны BD = AC и CD = AB. Это превращает «неудобный» треугольник в удобную фигуру.</p>
+        </details>
+        <details>
+            <summary><span class="badge badge-must">Факт 3</span> Задачи на построение: четыре шага.</summary>
+            <p>Сложная задача на построение решается по схеме: 1) анализ — предполагаем, что фигура построена, и ищем связи; 2) построение по плану; 3) доказательство, что фигура удовлетворяет условию; 4) исследование — при каких данных есть решение и сколько их.</p>
+        </details>
+    </div>
+
+    <!-- БЛОК 2. РЕШЕНИЕ ЗАДАЧ -->
+    <div class="card">
+        <h2>🛠 Блок 2. Решение задач (25–30 мин)</h2>
+        <p>Решай в тетради, делай чертежи, а затем открывай подсказку для самопроверки.</p>
+
+        <div class="card" style="border-left: 4px solid #2ecc71; margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 428.</strong> В каждом из следующих случаев определите вид треугольника: а) сумма любых двух углов больше 90°; б) каждый угол меньше суммы двух других углов.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Случай а): предположим, что какой-то угол не является острым (то есть равен 90° или больше). Тогда сумма двух других углов не превосходит 90°, что противоречит условию.</div>
+                <div class="step"><strong>Шаг 2.</strong> Значит, все три угла острые, и треугольник — остроугольный.</div>
+                <div class="step"><strong>Шаг 3.</strong> Случай б): обозначим углы α, β, γ. Условие «α < β + γ» равносильно α < 180° − α, то есть α < 90°.</div>
+                <div class="step"><strong>Шаг 4.</strong> То же верно для β и γ. Значит, все углы острые — треугольник снова остроугольный.</div>
+                <p><strong>Ответ:</strong> в обоих случаях треугольник остроугольный.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #2ecc71; margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 435.</strong> Докажите теорему: если в треугольнике биссектриса является медианой, то треугольник равнобедренный.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть AD — биссектриса и медиана треугольника ABC. Тогда BD = DC и ∠BAD = ∠CAD.</div>
+                <div class="step"><strong>Шаг 2.</strong> Рассмотрим треугольники ABD и ACD: сторона AD — общая, BD = DC, а угол между AD и BD равен углу между AD и DC (оба равны половине угла A).</div>
+                <div class="step"><strong>Шаг 3.</strong> Треугольники равны по двум сторонам и углу между ними.</div>
+                <div class="step"><strong>Шаг 4.</strong> Из равенства треугольников следует AB = AC, то есть треугольник ABC равнобедренный.</div>
+                <p><strong>Вывод:</strong> Если биссектриса является медианой, треугольник равнобедренный.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #2ecc71; margin-bottom: 15px;">
+            <span class="badge badge-must">Базовый уровень</span>
+            <strong>Задача 449.</strong> Через три данные точки проведите окружность. Всегда ли задача имеет решение?
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Центр искомой окружности должен быть равноудалён от всех трёх точек, значит, он лежит одновременно на серединных перпендикулярах к отрезкам, соединяющим эти точки.</div>
+                <div class="step"><strong>Шаг 2.</strong> Если точки не лежат на одной прямой, серединные перпендикуляры к двум отрезкам пересекаются в одной точке — это и есть центр окружности. Такая окружность ровно одна.</div>
+                <div class="step"><strong>Шаг 3.</strong> Если же все три точки лежат на одной прямой, то серединные перпендикуляры параллельны и не пересекаются — окружности не существует.</div>
+                <p><strong>Ответ:</strong> не всегда: если точки не лежат на одной прямой — ровно одна окружность; если лежат — решений нет.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #f39c12; margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 420.</strong> Даны шесть точек. Известно, что прямая, проходящая через любые две точки, содержит по крайней мере ещё одну из данных точек. Докажите, что все эти точки лежат на одной прямой.
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Предположим противное: есть три точки A, B, C, не лежащие на одной прямой. Среди всех таких троек выберем ту, у которой площадь треугольника наименьшая (троек конечное число, поэтому такая тройка существует).</div>
+                <div class="step"><strong>Шаг 2.</strong> По условию на прямой AB лежит ещё одна данная точка D (отличная от A и B).</div>
+                <div class="step"><strong>Шаг 3.</strong> Если D лежит между A и B, то расстояние от D до прямой AC меньше расстояния от B до AC (вдоль AB оно меняется линейно от 0 в точке A). Значит, площадь треугольника ACD меньше площади ABC.</div>
+                <div class="step"><strong>Шаг 4.</strong> Если D лежит вне отрезка AB (например, за точкой A), то расстояние от D до прямой AC тоже меньше расстояния от B до AC, и площадь ACD снова меньше площади ABC.</div>
+                <div class="step"><strong>Шаг 5.</strong> В обоих случаях получаем тройку с меньшей площадью — противоречие с выбором минимальной тройки.</div>
+                <p><strong>Вывод:</strong> Предположение неверно, значит, все точки лежат на одной прямой.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #f39c12; margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 421.</strong> Точки C₁ и C₂ лежат по разные стороны от прямой AB и расположены так, что AC₁ = BC₂ и ∠BAC₁ = ∠ABC₂. Докажите, что прямая C₁C₂ проходит через середину отрезка AB.
+            <div class="diagram">
+                <!-- SVG 1: к задаче 421. A=(70,180), B=(230,180), M=(150,180). C1=(105.4,144.6), C2=(194.6,215.4). -->
+                <!-- Проверка: AC1=BC2=50, ∠BAC1=∠ABC2=45°, середина C1C2 = M=(150,180). -->
+                <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                    <line x1="70" y1="180" x2="230" y2="180" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="70" y1="180" x2="105.4" y2="144.6" stroke="#3498db" stroke-width="2"/>
+                    <line x1="230" y1="180" x2="194.6" y2="215.4" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="105.4" y1="144.6" x2="194.6" y2="215.4" stroke="#2c3e50" stroke-width="2"/>
+                    <path d="M 70,175 L 78,175 L 78,183" fill="none" stroke="#3498db" stroke-width="1.5"/>
+                    <path d="M 230,185 L 222,185 L 222,177" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+                    <path d="M 84,175 L 92,175 L 92,183" fill="none" stroke="#3498db" stroke-width="1.5"/>
+                    <path d="M 218,185 L 210,185 L 210,177" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+                    <circle cx="150" cy="180" r="3.5" fill="#2c3e50"/>
+                    <circle cx="70" cy="180" r="3" fill="#2c3e50"/>
+                    <circle cx="230" cy="180" r="3" fill="#2c3e50"/>
+                    <text x="58" y="198" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                    <text x="236" y="198" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                    <text x="154" y="198" font-size="16" fill="#2c3e50" font-family="sans-serif">M</text>
+                    <text x="92" y="138" font-size="16" fill="#3498db" font-family="sans-serif">C₁</text>
+                    <text x="199" y="230" font-size="16" fill="#e74c3c" font-family="sans-serif">C₂</text>
+                </svg>
+                <p><strong>Рис. 1:</strong> К задаче 421. Точки C₁ и C₂ симметричны относительно M, поэтому C₁M = MC₂.</p>
+            </div>
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть M — середина отрезка AB. Тогда AM = MB.</div>
+                <div class="step"><strong>Шаг 2.</strong> ∠MAC₁ = ∠BAC₁ (так как луч AM совпадает с лучом AB) и ∠MBC₂ = ∠ABC₂ (луч BM совпадает с лучом BA). По условию ∠BAC₁ = ∠ABC₂, значит, ∠MAC₁ = ∠MBC₂.</div>
+                <div class="step"><strong>Шаг 3.</strong> В треугольниках AMC₁ и BMC₂: AM = MB, AC₁ = BC₂ и угол между ними равен. Треугольники равны по двум сторонам и углу между ними.</div>
+                <div class="step"><strong>Шаг 4.</strong> Из равенства треугольников ∠AMC₁ = ∠BMC₂.</div>
+                <div class="step"><strong>Шаг 5.</strong> Углы AMC₁ и C₁MB — смежные, их сумма 180°. Значит, ∠C₁MB + ∠BMC₂ = 180°, то есть лучи MC₁ и MC₂ образуют развёрнутый угол.</div>
+                <p><strong>Вывод:</strong> Точки C₁, M и C₂ лежат на одной прямой, значит, прямая C₁C₂ проходит через середину AB.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #f39c12; margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 436.</strong> Две стороны треугольника не равны друг другу. Докажите, что медиана, проведённая из их общей вершины, составляет с меньшей из сторон больший угол.
+            <div class="diagram">
+                <!-- SVG 2: к задаче 436. A=(140,40), B=(90,130), C=(235,130), M=(162.5,130), D=(185,220). -->
+                <!-- Медиана AM продолжена до D: MD=AM. ABDC — параллелограмм: BD=AC=130.9, CD=AB=103.0. -->
+                <svg viewBox="0 0 320 240" width="100%" style="max-width: 400px;">
+                    <polygon points="140,40 90,130 235,130" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linejoin="round"/>
+                    <line x1="140" y1="40" x2="185" y2="220" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="90" y1="130" x2="185" y2="220" stroke="#3498db" stroke-width="1.5" stroke-dasharray="5,5"/>
+                    <line x1="235" y1="130" x2="185" y2="220" stroke="#3498db" stroke-width="1.5" stroke-dasharray="5,5"/>
+                    <circle cx="162.5" cy="130" r="3" fill="#2c3e50"/>
+                    <text x="130" y="32" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                    <text x="72" y="145" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                    <text x="240" y="145" font-size="16" fill="#2c3e50" font-family="sans-serif">C</text>
+                    <text x="166" y="145" font-size="16" fill="#2c3e50" font-family="sans-serif">M</text>
+                    <text x="190" y="235" font-size="16" fill="#e74c3c" font-family="sans-serif">D</text>
+                </svg>
+                <p><strong>Рис. 2:</strong> К задаче 436. Продолжение медианы: MD = AM, ABDC — параллелограмм.</p>
+            </div>
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Пусть AB < AC. Продлим медиану AM за точку M на отрезок MD = AM.</div>
+                <div class="step"><strong>Шаг 2.</strong> Четырёхугольник ABDC — параллелограмм, так как его диагонали AD и BC делятся пополам в точке M. Значит, BD = AC и CD = AB.</div>
+                <div class="step"><strong>Шаг 3.</strong> Так как AB < AC, то CD < BD.</div>
+                <div class="step"><strong>Шаг 4.</strong> Рассмотрим треугольники ABD и ACD. У них сторона AD — общая, BD = AC и CD = AB, причём BD > CD. По следствию из теоремы о соотношении сторон и углов против большей стороны BD лежит больший угол: ∠BAD > ∠CAD.</div>
+                <div class="step"><strong>Шаг 5.</strong> Но ∠BAD — это угол между медианой AM и меньшей стороной AB, а ∠CAD — угол между AM и большей стороной AC.</div>
+                <p><strong>Вывод:</strong> Медиана составляет с меньшей стороной больший угол.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #f39c12; margin-bottom: 15px;">
+            <span class="badge badge-should">Средний уровень</span>
+            <strong>Задача 453.</strong> Даны две равные окружности с центрами O₁ и O₂, имеющие одну общую точку (такие окружности называются касающимися). Прямая m является касательной к каждой из них в точках A и B соответственно. Докажите, что отрезок AB равен отрезку O₁O₂.
+            <div class="diagram">
+                <!-- SVG 3: к задаче 453. O1=(110,110), O2=(230,110), R=60, M=(170,110). -->
+                <!-- Общая касательная m горизонтальна: y=50. A=(110,50), B=(230,50). AB = O1O2 = 120. -->
+                <svg viewBox="0 0 320 220" width="100%" style="max-width: 400px;">
+                    <line x1="50" y1="50" x2="290" y2="50" stroke="#3498db" stroke-width="2"/>
+                    <circle cx="110" cy="110" r="60" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                    <circle cx="230" cy="110" r="60" fill="none" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="110" y1="110" x2="230" y2="110" stroke="#2c3e50" stroke-width="1.5" stroke-dasharray="4,4"/>
+                    <line x1="110" y1="110" x2="110" y2="50" stroke="#2c3e50" stroke-width="1.5"/>
+                    <line x1="230" y1="110" x2="230" y2="50" stroke="#2c3e50" stroke-width="1.5"/>
+                    <line x1="110" y1="50" x2="230" y2="50" stroke="#e74c3c" stroke-width="2"/>
+                    <path d="M 106,58 L 114,58 L 114,66" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
+                    <path d="M 226,58 L 234,58 L 234,66" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
+                    <circle cx="170" cy="110" r="3.5" fill="#e74c3c"/>
+                    <text x="100" y="130" font-size="16" fill="#2c3e50" font-family="sans-serif">O₁</text>
+                    <text x="220" y="130" font-size="16" fill="#2c3e50" font-family="sans-serif">O₂</text>
+                    <text x="174" y="130" font-size="16" fill="#e74c3c" font-family="sans-serif">M</text>
+                    <text x="98" y="45" font-size="16" fill="#3498db" font-family="sans-serif">A</text>
+                    <text x="218" y="45" font-size="16" fill="#e74c3c" font-family="sans-serif">B</text>
+                </svg>
+                <p><strong>Рис. 3:</strong> К задаче 453. O₁ABO₂ — прямоугольник, поэтому AB = O₁O₂.</p>
+            </div>
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Радиусы окружностей равны, а окружности касаются, значит, O₁O₂ = 2R.</div>
+                <div class="step"><strong>Шаг 2.</strong> Прямая m — касательная к обеим окружностям, поэтому O₁A ⊥ m и O₂B ⊥ m. Значит, O₁A ∥ O₂B.</div>
+                <div class="step"><strong>Шаг 3.</strong> Кроме того, O₁A = O₂B = R (радиусы). Две стороны O₁A и O₂B равны и параллельны, поэтому четырёхугольник O₁ABO₂ — параллелограмм.</div>
+                <div class="step"><strong>Шаг 4.</strong> В этом параллелограмме углы при A и B прямые, значит, это прямоугольник.</div>
+                <div class="step"><strong>Шаг 5.</strong> У прямоугольника диагонали равны: AB = O₁O₂.</div>
+                <p><strong>Вывод:</strong> AB = O₁O₂.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #9b59b6; margin-bottom: 15px;">
+            <span class="badge badge-aspire">Продвинутый уровень</span>
+            <strong>Задача 426.</strong> Прямые, содержащие биссектрисы внешних углов при вершинах B и C треугольника ABC, пересекаются в точке O. Найдите угол BOC, если угол A равен α.
+            <div class="diagram">
+                <!-- SVG 4: к задаче 426. A=(160,100), B=(130,160), C=(190,160). -->
+                <!-- Внешний угол при B: между продолжением BA за B и BC. Его биссектриса: направление (0.419,0.814). -->
+                <!-- Из B: B+t(0.419,0.814); из C: C+s(-0.419,0.814); t=s=119.3 -> O=(160,257.1). -->
+                <svg viewBox="0 0 320 240" width="100%" style="max-width: 400px;">
+                    <polygon points="160,100 130,160 190,160" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linejoin="round"/>
+                    <line x1="130" y1="160" x2="90" y2="90" stroke="#95a5a6" stroke-width="1.5" stroke-dasharray="4,4"/>
+                    <line x1="190" y1="160" x2="230" y2="90" stroke="#95a5a6" stroke-width="1.5" stroke-dasharray="4,4"/>
+                    <line x1="130" y1="160" x2="160" y2="257.1" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="190" y1="160" x2="160" y2="257.1" stroke="#e74c3c" stroke-width="2"/>
+                    <circle cx="160" cy="257.1" r="4" fill="#e74c3c"/>
+                    <text x="155" y="90" font-size="16" fill="#2c3e50" font-family="sans-serif">A</text>
+                    <text x="98" y="175" font-size="16" fill="#2c3e50" font-family="sans-serif">B</text>
+                    <text x="195" y="175" font-size="16" fill="#2c3e50" font-family="sans-serif">C</text>
+                    <text x="165" y="245" font-size="16" fill="#e74c3c" font-family="sans-serif">O</text>
+                </svg>
+                <p><strong>Рис. 4:</strong> К задаче 426. Биссектрисы внешних углов при B и C пересекаются в точке O.</p>
+            </div>
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Внешний угол при вершине B равен 180° − ∠B. Его биссектриса образует со стороной BC угол (180° − ∠B) : 2 = 90° − ∠B/2.</div>
+                <div class="step"><strong>Шаг 2.</strong> Аналогично биссектриса внешнего угла при C образует со стороной CB угол 90° − ∠C/2.</div>
+                <div class="step"><strong>Шаг 3.</strong> В треугольнике BOC: ∠BOC = 180° − (90° − ∠B/2) − (90° − ∠C/2) = (∠B + ∠C) : 2.</div>
+                <div class="step"><strong>Шаг 4.</strong> Так как ∠B + ∠C = 180° − ∠A = 180° − α, получаем: ∠BOC = (180° − α) : 2 = 90° − α/2.</div>
+                <p><strong>Ответ:</strong> ∠BOC = 90° − α/2.</p>
+            </details>
+        </div>
+
+        <div class="card" style="border-left: 4px solid #9b59b6; margin-bottom: 15px;">
+            <span class="badge badge-aspire">Продвинутый уровень</span>
+            <strong>Задача 451.</strong> Даны три попарно пересекающиеся прямые, не проходящие через одну точку. Постройте точку, равноудалённую от этих прямых. Сколько решений имеет задача?
+            <details>
+                <summary>Проверить решение</summary>
+                <div class="step"><strong>Шаг 1.</strong> Точка, равноудалённая от двух пересекающихся прямых, лежит на одной из двух биссектрис углов, образованных этими прямыми.</div>
+                <div class="step"><strong>Шаг 2.</strong> Три прямые образуют треугольник. Точка, равноудалённая от всех трёх прямых, должна лежать на биссектрисе угла при каждой вершине этого «треугольника».</div>
+                <div class="step"><strong>Шаг 3.</strong> Пересечение биссектрис трёх внутренних углов даёт одну точку — центр вписанной окружности.</div>
+                <div class="step"><strong>Шаг 4.</strong> Но есть и другие комбинации: взять две биссектрисы внешних углов и одну внутреннюю. Таких комбинаций ещё три — это центры вневписанных окружностей.</div>
+                <p><strong>Ответ:</strong> всего 4 решения: центр вписанной окружности и три центра вневписанных окружностей.</p>
+            </details>
+        </div>
+
+        <div class="highlight" style="margin-top: 30px;">
+            <h3>🧠 Методическая подсказка</h3>
+            <p>При решении задач повышенной трудности используй этот алгоритм:</p>
+            <ol>
+                <li><strong>Сделай чертёж</strong> и отметь все равные элементы и прямые углы.</li>
+                <li><strong>Ищи дополнительное построение:</strong> продолжение медианы (параллелограмм), радиус в точку касания, симметричную точку — оно часто «развязывает» задачу.</li>
+                <li><strong>Сравнивай через углы и стороны:</strong> против большей стороны лежит больший угол; равные стороны — при равных углах.</li>
+                <li><strong>Не бойся «от противного»:</strong> если нужно доказать, что все точки лежат на одной прямой, предположи обратное и приди к противоречию.</li>
+                <li><strong>В построениях проходи четыре шага:</strong> анализ, построение, доказательство, исследование (всегда отвечай на вопрос «сколько решений?»).</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="lesson-nav">
+<a class="nav-link prev" href="geometriya-7-5-27.html"><span class="nav-arrow">←</span><span class="nav-text"><span class="nav-dir">Предыдущий урок</span><span class="nav-title">Дополнительные задачи: глава V</span></span></a>
+</div>
+
+<footer>
+    <div class="container">
+        <p>Учебник: Л. С. Атанасян и др. «Геометрия, 7–9», Задачи повышенной трудности, стр. 116–121.</p>
+        <div class="legal">
+            © 2019-2026 ИП Громова Анна Александровна, ОГРНИП: 319237500156762, ИНН: 236507001744<br>
+            Лицензия № Л035-01218-23/01091451 <a href="https://xn--80aaagnrcpdkofpu2ae0iuf.xn--p1ai/" target="_blank" rel="noopener">Интерактивная школа «МУДРО»</a>
+        </div>
+    </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/axis-math.js"></script>
+<script defer src="assets/answer-core.js"></script>
+<script defer src="assets/course.js"></script>
+</body>
+</html>
